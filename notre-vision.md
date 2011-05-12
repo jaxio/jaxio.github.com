@@ -4,7 +4,7 @@ title: La vision Jaxio sur le développement d'applications web java
 description: Aller au-delà du développement artisanal des applications java 
 ---
 # Au-delà du développement artisanal...
-## <a name="la-vision-de-jaxio">Notre vision</a>
+## Notre vision
 
 
 Le développement des applications web écrites en Java reste encore largement artisanal alors que cette

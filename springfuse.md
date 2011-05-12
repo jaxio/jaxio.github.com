@@ -11,4 +11,3 @@ Springfuse est un générérateur de code "one-shot", il permet de tester
 le code source Java que Celerio génère. Vous pouvez évaluer Springfuse simplement 
 et gratuitement en vous rendant sur <a href="http://www.springfuse.com">www.springfuse.com</a>
 
-Petite anecdote, le socle de l'application Springfuse est généré par Celerio!

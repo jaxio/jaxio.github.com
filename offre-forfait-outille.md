@@ -5,7 +5,7 @@ description: Réalisation au Forfait à l'aide de Celerio
 ---
 
 # Réalisation au Forfait à l'aide de Celerio
-## <a name="realiser-un-projet">Forfait Outillé</a>
+## Forfait Outillé
 
 Vous voulez externaliser le développement de votre application auprès de Jaxio ?
 

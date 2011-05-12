@@ -12,15 +12,12 @@ environnement de développement. Celerio est immédiatement utilisable par tout 
 déjà Java. Le code source généré utilise de manière optimale les briques Open Source les plus reconnues.
 
 
-
 ## Celerio est adapté aux méthodologies "Agile"
 
 Celerio est conçu pour être utilisé tous les jours, à chaque build. Il s'intégre de manière standard à votre 
 environnement de développement et votre système de build. La génération du code source ne prend que quelques secondes. 
 Le code source généré peut être enrichi de manière simple et astucieuse, sans faire usage de marqueurs spéciaux 
 pour les regénérations successives. Ce procédé est déposé.
-
-
 
 ## Celerio utilise des templates riches
 

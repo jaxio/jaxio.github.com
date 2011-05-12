@@ -4,7 +4,7 @@ title: Celerio est un outil de réduction des risques des projets java
 description: Celerio permet de réduire les risques en générant un socle technique robuste, clair, documenté, unit-testé et déjà éprouvé en production 
 ---
 # Réduisez les risques techniques de vos projets
-## <a name="reduire-les-risques">Réduction des risques</a>
+## Réduction des risques
 
 Le code source généré par Celerio est 
 

@@ -6,7 +6,7 @@ description: L'Offre Régie Outillée pour sécuriser vos projets
 
 # Réussissez vos projets avec Celerio
 
-## <a name="realiser-un-projet">Régie Outillée</a>
+## Régie Outillée
 
 Vous voulez renforcer votre équipe de développement et bénéficier de toute la puissance de Celerio sur un projet donné?
 

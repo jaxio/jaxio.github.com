@@ -16,3 +16,6 @@ La mise en production du projet a eu lieu seulement sept mois après l’écritu
 
 Steria a pris la décision d’utiliser Celerio après avoir généré en ligne, sur 
 <a href="http://www.springfuse.com">www.sprinfuse.com</a>, le socle  technique d’une première  maquette du projet.
+
+<img src="/images/customers/logo-steria.gif"/> 
+

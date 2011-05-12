@@ -19,7 +19,7 @@ La conception du socle technique demande une véritable expertise, souvent éloi
 Le code source technique peut représenter jusqu’à 70% du code source total de l’application. 
 Le constat classique est que le socle technique freine le développement de la partie métier  de l’application.
 
-<img src="/img/roi-celerio.png" alt="Le ROI de Celerio très rapide"/>
+<img src="/images/celerio/celerio-roi.png" alt="Le ROI de Celerio très rapide"/>
 
 
 En générant le socle technique de votre application, Celerio vous permet de gagner du temps sur le développement global de votre application.

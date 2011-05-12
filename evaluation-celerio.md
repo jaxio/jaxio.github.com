@@ -4,7 +4,7 @@ title: Demande d'évaluation de Celerio
 description: Evaluer Celerio en réalisant un prototype 
 ---
 
-# <a name="evaluation-de-celerio">Evaluation de Celerio</a>
+# Evaluation de Celerio
 
 
 Il y a 2 parties distinctes à évaluer:

@@ -3,17 +3,17 @@ layout: french
 title: Jaxio
 ---
 
-## <a name="">en 3 étapes</a>
+## en 3 étapes
 
 <a href="/screencast/en-3-etapes">Visualiser</a>
 
 
-## <a name="">Celerio</a>
+## Celerio
 
 <a href="/celerio/">Visualiser</a>
 
 
-## <a name="">Application d'exemple</a>
+## Application d'exemple
 
 <a href="/screencast/meslivres/">Visualiser</a>
 

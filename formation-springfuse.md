@@ -6,7 +6,7 @@ description: Formation sur SpringFuse en partenariat avec Zenika
 
 # Formation sur SpringFuse
 
-<a href="http://www.zenika.com"><img align="right" src="/img/logo-zenika.gif" align="left"/></a>
+<a href="http://www.zenika.com"><img align="right" src="/images/logo-zenika.gif" align="left"/></a>
 
 
 Nos formations sont proposées en partenariat avec la société Zenika.
@@ -21,13 +21,13 @@ Inscriptions et tarifs directement sur le site de <a href="http://www.zenika.com
 
 
 ## Contenu
-### Génération d’un projet</h3>
+### Génération d’un projet
 
 * Extraction des meta-données d’une base de données et génération du projet
 * Lancement du projet depuis Eclipse ou depuis une ligne de commande
 
 
-### Découverte du code généré par SpringFuse</h3>
+### Découverte du code généré par SpringFuse
 
 
 * Organisation du code généré selon les conventions Maven2
@@ -35,7 +35,7 @@ Inscriptions et tarifs directement sur le site de <a href="http://www.zenika.com
 * Présentation des différents fichiers de configuration générés par Celerio
 
 
-### Développement d’une fonctionnalité métier</h3>
+### Développement d’une fonctionnalité métier
 
 * Distinguer le code généré réutilisable du code généré à titre d’exemple
 * Développer un service métier et le test associé

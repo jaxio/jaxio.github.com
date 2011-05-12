@@ -4,7 +4,7 @@ title: Un exemple de success-story avec Celerio dans le monde bancaire.
 ---
 
 # Une success story dans le monde bancaire
-## <a name="ssii">Eptica, Editeur de logiciels</a>
+## Eptica, Editeur de logiciels
 
 <a href="http://www.eptica.com">Eptica</a> utilise Celerio pour concevoir un de ses produits.
 Ce produit est actuellement en production dans une grande banque Française et est utilisé par plus de 15 000 utilisateurs chaque jour.
@@ -25,3 +25,5 @@ Ce produit est utilisé par des milliers d'utilisateurs quotidiennement. <a href
 ce produit à d'autres grands comptes. Enfin, au vu du succès rencontré par l'équipe de développement, 
 <a href="http://www.eptica.com">Eptica</a> a décidé de lancer de nouveaux produits à l'aide de Celerio.
 
+
+<img src="/images/customers/logo-eptica.gif">

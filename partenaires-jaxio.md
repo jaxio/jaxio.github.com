@@ -6,7 +6,7 @@ description: Florent Ramière, Nicolas Romanetti, Jaxio, Fondateur, Equipe, Expe
 
 # Des partenaires solides
 ## SpringSource
-<img src="/img/partners_systems_integrator_springsource.png" alt="Jaxio est le premier partenaire de SpringSource en France"/>
+<img src="/images/partners/partners_systems_integrator_springsource.png" alt="Jaxio est le premier partenaire de SpringSource en France"/>
 
 
 Jaxio est un "System Integrator Partner" de la société <a href="http://www.springsource.com">SpringSource</a> depuis juin 2008.
@@ -17,7 +17,7 @@ Voir aussi notre
 
 
 ## Telecom ParisTech
-<img src="/img/logo_telecom_paristech.gif" alt="Jaxio est soutenu par Telecom ParisTech"/>
+<img src="/images/logo_telecom_paristech.gif" alt="Jaxio est soutenu par Telecom ParisTech"/>
 
 Jaxio a été soutenu par l'incubateur de <a href="http://www.telecom-paristech.fr">Telecom ParisTech</a> en 2008 et 2009.
 

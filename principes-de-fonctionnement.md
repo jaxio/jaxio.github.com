@@ -5,7 +5,7 @@ description: Modèle de base de données + convention = Génération socle techn
 ---
 
 # Celerio est pragmatique
-## <a name="les-principes-de-fonctionnement-de-celerio">Principe de fonctionnement</a>
+## Principe de fonctionnement
 
 Pour fonctionner Celerio prend en entrée le modèle le plus classique qui soit, le modèle entité-relation utilisé par toutes les bases de données relationnelles. 
 
@@ -19,7 +19,7 @@ Celerio génère automatiquement le code source Java couvrant les problématique
 * le cache de données, 
 * etc.
 
-<img src="/img/celerio.png" alt="Principe de fonctionnement de Celerio"/>
+<img src="/images/celerio/celerio-principes.png" alt="Principe de fonctionnement de Celerio"/>
 
 
 Le socle technique, généré en quelques secondes, correspond à ce qu’une équipe d’ingénieurs

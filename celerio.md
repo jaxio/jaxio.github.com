@@ -5,14 +5,14 @@ description: Celerio est une « Software Factory » qui permet d’automatiser e
 ---
 
 # Générateur de code Java pragmatique et Model-Driven
-## <a name="pourquoi-celerio">Celerio</a>
+## Celerio
 
 Celerio est un générateur de code pragmatique, 'Model-Driven', adapté aux méthodologies Agile, permettant 
 <a href="documents/jaxio-industrialisation-pragmatique-du-developpement-logiciel.pdf">d’industrialiser le développement</a> des 
 éléments techniques d’une application.
 
 
-<img src="/img/origine-celerio.png" alt="Celerio permet de supprimer le développement répétitif"/>
+<img src="/images/celerio/celerio-with-without.png" alt="Celerio permet de supprimer le développement répétitif"/>
 
 
 Celerio accélére et améliore la qualité du développement de la partie  technique d’une application en la générant.

@@ -1,13 +1,13 @@
 ---
 layout: french
-title: Les fondateurs de Jaxio: Nicolas Romanetti et Florent Ramière
+title: Les fondateurs de Jaxio- Nicolas Romanetti et Florent Ramière
 description: Un équipe d'experts Java cumulant plus de 20 ans d'expérience 
 ---
 
+
 # Une équipe d'experts
 
-## Nicolas Romanetti
-### Fondateur &amp; Président</h3>
+## Nicolas Romanetti - Président
 
 Nicolas a plus de dix années d'expérience dans le développement logiciel et la conduite de projets informatiques.
 Il a passé plusieurs années aux Etats-Unis dans la Silicon Valley où il a travaillé pour deux éditeurs de logiciels.
@@ -16,8 +16,7 @@ Nicolas est diplomé de Télécom Paris.
 
 
 
-## Florent Ramière
-### Fondateur &amp; Responsable Technologique</h3>
+## Florent Ramière - Responsable Technologique
 
 Florent a plus de dix années d'expérience dans la conception et l'architecture d'applications logicielles.
 Il a passé plusieurs années aux Etats-Unis comme Senior Software Engineer et Project Manager sur des projets internationaux.
