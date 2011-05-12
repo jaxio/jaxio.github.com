@@ -43,6 +43,19 @@ div pre {
 	background: white;
 }
 
+blockquote {
+	background: #F4F5F7 url(/images/blockquote.gif) 3px 3px no-repeat;
+	padding: 8px 12px 8px 36px;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	border-radius: 4px 4px 4px 4px;
+	-moz-box-shadow: 0 0 6px #C6C6C6;
+	-webkit-box-shadow: 0 0 6px #C6C6C6;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	box-shadow: 0 3px 7px gray;
+}
+
 .container, .tooltip {
 	background: white;
 	padding: 10px;
@@ -174,32 +187,6 @@ ul#menu .sub ul li h2 {
 	font-size: 17px;
 }
 
-/** feature comparisons */
-table#features-comparison {
-	background: white;
-	border: 1px #508616 solid;
-}
-
-table#features-comparison tbody th,table#features-comparison tbody td {
-	border: 1px #508616 dotted;
-}
-
-table#features-comparison thead tr th,table#features-comparison tfoot tr th
-	{
-	border: 1px #508616 solid;
-}
-
-table#features-comparison thead tr td,table#features-comparison tfoot tr td
-	{
-	text-align: center;
-	border: 1px #508616 solid;
-}
-
-table#features-comparison tbody tr td.checked {
-	background-image: url(/images/green-check.gif);
-	background-repeat: no-repeat;
-	background-position: center;
-}
 
 /** main */
 #main h1 {

@@ -5,34 +5,28 @@ title: Jaxio
 
 <div>
 <style>
-.homepage {
+div#message {
 	background-color: lightgrey;
 }
-h1.homepage{
-	color:white;
-}
-ul.homepage {
+#actualites ul li {
 	margin-left: 0px;
 }
+
 </style>
-sds
-<section class="homepage span-24 last">
+<section id="message" class="span-24 last">
 	<h1>Celerio: générateur de code</h1>
-	<p>
+	<h3>
 		Reverse de base de données
-	</p>
-	<p>
+	</h3>
+	<h3>
 		Générateur de code Java
-	</p>
-	<p>
+	</h3>
+	<h3>
 		Puissant et simple à mettre en oeuvre
-	</p>
-	<p>
-		Templates de génération: Spring, JPA, JSF, Spring WebFlow,
-	</p>
-	<p>
-		Spring MVC, Wicket, etc.
-	</p>
+	</h3>
+	<h3>
+		Templates de génération: Spring, JPA, JSF, Spring WebFlow, Spring MVC, Wicket, etc.
+	</h3>
 </section>
 <section id="springfuse" class="span-8">
 	<h1>Springfuse</h1>
@@ -68,3 +62,5 @@ sds
 	</ul>
 </section>
 </div>
+
+Testez vous même la génération de code grâce à <a href="http://www.springfuse.com">http://www.springfuse.com</a> !
