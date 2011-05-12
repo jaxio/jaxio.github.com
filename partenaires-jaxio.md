@@ -1,7 +1,6 @@
 ---
 layout: french
-title: Les fondateurs de Jaxio: Nicolas Romanetti et Florent Ramière
-description: Florent Ramière, Nicolas Romanetti, Jaxio, Fondateur, Equipe, Expert, Java, Experts Java 
+title: Nos partenaires
 ---
 
 # Des partenaires solides
