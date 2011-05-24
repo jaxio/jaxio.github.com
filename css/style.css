@@ -10,6 +10,7 @@ base color #0477BF
 */
 body {
 	background-color: #EFEFEF;
+	min-height: 480px;
 }
 
 p {
@@ -42,18 +43,11 @@ pre {
 div pre {
 	background: white;
 }
-
-blockquote {
-	background: #F4F5F7 url(/images/blockquote.gif) 3px 3px no-repeat;
-	padding: 8px 12px 8px 36px;
-	margin-top: 5px;
-	margin-bottom: 20px;
-	border-radius: 4px 4px 4px 4px;
-	-moz-box-shadow: 0 0 6px #C6C6C6;
-	-webkit-box-shadow: 0 0 6px #C6C6C6;
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
-	box-shadow: 0 3px 7px gray;
+label {
+	font-weight: normal;
+}
+th {
+font-weight: normal;
 }
 
 .container, .tooltip {
@@ -69,25 +63,28 @@ blockquote {
 	box-shadow: 0 3px 7px gray;
 }
 
+/** icons */
+p.tip,span.tip {
+	background-image: url(/images/tip.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 32px;
+	padding-top: 10px;
+	min-height: 25px;
+}
+
+p.important, span.important {
+	background-image: url(/images/important.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	padding-left: 32px;
+	padding-top: 10px;
+	min-height: 25px;
+}
+
 /** header */
 h1#logo {
 	margin: 0;
-}
-
-#header h1 a {
-	font-size: 46px;
-	color: #0477BF;
-	font-style: italic;
-	font-family: "Helvetica Neue", Helvetica, "Lucida Grande", "Lucida Sans",
-		"Lucida Sans Unicode", Arial, Verdana, sans-serif;
-	font-variant: small-caps;
-	text-shadow: rgba(160, 160, 160, 0.5) 1px 1px 1px;
-	font-style: normal;
-	text-decoration: none;
-}
-
-#header h1 a:hover {
-	text-shadow: lightgrey 1px 1px 1px;
 }
 
 /** menu see http://www.sohtanaka.com/web-design/mega-drop-downs-w-css-jquery/ */
@@ -137,7 +134,7 @@ ul#menu  a {
 }
 
 ul#menu  a:hover {
-	text-shadow: lightgrey 1px 1px 1px;
+	text-shadow: grey 1px 2px;
 }
 
 ul#menu li .sub {
@@ -187,10 +184,37 @@ ul#menu .sub ul li h2 {
 	font-size: 17px;
 }
 
+/** feature comparisons */
+table#features-comparison {
+	background: white;
+	border: 1px #508616 solid;
+}
+
+table#features-comparison tbody th,table#features-comparison tbody td {
+	border: 1px #508616 dotted;
+}
+
+table#features-comparison thead tr th,table#features-comparison tfoot tr th
+	{
+	border: 1px #508616 solid;
+}
+
+table#features-comparison thead tr td,table#features-comparison tfoot tr td
+	{
+	text-align: center;
+	border: 1px #508616 solid;
+}
+
+table#features-comparison tbody tr td.checked {
+	background-image: url(/images/green-check.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+}
 
 /** main */
 #main h1 {
 	font-size: 25px;
+	padding-top: 10px;
 	color: #0477BF;
 	font-style: italic;
 	font-family: "Helvetica Neue", Helvetica, "Lucida Grande", "Lucida Sans",
@@ -201,6 +225,7 @@ ul#menu .sub ul li h2 {
 }
 
 #main h2 {
+	padding-top: 5px;
 	padding-left: 20px;
 	font-size: 18px;
 	color: #0477BF;
@@ -212,6 +237,7 @@ ul#menu .sub ul li h2 {
 }
 
 #main h3 {
+	padding-top: 0px;
 	padding-left: 30px;
 	font-size: 13px;
 	color: #0477BF;
