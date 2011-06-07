@@ -16,7 +16,7 @@ Suivez notre équipe sur twitter pour la suite du concours: <a href="http://twit
 Les membres de l'équipe sont par ordre alphabétique:
 
 * Julien  Dubois (Ippon Technologies) / <a href="http://twitter.com/#!/juliendubois" target="new">@juliendubois</a>
-* Bernard Pons / <a href="http://twitter.com/#!/ponsbernard " target="new">@ponsbernard</a>
+* Bernard Pons (Banque de France) / <a href="http://twitter.com/#!/ponsbernard " target="new">@ponsbernard</a>
 * Florent Ramière (Jaxio) / <a href="http://twitter.com/#!/framiere" target="new">@framiere</a>
 * Nicolas Romanetti (Jaxio) / <a href="http://twitter.com/#!/nromanetti" target="new">@nromanetti</a>
 
