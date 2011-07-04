@@ -17,18 +17,18 @@ color: black;
 
 </style>
 <section id="message" class="span-24 last">
-	<h1>Celerio: générateur de code</h1>
+	<h1>Vous développez des applications orientées données en Java?</h1>
 	<h2>
-		<a href="/celerio.html">Reverse de base de données</a>
+		<a href="/celerio.html">Celerio vous aide à réaliser vos projets...</a>
 	</h2>
 	<h2>
-		<a href="/celerio.html">Générateur de code Java</a>
+		<a href="/celerio.html">... dans les temps</a>
 	</h2>
 	<h2>
-		<a href="/celerio.html">Puissant et simple à mettre en oeuvre</a>
+		<a href="/celerio.html">... en réduisant vos coûts.</a>
 	</h2>
 	<h2>
-		<a href="/celerio.html">Templates de génération: Spring, JPA, JSF, Spring WebFlow, Spring MVC, Wicket, etc.</a>
+		<a href="/celerio.html">... avec la qualité au rendez-vous</a>
 	</h2>
 </section>
 <section id="springfuse" class="span-8">

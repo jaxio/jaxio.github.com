@@ -9,9 +9,8 @@ description: Evaluer Celerio en réalisant un prototype
 
 Il y a 2 parties distinctes à évaluer:
 
-* Le code source généré par Celerio 
-* et le plugin maven2 permettant d'intégrer Celerio dans votre cycle de développement.
-
+* Le code source généré par Celerio. 
+* Le plugin maven2 permettant d'intégrer Celerio dans votre cycle de développement.
 
 
 ## Evaluer le code source généré par Celerio
