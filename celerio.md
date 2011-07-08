@@ -12,13 +12,18 @@ Celerio est un générateur de code conçu pour industrialiser le développement
 Celerio est composé de 3 parties:
 
 * Un utilitaire pour faire le reverse engineering de votre base de données relationnelle.
-* Des templates de générations regroupées en pack
+* Des templates de générations regroupées en packs ('Backend', 'SpringMVC3', 'JSF 2', etc...)
 * Un moteur de génération (plugin maven)
+
+<img src="/images/celerio/celerio-overview.png"/>
+
+Le code généré est organisé en couche. Ci-dessous un aperçu des couches générées par les packs de templates 'Backend' et 'JSF2'.
 
 Le code généré en quelques secondes, correspond à ce qu’une équipe d’ingénieurs expérimentés mettrait au point au bout 
 d’un temps se chiffrant en plusieurs semaines voire en plusieurs mois selon la complexité du modèle.
 
-Ce code est écrit suivant les règles de l’art et utilise des technologies Open Source reconnues.
+Le code généré est écrit suivant les règles de l’art et utilise des technologies Open Source reconnues.
+
 
 ## Exemple de packs de templates déjà réalisés
 
@@ -37,13 +42,14 @@ Ce code est écrit suivant les règles de l’art et utilise des technologies Op
 * Auto-complete ajax
 * etc.
 
-### Pack JSF 2 / Spring Web Flow / PrimeFaces
-* Génération des conversations (flows)
-* Génération des vues
+### Pack JSF 2
+* Génération des conversations (Spring Web Flow)
+* Génération des vues (facelets et Primefaces)
 * Utilisation des facelets
 * Utilisation du persistence contexte étendu
 * Sécurité avec Spring Security
 * etc.
+
 
 ## Evaluer le code source généré par Celerio
 Pour évaluer le code généré par Celerio, il suffit de générer un projet en ligne avec notre service <a href="http://www.springfuse.com/">www.springfuse.com</a>.
