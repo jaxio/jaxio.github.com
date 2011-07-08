@@ -13,6 +13,5 @@ Le code source généré par Celerio est
 * testé unitairement,
 * et forme une architecture déjà testée et déjà éprouvée en production.
 
-
-En générant le socle technique de votre application, Celerio vous réduit considérablement les risques induits par les aspects techniques de vos projets.
+En générant le socle technique de votre application, Celerio réduit considérablement les risques induits par les aspects techniques de vos projets.
 

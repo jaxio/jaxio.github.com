@@ -4,19 +4,51 @@ title: Celerio de Jaxio, une Software Factory Java
 description: Celerio est une « Software Factory » qui permet d’automatiser en partie le développement informatique des applications web en Java. 
 ---
 
-# Générateur de code Java pragmatique et Model-Driven
+# Celerio: Générateur de code Java
+
 ## Celerio
+Celerio est un générateur de code conçu pour industrialiser le développement des applications orientées données.
 
-Celerio est un générateur de code pragmatique, 'Model-Driven', adapté aux méthodologies Agile, permettant 
-<a href="documents/jaxio-industrialisation-pragmatique-du-developpement-logiciel.pdf">d’industrialiser le développement</a> des 
-éléments techniques d’une application.
+Celerio est composé de 3 parties:
 
+* Un utilitaire pour faire le reverse engineering de votre base de données relationnelle.
+* Des templates de générations regroupées en pack
+* Un moteur de génération (plugin maven)
 
-<img src="/images/celerio/celerio-with-without.png" alt="Celerio permet de supprimer le développement répétitif"/>
+Le code généré en quelques secondes, correspond à ce qu’une équipe d’ingénieurs expérimentés mettrait au point au bout 
+d’un temps se chiffrant en plusieurs semaines voire en plusieurs mois selon la complexité du modèle.
 
+Ce code est écrit suivant les règles de l’art et utilise des meilleures technologies Open Source reconnues.
 
-Celerio accélére et améliore la qualité du développement de la partie  technique d’une application en la générant.
+## Exemple de packs de templates déjà réalisés
 
+### Pack backend
+* Génération des entitées JPA2 (Hibernate), des DAOs et services associés
+* Recherche avancée & pagination
+* Transactions avec Spring Framework
+* Cache de second niveau
+* Tests unitaires
+* etc.
 
-Celerio s’intègre naturellement aux ateliers de logiciels existants et  surtout n’introduit aucun nouveau langage ou concept. 
+### Pack Spring MVC 3 & JQuery
+* Génération des controlleurs
+* Génération des vues
+* Sécurité avec Spring Security
+* Auto-complete ajax
+* etc.
+
+### Pack JSF 2 / Spring Web Flow / PrimeFaces
+* Génération des conversations (flows)
+* Génération des vues
+* Utilisation des facelets
+* Utilisation du persistence contexte étendu
+* Sécurité avec Spring Security
+* etc.
+
+## Evaluer le code source généré par Celerio
+Pour évaluer le code généré par Celerio, il suffit de générer un projet en ligne avec notre service <a href="http://www.springfuse.com/">www.springfuse.com</a>.
+
+## Evaluer Celerio
+Nous vous proposons d'évaluer Celerio lors d'une présentation dans vos locaux. Pour prendre rendez-vous, 
+<a href="/nous-contacter.html">contactez-nous</a>.
 
