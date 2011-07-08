@@ -37,16 +37,16 @@ color: black;
 		<a href="http://www.springfuse.com">Springfuse, la version en ligne de Celerio permet de générer des projets Java à partir d'une base de données (la votre).</a>
 	</p>
 	<p>
-		<a href="http://www.springfuse.com">SLe code généré permet aux juniors de se former par l'exemple et de démarrer un projet en partant sur des bases solides.</a>
+		<a href="http://www.springfuse.com">Le code généré permet aux juniors de se former par l'exemple et de démarrer un projet en partant sur des bases solides.</a>
 	</p>
 	<p>
-		<a href="http://www.springfuse.com">SPour utiliser Springfuse, rendez-vous sur www.springfuse.com</a>
+		<a href="http://www.springfuse.com">Pour utiliser Springfuse, rendez-vous sur www.springfuse.com</a>
 	</p>
 </section>
 <section id="success-story" class="span-8">
 	<h1>Success story Celerio</h1>
 	<p>
-		<a href="2010/09/10/md-day-2010-journee-du-model-driven-25-novembre-2010-paris.html">Une banque centrale utilise Celerio. Vous en saurez plus lors du MD Day 2010. [...]</a>
+		<a href="/use-case-celerio-migration.html">Une banque centrale utilise Celerio. Présenté lors du MD Day 2010. [...]</a>
 	</p>
 	<p>
 		<a href="reference-steria.html">Steria utilise Celerio pour développer la banque en ligne BforBank... [...]</a>

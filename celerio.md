@@ -18,7 +18,7 @@ Celerio est composé de 3 parties:
 Le code généré en quelques secondes, correspond à ce qu’une équipe d’ingénieurs expérimentés mettrait au point au bout 
 d’un temps se chiffrant en plusieurs semaines voire en plusieurs mois selon la complexité du modèle.
 
-Ce code est écrit suivant les règles de l’art et utilise des meilleures technologies Open Source reconnues.
+Ce code est écrit suivant les règles de l’art et utilise des technologies Open Source reconnues.
 
 ## Exemple de packs de templates déjà réalisés
 
