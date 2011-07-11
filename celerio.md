@@ -17,7 +17,7 @@ Celerio est composé de 3 parties:
 
 <img src="/images/celerio/celerio-overview.png"/>
 
-Le code généré est organisé en couche. Ci-dessous un aperçu des couches générées par les packs de templates 'Backend' et 'JSF2'.
+Le code généré est organisé en couche. Ci-dessus un aperçu des couches générées par les packs de templates 'Backend' et 'JSF2'.
 
 Le code généré en quelques secondes, correspond à ce qu’une équipe d’ingénieurs expérimentés mettrait au point au bout 
 d’un temps se chiffrant en plusieurs semaines voire en plusieurs mois selon la complexité du modèle.
