@@ -32,15 +32,9 @@ color: black;
 	</h2>
 </section>
 <section id="springfuse" class="span-8">
-	<h1>Springfuse</h1>
+	<h1>Evaluer Celerio</h1>
 	<p>
-		<a href="http://www.springfuse.com">Springfuse, la version en ligne de Celerio permet de générer des projets Java à partir d'une base de données (la votre).</a>
-	</p>
-	<p>
-		<a href="http://www.springfuse.com">Le code généré permet aux juniors de se former par l'exemple et de démarrer un projet en partant sur des bases solides.</a>
-	</p>
-	<p>
-		<a href="http://www.springfuse.com">Pour utiliser Springfuse, rendez-vous sur www.springfuse.com</a>
+		<a href="http://www.springfuse.com">Pour évaluer le code généré par Celerio, rendez-vous sur www.springfuse.com, la version en ligne de Celerio.</a>
 	</p>
 </section>
 <section id="success-story" class="span-8">

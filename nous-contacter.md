@@ -54,7 +54,8 @@ Par téléphone au +33 (0) 6 18 65 03 89
 				<textarea id="message" name="entry.8.single" placeholder="Votre message..." style="width:570px;height: 150px;" required></textarea>
 			</p>
 			<p>
-				<input type="submit" name="submit" value="Envoyer" style="float:right;padding:5px;font-size:15px;width:200px;border: 1px solid #BEBEBE;background-color: white;"/><br>
+				<label for="sendit" style="vertical-align:top;">&nbsp;</label>			
+				<input id="sendit" type="submit" name="submit" value="Envoyer" style="padding:5px;font-size:15px;width:200px;border: 1px solid #BEBEBE;background-color: white;"/><br>
 			</p>
 		</fieldset>
 	</form>
