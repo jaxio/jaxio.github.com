@@ -8,7 +8,7 @@ description: Celerio est une « Software Factory » qui permet d’automatiser e
 
 ## Ce document a servi de support lors de notre intervention au MD Day 2010.
 Voici en téléchargement l'intégralité de l'article :
-<a href="/documents/jaxio-migration-application-client-serveur.pdf" onclick="javascript:urchinTracker ('documents/jaxio-migration-application-client-serveur.pdf');"><img src="/images/pdf-icon.png" width="16" height="16"/>Migration d'application client-serveur avec Celerio</a>
+<a href="/documents/jaxio-migration-application-client-serveur.pdf" onclick="javascript: pageTracker._trackPageview('/documents/jaxio-migration-application-client-serveur.pdf'); "><img src="/images/pdf-icon.png" width="16" height="16"/>Migration d'application client-serveur avec Celerio</a>
 
 ## Résumé
 Les applications de gestion ont souvent un modèle métier proche du modèle de base de données associé. Une partie des spécifications de ces applications est classique: il faut permettre aux utilisateurs d’effectuer des recherches, de naviguer à travers les entités du modèle en suivant les relations entre elles, de faire des mises à jour, etc. 
