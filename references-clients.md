@@ -14,6 +14,18 @@ title: Les références de Jaxio - Success-story
 </p>
 </td>
 </tr>
+<tr>
+<td style="vertical-align: top">Banque Centrale</td>
+<td>
+<p>
+Une <strong>Banque Centrale</strong> utilise Celerio en interne pour générer des applications de gestion.
+</p>
+<p>
+Le retour d'expérience <img src="/images/pdf-icon.png" width="16" height="16"/>"<a href="/documents/jaxio-migration-application-client-serveur.pdf" 
+onclick="javascript: pageTracker._trackPageview('/documents/jaxio-migration-application-client-serveur.pdf'); "><strong>Migration d'applications statefull de type client lourd sur une stack jee/springwebflow/jsf chez une banque centrale</strong></a>" a été présenté avec ce client lors de la conférence MD Day 2010.
+</p>
+</td>
+</tr>
 
 <tr>
 <td style="vertical-align: top">
