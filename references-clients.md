@@ -10,7 +10,7 @@ title: Les références de Jaxio - Success-story
 <img src="/images/customers/logo-unibail-rodamco.gif"/></td>
 <td>
 <p>
-<a href="http://www.unibail-rodamco.fr"><strong>Unibail-Rodamco</strong></a> utilise Celerio en interne pour générer à partir de leur nouveau MDM le code Java correspondant (application Spring MVC3).   
+<a href="http://www.unibail-rodamco.fr" target="_new"><strong>Unibail-Rodamco</strong></a> utilise Celerio en interne pour générer à partir de leur nouveau MDM le code Java correspondant (application Spring MVC3).   
 </p>
 </td>
 </tr>
@@ -21,8 +21,9 @@ title: Les références de Jaxio - Success-story
 Une <strong>Banque Centrale</strong> utilise Celerio en interne pour générer des applications de gestion.
 </p>
 <p>
-Le retour d'expérience <img src="/images/pdf-icon.png" width="16" height="16"/>"<a href="/documents/jaxio-migration-application-client-serveur.pdf" 
-onclick="javascript: pageTracker._trackPageview('/documents/jaxio-migration-application-client-serveur.pdf'); "><strong>Migration d'applications statefull de type client lourd sur une stack jee/springwebflow/jsf chez une banque centrale</strong></a>" a été présenté avec ce client lors de la conférence MD Day 2010.
+Le retour d'expérience<br/> <img src="/images/pdf-icon.png" width="16" height="16"/>"<a href="/documents/jaxio-migration-application-client-serveur.pdf" 
+onclick="javascript: pageTracker._trackPageview('/documents/jaxio-migration-application-client-serveur.pdf'); "><strong>Migration d'applications statefull de type client lourd sur une stack jee/springwebflow/jsf chez une banque centrale</strong></a>"
+<br/> a été présenté avec ce client lors de la conférence MD Day 2010.
 </p>
 </td>
 </tr>
@@ -33,7 +34,7 @@ onclick="javascript: pageTracker._trackPageview('/documents/jaxio-migration-appl
 </td>
 <td>
 <p>
-<a href="http://www.steria.fr"><strong>Steria</strong></a> utilise Celerio, le générateur de code Java de Jaxio, pour développer <a href="http://www.bforbank.com">BforBank</a>, 
+<a href="http://www.steria.fr" target="_new"><strong>Steria</strong></a> utilise Celerio, le générateur de code Java de Jaxio, pour développer <a href="http://www.bforbank.com">BforBank</a>, 
 la première banque privée 100% en ligne du Crédit Agricole.</p>
 
 <p>
@@ -54,7 +55,7 @@ Steria a pris la décision d’utiliser Celerio après avoir généré en ligne,
 </td>
 <td>
 <p>
-<a href="http://www.eptica.com"><strong>Eptica</strong></a> utilise Celerio pour concevoir un de ses produits.
+<a href="http://www.eptica.com" target="_new"><strong>Eptica</strong></a> utilise Celerio pour concevoir un de ses produits.
 Ce produit est actuellement en production dans une grande banque Française et est utilisé par plus de 15 000 utilisateurs chaque jour.
 </p>
 
@@ -80,4 +81,3 @@ ce produit à d'autres grands comptes. Enfin, au vu du succès rencontré par l'
 </td>
 </tr>
 </table>
-<!-- <img src="/images/customers/logo-banque-de-france.gif"/> --> 

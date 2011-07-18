@@ -6,7 +6,7 @@ description: Formation sur SpringFuse en partenariat avec Zenika
 
 # Formation sur SpringFuse
 
-<a href="http://www.zenika.com"><img align="right" src="/images/logo-zenika.gif" align="left"/></a>
+<a href="http://www.zenika.com"><img align="right" src="/images/partners/logo-zenika.gif" align="left"/></a>
 
 
 Nos formations sont proposées en partenariat avec la société Zenika.

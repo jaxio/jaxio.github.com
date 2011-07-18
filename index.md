@@ -25,7 +25,7 @@ color: black;
 		<a href="/celerio.html">... dans les temps</a>
 	</h2>
 	<h2>
-		<a href="/celerio.html">... en réduisant vos coûts.</a>
+		<a href="/celerio.html">... en réduisant vos coûts</a>
 	</h2>
 	<h2>
 		<a href="/celerio.html">... avec la qualité au rendez-vous</a>
@@ -40,7 +40,7 @@ color: black;
 <section id="success-story" class="span-8">
 	<h1>Success story Celerio</h1>
 	<p>
-		<a href="/use-case-celerio-migration.html">Une banque centrale utilise Celerio. Présenté lors du MD Day 2010. [...]</a>
+		<a href="/celerio-livre-blanc.html">Une banque centrale utilise Celerio. Présenté lors du MD Day 2010. [...]</a>
 	</p>
 	<p>
 		<a href="reference-steria.html">Steria utilise Celerio pour développer la banque en ligne BforBank... [...]</a>

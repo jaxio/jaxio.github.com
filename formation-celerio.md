@@ -6,7 +6,7 @@ description: Formation sur Celerio en partenariat avec Zenika
 
 # Formation sur Celerio
 
-<a href="http://www.zenika.com"><img align="right" src="/images/logo-zenika.gif" align="left"/></a>
+<a href="http://www.zenika.com"><img align="right" src="/images/partners/logo-zenika.gif" align="left"/></a>
 
 
 Nos formations sont proposées en partenariat avec la société <a href="http://www.zenika.com">Zenika</a>.

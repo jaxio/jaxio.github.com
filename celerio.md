@@ -100,12 +100,3 @@ La figure ci-dessus illustre le fonctionnement de Celerio et donne un aperçu de
 * etc.
 
 Voir aussi le billet "<a href="http://www.springfuse.com/2011/01/04/springfuse-generates-primefaces-with-spring-webflow-frontend.html">Springfuse generates Primefaces with Spring Web Flow front end</a>" publié sur le blog de SpringFuse.  
-
-
-## Evaluer le code source généré par Celerio
-Pour évaluer le code généré par Celerio, il suffit de générer un projet en ligne avec notre service <a href="http://www.springfuse.com/">www.springfuse.com</a>.
-
-## Evaluer Celerio
-Nous vous proposons d'évaluer Celerio lors d'une présentation dans vos locaux. Pour prendre rendez-vous, 
-<a href="/nous-contacter.html">contactez-nous</a>.
-
