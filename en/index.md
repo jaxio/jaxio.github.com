@@ -66,7 +66,7 @@ div#message {
 There are often many risks. Celerio helps your existing team make the first move toward your application rewriting.</p>
 
 <p><img src="/images/green-check.gif"/><strong>Jumpstart</strong>:
-<br/>Celerio allows you to jumpstart new projects in a minute. Developer learns faster.
+<br/>Celerio allows you to jumpstart new projects in a minute. Developers learn faster.
 </p>
 
 <p><img src="/images/green-check.gif"/><strong>Prototyping</strong>:
