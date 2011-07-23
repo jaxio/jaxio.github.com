@@ -1,12 +1,11 @@
 ---
 layout: english
-title: Celerio , a java software factory
+title: Celerio , a code generation tool for data-oriented application written in Java.
 ---
-# Celerio: Code Generation Tool for Java
 
-## Celerio
+# Celerio Overview
 
-Celerio is a code generator tool for data-oriented application
+Celerio is a code generator tool for data-oriented application.
 
 <div class="prepend-1 span-23 last">
 <p><img src="/images/green-check.gif"/>Celerio uses as input the entity-relationship model used by all relational databases. 
@@ -17,30 +16,28 @@ To obtain this model, Celerio connects to your database and does a "reverse engi
 <p><img src="/images/green-check.gif"/>The model can be augmented using a configuration file. You may for example configure inheritance, rename some variables, declare some bi-directional associations, etc.
 Then Celerio executes code generation templates written in Velocity.</p>
 
-<p><img src="/images/green-check.gif"/>Jaxio ships with Celerio  code generation templates organized into packs ('Backend' pack, 'SpringMVC3' pack, 'JSF 2' pack, etc...). 
+<p><img src="/images/green-check.gif"/>Celerio comes with code generation templates organized into packs ('Backend' pack', 'SpringMVC3' pack, 'JSF 2' pack, etc...). 
 These templates address most use cases of data-oriented applications.
 
-The code that Celerio generates leverages the best and latest Open Source technologies and standard and follows the best practices.</p>
+The code that Celerio generates leverages the best and latest Open Source technologies and standards and follows the best practices.</p>
 </div>
 
 Of course Celerio is not required at Runtime.
 
-<img src="/images/celerio/celerio-overview.png"/>
+Here is a high level overview of Celerio
+<img src="/images/celerio/celerio-overview-en.png" width="100%"/>
 
-The above figure illustrates Celerio an dci-dessus illustre le fonctionnement de Celerio et donne un aperçu des couches générées par les packs de templates 'Backend' et 'JSF2'.
+# Celerio Main features
 
-
-## Main features
-
-* Database Reverse engineering
+* Database reverse engineering
     * Tables, columns, contraints, comments
-	* Support composite key ans les clés composée ainsi que les relations x-to-one composées
 	* Detects auto-generated keys (depends on driver jdbc)
+	* Support composite key and composite x-to-one
 	* Dumps the reversed metadata in an XML file to avoid useless reverse operation.
 * Convention over Configuration
     * Camel case naming for entity and fields 
-    * Simple many-to-one, one-to-one, many-to-many
-    * Optimistic locking  
+    * Sensitive default for many-to-one, one-to-one and many-to-many
+    * Optimistic locking
 * Configuration
 	* Filter tables
 	* Mapping rules for columns data type
@@ -53,54 +50,54 @@ The above figure illustrates Celerio an dci-dessus illustre le fonctionnement de
 	* Field visibility in search form, edit form, and search results tables
 	* etc.
 * Write your own generation templates, using existing one as source of inspiration
-* Detect and preserver code modification across regeneration. 
+* Detect and preserve code modification across regeneration 
 * Integrate with Maven 2/3: Celerio comes as a Maven plugin. No IDE required!
 
 
-# Templates packs
+# Code Generation Templates Packs
 
 ## 'Backend' pack
-* Génération des entitées JPA2 (Hibernate)
-	* Associations many-to-one, one-to-many, one-to-one, one-to-one inverse, many-to-many, many-to-many inverse
-	* Héritage
+* JPA2 entities (Hibernate)
+	* Supports many-to-one, one-to-many, one-to-one, one-to-one inverse, many-to-many, many-to-many inverse
+	* Inheritance
 	* Bean Validation
 	* Optimistic Locking
-	* Formattage des dates
-	* Cache de second niveau
-	* Support des principaux types (BigInteger, BigDecimal, Integer, String, etc...)
-	* Helper pour les formats binaires (Blob)
-* Génération des DAOs et services associés
-	* Recherche avancée par l'exemple (inclus les entitées liées au 1er degré)
+	* Date formatting
+	* 2d level cache
+	* Support main java type mapping (BigInteger, BigDecimal, Integer, String, etc...)
+	* Generate helper methods for files (Blob)
+* DAOs and services
+	* Search by example with first level associated entities
 	* Pagination
 	* Named-query
-	* Utilisation des "generic" Java
-	* Transactions avec Spring Framework (@Transactional)
-* Génération des Tests unitaires
+	* Leverage generics
+	* Transactions with Spring Framework (@Transactional)
+* Generate Unit tests
 * etc.
 
 ## 'Spring MVC 3 & JQuery' Pack
-* Utilise le résultat du pack 'Backend'
-* Génération des controlleurs
-* Génération des vues
-	* Auto-complete ajax configuration
-	* formulaire
-	* read-only avec navigation dans le graphe des entitées liées
-	* Critères de recherche (intervalle de date, ajax, etc.)
-	* Résultats de recherche paginés (ajax)
-	* Layout avec BluePrint Css
-* Sécurité avec Spring Security
+* Depends on 'Backend' Pack
+* Controllers (regular, REST)
+* Generate views
+	* Auto-complete (ajax configuration)
+	* forms
+	* Complete navigation of entities graph
+	* Search criteria (date range, ajax, etc.)
+	* Ajax pagination
+	* Layout with BluePrint Css
+* Spring Security ready
 
-<p>Voir aussi le billet "<a href="http://www.springfuse.com/2011/05/04/generate-spring-mvc3-jquery-jpa2-crud-applications.html">Generate Spring MVC3, JQuery, JPA2 CRUD Application</a>" publié sur le blog de SpringFuse.</p>
+<p>Read our blog entry "<a href="http://www.springfuse.com/2011/05/04/generate-spring-mvc3-jquery-jpa2-crud-applications.html">Generate Spring MVC3, JQuery, JPA2 CRUD Application</a>".</p>
 
 ## 'JSF 2 & PrimeFaces' Pack
-* Utilise le résultat du pack 'Backend'
-* Génération des conversations (Spring Web Flow)
-	* Ré-utilisation des conversations
-	* Utilisation du persistence contexte étendu
-* Génération des vues
-	* Utilisation des facelets
-	* Utilisation des composants PrimeFaces
-* Sécurité avec Spring Security
+* Depends on 'Backend' Pack
+* Generate Spring Web Flow for all entities
+	* Use flow composition for associated entities
+	* Leverage Extented persistence context
+* View generation
+	* Uses facelets
+	* Uses PrimeFaces
+* Spring Security ready
 * etc.
 
-Voir aussi le billet "<a href="http://www.springfuse.com/2011/01/04/springfuse-generates-primefaces-with-spring-webflow-frontend.html">Springfuse generates Primefaces with Spring Web Flow front end</a>" publié sur le blog de SpringFuse.  
+<p>Read our blog entry  "<a href="http://www.springfuse.com/2011/01/04/springfuse-generates-primefaces-with-spring-webflow-frontend.html">Springfuse generates Primefaces with Spring Web Flow front end</a>"</p>  

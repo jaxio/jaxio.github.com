@@ -11,7 +11,7 @@ Our consulting offer consists essentially in helping Celerio users to leverage t
 * Assess with you if Celerio may be used to migrate a legacy application that uses a database. We have already reversed successfully hundred of database schema, some of them having hundreds of tables.
 * Write some new code generation templates fitting exactly your needs.
 
-<a href="/contact.html">Contact us</a>, we would be happy to discuss that with you.
+<a href="/en/contact-us.html">Contact us</a>, we would be happy to discuss that with you.
 
 # Support
 

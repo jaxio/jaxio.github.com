@@ -14,7 +14,7 @@ div#message {
 
 </style>
 <section id="message" class="span-24 last">
-	<h1>Celerio, is a code generation tool</h1>
+	<h1>Celerio is a code generation tool for Java</h1>
 	<h3>
 		Reverse your database schema
 	</h3>
@@ -61,19 +61,18 @@ div#message {
 <section id="actualites" class="span-8 last">
 	<h1>Use Cases</h1>
 
-<p><img src="/images/green-check.gif"/><strong>Application rewriting</strong>:
+<p><img src="/images/green-check.gif"/><strong>Application rewriting</strong>
 <br/>Deciding to rewrite an application is a tough decision. 
 There are often many risks. Celerio helps your existing team make the first move toward your application rewriting.</p>
 
-<p><img src="/images/green-check.gif"/><strong>Jumpstart</strong>:
+<p><img src="/images/green-check.gif"/><strong>Jumpstart</strong>
 <br/>Celerio allows you to jumpstart new projects in a minute. Developers learn faster.
 </p>
 
-<p><img src="/images/green-check.gif"/><strong>Prototyping</strong>:
+<p><img src="/images/green-check.gif"/><strong>Prototyping</strong>
 <br/>Writing a prototype for free is a common practice in the industry.
 You have to work fast, for free, and deliver top notch quality to get the deal.
 Celerio increases drastically your chances to succeed.</p>
-
 
 
 </section>
