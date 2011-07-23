@@ -14,6 +14,8 @@ title: Contact us
 Phone: +33 6 18 65 03 89
 <br/>
 Email: <a href="mailto:info@jaxio.com">info@jaxio.com</a>
+<br/>
+Twitter <a href="http://www.twitter.com/springfuse" target="_new">@springfuse</a> 
 </p>
 <br/>
 <br/>

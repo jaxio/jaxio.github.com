@@ -23,7 +23,7 @@ Ne cherchant pas à réinventer la roue, bien au contraire, le code Java gén
 Il est important de noter que Celerio n’est pas requis à l’exécution.
 
 
-<img src="/images/celerio/celerio-overview.png"/>
+<img src="/images/celerio/celerio-overview.png" width="100%"/>
 
 
 La figure ci-dessus illustre le fonctionnement de Celerio et donne un aperçu des couches générées par les packs de templates 'Backend' et 'JSF2'.

@@ -16,16 +16,16 @@ div#message {
 <section id="message" class="span-24 last">
 	<h1>Celerio is a code generation tool for Java</h1>
 	<h3>
-		Reverse your database schema
+		<img src="/images/green-check.gif"/>Reverse your database schema
 	</h3>
 	<h3>
-		Generate advanced web application using the latest standards in a minute
+		<img src="/images/green-check.gif"/>Generate advanced web application using the latest standards in a minute
 	</h3>
 	<h3>
-		Code Generation templates available for Spring, JPA 2, JSF 2 + PrimeFaces , Spring WebFlow, Spring MVC 3, etc...
+		<img src="/images/green-check.gif"/>Code Generation templates available for Spring, JPA 2, JSF 2 + PrimeFaces , Spring WebFlow, Spring MVC 3, etc...
 	</h3>
 	<h3>
-		Learn from the code, create your templates, iterate, save weeks!
+		<img src="/images/green-check.gif"/>Learn from the code, create your templates, iterate, save weeks!
 	</h3>
 	<br/>
 	<br/>
@@ -33,10 +33,8 @@ div#message {
 <section id="springfuse" class="span-8">
 	<h1>Try Celerio Online</h1>
 	<p>
-		You can freely evaluate the code that Celerio generates on <a href="www.springfuse.com">SpringFuse</a>.  
-	</p>
-	<p>
-		You can generate a project using your own database or a sample H2 database that we provide.  
+		<img src="/images/green-check.gif"/>You can freely evaluate the code that Celerio generates on <a href="www.springfuse.com">SpringFuse</a> 
+		using your own database or a sample H2 database that we provide.  
 	</p>
 </section>
 <section id="success-story" class="span-8">
