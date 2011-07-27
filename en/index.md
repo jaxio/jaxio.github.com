@@ -33,7 +33,7 @@ div#message {
 <section id="springfuse" class="span-8">
 	<h1>Try Celerio Online</h1>
 	<p>
-		<img src="/images/green-check.gif"/>You can freely evaluate the code that Celerio generates on <a href="http://www.springfuse.com/">SpringFuse</a> 
+		<img src="/images/green-check.gif"/>You can freely evaluate the code that Celerio generates on <a href="http://www.springfuse.com/">www.springfuse.com</a> 
 		using your own database or a sample H2 database that we provide.  
 	</p>
 </section>
