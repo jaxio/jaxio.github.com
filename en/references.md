@@ -29,6 +29,26 @@ onclick="javascript: pageTracker._trackPageview('/documents/jaxio-migration-appl
 </td>
 </tr>
 
+
+<tr>
+<td style="vertical-align: top"><a href="http://www.ehealthobjects.com" target="_new">eHealthObjects, Inc</a></td> 
+<td>
+<p>
+
+<p><a href="http://www.ehealthobjects.com" target="_new"><strong>eHealthObjects, Inc.</strong></a> provides Industry-leading NHIN (National Health Information Network) 
+standards based Health Information Exchange (ThinkHIE), ONC-ATCB (ONC Certified Authorized
+Testing and Certification Body) certified Electronic Health Records (ThinkEHR),  
+Case/Disease Management & Patient-Centered Medical Home (ThinkCDM) products that help ensure
+quality care for patients at a reduced cost.
+</p>
+<p><strong>eHealthObjects</strong> uses open standards based frameworks and technologies to build and deliver the healthcare products and solutions. 
+<blockquote>Celerio helped us to develop the products faster than we ever thought as it generated all the backend code 
+and the screens using the industry standard frameworks. Using Celerio saved us about 40% of the total 
+development time and we highly recommend using Celerio for all who want to develop products faster 
+with top quality code</blockquote> says Sanjay Mittal, CEO of eHealthObjects, Inc.
+</p>
+</td>
+</tr>
 <tr>
 <td style="vertical-align: top">
 <img src="/images/customers/logo-steria.gif" />
@@ -47,7 +67,8 @@ the first 100% online private bank from Crédit Agricole.</p>
 </td>
 <td>
 <p>
-<a href="http://www.eptica.com" target="_new"><strong>Eptica</strong></a> uses Celerio.
+<a href="http://www.eptica.com" target="_new"><strong>Eptica</strong></a> uses Celerio to develop one of its eCRM product. 
+This product was first deployed in 2008 at a large French bank and is used daily by tens of thousands of employees.
 </p>
 </td>
 </tr>
