@@ -9,8 +9,8 @@ description: Le livre blanc Jaxio présente notre approche pragmatique adaptée 
 ## Une migration agile: cas client banque centrale
 <div class="prepend-1 append-bottom span-24 last">
 <p>Article publié à l'occasion du MD Day 2010.</p>
-<p><a href="/documents/jaxio-migration-application-client-serveur.pdf" target="_new"
-   onclick="javascript: pageTracker._trackPageview('/documents/jaxio-migration-application-client-serveur.pdf'); "><img src="/images/pdf-icon.png" width="16" height="16"/><strong>Migration d'applications statefull de type client lourd sur une stack jee/springwebflow/jsf chez une banque centrale</strong></a>
+<p><a href="/documents/jaxio-migration-application-client-serveur.pdf"
+  onclick="_gaq.push(['_trackEvent', 'jaxio-migration-application-client-serveur.pdf', 'download', 'counter', 1]);"><img src="/images/pdf-icon.png" width="16" height="16"/><strong>Migration d'applications statefull de type client lourd sur une stack jee/springwebflow/jsf chez une banque centrale</strong></a>
 </p>
 </div>
 
@@ -18,7 +18,7 @@ description: Le livre blanc Jaxio présente notre approche pragmatique adaptée 
 ## L’industrialisation pragmatique du développement logiciel
 <div class="prepend-1 append-bottom span-24 last">
 <p>Article publié dans la revue "Telecom" des anciens de l'école d'ingénieur Telecom Paris Tech.</p>
-<p><a href="/documents/jaxio-industrialisation-pragmatique-du-developpement-logiciel.pdf" target="_new"><img src="/images/pdf-icon.png" width="16" height="16"/><strong>L’industrialisation pragmatique du développement logiciel</strong></a></p>
+<p><a href="/documents/jaxio-industrialisation-pragmatique-du-developpement-logiciel.pdf" onclick="_gaq.push(['_trackEvent', 'jaxio-industrialisation-pragmatique-du-developpement-logiciel.pdf', 'download', 'counter', 1]);"><img src="/images/pdf-icon.png" width="16" height="16"/><strong>L’industrialisation pragmatique du développement logiciel</strong></a></p>
 </div>
 
 
@@ -32,5 +32,5 @@ description: Le livre blanc Jaxio présente notre approche pragmatique adaptée 
 <li>Synthèse</li>
 </ul>
 
-<p><a href="/documents/jaxio-celerio.pdf" target="_new" onclick="javascript:urchinTracker ('documents/jaxio-celerio.pdf');"><img src="/images/pdf-icon.png" width="16" height="16"/><strong>Celerio, accélérateur de développement Java</strong></a></p>
+<p><a href="/documents/jaxio-celerio.pdf" onclick="_gaq.push(['_trackEvent', 'jaxio-celerio.pdf', 'download', 'counter', 1]);"><img src="/images/pdf-icon.png" width="16" height="16"/><strong>Celerio, accélérateur de développement Java</strong></a></p>
 </div>
