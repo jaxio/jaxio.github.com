@@ -31,9 +31,8 @@ onclick="javascript: pageTracker._trackPageview('/documents/jaxio-migration-appl
 
 
 <tr>
-<td style="vertical-align: top"><a href="http://www.ehealthobjects.com" target="_new">eHealthObjects, Inc</a></td> 
+<td style="vertical-align: top"><img src="/images/customers/logo-ehealthobjects.png" width="95%"/></td> 
 <td>
-<p>
 
 <p><a href="http://www.ehealthobjects.com" target="_new"><strong>eHealthObjects, Inc.</strong></a> provides Industry-leading NHIN (National Health Information Network) 
 standards based Health Information Exchange (ThinkHIE), ONC-ATCB (ONC Certified Authorized
