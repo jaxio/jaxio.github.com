@@ -23,4 +23,4 @@ Pour finaliser votre calcul, <a href="/nous-contacter.html">contactez-nous</a> p
 
 Celerio permet également de débloquer des situations où le projet est simplement irréalisable soit, par manque de ressources internes, soit par manque de temps.
  
-Le calcul du ROI consiste alors à évaluer l'impact de la nom réalisation du projet vs sa réalisation avec Celerio. 
+Le calcul du ROI consiste alors à évaluer l'impact de la non réalisation du projet vs sa réalisation avec Celerio. 
