@@ -8,6 +8,8 @@ date: 2011-11-25
 
 
 <a href="http://blog.ippon.fr/2011/11/14/ippevent-springfuse-le-1er-decembre/">
+<img src="/images/events/ippon.png"/>
+
 Ippon Technologies, société de conseil experte en Spring et JEE6 consacre un "Ippon Event" à SpringFuse et Celerio le 1er décembre 2011.
 
 La présentation sera donnée par Florent Ramière de Jaxio.
