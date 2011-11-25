@@ -1,6 +1,6 @@
 ---
 layout: french
-title: Jaxio présent SpringFuse chez Ippon Technologie
+title: Jaxio présente SpringFuse chez Ippon Technologie
 comments: true
 date: 2011-11-25
 ---
