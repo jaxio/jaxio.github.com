@@ -38,6 +38,9 @@ color: black;
 	<p>
 		<a href="http://www.springfuse.com"><img src="/images/green-check.gif"/>Pour évaluer le code généré par Celerio, rendez-vous sur www.springfuse.com, la version en ligne de Celerio.</a>
 	</p>
+	<p>
+		<a href="http://www.springfuse.com"><img src="/images/logo/springfuse.png"/></a>
+	</p>
 </section>
 <section id="success-story" class="span-8">
 	<h1>Success story Celerio</h1>
