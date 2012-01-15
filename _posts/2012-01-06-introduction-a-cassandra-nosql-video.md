@@ -9,7 +9,7 @@ date: 2012-01-06
 
 # Introduction à Cassandra: conférence au CampusPlex
 
-Début janvier, Nicolas Romanetti a été invité par <a href="http://www.wmaker.net/">WMaker</a> à venir présenter la technologie <a href="http://cassandra.apache.org/">Cassandra</a> au <a href="http://www.campusplex.org/">CampusPlex à Ajaccio</a>.
+Début janvier, <a href="http://twitter.com/nromanetti">Nicolas Romanetti</a> a été invité par <a href="http://www.wmaker.net/">WMaker</a> à venir présenter la technologie <a href="http://cassandra.apache.org/">Cassandra</a> au <a href="http://www.campusplex.org/">CampusPlex à Ajaccio</a>.
 
 Vous pouvez voir ou revoir cette présentation sur le <a href="http://blog.wmaker.net/Cassandra-la-technologie-NoSQL-inventee-par-Facebook_a1190.html">blog de WMaker</a>.
 
