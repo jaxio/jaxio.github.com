@@ -60,6 +60,7 @@ color: black;
                 {% for post in site.posts limit:5 %}
                 <li><a href="{{ post.url }}">{{ post.date | date_to_string }} - {{ post.title }}</a></li>
                 {% endfor %}
+				<li><a href="actualites.html">Toutes les actualités Jaxio...</a></li>
 	</ul>
 </section>
 </div>
