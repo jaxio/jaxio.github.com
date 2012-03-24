@@ -1,6 +1,6 @@
 ---
 layout: french
-title: Cassandra Party à Devoxx France (Hands On Cassandra)
+title: Cassandra Lan Party à Devoxx France (Hands On Cassandra)
 comments: true
 date: 2012-03-21
 ---
@@ -9,7 +9,7 @@ date: 2012-03-21
 <img src="/images/blog/cassandra-logo.png"/>
 
 
-# Cassandra Party à Devoxx France (Hands on Cassandra)
+# Cassandra Lan Party à Devoxx France (Hands on Cassandra)
 
 Jaxio présentera 2 sessions complémentaires sur Cassandra à Devoxx France le mercredi 18 avril 2012:
 
@@ -23,7 +23,7 @@ Voici plus d'information sur la partie Hands on Cassandra.
 
 ## Principe du Hands on
 
-L’objectif du Hands on Cassandra, rebaptisé "Cassandra Party", est de rassembler le plus grand nombre de participants pour créer le plus grand cluster Cassandra possible. 
+L’objectif du Hands on Cassandra, rebaptisé "Cassandra Lan Party", est de rassembler le plus grand nombre de participants pour créer le plus grand cluster Cassandra possible. 
 
 Munissez-vous de votre laptop équipé d’un OS compatible (et si possible un cable RJ45 de quelques mètres), pour contribuer d'un noeud au cluster Cassandra.
 
@@ -36,7 +36,7 @@ Bref, la réussite de ce hands on dépend fortement de vous.
 
 ## Conseils de préparation
 
-Voici quelques pistes pour préparer cette Cassandra Party au mieux. Attention, nous ne serons pas connectés à Internet...
+Voici quelques pistes pour préparer cette Cassandra Lan Party au mieux. Attention, nous ne serons pas connectés à Internet...
 
 **Connaissances:**
 
@@ -52,7 +52,7 @@ Voici quelques pistes pour préparer cette Cassandra Party au mieux. Attention, 
 
 ## Equipe de choc
 
-Voici les speakers qui animeront cette Cassandra Party:
+Voici les speakers qui animeront cette Cassandra Lan Party:
 
 * Jérémy Sevellec (Indépendant) - <a href="http://twitter.com/jsevellec">@jsevellec</a>
 * Sylvain Lebresne (DataStax) - <a href="http://twitter.com/pcmanus">@pcmanus</a>
