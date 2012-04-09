@@ -1,10 +1,10 @@
 ---
 layout: french
-title: Formation Cassandra NoSQL
+title: Formation sur Cassandra, base NoSQL
 description: Formation sur Cassandra en partenariat avec Zenika 
 ---
 
-# Formation Cassandra
+# Formation sur Cassandra
 
 <a href="http://www.zenika.com"><img align="right" src="/images/partners/logo-zenika.gif" align="left"/></a>
 <a href="http://cassandra.apache.org"><img align="right" src="/images/logo/cassandra-logo.png" align="left"/></a>
