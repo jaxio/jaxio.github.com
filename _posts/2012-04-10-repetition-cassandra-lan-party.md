@@ -10,9 +10,9 @@ date: 2012-04-10
 
 # Répétition de la Cassandra Lan Party dans les locaux de Zenika
 
-La répétition du <a href="http://www.devoxx.fr/display/FR12/Hands+on+Cassandra">Hands on Cassandra (Cassandra Lan Party)</a> a eu lieu mardi soir (10 avril 2012) dans les locaux de Zenika (MERCI ZENIKA).
+La répétition du <a href="http://www.devoxx.fr/display/FR12/Hands+on+Cassandra">Hands on Cassandra (Cassandra Lan Party)</a> a eu lieu mardi soir (10 avril 2012) dans les locaux de <a href="http://www.zenika.fr">Zenika</a> (merci à eux !).
 
-Nous avons simulé 3 data centers avec 6 noeuds par data center, c'est à dire un cluster Cassandra de 18 machines.
+Nous avons simulé 3 data centers avec 6 noeuds par data center, c'est à dire un cluster Cassandra de 18 machines!
 
 Les connaisseurs peuvent voir sur ce screenshot que quelques participants n'ont pas bien saisi leur token... 
 
@@ -20,7 +20,7 @@ Les connaisseurs peuvent voir sur ce screenshot que quelques participants n'ont 
 
 Mais c'est une super réussite en début de soirée avec des volontaires cobayes qui ne connaissaient pas Cassandra.
 
-Les feedbacks recueillis vont nous permettre d'être au top pour Devoxx France.
+Les feedbacks recueillis vont nous permettre d'être au top pour <a href="http://devoxx.fr">Devoxx France</a>.
 
 Voici le ring renvoyé par nodetool:
 
