@@ -1,34 +1,20 @@
 ---
 layout: french
-title: Répétition de la Cassandra Lan Party dans les locaux de Zenika 
+title: Vidéo de l'university Introduction à Cassandra à Devoxx France 2012
 comments: true
-date: 2012-04-10
+date: 2012-05-29
 ---
 
-<img src="/images/partners/logo-zenika.gif"/>
+<img src="/images/blog/Logo-Devoxx-France-seul.png"/>
 <img src="/images/blog/cassandra-logo.png"/>
 
-# Répétition de la Cassandra Lan Party dans les locaux de Zenika
 
-La répétition du <a href="http://www.devoxx.fr/display/FR12/Hands+on+Cassandra">Hands on Cassandra (Cassandra Lan Party)</a> a eu lieu mardi soir (10 avril 2012) dans les locaux de <a href="http://www.zenika.fr">Zenika</a> (merci à eux !).
+# Vidéo de l'university Introduction à Cassandra (Devoxx France 2012)
 
-Merci également à <a href="http://www.euratechnologies.com/">Euratechnologies</a> pour le prêt de 3 switches et quelques cables ethernet ainsi qu'à <a href="http://www.twitter.com/thomasrecloux">Thomas Recloux</a> pour le prêt d'un 4ème switch.
+Voici les vidéo tant attendues (approx 3h en tout):
 
-Nous avons simulé 3 data centers avec 6 noeuds par data center, c'est à dire un cluster Cassandra de 18 machines!
+* <a href="http://www.parleys.com/#st=5&id=3260&sl=0">Introducation à Cassandra part 1/3</a>
+* <a href="http://www.parleys.com/#st=5&id=3247&sl=0">Introducation à Cassandra part 2/3</a>
+* <a href="http://www.parleys.com/#st=5&id=3261&sl=0">Introducation à Cassandra part 3/3</a>
 
-Les connaisseurs peuvent voir sur ce screenshot que quelques participants n'ont pas bien saisi leur token... 
-
-<img src="/images/blog/cassandra-lan-party-repetition-opscenter.png"/>
-
-Mais c'est une super réussite en début de soirée avec des volontaires cobayes qui ne connaissaient pas Cassandra.
-
-Les feedbacks recueillis vont nous permettre d'être au top pour <a href="http://devoxx.fr">Devoxx France</a>.
-
-Voici le ring renvoyé par nodetool:
-
-<img src="/images/blog/cassandra-lan-party-repetition-ring.png"/>
-
-Un grand merci à tous les volontaires leur nom/prénom a été capturé pendant la répétition:
-
-<img src="/images/blog/cassandra-lan-party-repetition-participants.png"/>
-
+Enjoy!
