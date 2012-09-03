@@ -4,37 +4,39 @@ title: Retrouvez Les différents moyens pour contacter Jaxio
 description: Contactez nous via mail, téléphone et formulaire 
 ---
 
-# Nous contacter
-<div class="span-24 last">
-<h2>Directement</h2>
+## Nous contacter
+
+### Directement
+
+<div class="row">
+<div class="span4">
+	<p>
+	Téléphone: +33 (0)6 18 65 03 89
+	<br/>
+	Email: <a href="mailto:info@jaxio.com">info@jaxio.com</a>
+	</p>
+</div>
+<div class="span4">
+	<p>JAXIO SARL
+	<br/>
+	51, rue Le Peletier
+	<br/>
+	75009 Paris (<a href="http://maps.google.fr/maps?f=q&source=s_q&hl=fr&geocode=&q=51+Rue+Le+Peletier,+Paris&sll=46.75984,1.738281&sspn=11.215826,28.54248&ie=UTF8&hq=&hnear=51+Rue+Le+Peletier,+75009+Paris,+Ile-de-France&ll=48.875868,2.339857&spn=0.002628,0.006968&t=h&z=18">Carte</a>)
+	</p>
+	<br/>
+	<br/>
+</div>
 </div>
 
+### Via ce formulaire
 
-<div id="email" class="span-6">
-<p>
-Téléphone: +33 (0)6 18 65 03 89
-<br/>
-Email: <a href="mailto:info@jaxio.com">info@jaxio.com</a>
-</p>
-<br/>
-<br/>
+<div class="row">
+<div id="confirmation" style="display:none" class="alert">
+  <button type="button" class="close" data-dismiss="alert">×</button>
+	Nous avons reçu votre message, nous y répondrons dans les meilleurs délais
 </div>
 
-<div id="address" class="span-18 last">
-<p>JAXIO SARL
-<br/>
-51, rue Le Peletier
-<br/>
-75009 Paris (<a href="http://maps.google.fr/maps?f=q&source=s_q&hl=fr&geocode=&q=51+Rue+Le+Peletier,+Paris&sll=46.75984,1.738281&sspn=11.215826,28.54248&ie=UTF8&hq=&hnear=51+Rue+Le+Peletier,+75009+Paris,+Ile-de-France&ll=48.875868,2.339857&spn=0.002628,0.006968&t=h&z=18">Carte</a>)
-</p>
-<br/>
-<br/>
-</div>
-
-<div class="span-24 last">
-<h2>Via ce formulaire</h2>
-</div>
-<div id="questionnaire" class="span-24 last">
+<div id="questionnaire" class="span12">
 	<style>
 		form#contact_form label {
 			display: inline-block;
@@ -66,8 +68,12 @@ Email: <a href="mailto:info@jaxio.com">info@jaxio.com</a>
 			<p>
 				<label for="title">Titre</label>
 				<input id="title" type="text" name="entry.9.single" placeholder="Optionnel"/>
+			</p>	
+			<p>
 				<label for="company">Société</label>
 				<input id="company" type="text" name="entry.11.single" placeholder="Optionnel"/>
+			</p>
+			<p>
 				<label for="phone">Téléphone</label>
 				<input id="phone" type="phone" name="entry.6.single" placeholder="Optionnel"/>
 			</p>
@@ -83,9 +89,6 @@ Email: <a href="mailto:info@jaxio.com">info@jaxio.com</a>
 	</form>
 </div>
 
-<div id="confirmation" style="display: none" class="notice">
-Nous avons reçu votre message, nous y répondrons dans les meilleurs délais.
-</div>
 
 <!-- see http://www.morningcopy.com.au/tutorials/how-to-style-google-forms/ -->
 <script type="text/javascript">

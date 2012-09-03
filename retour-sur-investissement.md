@@ -2,9 +2,9 @@
 layout: french
 title: Quel retour sur investissement ?
 ---
-# Retour sur investissement
+## Retour sur investissement de Celerio
 
-## Optimisation
+### Optimisation
 
 Le calcul du retour sur investissement est relativement simple à faire si vous êtes capable d'estimer le temps passé en homme/jour sur les taches que Celerio automatise.
 
@@ -19,7 +19,7 @@ Bien entendu, pensez à inclure dans votre calcul les éventuels aléas liés à
 
 Pour finaliser votre calcul, <a href="/nous-contacter.html">contactez-nous</a> pour un devis.
 
-## Rupture
+### Rupture
 
 Celerio permet également de débloquer des situations où le projet est simplement irréalisable soit, par manque de ressources internes, soit par manque de temps.
  

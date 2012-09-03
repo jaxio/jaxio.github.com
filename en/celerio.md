@@ -3,31 +3,32 @@ layout: english
 title: Celerio , a code generation tool for data-oriented application written in Java.
 ---
 
-# Celerio Overview
+## Celerio Overview
 
 Celerio is a code generator tool for data-oriented application.
 
-<div class="prepend-1 span-23 last">
-<p><img src="/images/green-check.gif"/>Celerio uses as input the entity-relationship model used by all relational databases. 
+<img src="/images/green-check.gif"/>
+Celerio uses as input the entity-relationship model used by all relational databases. 
 This model is present in production and most developers understand it.
-
 To obtain this model, Celerio connects to your database and does a "reverse engineering" of your database schema. Celerio supports Oracle, My Sql, Postgres, DB2, etc.
 
-<p><img src="/images/green-check.gif"/>The model can be augmented using a configuration file. You may for example configure inheritance, rename some variables, declare some bi-directional associations, etc.
-Then Celerio executes code generation templates written in Velocity.</p>
+<img src="/images/green-check.gif"/>
+The model can be augmented using a configuration file. You may for example configure inheritance, rename some variables, declare some bi-directional associations, etc.
+Then Celerio executes code generation templates written in Velocity
 
-<p><img src="/images/green-check.gif"/>Celerio comes with code generation templates organized into packs ('Backend' pack', 'SpringMVC3' pack, 'JSF 2' pack, etc...). 
+<img src="/images/green-check.gif"/>
+Celerio comes with code generation templates organized into packs ('Backend' pack', 'SpringMVC3' pack, 'JSF 2' pack, etc...). 
 These templates address most use cases of data-oriented applications.
 
-The code that Celerio generates leverages the best and latest Open Source technologies and standards and follows the best practices.</p>
-</div>
+The code that Celerio generates leverages the best and latest Open Source technologies and standards and follows the best practices.
 
 Of course Celerio is not required at Runtime.
 
 Here is a high level overview of Celerio
+
 <img src="/images/celerio/celerio-overview-en.png" width="100%"/>
 
-# Celerio Main features
+### Celerio Main features
 
 * Database reverse engineering
     * Tables, columns, contraints, comments
@@ -53,10 +54,9 @@ Here is a high level overview of Celerio
 * Detect and preserve code modification across regeneration 
 * Integrate with Maven 2/3: Celerio comes as a Maven plugin. No IDE required!
 
+### Code Generation Templates Packs
 
-# Code Generation Templates Packs
-
-## 'Backend' pack
+#### 'Backend' pack
 * JPA2 entities (Hibernate)
 	* Supports many-to-one, one-to-many, one-to-one, one-to-one inverse, many-to-many, many-to-many inverse
 	* Inheritance
@@ -75,7 +75,7 @@ Here is a high level overview of Celerio
 * Generate Unit tests
 * etc.
 
-## 'Spring MVC 3 & JQuery' Pack
+#### 'Spring MVC 3 & JQuery' Pack
 * Depends on 'Backend' Pack
 * Controllers (regular, REST)
 * Generate views
@@ -87,9 +87,9 @@ Here is a high level overview of Celerio
 	* Layout with BluePrint Css
 * Spring Security ready
 
-<p>Read our blog entry "<a href="http://www.springfuse.com/2011/05/04/generate-spring-mvc3-jquery-jpa2-crud-applications.html">Generate Spring MVC3, JQuery, JPA2 CRUD Application</a>".</p>
+Read our blog entry "<a href="http://www.springfuse.com/2011/05/04/generate-spring-mvc3-jquery-jpa2-crud-applications.html">Generate Spring MVC3, JQuery, JPA2 CRUD Application</a>".
 
-## 'JSF 2 & PrimeFaces' Pack
+#### 'JSF 2 & PrimeFaces' Pack
 * Depends on 'Backend' Pack
 * Generate Spring Web Flow for all entities
 	* Use flow composition for associated entities

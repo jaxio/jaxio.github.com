@@ -3,7 +3,9 @@ layout: english
 title: Service
 ---
 
-# Consulting
+## Services
+
+### Consulting
 
 Our consulting offer consists essentially in helping Celerio users to leverage the potential that our product has to offer. For example, you can have someone from Jaxio:
 
@@ -13,14 +15,14 @@ Our consulting offer consists essentially in helping Celerio users to leverage t
 
 <a href="/en/contact-us.html">Contact us</a>, we would be happy to discuss that with you.
 
-# Support
+### Support
 
 We provide different support packages with specific service level agreements for Celerio product.
 
 <a href="/contact.html">Contact us</a>, we could help you to select the best offer for your needs.
 
-# Training
+### Training
 
 You would like to attend a training class introducing Celerio and covering the code that it generates?
 
-You may be interested in our training offer with our partner <a href="http://www.zenika.com/formation_celerio.php">Zenika
+You may be interested in our training offer with our partner <a href="http://www.zenika.com/formation_celerio.php">Zenika</a>

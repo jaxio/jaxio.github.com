@@ -4,9 +4,9 @@ title: Les bénéfices de l'offre jaxio pour votre métier
 description: Vous reposez vos développements sur le socle technique généré par Celerio pour vous focaliser sur les aspects métiers 
 ---
 
-# Pérennité
+## Bénéfices apportés par Celerio
 
-## Pérénnité pour le projet
+### Pérennité pour le projet et les développeurs
 Pour le chef de projet/architecte, l’utilisation de Celerio par ses équipes permet
 
 * de définir une ligne de conduite,
@@ -15,15 +15,12 @@ Pour le chef de projet/architecte, l’utilisation de Celerio par ses équipes p
 * d’attirer les meilleurs développeurs en leur proposant d’utiliser les meilleures technologies Open Source 
 * et enfin d’améliorer la qualité globale des développements dont il a la responsabilité.
 
-## Pérennité pour les développeurs
-
 Le code généré utilise les briques Open Source les plus reconnues en suivant les meilleures pratiques.
 
 Les développeurs juniors se forment par l'exemple durant le projet et produisent par mimétisme un code de qualité. 
 Ils montent ainsi en compétence plus rapidement et valorisent leur expérience plus facilement lorsqu’ils quittent l’équipe.
 
-
-# <a name="reduction-risques">Réduction des risques</a>
+### Réduction des risques
 
 Le code source généré par Celerio est 
 
@@ -34,7 +31,7 @@ Le code source généré par Celerio est
 
 En générant le socle technique de votre application, Celerio réduit considérablement les risques induits par les aspects techniques de vos projets.
 
-# <a name="focus-metier">Focus métier</a>
+### Focus métier
 
 C'est dans le développement des fonctionnalités propres à votre application, dites métiers, que réside la vraie valeur à votre application.
 
