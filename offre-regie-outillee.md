@@ -4,7 +4,7 @@ title: L'Offre Régie Outillée avec Celerio de Jaxio
 description: L'Offre Régie Outillée pour sécuriser vos projets 
 ---
 
-### Régie Outillée
+## Régie Outillée
 
 Vous voulez renforcer votre équipe de développement et bénéficier de toute la puissance de Celerio sur un projet donné?
 
