@@ -3,12 +3,11 @@ layout: english
 title: Features comparisons between Springfuse and Celerio 
 ---
 
-
-# SpringFuse 
+## SpringFuse 
 
 _Springfuse_ service allows you to generate as many projects as you want. The generation is done on our server, using Celerio.
 
-# Celerio
+## Celerio
 
 With Celerio, instead of generating remotely, you generate everything locally on your computer. 
 Celerio integrates smoothly within your build process. 
@@ -18,61 +17,59 @@ Celerio is distributed as a Maven 2 plugin.
 For more information regarding Celerio, please contact us.
 
 
-# Features comparisons 
+## Features comparisons 
 
-<div>
-	<table id="features-comparison">
-		<thead>
-			<tr>
-				<th style="width: 500px">Feature</th>
-				<td style="width: 70px">Springfuse</td>
-				<td style="width: 70px">Celerio</td>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<th>Generates all layers</th>
-				<td class="checked"></td>
-				<td class="checked"></td>
-			</tr>
-			<tr>
-				<th>Generates unit tests</th>
-				<td class="checked"></td>
-				<td class="checked"></td>
-			</tr>
-			<tr>
-				<th>Configure generation output:inheritance, renaming, relations, etc.</th>
-				<td class="checked"></td>
-				<td class="checked"></td>
-			</tr>
-			<tr>
-				<th>Generate on your computer (not remotely)</th>
-				<td></td>
-				<td class="checked"></td>
-			</tr>
-			<tr>
-				<th>Code generation round-trip</th>
-				<td></td>
-				<td class="checked"></td>
-			</tr>
-			<tr>
-				<th>Additional ready-to-use generation template packs</th>
-				<td></td>
-				<td class="checked"></td>
-			</tr>
-			<tr>
-				<th>Create your own generation templates</th>
-				<td></td>
-				<td class="checked"></td>
-			</tr>
-		</tbody>
-		<tfoot>
-			<tr>
-				<th>Price</th>
-				<td><a href="/">Free</a></td>
-				<td><a href="/en/contact-us.html">Contact us</a></td>
-			</tr>
-		</tfoot>
-	</table>
-</div>
+<table class="table">
+	<thead>
+		<tr>
+			<th>Feature</th>
+			<th style="text-align: center">Springfuse</th>
+			<th style="text-align: center">Celerio</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Generates all layers</td>
+			<td class="checked"></td>
+			<td class="checked"></td>
+		</tr>
+		<tr>
+			<td>Generates unit tests</td>
+			<td class="checked"></td>
+			<td class="checked"></td>
+		</tr>
+		<tr>
+			<td>Configure generation output:inheritance, renaming, relations, etc.</td>
+			<td class="checked"></td>
+			<td class="checked"></td>
+		</tr>
+		<tr>
+			<td>Generate on your computer (not remotely)</td>
+			<td></td>
+			<td class="checked"></td>
+		</tr>
+		<tr>
+			<td>Code generation round-trip</td>
+			<td></td>
+			<td class="checked"></td>
+		</tr>
+		<tr>
+			<td>Additional ready-to-use generation template packs</td>
+			<td></td>
+			<td class="checked"></td>
+		</tr>
+		<tr>
+			<td>Create your own generation templates</td>
+			<td></td>
+			<td class="checked"></td>
+		</tr>
+	</tbody>
+	<tfoot>
+		<tr>
+			<th>Price</th>
+			<th style="text-align: center">Free</th>
+			<th style="text-align: center"><a href="/en/contact-us.html">Contact us</a></th>
+		</tr>
+	</tfoot>
+</table>
 

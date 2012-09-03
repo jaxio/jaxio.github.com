@@ -28,6 +28,9 @@ description: Contactez nous via mail, téléphone et formulaire
 </div>
 </div>
 
+
+<!-- does not work ...
+
 ### Via ce formulaire
 
 <div class="row">
@@ -83,14 +86,14 @@ description: Contactez nous via mail, téléphone et formulaire
 			</p>
 			<p>
 				<label for="sendit" style="vertical-align:top;">&nbsp;</label>			
-				<input id="sendit" type="submit" name="submit" value="Envoyer" style="padding:5px;font-size:15px;width:200px;border: 1px solid #BEBEBE;background-color: white;"/><br>
+				<input id="sendit" type="submit" name="submit" value="Envoyer"/><br>
 			</p>
 		</fieldset>
 	</form>
 </div>
+</div>
 
 
-<!-- see http://www.morningcopy.com.au/tutorials/how-to-style-google-forms/ -->
 <script type="text/javascript">
 	var submitted=false;
 	function formLoaded() {
@@ -106,3 +109,4 @@ description: Contactez nous via mail, téléphone et formulaire
 	onload="formLoaded();">
 		Loading...
 </iframe>
+-->

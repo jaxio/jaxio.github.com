@@ -7,7 +7,7 @@ title: Jaxio
     <h1>CELERIO</h1>
     <h3>Code generation for humans</h3>
 	<p>Generate full J2EE web application stack in seconds</p>
-    <p><a href="https://github.com/jaxio/generated-projects/tree/master/crud-jsf2-jpa2-spring" class="btn btn-primary btn-large">Show some code example &raquo;</a></p>
+    <p><a href="https://github.com/jaxio/generated-projects/tree/master/crud-jsf2-jpa2-spring" class="btn btn-primary btn-large">Show me some code example &raquo;</a></p>
 </div>
 
 <!-- Example row of columns -->

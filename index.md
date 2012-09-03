@@ -6,10 +6,8 @@ title: Jaxio
 <div class="hero-unit">
     <h1>CELERIO</h1>
     <h3>La génération de code pour le humains</h3>
-	<p><img src="/images/green-check.gif"/> Générez un code propre | 
-	<img src="/images/green-check.gif"/> Apprenez du code généré | 
-	<img src="/images/green-check.gif"/> Focalisez sur votre savoir faire</p>
-    <p><a href="/celerio.html" class="btn btn-primary btn-large">En savoir plus &raquo;</a></p>
+	<p>Générez une application J2EE en quelques secondes</p>
+    <p><a href="https://github.com/jaxio/generated-projects/tree/master/crud-jsf2-jpa2-spring" class="btn btn-primary btn-large">Montrez moi du code &raquo;</a></p>
 </div>
 
 <!-- Example row of columns -->
@@ -26,13 +24,14 @@ title: Jaxio
 	<h2>Success Story</h2>
 	<ul>
 	<li>
-		<a href="/celerio-livre-blanc.html">Une banque centrale utilise Celerio. Présenté lors du MD Day 2010. &raquo;</a>
+		<a href="/celerio-livre-blanc.html">Une banque centrale utilise Celerio. Présenté lors du MD Day 2010...</a>
 	</li>
 	<li>
-		<a href="reference-steria.html">Steria utilise Celerio pour développer la banque en ligne BforBank... [...]</a>
+		<a href="reference-steria.html">Steria utilise Celerio pour développer la banque en ligne BforBank...</a>
 	</li>
 	<li>
-		<a href="reference-editeur.html">Celerio est utilisé par Eptica pour le développement d'un nouveau produit réalisé pour répondre aux besoins d'une grande banque. [...]</a>
+		<a href="reference-editeur.html">Celerio est utilisé par Eptica pour le développement d'un nouveau 
+		produit réalisé pour répondre aux besoins d'une grande banque...</a>
 	</li>
 	</ul>
 </div>

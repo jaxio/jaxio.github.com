@@ -75,6 +75,19 @@ Here is a high level overview of Celerio
 * Generate Unit tests
 * etc.
 
+#### 'JSF 2 & PrimeFaces' Pack
+* Depends on 'Backend' Pack
+* Generate Spring Web Flow for all entities
+	* Use flow composition for associated entities
+	* Leverage Extented persistence context
+* View generation
+	* Uses facelets
+	* Uses PrimeFaces
+* Spring Security ready
+* etc.
+
+<p>Read our blog entry  "<a href="http://www.springfuse.com/2011/01/04/springfuse-generates-primefaces-with-spring-webflow-frontend.html">Springfuse generates Primefaces with Spring Web Flow front end</a>"</p>  
+
 #### 'Spring MVC 3 & JQuery' Pack
 * Depends on 'Backend' Pack
 * Controllers (regular, REST)
@@ -88,16 +101,3 @@ Here is a high level overview of Celerio
 * Spring Security ready
 
 Read our blog entry "<a href="http://www.springfuse.com/2011/05/04/generate-spring-mvc3-jquery-jpa2-crud-applications.html">Generate Spring MVC3, JQuery, JPA2 CRUD Application</a>".
-
-#### 'JSF 2 & PrimeFaces' Pack
-* Depends on 'Backend' Pack
-* Generate Spring Web Flow for all entities
-	* Use flow composition for associated entities
-	* Leverage Extented persistence context
-* View generation
-	* Uses facelets
-	* Uses PrimeFaces
-* Spring Security ready
-* etc.
-
-<p>Read our blog entry  "<a href="http://www.springfuse.com/2011/01/04/springfuse-generates-primefaces-with-spring-webflow-frontend.html">Springfuse generates Primefaces with Spring Web Flow front end</a>"</p>  

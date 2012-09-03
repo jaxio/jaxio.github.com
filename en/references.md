@@ -2,13 +2,13 @@
 layout: english
 title: Jaxio Customer References - Success-story
 ---
-# Customer References
+## Customer References
 
-<table>
+<table class="table">
 <tr>
 <td style="vertical-align: top">
 <img src="/images/customers/logo-unibail-rodamco.gif"/></td>
-<td>
+<td
 <p>
 <a href="http://www.unibail-rodamco.fr" target="_new"><strong>Unibail-Rodamco</strong></a> the company that owns the Carroussel du Louvre in Paris, uses 
 Celerio to develop an internal application. The application connects to their new Master Data Management database schema. They choose the Spring MVC 3 + JQuery generation pack.   
@@ -28,7 +28,6 @@ onclick="javascript: pageTracker._trackPageview('/documents/jaxio-migration-appl
 </p>
 </td>
 </tr>
-
 
 <tr>
 <td style="vertical-align: top"><img src="/images/customers/logo-ehealthobjects.png" width="95%"/></td> 
