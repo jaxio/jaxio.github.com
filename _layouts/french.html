@@ -1,98 +1,64 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
-<head>{% include head.html %}
-<style type="text/css"> 
-p.tip {
-	background-image: url(/images/tip.png);
-	background-repeat: no-repeat;
-	background-position: left;
-	padding-left: 32px;
-	padding-top: 10px;
-	min-height: 25px;
-}
-p.important {
-	background-image: url(/images/important.png);
-	background-repeat: no-repeat;
-	background-position: left;
-	padding-left: 32px;
-	padding-top: 10px;
-	min-height: 25px;
-}
-</style>
-
-</head>
-<body>
-	<div class="container">
-		<header id="header">
-			<nav>
-				<h1 id="logo">
-					<a href="/"><img src="/images/logo/jaxio.gif"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="http://www.devoxx.fr/"><img src="/images/events/banniere_456_60_s_devoxx_france_2012.gif"></a>
-				</h1>
-				<ul id="menu">
-					<li class="first-line">
-						<a href="/celerio.html">Produit Celerio</a>
-						<div class="sub" style="width: 250px">
-							<ul>
-								<li><a href="/celerio.html">Fonctionnalités</a></li>
-								<li><a href="/benefices.html">Bénéfices</a></li>								
-								<li><a href="/retour-sur-investissement.html">Retour sur investissement</a></li>
-								<li><a href="/celerio-livre-blanc.html">Articles et Livre blanc</a></li>
-								<li><a href="/licence-utilisation-celerio.html">Licence</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="first-line">
-						<a href="#">Formations</a>
-						<div class="sub" style="width: 250px;">
-							<ul>
-								<li><a href="/formation-celerio.html">Formation Celerio</a></li>
-								<li><a href="/formation-springfuse.html">Formation Springfuse</a></li>
-								<li><a href="/formation-cassandra-nosql.html">Formation Cassandra</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="first-line">
-						<a href="#">Services</a>
-						<div class="sub" style="width: 250px;">
-							<ul>
-								<li><a href="/offre-prototype.html">Prototypage</a></li>
-								<li><a href="/offre-regie-outillee.html">Régie Outillée</a></li>
-								<li><a href="/offre-forfait-outille.html">Forfait Outillé</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="first-line">
-						<a href="/references-clients.html">Références</a>
-					</li>
-					
-					<li class="first-line">
-					<a href="/jaxio.html">Jaxio</a>
-						<div class="sub" style="width: 250px;">
-							<ul>
-								<li><a href="/jaxio.html">A propos</a></li>
-								<li><a href="/actualites.html">Actualités</a></li>
-							</ul>
-						</div>
-					</li>
-					<li class="first-line"><a href="/nous-contacter.html">Contact</a></li>
-					<li class="first-line"><a href="/en/"><img src="/images/us.gif"></a></li>										
-				</ul>
-			</nav>
-		</header>
-		<section id="main">
-			{{ content }} {% if page.comments %}
-			<aside>
-				<div id="disqus_thread"></div>
-			</aside>
-			{% endif %}
-		&nbsp; <!-- this nbsp prevent layout from breaking! -->			
-		</section>
-		<footer id="footer">
-			All rights reserved &copy; 2005-2011 <a href="http://www.jaxio.com/">Jaxio</a> | 
-								<a href="/mentions-legales.html">Mentions légales</a> | <a href="/privacy-policy.html">Privacy policy</a>
-		</footer>
+  {% include head.html %}
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+        	<a class="brand" href="/">Jaxio</a>        
+			<ul class="nav nav-pills">
+			  <li class="dropdown">
+			    <a class="dropdown-toggle" data-toggle="dropdown" href="">Produit Celerio</a>
+			    <ul class="dropdown-menu">
+					<li><a href="/avantages-celerio-sur-la-concurrence.html">Avantages</a></li>
+					<li><a href="/benefices.html">Bénéfices</a></li>								
+					<li><a href="/celerio.html">Fonctionnalités</a></li>
+					<li><a href="/retour-sur-investissement.html">Retour sur investissement</a></li>
+					<li><a href="/celerio-livre-blanc.html">Articles et Livre blanc</a></li>
+					<li class="divider"></li>
+					<li><a href="/licence-utilisation-celerio.html">Licence</a></li>
+			    </ul>
+			  </li>
+			  <li class="dropdown">
+			    <a class="dropdown-toggle" data-toggle="dropdown" href="">Formations</a>
+			    <ul class="dropdown-menu">
+					<li><a href="/formation-celerio.html">Formation Celerio</a></li>
+					<li><a href="/formation-springfuse.html">Formation Springfuse</a></li>
+					<li class="divider"></li>
+					<li><a href="/formation-cassandra-nosql.html">Formation Cassandra</a></li>
+			    </ul>
+			  </li>
+			  <li class="dropdown">
+			    <a class="dropdown-toggle" data-toggle="dropdown" href="">Services</a>
+			    <ul class="dropdown-menu">
+					<li><a href="/offre-prototype.html">Prototypage</a></li>
+					<li><a href="/offre-regie-outillee.html">Régie Outillée</a></li>
+					<li><a href="/offre-forfait-outille.html">Forfait Outillé</a></li>
+			    </ul>
+			  </li>
+			  <li class="dropdown">
+			    <a class="dropdown-toggle" data-toggle="dropdown" href="">A Propos</a>
+			    <ul class="dropdown-menu">
+					<li><a href="/jaxio.html">Société</a></li>
+					<li><a href="/actualites.html">Actualités</a></li>
+					<li><a href="/nous-contacter.html">Nous Contacter</a></li>
+			    </ul>
+			  </li>
+			</ul>
+			<ul class="nav pull-right"><a href="/en/"><img src="/images/us.gif"></a></li></ul>										
+		</div>
 	</div>
-	{% include javascript.html %}
-</body>
+</div>
+    <div class="container">
+{{content}}
+      <hr>
+      <footer class="offset3">
+		<p>&copy; 2005-2012 <a href="http://www.jaxio.com/">Jaxio</a> | 
+		<a href="/mentions-legales.html">Mentions légales</a> | <a href="/privacy-policy.html">Privacy policy</a></p>
+      </footer>
+    </div> <!-- /container -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	{% include js.html %}    
+  </body>
 </html>
+
