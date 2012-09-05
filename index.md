@@ -7,7 +7,8 @@ title: Jaxio
     <h1>Celerio</h1>
     <h3>La génération de code pour les humains</h3>
 	<p>Générez une application J2EE en quelques secondes</p>
-    <p><a href="https://github.com/jaxio/generated-projects/tree/master/crud-jsf2-jpa2-spring" class="btn btn-primary btn-large">Montrez moi du code généré &raquo;</a></p>
+    <p><a href="https://github.com/jaxio/generated-projects/tree/master/crud-jsf2-jpa2-spring" class="btn btn-primary btn-large">Montrez moi du
+     code généré &raquo;</a></p>
 </div>
 
 <!-- Example row of columns -->
@@ -43,5 +44,5 @@ title: Jaxio
 	{% endfor %}
 	</ul>
 	<p><a class="btn" href="actualites.html">Plus d'actualités &raquo;</a></p>
-    </div>
+</div>
 </div>

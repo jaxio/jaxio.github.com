@@ -1,7 +1,21 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr"/>
   {% include head.html %}
   <body>
+	<script type="text/javascript">
+	      var _gaq = _gaq || [];
+	      _gaq.push(['_setAccount', 'UA-166864-1']);
+	      _gaq.push(['_trackPageview']);
+	    
+	      (function() {
+	        var ga = document.createElement('script');
+	        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 
+	            'http://www') + '.google-analytics.com/ga.js';
+	        ga.setAttribute('async', 'true');
+	        document.documentElement.firstChild.appendChild(ga);
+	      })();
+	</script>    
+  
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -45,13 +59,13 @@
 			    </ul>
 			  </li>
 			</ul>
-			<ul class="nav pull-right"><a href="/en/"><img src="/images/us.gif"></a></li></ul>										
+			<ul class="nav pull-right"><li><a href="/en/"><img src="/images/us.gif"/></a></li></ul>										
 		</div>
 	</div>
 </div>
     <div class="container">
 {{content}}
-      <hr>
+      <hr/>
       <footer class="offset3">
 		<p>&copy; 2005-2012 <a href="http://www.jaxio.com/">Jaxio</a> | 
 		<a href="/mentions-legales.html">Mentions légales</a></p>
