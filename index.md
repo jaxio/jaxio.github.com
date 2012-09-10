@@ -17,7 +17,7 @@ title: Jaxio
 	<h2>Evaluer Celerio</h2>
 	<ul>
 	<li>
-		<a href="http://www.springfuse.com">Pour évaluer le code généré par Celerio, rendez-vous sur www.springfuse.com, la version en ligne de Celerio.</a>
+		<a href="http://www.springfuse.com">Pour évaluer Celerio sur votre base de données, rendez-vous sur www.springfuse.com, la version en ligne de Celerio.</a>
 	</li>
 	</ul>
 </div>
