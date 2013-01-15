@@ -21,7 +21,7 @@ title: Jaxio contact
 	41, rue de Maubeuge
 	<br/>
 	75009 Paris<br/>
-	France(<a href="http://maps.google.fr/maps?f=q&source=s_q&hl=fr&geocode=&q=51+Rue+Le+Peletier,+Paris&sll=46.75984,1.738281&sspn=11.215826,28.54248&ie=UTF8&hq=&hnear=51+Rue+Le+Peletier,+75009+Paris,+Ile-de-France&ll=48.875868,2.339857&spn=0.002628,0.006968&t=h&z=18">Map</a>)
+	France
 	</p>
 	<br/>
 	<br/>

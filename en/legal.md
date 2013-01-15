@@ -8,7 +8,7 @@ L'utilisateur, en ayant accès à ce site, s'engage à se conformer aux présent
 
 ### Mentions légales
 Ce site internet est la propriété Jaxio, S.A.R.L au capital de 10 000 euros, inscrite au R.C.S. de Paris sous le n° 483 935 714,
-TVA n° FR06 483 935 714 et dont le siège social se situe au 51 rue Le Peletier 75009 PARIS, France.
+TVA n° FR06 483 935 714 et dont le siège social se situe au 41 rue de Maubeuge, 75009 PARIS, France.
 
 ### Propriété intellectuelle
 Toute reproduction ou distribution non autorisée de tout ou partie des éléments et informations de ce site est interdite.
