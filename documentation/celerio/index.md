@@ -14,6 +14,7 @@ Its usage requires a commercial license.
 3. [Bootstrap](bootstrap.html)
 4. [Database Reverse Engineering](extraction.html)
 5. [Code Generation](generation.html)
+5. [Delete Generated Files](delete-generated-files.html)
 6. [Code Modification](modification.html)
 7. [Conventions](convention.html)
 8. [Configuration file](configuration-file.html)

@@ -47,7 +47,7 @@ You can configure it to be a different folder using the `${maven-celerio-plugin.
 
 The location of the generated Java file depend on the outputDir.
 
-When Celerio outputDir is the same as Maven baseDir, the Java files are generate under:
+When Celerio outputDir is the same as Maven baseDir, the Java files are generated under:
 
 * ${maven-celerio-plugin.outputDir}/src/main/generated-java
 * ${maven-celerio-plugin.outputDir}/src/test/generated-java
@@ -106,52 +106,56 @@ from all the manually written files.
 Simple Usage
 ------------
 
-In your pom.xml create a dedicated profile to execute the plugin.
+In your pom.xml create a dedicated profile to execute the plugin, then run:
+
+	mvn -Pgen generate-sources
+
+Here is the `gen` profile detail:
 
 {% highlight xml %}
-		<profile>
-			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-			<!-- Generate the code using Celerio -->
-			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-			<id>gen</id>
-			<build>
-				<defaultGoal>generate-sources</defaultGoal>
-				<plugins>
-					<plugin>
-						<groupId>com.jaxio.celerio</groupId>
-						<artifactId>maven-celerio-plugin</artifactId>
-						<version>${maven-celerio-plugin.version}</version>
-						<executions>
-							<execution>
-								<id>Generates files using the extracted database schema.</id>
-								<goals>
-									<goal>generate</goal>
-								</goals>
-							</execution>
-						</executions>
-						<dependencies>
-							<dependency>
-								<groupId>com.jaxio.celerio.packs</groupId>
-								<artifactId>backend-jpa</artifactId>
-								<version>${maven-celerio-plugin.version}</version>
-							</dependency>
-						</dependencies>
-					</plugin>
-				</plugins>
-			</build>
-			<repositories>
-				<repository>
-					<id>springfuse-repository</id>
-					<url>http://maven2.springfuse.com/</url>
-				</repository>
-			</repositories>
-			<pluginRepositories>
-				<pluginRepository>
-					<id>springfuse-repository</id>
-					<url>http://maven2.springfuse.com/</url>
-				</pluginRepository>
-			</pluginRepositories>
-		</profile>
+	<profile>
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- Generate the code using Celerio -->
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<id>gen</id>
+		<build>
+			<defaultGoal>generate-sources</defaultGoal>
+			<plugins>
+				<plugin>
+					<groupId>com.jaxio.celerio</groupId>
+					<artifactId>maven-celerio-plugin</artifactId>
+					<version>${maven-celerio-plugin.version}</version>
+					<executions>
+						<execution>
+							<id>Generates files using the extracted database schema.</id>
+							<goals>
+								<goal>generate</goal>
+							</goals>
+						</execution>
+					</executions>
+					<dependencies>
+						<dependency>
+							<groupId>com.jaxio.celerio.packs</groupId>
+							<artifactId>backend-jpa</artifactId>
+							<version>${maven-celerio-plugin.version}</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+			</plugins>
+		</build>
+		<repositories>
+			<repository>
+				<id>springfuse-repository</id>
+				<url>http://maven2.springfuse.com/</url>
+			</repository>
+		</repositories>
+		<pluginRepositories>
+			<pluginRepository>
+				<id>springfuse-repository</id>
+				<url>http://maven2.springfuse.com/</url>
+			</pluginRepository>
+		</pluginRepositories>
+	</profile>
 {% endhighlight %}
 
 
