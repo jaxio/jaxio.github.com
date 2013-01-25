@@ -5,8 +5,7 @@ title: Jaxio
 <!-- Main hero unit for a primary marketing message or call to action -->
 <div class="hero-unit">
     <h1>Celerio</h1>
-    <h3>La génération de code pour les humains</h3>
-	<p>Générez une application J2EE en quelques secondes</p>
+	<p>Générez une application Java EE en quelques secondes</p>
     <p><a href="https://github.com/jaxio/generated-projects" class="btn btn-primary btn-large">Exemple de
      code généré &raquo;</a></p>
 </div>

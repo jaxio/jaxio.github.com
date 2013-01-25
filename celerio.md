@@ -6,7 +6,7 @@ description: Celerio est une « Software Factory » qui permet d’automatiser e
 
 ## Fonctionnement et fonctionnalités de Celerio
 
-Celerio est un générateur de code conçu pour industrialiser le développement des applications orientées données.
+Celerio est un `générateur de code` conçu pour industrialiser le développement des `applications orientées données`.
 
 <p><img src="/images/green-check.gif"/>
 Pour fonctionner Celerio prend en 
@@ -21,13 +21,13 @@ Celerio interprète des templates de générations écrites en Velocity.</p>
 
 <p><img src="/images/green-check.gif"/>
 Jaxio fournit avec Celerio des templates de générations regroupées en packs 
-('Backend', 'SpringMVC3', 'JSF 2', etc...). Ces templates couvrent la majorité
+('Backend', 'JSF 2', etc...). Ces templates couvrent la majorité
 des problématiques rencontrées dans des applications orientées données.
 Ne cherchant pas à réinventer la roue, bien au contraire, le code Java généré
 par ces templates utilise les meilleures technologies Open Source en suivant 
 les meilleures pra­tiques.</p>
 
-Il est important de noter que Celerio n’est pas requis à l’exécution.
+Il est important de noter que `Celerio n’est pas requis à l’exécution`.
 
 <img src="/images/celerio/celerio-overview.png" width="100%"/>
 
@@ -80,7 +80,7 @@ La figure ci-dessus illustre le fonctionnement de Celerio et donne un aperçu de
 
 #### Pack 'JSF 2 & PrimeFaces'
 * Utilise le résultat du pack 'Backend'
-* Génération des conversations (Spring Web Flow)
+* Génération des conversations
 	* Ré-utilisation des conversations
 	* Utilisation du persistence contexte étendu
 * Génération des vues
