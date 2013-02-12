@@ -17,8 +17,12 @@ Voici la vidéo tant attendues (approx 3h en tout):
 * <a href="http://www.parleys.com/#st=5&id=3247&sl=0">Introducation à Cassandra part 2/3</a>
 * <a href="http://www.parleys.com/#st=5&id=3261&sl=0">Introducation à Cassandra part 3/3</a>
 
-Et voici les slides qui vont avec:
+Voici les slides qui vont avec:
 
 * <a href="http://fr.slideshare.net/jaxio/introduction-cassandra-12617269">Slides Intro à Cassandra</a> 
+
+Et enfin un article très sympa retraçant:
+
+* <a href="http://www.unchticafe.fr/2012/04/histoire-dune-cassandra-lan-party.html">L'histoire de cette Cassandra LAN party</a>
 
 Enjoy!
