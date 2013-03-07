@@ -24,7 +24,7 @@ Ne cherchant pas à réinventer la roue, bien au contraire, le code Java gén
 par ces templates utilise les meilleures technologies Open Source en suivant 
 les meilleures pra­tiques.
 
-![great](/images/green-check.gif) Les templates de générations proposées par Jaxio peuvent être édités et bien entendu
+![great](/images/green-check.gif) Les templates de générations proposées par Jaxio peuvent être éditées et bien entendu
 d'autres templates de de générations peuvent être développées soit par vous-même soit par Jaxio. 
 
 ![great](/images/green-check.gif) Il est important de noter que `Celerio n’est pas requis à l’exécution`.
