@@ -6,7 +6,7 @@ title: Jaxio
 <div class="hero-unit">
     <h1>Celerio</h1>
     <h3>Code generation for humans</h3>
-	<p>Generate full J2EE web application stack in seconds</p>
+	<p>Generate full Java EE web application stack in seconds</p>
     <p><a href="https://github.com/jaxio/generated-projects/tree/master/" class="btn btn-primary btn-large">Show me some code example &raquo;</a></p>
 </div>
 
