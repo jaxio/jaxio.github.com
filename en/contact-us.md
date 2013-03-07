@@ -10,7 +10,9 @@ title: Jaxio contact
 <div class="row">
 <div class="span4">
 	<p>
-	Phone: +33 (0)6 18 65 03 89
+	Phone (from France): 06 18 65 03 89
+	<br/>
+	Phone (out of France): +33 6 18 65 03 89
 	<br/>
 	Email: <a href="mailto:info@jaxio.com">info@jaxio.com</a>
 	</p>

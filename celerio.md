@@ -8,26 +8,26 @@ description: Celerio est une « Software Factory » qui permet d’automatiser e
 
 Celerio est un `générateur de code` conçu pour industrialiser le développement des `applications orientées données`.
 
-<p><img src="/images/green-check.gif"/>
-Pour fonctionner Celerio prend en 
+![great](/images/green-check.gif) Pour fonctionner Celerio prend en 
 entrée le modèle le plus classique qui soit, le modèle entité­-relation utilisé 
 par toutes les bases de données relationnelles. Ce modèle est extrait par "reverse engineering" 
-en se connectant à la base de données relationnelle cible (Oracle, My Sql, DB2, etc.).</p>
+en se connectant à la base de données relationnelle cible (Oracle, My Sql, DB2, etc.).
 
-<p><img src="/images/green-check.gif"/>
-A partir de ce modèle qui est bien connu et maitrisé des développeurs, mais aussi 
+![great](/images/green-check.gif) A partir de ce modèle qui est bien connu et maitrisé des développeurs, mais aussi 
 d'un fichier de configuration permettant de rafiner le modèle (renommage, héritage, etc.),
-Celerio interprète des templates de générations écrites en Velocity.</p>
+Celerio interprète des templates de générations écrites en Velocity.
 
-<p><img src="/images/green-check.gif"/>
-Jaxio fournit avec Celerio des templates de générations regroupées en packs 
+![great](/images/green-check.gif) Jaxio fournit avec Celerio des templates de générations regroupées en packs 
 ('Backend', 'JSF 2', etc...). Ces templates couvrent la majorité
 des problématiques rencontrées dans des applications orientées données.
 Ne cherchant pas à réinventer la roue, bien au contraire, le code Java généré
 par ces templates utilise les meilleures technologies Open Source en suivant 
-les meilleures pra­tiques.</p>
+les meilleures pra­tiques.
 
-Il est important de noter que `Celerio n’est pas requis à l’exécution`.
+![great](/images/green-check.gif) Les templates de générations proposées par Jaxio peuvent être édités et bien entendu
+d'autres templates de de générations peuvent être développées soit par vous-même soit par Jaxio. 
+
+![great](/images/green-check.gif) Il est important de noter que `Celerio n’est pas requis à l’exécution`.
 
 <img src="/images/celerio/celerio-overview.png" width="100%"/>
 
@@ -89,6 +89,8 @@ La figure ci-dessus illustre le fonctionnement de Celerio et donne un aperçu de
 * Sécurité avec Spring Security
 * etc.
 
+Voir le billet <a href="http://www.springfuse.com/2013/03/05/jsf2-conversation.html">Conversation with JSF2</a> publié sur le blog de SpringFuse.  
+
 #### Pack 'Spring MVC 3 & JQuery'
 * Utilise le résultat du pack 'Backend'
 * Génération des controlleurs
@@ -101,7 +103,5 @@ La figure ci-dessus illustre le fonctionnement de Celerio et donne un aperçu de
 	* Layout avec BluePrint Css
 * Sécurité avec Spring Security
 
-<p>Voir aussi le billet "<a href="http://www.springfuse.com/2011/05/04/generate-spring-mvc3-jquery-jpa2-crud-applications.html">Generate Spring MVC3, JQuery, JPA2 CRUD Application</a>" publié sur le blog de SpringFuse.</p>
+Voir le billet <a href="http://www.springfuse.com/2011/05/04/generate-spring-mvc3-jquery-jpa2-crud-applications.html">Generate Spring MVC3, JQuery, JPA2 CRUD Application</a> publié sur le blog de SpringFuse.
 
-
-Voir aussi le billet "<a href="http://www.springfuse.com/2011/01/04/springfuse-generates-primefaces-with-spring-webflow-frontend.html">Springfuse generates Primefaces with Spring Web Flow front end</a>" publié sur le blog de SpringFuse.  

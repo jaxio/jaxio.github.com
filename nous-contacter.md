@@ -10,11 +10,12 @@ description: Contactez nous via mail, téléphone et formulaire
 
 <div class="row">
 <div class="span4">
-	<p>
-	Téléphone: +33 (0)6 18 65 03 89
-	<br/>
-	Email: <a href="mailto:info@jaxio.com">info@jaxio.com</a>
-	</p>
+	
+<p>Depuis la France: 06 18 65 03 89</p>
+
+<p>Depuis l'étranger: +33 6 18 65 03 89</p>
+
+<p>Email: <a href="mailto:info@jaxio.com">info@jaxio.com</a></p>
 </div>
 <div class="span4">
 	<p>JAXIO SARL

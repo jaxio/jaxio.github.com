@@ -19,7 +19,9 @@ Springfuse, permet d'évaluer le code généré par Celerio.
 
 ### Fondateurs
 
-#### Nicolas Romanetti - Président
+<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+ 
+#### <script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/nromanetti" data-format="hover"></script> Nicolas Romanetti - Président
 
 Nicolas a plus de dix années d'expérience dans le développement logiciel et la conduite de projets informatiques.
 Il a passé plusieurs années aux Etats-Unis dans la Silicon Valley où il a travaillé pour deux éditeurs de logiciels.
@@ -27,7 +29,9 @@ Il a passé plusieurs années aux Etats-Unis dans la Silicon Valley où il a tra
 A son retour en France, il a travaillé en tant que consultant indépendant avant de fonder Jaxio avec Florent.
 Nicolas est diplomé de Télécom Paris.
 
-#### Florent Ramière - Responsable Technologique
+<a href="https://twitter.com/nromanetti" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @nromanetti</a>
+
+#### <script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/framiere" data-format="hover"></script> Florent Ramière - Responsable Technologique
 
 Florent a plus de dix années d'expérience dans la conception et l'architecture d'applications logicielles.
 Il a passé plusieurs années aux Etats-Unis comme Senior Software Engineer et Project Manager sur des projets internationaux.
@@ -35,3 +39,6 @@ Il a passé plusieurs années aux Etats-Unis comme Senior Software Engineer et P
 A son retour en France, il a travaillé pour Capgemini comme Responsable de Projets.
 Florent est diplomé de l'Epita.
 
+<a href="https://twitter.com/framiere" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @framiere</a>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
