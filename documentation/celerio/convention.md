@@ -202,6 +202,106 @@ the web tier to the persistence layer.
 This convention will allow you to upload a file transparently, save it
 to the corresponding table, then download it using a simple URL.
 
+## File Upload and Download
+
+When the following columns are present simultaneously in a
+table, Celerio generates various helper methods to ease file
+manipulation from the web tier to the persistence layer.
+
+* 'prefix'\_file\_name (String)
+* 'prefix'\_content\_type (String)
+* 'prefix'\_size or 'prefix'\_length or 'prefix'\_content\_length (int)
+* 'prefix'\_binary or 'prefix'\_content or 'prefix'\_blob or  (blob)
+
+Example: Here is the corresponding SQL code using 'mydoc' as a 'prefix'
+
+{% highlight sql %}
+    mydoc_content_type      varchar(255)    not null,
+    mydoc_size              integer         not null,
+    mydoc_file_name         varchar(255)    not null,
+    mydoc_binary            bytea,
+{% endhighlight %}
+
+This convention allows you to upload a file transparently, 
+save it to the corresponding table, then download it using a simple URL.
+
+
+<a name="conventions-audit-entity"></a>
+## Auditing entity
+
+When the following columns are present simultaneously in a
+table, Celerio will use these columns to save the creation and last update using jpa listeners.
+
+* creationAuthor, creationBy, creePar (Date)
+* creationDate, dateCreation (Date)
+* lastModificationAuthor, lastModificationAt, derniereModificationPar, modifiePar (String)
+* lastModificationDate, dateDerniereModification, derniereModification (String)
+
+Example: 
+
+{% highlight sql %}
+    creation_date            timestamp,
+    creation_author          varchar(200),
+    last_modification_date   timestamp,
+    last_modification_author varchar(200),
+{% endhighlight %}
+
+<a name="conventions-audit-table"></a>
+## Audit table
+
+When the following columns are present simultaneously in a
+table, Celerio will use these columns to save the creation and last update using jpa listeners.
+
+The table should be called either
+
+* audit
+* audit_log
+* audit_trail
+
+The table should contain the following columns
+
+* author‚ auteur (String)
+* event (String)
+* eventDate (Date)
+* stringAttribute1, attribute1, string1 (String)
+* stringAttribute2, attribute2, string2 (String)
+* stringAttribute3, attribute3, string3 (String)
+
+
+<a name="conventions-saved-search"></a>
+## Saved search table
+
+When the following columns are present simultaneously in a
+table, Celerio will use these columns to propose the user to save its searches
+
+The table should be called either
+
+* saved_search
+* saved_search_form
+
+The table should contain the following columns
+
+* formClass, formClassname (String)
+* name (String)
+* formContent (blob)
+* creationAuthor, creationBy, creePar, accountId (fk to account)
+
+Example: 
+
+{% highlight sql %}
+CREATE TABLE SAVED_SEARCH (
+    id                            int not null IDENTITY,
+    name                          varchar(128) not null,
+    form_classname                varchar(256) not null,
+    form_content                  bytea,
+    account_id                    char(36) not null,
+
+    constraint saved_search_fk_1 foreign key (account_id) references ACCOUNT,
+    primary key (id)
+);
+{% endhighlight %}
+
+
 ACCOUNT\_ID column & Hibernate Filter
 -------------------------------------
 
