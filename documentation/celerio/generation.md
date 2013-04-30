@@ -14,17 +14,13 @@ The code generation step is performed by the `generate` goal of the
 
 The code generation step is driven by several factors:
 
--   *The database meta data:* It serves as a main entry model. The
+*   *The database meta data:* It serves as a main entry model. The
     various column's constraints such as `NOT NULL` , the foreign keys,
     etc. are exploited by Celerio in the code generation process.
-
--   *Celerio conventions*
-
--   *Celerio configuration*
-
--   *Celerio template packs*
-
--   *Generated code modifications*
+*   *Celerio conventions*
+*   *Celerio configuration*
+*   *Celerio template packs*
+*   *Generated code modifications*
 
 ![Source code generation is driven by several
 factors](images/celerio-generation.png)
