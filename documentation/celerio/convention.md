@@ -16,22 +16,22 @@ download in your web application, in an optimal way.
 Camel case conventions
 ----------------------
 
-### Underscore '\_' Enables Java Camel Case Syntax
+### Underscore '_' Enables Java Camel Case Syntax
 
 'Camel Case' syntax is standard Java code convention. When Celerio
-encounters the character underscore '\_' in a table’s name or a column’s
+encounters the character underscore '_' in a table’s name or a column’s
 name, it skips it and converts to upper case the next character when
 generating classes, variables or methods related to this table, or
 column.
 
-For example, if your table name is BOOK\_COMMENT , the generated entity
+For example, if your table name is BOOK_COMMENT , the generated entity
 class will be named BookComment ; a variable holding BookComment
 instance will be named `bookComment` and a setter will be named
 setBookComment , etc.
 
 ### Native camel case support
 
-If your table's and/or column's name use a camelCase syntax AND if the
+If your table's and/or Column use a camelCase syntax AND if the
 JDBC driver preserves this syntax, then Celerio takes it into account
 when generating classes, variables or methods related to this table, or
 column.
@@ -56,7 +56,7 @@ Each numerical primary key column is mapped with `@GeneratedValue` and
 > **Important**
 >
 > If your database does not support identity columns, you should create
-> the sequence 'hibernate\_sequence'. Please refer to Hibernate
+> the sequence 'hibernate_sequence'. Please refer to Hibernate
 > reference documentation for more advanced alternatives.
 
 ### Primary Keys with 32 characters
@@ -65,9 +65,11 @@ By convention, for all primary keys that are char(32), Celerio maps the
 column with the following annotations
 
 {% highlight java %}
+
 @GeneratedValue(generator = "strategy-uuid")
 @GenericGenerator(name = "strategy-uuid", strategy = "uuid")
 @Id
+
 {% endhighlight %}
 
 annotations. so it uses Hibernate's UUIDHexGenerator. Therefore no
@@ -91,12 +93,26 @@ information in the current thread.
 Celerio detects automatically your 'Account' table. An account table
 candidate is expected to have at least the following columns:
 
-  Column's name                                                         Mapped Java Type   Description
-  --------------------------------------------------------------------- ------------------ ----------------------------------------------------------------------------------
-  "username" OR "login" OR "user\_name" OR "identifiant"                String             Login used by the end user to authenticate to this web application
-  "password" OR "pwd" OR "passwd" OR "mot\_de\_passe" OR "motdepasse"   String             Password (in clear) used by the end user to authenticate to this web application
+<table class="table">
+  <thead>
+    <tr>
+  		<th>Column</th>
+    	<th>Mapped Java Type</th>
+    	<th>Description</th>
+		</tr>
+	</thead>
+  <tr>
+		<td>"username" OR "login" OR "user_name" OR "identifiant"</td>
+		<td>String</td>
+		<td>Login used by the end user to authenticate to this web application</td>
+	</tr>
+  <tr>
+		<td>"password" OR "pwd" OR "passwd" OR "mot_de_passe" OR "motdepasse"</td>
+		<td>String</td>
+		<td>Password (in clear) used by the end user to authenticate to this web application</td>
+	</tr>
+</table>
 
-  : Account table conditions
 
 If no Account table candidate is found, Celerio will do as if it had
 found one and will generate a mock Account DAO implementation that
@@ -116,41 +132,52 @@ be detected by Celerio, it must have a many-to-many or a many-to-one
 relationship with the found 'Account' table and contain the following
 mandatory column:
 
-  Column's name                                             Mapped Java Type   Description
-  --------------------------------------------------------- ------------------ ------------------------------------------------------------------------------------------
-  "authority" OR "role\_name" OR "role" OR "name\_locale"   String             The generated code relies on the following authority's values: `ROLE_USER`, `ROLE_ADMIN`
-
-  : Role table conditions
+<table class="table">
+  <thead>
+    <tr>
+  		<th>Column</th>
+    	<th>Mapped Java Type</th>
+    	<th>Description</th>
+		</tr>
+	</thead>
+  <tr>
+		<td>"authority" OR "role_name" OR "role" OR "name_locale"</td>
+		<td>String</td>
+		<td>The generated code relies on the following authority's values: `ROLE_USER`, `ROLE_ADMIN`</td>
+	</tr>
+</table>
 
 Here is a sample SQL script (H2 Database) that complies to Celerio
 conventions
 
 {% highlight sql %}
-    CREATE TABLE ACCOUNT (
-        account_id char(32) not null, login
-        varchar(255) not null,
-        password varchar(255) not null,
-        email varchar(255) not null,
 
-        constraint account_unique_1 unique (login),
-        constraint account_unique_2 unique (email),
-        primary key (account_id)
-    );
-    CREATE TABLE ROLE (
-        role_id smallint generated by default as identity,
-        name_locale varchar(255) not null,
+CREATE TABLE ACCOUNT (
+    account_id char(32) not null, login
+    varchar(255) not null,
+    password varchar(255) not null,
+    email varchar(255) not null,
 
-        constraint role_unique_1 unique (name_locale),
-        primary key (role_id) 
-    );
-    CREATE TABLE ACCOUNT_ROLE (
-        account_id char(32) not null,
-        role_id smallint not null,
+    constraint account_unique_1 unique (login),
+    constraint account_unique_2 unique (email),
+    primary key (account_id)
+);
+CREATE TABLE ROLE (
+    role_id smallint generated by default as identity,
+    name_locale varchar(255) not null,
 
-        constraint account_role_fk_1 foreign key (account_id) references ACCOUNT,
-        constraint account_role_fk_2 foreign key (role_id) references ROLE,
-        primary key (account_id, role_id) 
-    );
+    constraint role_unique_1 unique (name_locale),
+    primary key (role_id) 
+);
+CREATE TABLE ACCOUNT_ROLE (
+    account_id char(32) not null,
+    role_id smallint not null,
+
+    constraint account_role_fk_1 foreign key (account_id) references ACCOUNT,
+    constraint account_role_fk_2 foreign key (role_id) references ROLE,
+    primary key (account_id, role_id) 
+);
+
 {% endhighlight %}
 
 Other optional account's columns
@@ -162,22 +189,41 @@ If the detected Account table has an email column, it is used by the
 generated code in few places, mostly as an illustration of the
 EmailService usage.
 
-  Column's name                                       Mapped Java Type   Description
-  --------------------------------------------------- ------------------ -------------------
-  "email", "email\_address", "emailAddress", "mail"   String             The user's email.
+<table class="table">
+  <thead>
+    <tr>
+    	<th>Column</th>
+    	<th>Mapped Java Type</th>
+    	<th>Description</th>
+		</tr>
+	</thead>
+  <tr>
+		<td>"email", "email_address", "emailAddress", "mail"</td>
+		<td>String</td>
+		<td>The user's email</td>
+	</tr>
+</table>
 
-  : Account's table email column conditions
 
 ### The Enabled column
 
 If the detected Account table has an enabled column, it is used by the
 generated code related to Spring Security integration.
 
-  Column's name                               Mapped Java Type   Description
-  ------------------------------------------- ------------------ -------------------------------------------------
-  "enabled" OR "is\_enabled" OR "isenabled"   Boolean            Only enabled users (enabled == true) can login.
-
-  : Account's table enabled column conditions
+<table class="table">
+  <thead>
+    <tr>
+      <th>Column</th>
+    	<th>Mapped Java Type</th>
+    	<th>Description</th>
+		</tr>
+	</thead>
+  <tr>
+		<td>"enabled" OR "is_enabled" OR "isenabled"</td>
+		<td>Boolean</td>
+		<td>Only enabled users (enabled == true) can login.</td>
+	</tr>
+</table>
 
 <a name="conventions-file-download"></a>
 ## File Upload and Download
@@ -186,18 +232,45 @@ When the following columns are present simultaneously in a
 table, Celerio generates various helper methods to ease file
 manipulation from the web tier to the persistence layer.
 
-* 'prefix'\_file\_name (String)
-* 'prefix'\_content\_type (String)
-* 'prefix'\_size or 'prefix'\_length or 'prefix'\_content\_length (int)
-* 'prefix'\_binary or 'prefix'\_content or 'prefix'\_blob or  (blob)
+<table class="table">
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Mapped Java Type</th>
+    	<th>Description</th>
+		</tr>
+	</thead>
+  <tr>
+  	<td>'prefix'_file_name</td>
+		<td>Boolean</td>
+		<td>File name</td>
+	</tr>
+  <tr>
+  	<td>'prefix'_size or 'prefix'_length or 'prefix'_content_length</td>
+		<td>Int</td>
+		<td>Length of the binary</td>
+	</tr>
+  <tr>
+    <td>'prefix'_content_type</td>
+  	<td>String</td>
+		<td>Content type of the file</td>
+	</tr>
+  <tr>
+    <td>'prefix'_binary or 'prefix'_content or 'prefix'_blob</td>
+  	<td>Blob</td>
+		<td>Binary content of the file</td>
+	</tr>
+</table>
 
 Example: Here is the corresponding SQL code using 'mydoc' as a 'prefix'
 
 {% highlight sql %}
+
 mydoc_content_type      varchar(255)    not null,
 mydoc_size              integer         not null,
 mydoc_file_name         varchar(255)    not null,
 mydoc_binary            bytea,
+
 {% endhighlight %}
 
 This convention allows you to upload a file transparently, 
@@ -210,18 +283,46 @@ save it to the corresponding table, then download it using a simple URL.
 When the following columns are present simultaneously in a
 table, Celerio will use these columns to save the creation and last update using jpa listeners.
 
-* creationAuthor, creationBy, creePar (Date)
-* creationDate, dateCreation (Date)
-* lastModificationAuthor, lastModificationAt, derniereModificationPar, modifiePar (String)
-* lastModificationDate, dateDerniereModification, derniereModification (String)
+<table class="table">
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Mapped Java Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>creation_author, creation_by, cree_par</td>
+    <td>String</td>
+    <td>Creation author id</td>
+  </tr>
+  <tr>
+    <td>creation_date, date_creation</td>
+    <td>Date</td>
+    <td>Creation date</td>
+  </tr>
+  <tr>
+    <td>last_modification_author, last_modification_at, derniere_modification_par, modifie_par</td>
+    <td>String</td>
+    <td>Last modification author id</td>
+  </tr>
+  <tr>
+    <td>last_modification_date, date_derniere_modification, derniere_modification</td>
+    <td>Date</td>
+    <td>Last modification date</td>
+  </tr>
+</table>
+
 
 Example: 
 
 {% highlight sql %}
+
 creation_date            timestamp,
 creation_author          varchar(200),
 last_modification_date   timestamp,
 last_modification_author varchar(200),
+
 {% endhighlight %}
 
 <a name="conventions-audit-table"></a>
@@ -238,13 +339,40 @@ The table should be called either
 
 The table should contain the following columns
 
-* author‚ auteur (String)
-* event (String)
-* eventDate (Date)
-* stringAttribute1, attribute1, string1 (String)
-* stringAttribute2, attribute2, string2 (String)
-* stringAttribute3, attribute3, string3 (String)
-
+<table class="table">
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Mapped Java Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>author‚ auteur</td>
+    <td>String</td>
+    <td>Account id</td>
+  </tr>
+  <tr>
+    <td>event</td>
+    <td>String</td>
+    <td>event type</td>
+  </tr>
+  <tr>
+    <td>string_attribute_1, attribute_1, string_1</td>
+    <td>String</td>
+    <td>First attribute</td>
+  </tr>
+  <tr>
+    <td>string_attribute_2, attribute_2, string_2</td>
+    <td>String</td>
+    <td>Second attribute</td>
+  </tr>
+  <tr>
+    <td>string_attribute_3, attribute_3, string_3</td>
+    <td>String</td>
+    <td>Third attribute</td>
+  </tr>
+</table>
 
 <a name="conventions-saved-search"></a>
 ## Saved search table
@@ -259,14 +387,40 @@ The table should be called either
 
 The table should contain the following columns
 
-* formClass, formClassname (String)
-* name (String)
-* formContent (blob)
-* creationAuthor, creationBy, creePar, accountId (fk to account)
+<table class="table">
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Mapped Java Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>form_class, form_classname</td>
+    <td>String</td>
+    <td>Fully qualified name of the search form type</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>String</td>
+    <td>Name given to the saved search</td>
+  </tr>
+  <tr>
+    <td>form_content</td>
+    <td>blob</td>
+    <td>Serialized form of the search</td>
+  </tr>
+  <tr>
+    <td>account_id</td>
+    <td>String</td>
+    <td>FK linked to Account (not required)</td>
+  </tr>
+</table>
 
 Example: 
 
 {% highlight sql %}
+
 CREATE TABLE SAVED_SEARCH (
     id                            int not null IDENTITY,
     name                          varchar(128) not null,
@@ -277,15 +431,16 @@ CREATE TABLE SAVED_SEARCH (
     constraint saved_search_fk_1 foreign key (account_id) references ACCOUNT,
     primary key (id)
 );
+
 {% endhighlight %}
 
 
-ACCOUNT\_ID column & Hibernate Filter
+ACCOUNT_ID column & Hibernate Filter
 -------------------------------------
 
 When a table contains a foreign key pointing to the Account table,
 Celerio assumes that the content of this table belongs to the user
-represented by the account\_id foreign key.
+represented by the account_id foreign key.
 
 An hibernate filter is configured to make sure that this table is loaded
 only by the current user.
