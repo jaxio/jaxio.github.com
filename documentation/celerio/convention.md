@@ -125,6 +125,7 @@ mandatory column:
 Here is a sample SQL script (H2 Database) that complies to Celerio
 conventions
 
+{% highlight sql %}
     CREATE TABLE ACCOUNT (
         account_id char(32) not null, login
         varchar(255) not null,
@@ -150,6 +151,7 @@ conventions
         constraint account_role_fk_2 foreign key (role_id) references ROLE,
         primary key (account_id, role_id) 
     );
+{% endhighlight %}
 
 Other optional account's columns
 --------------------------------
@@ -177,31 +179,7 @@ generated code related to Spring Security integration.
 
   : Account's table enabled column conditions
 
-Special columns for file handling support
------------------------------------------
-
-When the following columns are present simultaneously in a table,
-Celerio generates various helper methods to ease file manipulation from
-the web tier to the persistence layer.
-
--   'prefix'\_FILE\_NAME (String)
-
--   'prefix'\_CONTENT\_TYPE (String)
-
--   'prefix\_SIZE or 'prefix'\_LENGTH (int)
-
--   'prefix'\_BINARY (blob)
-
-<!-- -->
-
-    mydoc_content_type       varchar(255)    not null,
-    mydoc_size               integer         not null,
-    mydoc_file_name          varchar(255)    not null,
-    mydoc_binary             bytea,
-
-This convention will allow you to upload a file transparently, save it
-to the corresponding table, then download it using a simple URL.
-
+<a name="conventions-file-download"></a>
 ## File Upload and Download
 
 When the following columns are present simultaneously in a
@@ -216,10 +194,10 @@ manipulation from the web tier to the persistence layer.
 Example: Here is the corresponding SQL code using 'mydoc' as a 'prefix'
 
 {% highlight sql %}
-    mydoc_content_type      varchar(255)    not null,
-    mydoc_size              integer         not null,
-    mydoc_file_name         varchar(255)    not null,
-    mydoc_binary            bytea,
+mydoc_content_type      varchar(255)    not null,
+mydoc_size              integer         not null,
+mydoc_file_name         varchar(255)    not null,
+mydoc_binary            bytea,
 {% endhighlight %}
 
 This convention allows you to upload a file transparently, 
@@ -240,10 +218,10 @@ table, Celerio will use these columns to save the creation and last update using
 Example: 
 
 {% highlight sql %}
-    creation_date            timestamp,
-    creation_author          varchar(200),
-    last_modification_date   timestamp,
-    last_modification_author varchar(200),
+creation_date            timestamp,
+creation_author          varchar(200),
+last_modification_date   timestamp,
+last_modification_author varchar(200),
 {% endhighlight %}
 
 <a name="conventions-audit-table"></a>
