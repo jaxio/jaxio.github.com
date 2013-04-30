@@ -74,16 +74,13 @@ Skeleton files
 
 In general, the minimal files include at least:
 
--   `pom.xml` : A complete Maven2 POM file.
-
--   `src/main/sql/h2/01-create.sql` : an SQL script to create, init and
+*   `pom.xml` : A complete Maven2 POM file.
+*   `src/main/sql/h2/01-create.sql` : an SQL script to create, init and
     drop a local H2 database. This is an example database that Celerio
     is going to reverse.
-
--   `src/main/config/maven-celerio-plugin/maven-celerio-plugin.xml` : A
+*   `src/main/config/maven-celerio-plugin/maven-celerio-plugin.xml` : A
     Celerio's configuration file.
-
--   `src/main/config/maven-celerio-plugin/celerio-template-packs.xml` : A
+*   `src/main/config/maven-celerio-plugin/celerio-template-packs.xml` : A
     Celerio's configuration file.
 
 Reverse, generate and run
@@ -98,14 +95,11 @@ Celerio.
 
 You are now ready to
 
--   create the database out of the sample SQL script provided,
-
--   reverse this database schema and generate the corresponding source
+*   create the database out of the sample SQL script provided,
+*   reverse this database schema and generate the corresponding source
     code and configuration files,
-
--   build the generated project,
-
--   and run the resulting web application!
+*   build the generated project,
+*   and run the resulting web application!
 
 To do so, from your project folder execute the Maven command printed on
 the console, for example:
