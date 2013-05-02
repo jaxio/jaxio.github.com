@@ -287,6 +287,15 @@ was present by setting the `targetTableName` attribute of the
 <columnConfig columnName="address_id" targetTableName="ADDRESS"/>
 {% endhighlight %}
 
+
+@ManyToOne and @OneToMany with composite foreign key
+----------------------------------------------------
+
+By default, Celerio generates the code for a `@ManyToOne` association
+when it encounters a composite foreign key.
+
+The `manyToOneConfig` should be a child of the columnConfig corresponding to the first column of the composite foreign key.
+
 @OneToMany
 ----------
 
@@ -351,6 +360,19 @@ public void addResident(Account resident) {
 The `oneToManyConfig` element also allows you to tune the JPA fetch type
 and the JPA cascade types. Please refer to the XSD for more information.
 
+
+@ManyToOne and @OneToMany with composite foreign key
+----------------------------------------------------
+
+By default, Celerio generates the code for a `@ManyToOne` association
+when it encounters a composite foreign key.
+
+The `manyToOneConfig` should be a child of the columnConfig corresponding to the **first column of the composite foreign key**.
+
+As for regular @OneToMany, you can use the `oneToManyConfig` element to generate the inverse association. 
+Do not forget to set the `associationDirection` attribute of the `columnConfig` element to `BIDIRECTIONAL`
+
+
 @OneToOne
 ---------
 
@@ -412,3 +434,5 @@ the association. For example:
 > In case Celerio does not detect the join table, for example if an
 > extra column is present, you can force it by setting to `true` the
 > `middleTable` attribute of the `entityConfig` element.
+
+
