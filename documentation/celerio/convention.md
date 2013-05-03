@@ -97,21 +97,21 @@ candidate is expected to have at least the following columns:
 <table class="table">
   <thead>
     <tr>
-  		<th>Column</th>
-    	<th>Mapped Java Type</th>
-    	<th>Description</th>
-		</tr>
-	</thead>
+      <th>Column</th>
+      <th>Mapped Java Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
   <tr>
-		<td>"username" OR "login" OR "user_name" OR "identifiant"</td>
-		<td>String</td>
-		<td>Login used by the end user to authenticate to this web application</td>
-	</tr>
+    <td>`username`, `login`, `user_name`, or `identifiant`</td>
+    <td>String</td>
+    <td>Login used by the end user to authenticate to this web application</td>
+  </tr>
   <tr>
-		<td>"password" OR "pwd" OR "passwd" OR "mot_de_passe" OR "motdepasse"</td>
-		<td>String</td>
-		<td>Password (in clear) used by the end user to authenticate to this web application</td>
-	</tr>
+    <td>`password`, `pwd`, `passwd`, `mot_de_passe`, `motdepasse`</td>
+    <td>String</td>
+    <td>Password (in clear) used by the end user to authenticate to this web application</td>
+  </tr>
 </table>
 
 
