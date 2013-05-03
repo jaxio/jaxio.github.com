@@ -19,7 +19,7 @@ Camel case conventions
 ### Underscore '_' Enables Java Camel Case Syntax
 
 'Camel Case' syntax is standard Java code convention. When Celerio
-encounters the character underscore '_' in a table’s name or a column’s
+encounters the character underscore `_` in a table’s name or a column’s
 name, it skips it and converts to upper case the next character when
 generating classes, variables or methods related to this table, or
 column.
@@ -31,7 +31,7 @@ instance will be named `bookComment` and a setter will be named
 
 ### Native camel case support
 
-If your table's and/or Column use a camelCase syntax and if the
+If your table's and/or Column use a camel case syntax and if the
 JDBC driver preserves this syntax, then Celerio takes it into account
 when generating classes, variables or methods related to this table, or
 column.
@@ -56,7 +56,7 @@ Each numerical primary key column is mapped with `@GeneratedValue` and
 > **Important**
 >
 > If your database does not support identity columns, you should create
-> the sequence 'hibernate_sequence'. Please refer to Hibernate
+> the sequence `hibernate_sequence`. Please refer to Hibernate
 > reference documentation for more advanced alternatives.
 
 ### Primary Keys with 32 characters
@@ -72,7 +72,7 @@ column with the following annotations
 
 {% endhighlight %}
 
-As it uses Hibernate's UUIDHexGenerator, no sequence is needed for these primary keys.
+As it uses Hibernate's `UUIDHexGenerator`, no sequence is needed for these primary keys.
 
 ### Other Primary Keys
 
@@ -126,28 +126,27 @@ implementation with your own implementation.
 The 'Role' table
 ----------------
 
-The Role table is a special table that contains the account's roles. To
+The `Role` table is a special table that contains the account's roles. To
 be detected by Celerio, it must have a many-to-many or a many-to-one
-relationship with the found 'Account' table and contain the following
+relationship with the found `Account` table and contain the following
 mandatory column:
 
 <table class="table">
   <thead>
     <tr>
-  		<th>Column</th>
-    	<th>Mapped Java Type</th>
-    	<th>Description</th>
-		</tr>
-	</thead>
+      <th>Column</th>
+      <th>Mapped Java Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
   <tr>
-		<td>"authority" OR "role_name" OR "role" OR "name_locale"</td>
-		<td>String</td>
-		<td>The generated code relies on the following authority's values: `ROLE_USER`, `ROLE_ADMIN`</td>
-	</tr>
+    <td>`authority` OR `role_name` OR `role` OR `name_locale`</td>
+    <td>String</td>
+    <td>The generated code relies on the following authority's values: `ROLE_USER`, `ROLE_ADMIN`</td>
+   </tr>
 </table>
 
-Here is a sample SQL script (H2 Database) that complies to Celerio
-conventions
+Here is a sample SQL script (H2 Database) that complies to Celerio conventions
 
 {% highlight sql %}
 
@@ -184,23 +183,23 @@ Other optional account's columns
 
 ### The Email column
 
-If the detected Account table has an email column, it is used by the
+If the detected `Account` table has an email column, it is used by the
 generated code in few places, mostly as an illustration of the
 EmailService usage.
 
 <table class="table">
   <thead>
     <tr>
-    	<th>Column</th>
-    	<th>Mapped Java Type</th>
-    	<th>Description</th>
-		</tr>
-	</thead>
+      <th>Column</th>
+      <th>Mapped Java Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
   <tr>
-		<td>"email", "email_address", "emailAddress", "mail"</td>
-		<td>String</td>
-		<td>The user's email</td>
-	</tr>
+    <td>`email`, `email_address`, `emailAddress`, `mail`</td>
+    <td>String</td>
+    <td>The user's email</td>
+  </tr>
 </table>
 
 
@@ -213,15 +212,15 @@ generated code related to Spring Security integration.
   <thead>
     <tr>
       <th>Column</th>
-    	<th>Mapped Java Type</th>
-    	<th>Description</th>
-		</tr>
-	</thead>
+      <th>Mapped Java Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
   <tr>
-		<td>"enabled" OR "is_enabled" OR "isenabled"</td>
-		<td>Boolean</td>
-		<td>Only enabled users (enabled == true) can login.</td>
-	</tr>
+    <td>`enabled`, `is_enabled`, `isenabled`</td>
+    <td>Boolean</td>
+    <td>Only enabled users (enabled == true) can login.</td>
+  </tr>
 </table>
 
 <a name="conventions-file-download"></a>
@@ -236,32 +235,32 @@ manipulation from the web tier to the persistence layer.
     <tr>
       <th>Column</th>
       <th>Mapped Java Type</th>
-    	<th>Description</th>
-		</tr>
-	</thead>
+      <th>Description</th>
+    </tr>
+  </thead>
   <tr>
-  	<td><i>prefix</i>_file_name</td>
-		<td>Boolean</td>
-		<td>File name</td>
-	</tr>
+    <td><i>prefix</i>_file_name</td>
+    <td>Boolean</td>
+    <td>File name</td>
+  </tr>
   <tr>
-  	<td><i>prefix</i>_size or <i>prefix</i>_length or <i>prefix</i>_content_length</td>
-		<td>Int</td>
-		<td>Length of the binary</td>
-	</tr>
+    <td><i>prefix</i>_size or <i>prefix</i>_length or <i>prefix</i>_content_length</td>
+    <td>Int</td>
+    <td>Length of the binary</td>
+  </tr>
   <tr>
     <td><i>prefix</i>_content_type</td>
-  	<td>String</td>
-		<td>Content type of the file</td>
-	</tr>
+    <td>String</td>
+    <td>Content type of the file</td>
+  </tr>
   <tr>
     <td><i>prefix</i>_binary or <i>prefix</i>_content or <i>prefix</i>_blob</td>
-  	<td>Blob</td>
-		<td>Binary content of the file</td>
-	</tr>
+    <td>Blob</td>
+    <td>Binary content of the file</td>
+  </tr>
 </table>
 
-Example: Here is the corresponding SQL code using 'mydoc' as a `prefix`
+Example: Here is the corresponding SQL code using `mydoc` as a prefix
 
 {% highlight sql %}
 
@@ -379,10 +378,7 @@ The table should contain the following columns
 When the following columns are present simultaneously in a
 table, Celerio will use these columns to propose the user to save its searches
 
-The table should be called either
-
-* saved_search
-* saved_search_form
+The table should be called either `saved_search` or `saved_search_form`
 
 The table should contain the following columns
 
@@ -468,4 +464,4 @@ Many to many and inverse attribute
 
 Which side of the relation is marked as `inverse="true"` ? By convention,
 the side whose corresponding column's order is the highest on the
-"Middle table".
+'middle table'.
