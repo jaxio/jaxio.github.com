@@ -241,22 +241,22 @@ manipulation from the web tier to the persistence layer.
 		</tr>
 	</thead>
   <tr>
-  	<td>`prefix` _file_name</td>
+  	<td><i>prefix</i>_file_name</td>
 		<td>Boolean</td>
 		<td>File name</td>
 	</tr>
   <tr>
-  	<td>`prefix` _size or `prefix` _length or `prefix` _content_length</td>
+  	<td><i>prefix</i>_size or <i>prefix</i>_length or <i>prefix</i>_content_length</td>
 		<td>Int</td>
 		<td>Length of the binary</td>
 	</tr>
   <tr>
-    <td>`prefix` _content_type</td>
+    <td><i>prefix</i>_content_type</td>
   	<td>String</td>
 		<td>Content type of the file</td>
 	</tr>
   <tr>
-    <td>`prefix` _binary or `prefix` _content or `prefix` _blob</td>
+    <td><i>prefix</i>_binary or <i>prefix</i>_content or <i>prefix</i>_blob</td>
   	<td>Blob</td>
 		<td>Binary content of the file</td>
 	</tr>
@@ -469,4 +469,4 @@ Many to many and inverse attribute
 
 Which side of the relation is marked as `inverse="true"` ? By convention,
 the side whose corresponding column's order is the highest on the
-"middle table".
+"Middle table".
