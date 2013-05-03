@@ -8,7 +8,9 @@ Conventions and integration
 
 Celerio has some built-in conventions. When these conventions are
 followed, Celerio generates cleaner Java code and some specific
-features. For example, by simply following some columns naming
+features. 
+
+For example, by simply following some columns naming
 convention, you can rely on Celerio to generate all the infrastructure
 code and configuration that will allow you to handle file upload and
 download in your web application, in an optimal way.
