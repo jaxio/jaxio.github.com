@@ -24,22 +24,22 @@ name, it skips it and converts to upper case the next character when
 generating classes, variables or methods related to this table, or
 column.
 
-For example, if your table name is BOOK_COMMENT , the generated entity
-class will be named BookComment ; a variable holding BookComment
+For example, if your table name is `BOOK_COMMENT`, the generated entity
+class will be named `BookComment`; a variable holding `BookComment`
 instance will be named `bookComment` and a setter will be named
-setBookComment , etc.
+`setBookComment`, etc.
 
 ### Native camel case support
 
-If your table's and/or Column use a camelCase syntax AND if the
+If your table's and/or Column use a camelCase syntax and if the
 JDBC driver preserves this syntax, then Celerio takes it into account
 when generating classes, variables or methods related to this table, or
 column.
 
-For example, if your table name is bankAccount , the generated entity
-class will be named BankAccount ; a variable holding BankAccount
+For example, if your table name is `bankAccount`, the generated entity
+class will be named `BankAccount`; a variable holding `BankAccount`
 instance will be named `bankAccount` and a setter will be named
-setBankAccount , etc.
+`setBankAccount`, etc.
 
 Choosing explicit names for your tables and columns is thus very
 important as it improves your source code readability without the burden
@@ -61,7 +61,7 @@ Each numerical primary key column is mapped with `@GeneratedValue` and
 
 ### Primary Keys with 32 characters
 
-By convention, for all primary keys that are char(32), Celerio maps the
+By convention, for all primary keys that are `char(32)`, Celerio maps the
 column with the following annotations
 
 {% highlight java %}
@@ -72,25 +72,24 @@ column with the following annotations
 
 {% endhighlight %}
 
-annotations. so it uses Hibernate's UUIDHexGenerator. Therefore no
-sequence is needed for these primary keys.
+As it uses Hibernate's UUIDHexGenerator, no sequence is needed for these primary keys.
 
 ### Other Primary Keys
 
-For primary key that are char(x) where x is different from 32, Celerio
-map the column with an "assigned" generator, which means you must
+For primary key that are `char(x)` where x is different from 32, Celerio
+map the column with an `assigned` generator, which means you must
 provide manually the primary key value.
 
 The 'Account' table
 -------------------
 
-The Account table is a special table that contains the user's login and
+The `Account` table is a special table that contains the user's login and
 password columns and eventually the email and enabled columns. It has an
 important role during the login phase. It is also used by the
-AccountContext generated class which store the current `account`
+`AccountContext` generated class which store the current `account`
 information in the current thread.
 
-Celerio detects automatically your 'Account' table. An account table
+Celerio detects automatically your `Account` table. An account table
 candidate is expected to have at least the following columns:
 
 <table class="table">
@@ -114,7 +113,7 @@ candidate is expected to have at least the following columns:
 </table>
 
 
-If no Account table candidate is found, Celerio will do as if it had
+If no `Account` table candidate is found, Celerio will do as if it had
 found one and will generate a mock Account DAO implementation that
 returns 2 dummy users (user/user and admin/admin) instead of generating
 a real JPA DAO implementation. It is up to you to replace this DAO
@@ -438,9 +437,9 @@ CREATE TABLE SAVED_SEARCH (
 ACCOUNT_ID column & Hibernate Filter
 -------------------------------------
 
-When a table contains a foreign key pointing to the Account table,
+When a table contains a foreign key pointing to the `Account` table,
 Celerio assumes that the content of this table belongs to the user
-represented by the account_id foreign key.
+represented by the `account_id` foreign key.
 
 An hibernate filter is configured to make sure that this table is loaded
 only by the current user.
@@ -460,7 +459,7 @@ of disabling it:
 Version column and Optimistic Locking
 -------------------------------------
 
-If your table has a column named VERSION whose type is an int, Celerio
+If your table has a column named `VERSION` whose type is an int, Celerio
 assumes by convention that you want to enable an optimistic locking
 strategy. As a result, the property is annotated with `@Version` .
 
