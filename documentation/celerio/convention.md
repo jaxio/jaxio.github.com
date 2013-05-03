@@ -241,28 +241,28 @@ manipulation from the web tier to the persistence layer.
 		</tr>
 	</thead>
   <tr>
-  	<td>'prefix'_file_name</td>
+  	<td>`prefix`_file_name</td>
 		<td>Boolean</td>
 		<td>File name</td>
 	</tr>
   <tr>
-  	<td>'prefix'_size or 'prefix'_length or 'prefix'_content_length</td>
+  	<td>`prefix`_size or `prefix`_length or `prefix`_content_length</td>
 		<td>Int</td>
 		<td>Length of the binary</td>
 	</tr>
   <tr>
-    <td>'prefix'_content_type</td>
+    <td>`prefix`_content_type</td>
   	<td>String</td>
 		<td>Content type of the file</td>
 	</tr>
   <tr>
-    <td>'prefix'_binary or 'prefix'_content or 'prefix'_blob</td>
+    <td>`prefix`_binary or `prefix`_content or `prefix`_blob</td>
   	<td>Blob</td>
 		<td>Binary content of the file</td>
 	</tr>
 </table>
 
-Example: Here is the corresponding SQL code using 'mydoc' as a 'prefix'
+Example: Here is the corresponding SQL code using 'mydoc' as a `prefix`
 
 {% highlight sql %}
 
@@ -467,6 +467,6 @@ strategy. As a result, the property is annotated with `@Version` .
 Many to many and inverse attribute
 ----------------------------------
 
-Which side of the relation is marked as inverse="true" ? By convention,
+Which side of the relation is marked as `inverse="true"` ? By convention,
 the side whose corresponding column's order is the highest on the
 "Middle table".
