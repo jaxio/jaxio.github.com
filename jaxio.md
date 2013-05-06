@@ -8,6 +8,8 @@ description: Notre mission est de permettre aux entreprises d'accélérer et d'a
 
 ### Jaxio
 
+<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+
 Jaxio est une société Française, basée à Paris.
 
 Jaxio édite le logiciel Celerio et opère le site springfuse.com
@@ -16,10 +18,10 @@ Celerio permet aux entreprises d'accélérer et d'assurer la pérennité de leur
 
 Springfuse, permet d'évaluer le code généré par Celerio.
 
+<a href="https://twitter.com/springfuse" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @springfuse</a>
+
 
 ### Fondateurs
-
-<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
  
 #### <script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/nromanetti" data-format="hover"></script> Nicolas Romanetti
 
