@@ -34,6 +34,10 @@ Here are the main configuration points:
 	* [Inverse @OneToOne](#io2o)
 	* [@ManyToMany](#m2m)
 	* [@ManyToOne and @OneToMany with an intermediate table](#m2o-intermediate)
+* [Inheritance](#inheritance)  
+	* [Single table strategy](#inheritance-single-table)  
+	* [Joined strategy](#inheritance-joined)  
+	* [Table per class strategy](#inheritance-table-per-class)  
 
 <a name="xsd"></a>
 ## Inline documentation through XSD
@@ -482,3 +486,134 @@ the `OneToManyConfig` element for the inverse association. For example:
   </columnConfigs>
 </entityConfig>
 {% endhighlight %}
+
+<a name="inheritance"></a>
+## Inheritance
+
+By default Celerio does not try to guess any inheritance strategy.
+
+However, you can configure Celerio to take your inheritance strategy into account.
+
+<a name="inheritance-single-table"></a>
+### Single table strategy inheritance
+
+The `SINGLE_TABLE` strategy maps all entities in the hierarchy to the same table.
+
+Please find below a schema example and the corresponding Celerio configuration.
+
+{% highlight sql %}
+DROP ALL OBJECTS;
+
+CREATE TABLE ROCKET (
+	rocket_id		char(32)		not null,
+	name			varchar(255)	not null,
+	weight			smallint,
+	discriminator	char(4)			not null,
+	seats_count		smallint,
+	primary key (rocket_id)
+);
+{% endhighlight %}
+
+Here is the corresponding `SINGLE_TABLE` inheritance configuration: 
+
+{% highlight xml %}
+<entityConfigs>
+	<entityConfig tableName="ROCKET" subPackage="one">
+		<inheritance strategy="SINGLE_TABLE" discriminatorColumn="discriminator" discriminatorValue="ROCK" />
+		<columnConfigs>
+			<columnConfig columnName="rocket_id" />
+			<columnConfig columnName="name" />
+			<columnConfig columnName="weight" />
+		</columnConfigs>
+	</entityConfig>
+	<entityConfig entityName="SpaceShip" subPackage="two">
+		<inheritance parentEntityName="Rocket" discriminatorValue="SPAC" />
+		<columnConfigs>
+			<columnConfig columnName="seats_count" />
+		</columnConfigs>
+	</entityConfig>
+</entityConfigs>
+{% endhighlight %}
+
+<a name="inheritance-joined"></a>
+### Joined strategy inheritance 
+
+The `JOINED` strategy uses a different table for each entity in the hierarchy.
+
+Please find below a schema example and the corresponding Celerio configuration.
+
+{% highlight sql %}
+DROP ALL OBJECTS;
+
+CREATE TABLE ACCOUNT (
+	account_id	char(32)		not null,
+	login		varchar(255)	not null,
+	password	varchar(255)	not null,
+	email		varchar(255)	not null,
+	is_enabled	bool,
+	civility	char(2),
+	first_name	varchar(255),
+	last_name	varchar(255),
+	version		smallint		default 0,
+
+	constraint account_unique_1 unique (login),
+	constraint account_unique_2 unique (email),
+	primary key (account_id)
+);
+
+CREATE TABLE ADMINISTRATIVE_ACCOUNT (
+	account_id	char(32)		not null,
+	fax			varchar(255)	not null,	
+	country		varchar(255)	not null,	
+	city		varchar(255),
+	primary key (account_id)
+);
+
+CREATE TABLE ENTERPRISE_ACCOUNT (
+	account_id		char(32)		not null,
+	company_name	varchar(255)	not null,
+	inception_date	timestamp		not null,	
+	revenue			integer			not null,	
+	dummy			integer,
+	is_ethical		bool			not null,	
+	primary key (account_id)
+);
+{% endhighlight %}
+
+Here is the corresponding `JOINED` inheritance configuration: 
+
+{% highlight xml %}
+<entityConfigs>
+	<entityConfig tableName="ACCOUNT">
+		<inheritance strategy="JOINED" />
+		<columnConfigs>
+			<!-- We do not mention all columns on purpose, we expect Celerio to add missing columns... -->
+			<columnConfig columnName="login" fieldName="username" />
+		</columnConfigs>
+	</entityConfig>
+
+	<entityConfig tableName="ADMINISTRATIVE_ACCOUNT" entityName="AdminAccount">
+		<inheritance parentEntityName="Account" />
+		<columnConfigs>
+			<!-- We do not mention all columns on purpose, we expect Celerio to add missing columns... -->
+			<columnConfig columnName="fax" fieldName="faxNumber" />
+		</columnConfigs>
+	</entityConfig>
+
+	<entityConfig tableName="ENTERPRISE_ACCOUNT">
+		<inheritance parentEntityName="AdminAccount" />
+		<columnConfigs>
+			<!-- We do not mention all columns on purpose, we expect Celerio to add missing columns... -->
+			<columnConfig columnName="revenue" fieldName="revenuePerYear" />
+		</columnConfigs>
+	</entityConfig>
+</entityConfigs>
+{% endhighlight %}
+
+<a name="inheritance-table-per-class"></a>
+### Table per class strategy inheritance
+
+*This feature is not implemented* 
+
+
+
