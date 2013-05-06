@@ -1,5 +1,5 @@
 ---
-layout: french
+layout: doc
 title: Celerio Guide - Conventions 
 ---
 
@@ -15,9 +15,27 @@ convention, you can rely on Celerio to generate all the infrastructure
 code and configuration that will allow you to handle file upload and
 download in your web application, in an optimal way.
 
+* [Camel case conventions](#conventions-camel-case)
+	* [Underscore](#conventions-camel-case-underscore)
+	* [Native](#conventions-camel-case-native)
+* [Primary key conventions](#conventions-pk)
+	* [Numeric](#conventions-pk-numeric)
+	* [32 chars](#conventions-pk-32chars)
+	* [Other](#conventions-pk-other)
+* [Account table](#conventions-account-table)
+	* [Optional columns](#conventions-account-other-columns)		
+* [Role table](#conventions-role-table)
+* [File Upload and Download](#conventions-file-download)
+* [Audit entity](#conventions-audit-entity)
+* [Audit table](#conventions-audit-table)
+* [Saved search](#conventions-saved-search)
+
+
+<a name="conventions-camel-case"></a>
 Camel case conventions
 ----------------------
 
+<a name="conventions-camel-case-underscore"></a>
 ### Underscore '_' Enables Java Camel Case Syntax
 
 'Camel Case' syntax is standard Java code convention. When Celerio
@@ -31,6 +49,7 @@ class will be named `BookComment`; a variable holding `BookComment`
 instance will be named `bookComment` and a setter will be named
 `setBookComment`, etc.
 
+<a name="conventions-camel-case-native"></a>
 ### Native camel case support
 
 If your table's and/or Column use a camel case syntax and if the
@@ -47,9 +66,11 @@ Choosing explicit names for your tables and columns is thus very
 important as it improves your source code readability without the burden
 of relying on configuration.
 
+<a name="conventions-pk"></a>
 Primary key conventions
 -----------------------
 
+<a name="conventions-pk-numeric"></a>
 ### Numerical Primary Keys
 
 Each numerical primary key column is mapped with `@GeneratedValue` and
@@ -61,6 +82,7 @@ Each numerical primary key column is mapped with `@GeneratedValue` and
 > the sequence `hibernate_sequence`. Please refer to Hibernate
 > reference documentation for more advanced alternatives.
 
+<a name="conventions-pk-32chars"></a>
 ### Primary Keys with 32 characters
 
 By convention, for all primary keys that are `char(32)`, Celerio maps the
@@ -76,12 +98,14 @@ column with the following annotations
 
 As it uses Hibernate's `UUIDHexGenerator`, no sequence is needed for these primary keys.
 
+<a name="conventions-pk-other"></a>
 ### Other Primary Keys
 
 For primary key that are `char(x)` where x is different from 32, Celerio
 map the column with an `assigned` generator, which means you must
 provide manually the primary key value.
 
+<a name="conventions-account-table"></a>
 The Account table
 -------------------
 
@@ -125,6 +149,53 @@ implementation with your own implementation.
 >
 > You may also elect the account table by configuration.
 
+<a name="conventions-account-other-columns"></a>
+### Other optional account columns
+
+<a name="conventions-account-email"></a>
+#### The Email column
+
+If the detected `Account` table has an email column, it is used by the
+generated code in few places, mostly as an illustration of the
+EmailService usage.
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Mapped Java Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>email, email_address, emailAddress, mail</td>
+    <td>String</td>
+    <td>The user email</td>
+  </tr>
+</table>
+
+<a name="conventions-account-enabled"></a>
+#### The Enabled column
+
+If the detected Account table has an enabled column, it is used by the
+generated code related to Spring Security integration.
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Mapped Java Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>enabled, is_enabled, isenabled</td>
+    <td>Boolean</td>
+    <td>Only enabled users (enabled == true) can login.</td>
+  </tr>
+</table>
+
+<a name="conventions-role-table"></a>
 The 'Role' table
 ----------------
 
@@ -182,50 +253,6 @@ CREATE TABLE ACCOUNT_ROLE (
 
 {% endhighlight %}
 
-Other optional account columns
---------------------------------
-
-### The Email column
-
-If the detected `Account` table has an email column, it is used by the
-generated code in few places, mostly as an illustration of the
-EmailService usage.
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Column</th>
-      <th>Mapped Java Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tr>
-    <td>email, email_address, emailAddress, mail</td>
-    <td>String</td>
-    <td>The user email</td>
-  </tr>
-</table>
-
-
-### The Enabled column
-
-If the detected Account table has an enabled column, it is used by the
-generated code related to Spring Security integration.
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Column</th>
-      <th>Mapped Java Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tr>
-    <td>enabled, is_enabled, isenabled</td>
-    <td>Boolean</td>
-    <td>Only enabled users (enabled == true) can login.</td>
-  </tr>
-</table>
 
 <a name="conventions-file-download"></a>
 ## File Upload and Download
@@ -277,7 +304,6 @@ mydoc_binary            bytea,
 
 This convention allows you to upload a file transparently, 
 save it to the corresponding table, then download it using a simple URL.
-
 
 <a name="conventions-audit-entity"></a>
 ## Auditing entity
