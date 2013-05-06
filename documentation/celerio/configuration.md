@@ -26,13 +26,14 @@ Here are the main configuration points:
 	* [Force a type mapping locally](#force_mapping)
 	* [Number mapping customization](#rule_number_mapping)
 	* [Date mapping customization](#rule_date_mapping)               
-* [Associations](#associations)
+* [Associations](#associations)  
 	* [@ManyToOne](#m2o)
 	* [@OneToMany](#o2m)
 	* [@ManyToOne and @OneToMany with composite foreign key](#cfk)
 	* [@OneToOne](#o2o)
 	* [Inverse @OneToOne](#io2o)
 	* [@ManyToMany](#m2m)
+	* [@ManyToOne and @OneToMany with an intermediate table](#m2o-intermediate)
 
 <a name="xsd"></a>
 ## Inline documentation through XSD
@@ -272,14 +273,14 @@ Celerio adds the "Ref" suffix to the variable name. Here are few
 simplified examples:
 
 {% highlight java %}
-	// column name is 'addr_id' 
-	Address addr;
+// column name is 'addr_id' 
+Address addr;
 
-	// column name is 'address'
-	Address address;
+// column name is 'address'
+Address address;
 
-	// column name is 'anything_else'
-    Address anythingElse;
+// column name is 'anything_else'
+Address anythingElse;
 {% endhighlight %}
 
 In any case, use the `manyToOneConfig` element to force a different
@@ -294,7 +295,7 @@ variable name. For example:
 will lead to
 
 {% highlight java %}
-    Address myAddress;
+Address myAddress;
 {% endhighlight %}
 
 The `manyToOneConfig` element also allows you to tune the JPA fetch type
@@ -342,13 +343,13 @@ of the `columnConfig` element is `BIDIRECTIONAL` . For example:
 will lead (assuming address\_id refers to Address) to something like:
 
 {% highlight java %}
-	// in Account.java
-    Address address;
+// in Account.java
+Address address;
 {% endhighlight %}
 
 {% highlight java %}
-	// In Address.java
-    List<Account> accounts;
+// In Address.java
+List<Account> accounts;
 {% endhighlight %}
 
 In the example above `accounts` is simply the plural of the Account
@@ -372,11 +373,11 @@ control the name of the associated helper methods that Celerio generates
 will lead to
 
 {% highlight java %}
-	// In Address.java
-	List<Account> people;
+// In Address.java
+List<Account> people;
 
 public void addResident(Account resident) {
-	// skip...
+// skip...
 }
 {% endhighlight %}
 
@@ -457,4 +458,27 @@ the association. For example:
 > extra column is present, you can force it by setting to `true` the
 > `middleTable` attribute of the `entityConfig` element.
 
+<a name="m2o-intermediate"></a>
+### @ManyToOne and @OneToMany with an intermediate table
 
+*Since Celerio 3.0.101*
+
+Configuration is very similar to many to many configuration above except that you should use the `manyToOneConfig` element for the forward association and
+the `OneToManyConfig` element for the inverse association. For example:
+
+{% highlight xml %}
+<entityConfig tableName="ADDRESS_PERSON">
+  <columnConfigs>
+    <columnConfig columnName="address_id">
+	  <oneToManyConfig var="addresses" elementVar="address" />
+    </columnConfig>
+    <columnConfig columnName="person_id" inverse="true">
+      <manyToOneConfig var="person">
+        <cascades>
+          <cascade type="ALL" />
+        </cascades>
+      </manyToOneConfig>
+    </columnConfig>
+  </columnConfigs>
+</entityConfig>
+{% endhighlight %}
