@@ -69,7 +69,7 @@ puis exécutez dans une console les commandes maven résultantes.
 	<label class="control-label" for="frontEnd">Type de Project</label>
     <div class="controls">
       <label class="radio">
-		<input type="radio" name="frontEnd" id="jsf2Spring" value="jsf2Spring" class="updateCommand" checked="checked"/>JSF 2, Primefaces 3.5, with conversation
+		<input type="radio" name="frontEnd" id="jsf2Spring" value="jsf2Spring" class="updateCommand" checked="checked"/>JSF 2, Primefaces 3.5, avec une API conversation
 			<span class="help-block">
 				Parfait pour une application d'entreprise orientée données. Le code généré est 
 				bien organisé, propose des fonctionnalités puissantes, contient une API inégalée de `conversation`, etc.
