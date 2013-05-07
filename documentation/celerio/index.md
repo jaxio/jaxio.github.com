@@ -22,6 +22,7 @@ Its usage requires a commercial license.
 10. [Writing templates](templates.html)
 11. [Best practices](best-practices.html)
 12. [Troubleshooting](troubleshooting.html)
+13. [Miscellaneous](miscellaneous.html)
 
 *All copyright, confidential information, patents, design rights and all other 
 intellectual property rights of whatsoever nature contained herein are and 

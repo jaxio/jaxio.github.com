@@ -8,6 +8,7 @@ title: Jaxio
 	<p>Industrialisez le développement de vos applications Java EE orientées données
     <p><a href="https://github.com/jaxio/generated-projects" class="btn btn-primary btn-large">Exemple de
      code généré &raquo;</a></p>
+    <p><a href="/celerio-service.html" class="btn btn-primary btn-large">Evaluer Celerio</a></p>
 </div>
 
 <!-- Example row of columns -->
@@ -16,7 +17,7 @@ title: Jaxio
 	<h2>Evaluer Celerio</h2>
 	<ul>
 	<li>
-		<a href="http://www.springfuse.com">Pour évaluer Celerio sur votre base de données, rendez-vous sur www.springfuse.com, la version en ligne de Celerio.</a>
+		<a href="/celerio-service.html">Evaluer Celerio sur votre base de données, en utilisant la version en ligne de Celerio.</a>
 	</li>
 	</ul>
 </div>
