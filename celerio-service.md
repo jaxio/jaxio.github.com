@@ -42,8 +42,8 @@ puis exécutez dans une console les commandes maven résultantes.
 <div class="control-group artifactId">
     <label class="control-label" for="artifactId">Nom du projet</label>
     <div class="controls">
-		<input type="text" id="artifactId" value="monproject" placeholder="ex: monproject" class="required lettersNumbers updateCommand"/>
-		<span class="help-inline">Seuls les caractères simples sont permis, a-z, A-Z, 0-9, ex: monproject</span>
+		<input type="text" id="artifactId" value="monprojet" placeholder="ex: monprojet" class="required lettersNumbers updateCommand"/>
+		<span class="help-inline">Seuls les caractères simples sont permis, a-z, A-Z, 0-9, ex: monprojet</span>
 	</div>
 </div>
 
