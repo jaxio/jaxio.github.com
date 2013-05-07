@@ -160,22 +160,25 @@ Date birthDate;
 <a name="name_rule"></a>
 ### Advanced property name calculation
 
-By default Celerio calculates Java field name based on the underlying
-column name. The `fieldNaming` element allows you to change the column
-names passed to Celerio to calculate the default field names. The
-example below removes well known prefix pattern from column names:
+By default Celerio calculates Java field name based on the underlying column name. 
+
+In order to quickly remove existing database conventions from leaking into your java code, you now can rename globally tables and columns.
 
 {% highlight xml %}
-<configuration>
-  <conventions>
-    <fieldNaming regexp="^.{3}_{1}" replace=""/>
-  </conventions>
-</configuration>
-{% endhighlight %}
 
-In that case, column names such as `XYZ_SOMETHING_MEANINGFUL` now lead
-to Java field name `sometingMeaningful` instead of
-`xyzSometingMeaningful`.
+<tableRenamers>
+	<tableRenamer regexp="tbl_" replace="" />
+</tableRenamers>
+<columnRenamers>
+	<columnRenamer regexp="^.{3}_" replace="" />
+	<columnRenamer regexp="qrtz_" replace="Quartz_" />
+</columnRenamers>
+
+{% endhighlight %}  
+
+In that case, table named `tbl_account` will be named `Account`, column names such as `XYZ_SOMETHING_MEANINGFUL` now lead
+to Java field name `sometingMeaningful` instead of `xyzSometingMeaningful`.
+
 
 <a name="type_mapping"></a>
 ## Type Mapping
