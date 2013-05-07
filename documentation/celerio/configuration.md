@@ -176,8 +176,8 @@ In order to quickly remove existing database conventions from leaking into your 
 
 {% endhighlight %}  
 
-In that case, table named `tbl_account` will be named `Account`, column names such as `XYZ_SOMETHING_MEANINGFUL` now lead
-to Java field name `sometingMeaningful` instead of `xyzSometingMeaningful`.
+In that case, table named `tbl_account` will be named `Account` instead of `TblAccount`.
+Column names such as `XYZ_SOMETHING_MEANINGFUL` now lead to Java field name `sometingMeaningful` instead of `xyzSometingMeaningful`.
 
 
 <a name="type_mapping"></a>
