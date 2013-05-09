@@ -362,7 +362,7 @@ List<Account> accounts;
 In the example above `accounts` is simply the plural of the Account
 entity that Celerio guessed. We were of course lucky on this one.
 
-Use the `oneToManyConfig` element of the `columnAttribute` to set the
+Use the `oneToManyConfig` element of the `columnConfig` to set the
 name of the one to many association to a different value. As you will
 see, you can also set the name of an element of the collection to
 control the name of the associated helper methods that Celerio generates
@@ -410,10 +410,28 @@ By default, Celerio generates the code for a `@OneToOne` association
 when it encounters a column having a `foreign key` constraint AND a
 `unique` constraint.
 
-One to one associations are very similar to many to one associations. To
-change the variable name, the JPA fetch type or the cascade types of the
-one to one association, use the `oneToOne` element of the `columnConfig`
-element.
+One to one association configuration is very similar to many to one association.
+
+To change the variable name, the JPA fetch type or the cascade types of the
+one to one association, use the `oneToOneConfig` element of the `columnConfig`
+element. Here is an example:
+
+{% highlight xml %}
+<entityConfig tableName="account">
+	<columnConfigs>
+		<columnConfig columnName="address_id">
+			<oneToOneConfig var="myAddress" />
+		</columnConfig>
+	</columnConfigs>
+</entityConfig>
+{% endhighlight %}
+
+will lead to
+
+{% highlight java %}
+// In Account.java
+Address myAddress;
+{% endhighlight %}
 
 <a name="io2o"></a>
 ### Inverse @OneToOne
@@ -427,9 +445,38 @@ attribute of the `columnConfig` element is `BIDIRECTIONAL` .
 
 Inverse one to one association is configured on the owning side of
 association, that is on the `columnConfig` that has the foreign key and
-unique constraints. As for one to many association, this may be a bit
+unique constraints.
+
+As for one to many association configuration, this may be a bit
 confusing at first but it has the advantage to group together, both
 associations on the side that really owns the association.
+
+To change the variable name, the JPA fetch type or the cascade types of the
+inverse one to one association, use the `inverseOneToOneConfig` element of the `columnConfig`
+element. Here is an example:
+
+Here is an example:
+
+{% highlight xml %}
+<entityConfig tableName="account">
+	<columnConfigs>
+		<columnConfig columnName="address_id" associationDirection="BIDIRECTIONAL">
+			<oneToOneConfig var="myAddress" />
+			<inverseOneToOneConfig var="owner" />
+		</columnConfig>
+	</columnConfigs>
+</entityConfig>
+{% endhighlight %}
+
+will lead to
+
+{% highlight java %}
+// In Account.java
+Address myAddress;
+
+// In Address.java
+Account owner;
+{% endhighlight %}
 
 <a name="m2m"></a>
 ### @ManyToMany
