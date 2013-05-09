@@ -160,25 +160,33 @@ Date birthDate;
 <a name="name_rule"></a>
 ### Advanced property name calculation
 
-By default Celerio calculates Java field name based on the underlying column name. 
+By default Celerio calculates Java entity/field name based on the underlying table/column name.
 
-In order to quickly remove existing database conventions from leaking into your java code, you now can rename globally tables and columns.
+If your database schema has some naming convention using prefixes, this can lead to non friendly entity/column name.
+
+Hopefully, you can configure Celerio to pre-process all your table names and column names before applying its convention to compute the entity/column name.  
+  
+Here are some configuration examples:
 
 {% highlight xml %}
 
-<tableRenamers>
-	<tableRenamer regexp="tbl_" replace="" />
-</tableRenamers>
-<columnRenamers>
-	<columnRenamer regexp="^.{3}_" replace="" />
-	<columnRenamer regexp="qrtz_" replace="Quartz_" />
-</columnRenamers>
+<configuration>
+  <conventions>
+    <tableRenamers>
+      <tableRenamer regexp="tbl_" replace="" />
+    </tableRenamers>
+    <columnRenamers>
+	  <columnRenamer regexp="^.{3}_" replace="" />
+	  <columnRenamer regexp="qrtz_" replace="Quartz_" />
+    </columnRenamers>
+  </conventions>
+</configuration>
 
 {% endhighlight %}  
 
-In that case, table named `tbl_account` will be named `Account` instead of `TblAccount`.
-Column names such as `XYZ_SOMETHING_MEANINGFUL` now lead to Java field name `sometingMeaningful` instead of `xyzSometingMeaningful`.
+In that case, assuming we have a table named `tbl_account`, the entity will be named `Account` instead of `TblAccount`.
 
+Column names such as `XYZ_SOMETHING_MEANINGFUL` will give `sometingMeaningful` instead of `xyzSometingMeaningful`.
 
 <a name="type_mapping"></a>
 ## Type Mapping
