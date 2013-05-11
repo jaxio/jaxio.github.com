@@ -7,7 +7,6 @@ Celerio reference guide
 =======================
 
 Celerio is a code generator developed by [Jaxio](http://www.jaxio.com).
-Its usage requires a commercial license.
 
 1. [Introduction](introduction.html)
 2. [Installation](installation.html)
