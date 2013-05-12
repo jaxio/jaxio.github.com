@@ -8,6 +8,8 @@ Celerio reference guide
 
 Celerio is a code generator developed by [Jaxio](http://www.jaxio.com).
 
+**Note** *If you are using Celerio remotely (through [Springfuse](http://www.springfuse.com)), go directly to [Conventions](convention.html) or [Configuration](configuration.html).*
+
 1. [Introduction](introduction.html)
 2. [Installation](installation.html)
 3. [Bootstrap](bootstrap.html)
