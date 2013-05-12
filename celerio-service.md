@@ -38,6 +38,16 @@ puis exécutez dans une console les commandes maven résultantes.
 	Informations sur le projet
 </div>
 
+<div class="control-group celerioVersion">
+    <label class="control-label" for="celerioVersion">Version de Celerio</label>
+    <div class="controls">
+		<select id="celerioVersion" name="celerioVersion" class="updateCommand">
+			<option value="3.0.100">3.0.100</option>
+			<option value="3.0.101-SNAPSHOT">3.0.101-SNAPSHOT</option>
+		</select>    
+	</div>
+</div>
+
 <!-- artifactId -->
 <div class="control-group artifactId">
     <label class="control-label" for="artifactId">Nom du projet</label>
@@ -51,7 +61,7 @@ puis exécutez dans une console les commandes maven résultantes.
 <div class="control-group groupId">
     <label class="control-label" for="groupId">Package Java</label>
     <div class="controls">
-		<input type="text" id="groupId" size="40" value="com.masociete.monproject" placeholder="ex: com.jaxio.demo" class="required updateCommand" title="Ex: com.masociete.monproject"/>
+		<input type="text" id="groupId" size="40" value="com.masociete.monprojet" placeholder="ex: com.jaxio.demo" class="required updateCommand" title="Ex: com.masociete.monprojet"/>
     </div>
 </div>
 
@@ -394,7 +404,7 @@ Après avoir fait <span class="label label-info">vos premières armes</span> ave
 	}
 
 	function updateCommand() {
-		var version= "3.0.100";
+		var version= $("#celerioVersion").val();
 		var groupId = $("#groupId").val();
 		var artifactId = $("#artifactId").val();
 		var email= $("#email").val();
