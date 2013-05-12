@@ -25,6 +25,9 @@ download in your web application, in an optimal way.
 * [Account table](#conventions-account-table)
 	* [Optional columns](#conventions-account-other-columns)		
 * [Role table](#conventions-role-table)
+* [ACCOUNT_ID column & Hibernate Filter](#conventions-hibernate-filter)
+* [Version column and optimistic locking](#conventions-version-optimistic-locking)
+* [Many to many and inverse attribute](#conventions-many-to-many-inverse-attribute)
 * [File Upload and Download](#conventions-file-download)
 * [Audit entity](#conventions-audit-entity)
 * [Audit table](#conventions-audit-table)
@@ -253,6 +256,42 @@ CREATE TABLE ACCOUNT_ROLE (
 
 {% endhighlight %}
 
+<a name="conventions-hibernate-filter"></a>
+## ACCOUNT_ID column & Hibernate Filter
+
+When a table contains a foreign key pointing to the `Account` table,
+Celerio assumes that the content of this table belongs to the user
+represented by the `account_id` foreign key.
+
+An hibernate filter is configured to make sure that this table is loaded
+only by the current user.
+
+The filter is enabled by the `HibernateFilterInterceptor`. Of course
+this default behavior may not always suit your needs. There are two ways
+of disabling it:
+
+1.  Remove the `@Filter` annotation from the Entity. This imply taking
+    control over the entity.
+
+2.  Disable the filter programmatically using the HibernateFilterContext
+    generated helper.
+
+3.  Disable globally this convention in Celerio's configuration file.
+
+<a name="conventions-version-optimistic-locking"></a>
+## Version column and Optimistic Locking
+
+If your table has a column named `VERSION` whose type is an int, Celerio
+assumes by convention that you want to enable an optimistic locking
+strategy. As a result, the property is annotated with `@Version` .
+
+<a name="conventions-many-to-many-inverse-attribute"></a>
+## Many to many and inverse attribute
+
+Which side of the @ManyToMany relation is marked as `inverse="true"` ? 
+
+By convention, the side whose corresponding column's order is the highest on the 'middle table'.
+You can override this convention using the parent's columnConfig's 'inverse' attribute. 
 
 <a name="conventions-file-download"></a>
 ## File Upload and Download
@@ -458,40 +497,3 @@ CREATE TABLE SAVED_SEARCH (
 );
 
 {% endhighlight %}
-
-
-ACCOUNT_ID column & Hibernate Filter
--------------------------------------
-
-When a table contains a foreign key pointing to the `Account` table,
-Celerio assumes that the content of this table belongs to the user
-represented by the `account_id` foreign key.
-
-An hibernate filter is configured to make sure that this table is loaded
-only by the current user.
-
-The filter is enabled by the `HibernateFilterInterceptor`. Of course
-this default behavior may not always suit your needs. There are two ways
-of disabling it:
-
-1.  Remove the `@Filter` annotation from the Entity. This imply taking
-    control over the entity.
-
-2.  Disable the filter programmatically using the HibernateFilterContext
-    generated helper.
-
-3.  Disable globally this convention in Celerio's configuration file.
-
-Version column and Optimistic Locking
--------------------------------------
-
-If your table has a column named `VERSION` whose type is an int, Celerio
-assumes by convention that you want to enable an optimistic locking
-strategy. As a result, the property is annotated with `@Version` .
-
-Many to many and inverse attribute
-----------------------------------
-
-Which side of the relation is marked as `inverse="true"` ? By convention,
-the side whose corresponding column's order is the highest on the
-'middle table'.
