@@ -121,7 +121,7 @@ As it uses Hibernate's `UUIDGenerator`, no sequence is needed for these primary 
 <a name="conventions-pk-other"></a>
 ### Other Primary Keys
 
-For primary key that are `char(x)` where x is different from 32, Celerio
+For primary key that are `char(x)` where x is different from 32 or 36, Celerio
 map the column with an `assigned` generator, which means you must
 provide manually the primary key value.
 
