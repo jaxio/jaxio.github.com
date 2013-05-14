@@ -21,6 +21,7 @@ download in your web application, in an optimal way.
 * [Primary key conventions](#conventions-pk)
 	* [Numeric](#conventions-pk-numeric)
 	* [32 chars](#conventions-pk-32chars)
+	* [36 chars](#conventions-pk-36chars)
 	* [Other](#conventions-pk-other)
 * [Account table](#conventions-account-table)
 	* [Optional columns](#conventions-account-other-columns)		
@@ -100,6 +101,22 @@ column with the following annotations
 {% endhighlight %}
 
 As it uses Hibernate's `UUIDHexGenerator`, no sequence is needed for these primary keys.
+
+<a name="conventions-pk-36chars"></a>
+### Primary Keys with 36 characters
+
+By convention, for all primary keys that are `char(36)`, Celerio maps the
+column with the following annotations
+
+{% highlight java %}
+
+@GeneratedValue(generator = "strategy-uuid2")
+@GenericGenerator(name = "strategy-uuid2", strategy = "uuid2")
+@Id
+
+{% endhighlight %}
+
+As it uses Hibernate's `UUIDGenerator`, no sequence is needed for these primary keys.
 
 <a name="conventions-pk-other"></a>
 ### Other Primary Keys
