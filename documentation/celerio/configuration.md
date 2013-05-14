@@ -26,6 +26,10 @@ Here are the main configuration points:
 	* [Force a type mapping locally](#force_mapping)
 	* [Number mapping customization](#rule_number_mapping)
 	* [Date mapping customization](#rule_date_mapping)               
+* [Enum Mapping](#enum)
+	* [Enum persisted as String](#enum-string)
+	* [Enum persisted as Integer](#enum-ordinal)
+	* [Advanced Enum mapping](#enum-custom)
 * [Associations](#associations)  
 	* [@ManyToOne](#m2o)
 	* [@OneToMany](#o2m)
@@ -269,6 +273,174 @@ can add the following mapping rule:
 </configuration>
 {% endhighlight %}
 
+
+<a name="enum"></a>
+## Enum
+
+To map a column to an Java Enum using the `@Enumerated` value, see:
+
+* [Enum persisted as String](#enum-string) 
+* [Enum persisted as Integer](#enum-ordinal) 
+
+To map your enum to a value that is different from the value returned by either 
+the enum's name() or enum's ordinal() method, see:
+
+* [Advanced Enum mapping](#enum-custom) 
+
+<a name="enum-string"></a>
+### Enum persisted as String
+In this example, the persisted value is the value returned by the enum's name() method.
+
+**Value persisted in the database**: Either "MR" or "MS".
+
+**Celerio configuration**:
+{% highlight xml %}
+<celerio>
+	<entityConfig tableName="ACCOUNT">
+		<columnConfigs>
+			<columnConfig columnName="civility" sharedEnumName="Civility" />
+		</columnConfigs>
+	</entityConfigs>
+
+	<sharedEnumConfigs>
+		<sharedEnumConfig name="Civility" type="STRING">
+			<enumValues>
+				<enumValue value="MR" label="Mister"/>
+				<enumValue value="MS" label="Miss" />
+			</enumValues>
+		</sharedEnumConfig>
+	</sharedEnumConfigs>
+</celerio>
+{% endhighlight %}
+
+**Generated code**:
+{% highlight java %}
+public enum Civility {
+    MR, MS;
+    public String getLabel() {
+        return ResourcesUtil.getInstance().getProperty("Civility_" + name());
+    }
+}
+
+// In Account.java
+@Column(name = "CIVILITY")
+@Enumerated(STRING)
+public Civility getCivility() {
+    return civility;
+}
+{% endhighlight %}
+
+<a name="enum-ordinal"></a>
+### Enum persisted as Integer
+In this example, the persisted value is the value returned by the enum's ordinal() method.
+
+**Value persisted in the database**: Either 0 (for 'MR') or 1 (for 'MS').
+
+**Celerio configuration**:
+{% highlight xml %}
+<celerio>
+	<entityConfig tableName="ACCOUNT">
+		<columnConfigs>
+			<columnConfig columnName="civility" sharedEnumName="Civility" />
+		</columnConfigs>
+	</entityConfigs>
+
+	<sharedEnumConfigs>
+		<sharedEnumConfig name="Civility" type="ORDINAL">
+			<enumValues>
+				<enumValue value="MR" label="Mister"/>
+				<enumValue value="MS" label="Miss" />
+			</enumValues>
+		</sharedEnumConfig>
+	</sharedEnumConfigs>
+</celerio>
+{% endhighlight %}
+
+**Generated code**:
+{% highlight java %}
+public enum Civility {
+    MR, MS;
+    public String getLabel() {
+        return ResourcesUtil.getInstance().getProperty("Civility_" + name());
+    }
+}
+
+// In Account.java
+@Column(name = "CIVILITY")
+@Enumerated
+public Civility getCivility() {
+    return civility;
+}
+{% endhighlight %}
+
+<a name="enum-custom"></a>
+### Advanced Enum mapping
+This mapping allows you to customize the persisted value instead of relying on the name() or ordinal() enum's method.
+
+**Value persisted in the database**: Either "MR" or "MS".
+
+**Celerio configuration**:
+{% highlight xml %}
+<celerio>
+	<entityConfig tableName="ACCOUNT">
+		<columnConfigs>
+			<columnConfig columnName="civility" sharedEnumName="Civility" />
+		</columnConfigs>
+	</entityConfigs>
+
+	<sharedEnumConfigs>
+		<sharedEnumConfig name="Civility" type="CUSTOM">
+			<enumValues>
+				<enumValue name="MISTER" value="MR" label="Mister"/>
+				<enumValue name="MISS" value="MS" label="Miss"   />
+			</enumValues>
+		</sharedEnumConfig>
+	</sharedEnumConfigs>
+</celerio>
+{% endhighlight %}
+
+**Generated code**:
+{% highlight java %}
+public enum Civility {
+    MISTER("MR"), MISS("MS");
+    private String code;
+
+    Civility(String code) {
+        this.code = code;
+    }
+
+    public String toString() {
+        return this.code;
+    }
+
+    public static Civility fromString(String value) {
+        if (value == null) {
+            return null;
+        }
+        for (Civility enumValue : Civility.values()) {
+            if (value.equals(enumValue.toString())) {
+                return enumValue;
+            }
+        }
+        return null;
+    }
+
+    public String getLabel() {
+        return ResourcesUtil.getInstance().getProperty("Civility_" + name());
+    }
+}
+
+// In Account.java
+@Column(name = "CIVILITY")
+@Type(type = "org.jadira.usertype.corejava.PersistentEnum", parameters = { //
+@Parameter(name = "enumClass", value = "com.mycompany.myproject.domain.Civility"), //
+        @Parameter(name = "valueOfMethod", value = "fromString"), //
+        @Parameter(name = "identifierMethod", value = "toString") //
+})
+public Civility getCivility() {
+    return civility;
+}
+{% endhighlight %}
 
 <a name="associations"></a>
 ## Associations
