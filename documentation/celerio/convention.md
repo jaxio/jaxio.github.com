@@ -7,17 +7,13 @@ Conventions and integration
 ===========================
 
 Celerio has some built-in conventions. When these conventions are
-followed, Celerio generates cleaner Java code and some specific
-features. 
+followed, Celerio generates some specific features.
 
 For example, by simply following some columns naming
 convention, you can rely on Celerio to generate all the infrastructure
 code and configuration that will allow you to handle file upload and
 download in your web application, in an optimal way.
 
-* [Camel case conventions](#conventions-camel-case)
-	* [Underscore](#conventions-camel-case-underscore)
-	* [Native](#conventions-camel-case-native)
 * [Primary key conventions](#conventions-pk)
 	* [Numeric](#conventions-pk-numeric)
 	* [32 chars](#conventions-pk-32chars)
@@ -34,41 +30,6 @@ download in your web application, in an optimal way.
 * [Audit table](#conventions-audit-table)
 * [Saved search](#conventions-saved-search)
 
-
-<a name="conventions-camel-case"></a>
-Camel case conventions
-----------------------
-
-<a name="conventions-camel-case-underscore"></a>
-### Underscore '_' Enables Java Camel Case Syntax
-
-'Camel Case' syntax is standard Java code convention. When Celerio
-encounters the character underscore `_` in a table’s name or a column’s
-name, it skips it and converts to upper case the next character when
-generating classes, variables or methods related to this table, or
-column.
-
-For example, if your table name is `BOOK_COMMENT`, the generated entity
-class will be named `BookComment`; a variable holding `BookComment`
-instance will be named `bookComment` and a setter will be named
-`setBookComment`, etc.
-
-<a name="conventions-camel-case-native"></a>
-### Native camel case support
-
-If your table's and/or Column use a camel case syntax and if the
-JDBC driver preserves this syntax, then Celerio takes it into account
-when generating classes, variables or methods related to this table, or
-column.
-
-For example, if your table name is `bankAccount`, the generated entity
-class will be named `BankAccount`; a variable holding `BankAccount`
-instance will be named `bankAccount` and a setter will be named
-`setBankAccount`, etc.
-
-Choosing explicit names for your tables and columns is thus very
-important as it improves your source code readability without the burden
-of relying on configuration.
 
 <a name="conventions-pk"></a>
 Primary key conventions

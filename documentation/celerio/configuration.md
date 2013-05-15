@@ -19,6 +19,8 @@ Here are the main configuration points:
 	* [Use a SEQUENCE per TABLE](#seq_per_table)
 	* [Use a custom Id generator](#cust_id_generator)
 * [Entity and property names](#naming)
+	* [Underscore '_' enables Java camel case syntax](#conventions-camel-case-underscore)
+	* [Native camel case support](#conventions-camel-case-native)
 	* [Force an entity name](#entity_name)
 	* [Force a property name](#property_name)
 	* [Advanced property name calculation](#name_rule)
@@ -124,6 +126,37 @@ public Integer getAddressId() {
 
 <a name="naming"></a>
 ## Entity and property names
+
+<a name="conventions-camel-case-underscore"></a>
+### Underscore '_' enables Java camel case syntax
+
+'Camel Case' syntax is standard Java code convention. When Celerio
+encounters the character underscore `_` in a table’s name or a column’s
+name, it skips it and converts to upper case the next character when
+generating classes, variables or methods related to this table, or
+column.
+
+For example, if your table name is `BOOK_COMMENT`, the generated entity
+class will be named `BookComment`; a variable holding `BookComment`
+instance will be named `bookComment` and a setter will be named
+`setBookComment`, etc.
+
+<a name="conventions-camel-case-native"></a>
+### Native camel case support
+
+If your table's and/or Column use a camel case syntax and if the
+JDBC driver preserves this syntax, then Celerio takes it into account
+when generating classes, variables or methods related to this table, or
+column.
+
+For example, if your table name is `bankAccount`, the generated entity
+class will be named `BankAccount`; a variable holding `BankAccount`
+instance will be named `bankAccount` and a setter will be named
+`setBankAccount`, etc.
+
+Choosing explicit names for your tables and columns is thus very
+important as it improves your source code readability without the burden
+of relying on configuration.
 
 <a name="entity_name"></a>
 ### Force an entity name
