@@ -14,7 +14,7 @@ title: Jaxio
 <!-- Example row of columns -->
 <div class="row">
 <div class="span4">
-	<h2>Evaluer Celerio</h2>
+	<h1>Evaluer Celerio</h1>
 	<ul>
 	<li>
 		<a href="/celerio-service.html">Evaluer Celerio sur votre base de données, en utilisant la version en ligne de Celerio.</a>
@@ -22,7 +22,7 @@ title: Jaxio
 	</ul>
 </div>
 <div class="span4">
-	<h2>Success Story</h2>
+	<h1>Success Story</h1>
 	<ul>
 	<li>
 		<a href="/celerio-livre-blanc.html">Une banque centrale utilise Celerio. Présenté lors du MD Day 2010...</a>
@@ -37,7 +37,7 @@ title: Jaxio
 	</ul>
 </div>
 <div class="span4">
-	<h2>Actualités</h2>
+	<h1>Actualités</h1>
 	<ul>
     {% for post in site.posts limit:3 %}
     	<li><a href="{{ post.url }}">{{ post.date | date_to_string }} - {{ post.title }}</a></li>
