@@ -3,10 +3,10 @@ layout: doc
 title: Celerio Guide 
 ---
 
-Celerio reference guide
+Celerio Reference Guide
 =======================
 
-Celerio is a code generator developed by [Jaxio](http://www.jaxio.com).
+Celerio is a code generator tool for data-driven application.
 
 **Note** *If you are using Celerio remotely (through [Springfuse](http://www.springfuse.com)), go directly to [Conventions](convention.html) or [Configuration](configuration.html).*
 
