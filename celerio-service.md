@@ -61,7 +61,7 @@ puis exécutez dans une console les commandes maven résultantes.
 <div class="control-group groupId">
     <label class="control-label" for="groupId">Package Java</label>
     <div class="controls">
-		<input type="text" id="groupId" size="40" value="com.masociete.monprojet" placeholder="ex: com.jaxio.demo" class="required updateCommand" title="Ex: com.masociete.monprojet"/>
+		<input type="text" id="groupId" size="40" value="fr.masociete.monprojet" placeholder="ex: fr.jaxio.demo" class="required updateCommand" title="Ex: fr.masociete.monprojet"/>
     </div>
 </div>
 
