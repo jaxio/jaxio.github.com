@@ -6,16 +6,29 @@ title: Celerio Guide - Code modification, regeneration and collisions
 Code modification, regeneration and collisions
 ==============================================
 
-Introduction
-------------
+## Introduction
 
 One of the most important feature of a code generator is its ability to
 preserve manual code modifications across re-generations. To solve this
 challenge, Celerio proposes various pragmatic solutions depending on the
 nature of the generated file.
 
-Manual Modification Detection
------------------------------
+* [Manual Modification Detection](#manual-modification-detection)
+* [Java Files](#java-files)
+    * [Moving the file to ${baseDir}/src/main/java](#moving-to-java)
+    * [Code modifications through 'Base' inheritance](#inheritance)
+* [Other files (non-Java) when baseDir equals Celerio's outputDir](#non-java-files-same-dir)
+    * [Take ownership of a generated file](#take-ownership)
+        * [Generation rule summary for non-java file (baseDir == outputDir)](#gen-rule-same-dir)
+    * [Other files (non-Java) when baseDir is different from Celerio's outputDir](#non-java-diff-dir)
+        * [Generation rule summary for non-java file (baseDir =/= outputDir)](#gen-rule-diff-dir)
+* [Collisions and Merging](#collisions-merging)
+    * [Collision folder](#collisions-folder)
+    * [Merging manually the files](#collisions-manual-merge)
+        * [Merging Tools](#collisions-merging-tools)
+
+<a name="manual-modification-detection"></a>
+## Manual Modification Detection
 
 Celerio keeps track of all the file it generates in the file `.celerio/generated.xml`.
 Do not commit this file to your Source Control System as it is different for each developer.
@@ -31,9 +44,8 @@ Note that if the generated file has the same content as the old one, Celerio doe
 > If you delete the `.celerio/generated.xml file` Celerio has no way to determine if a file has been manually modified or not and you may loose 
 > your modifications unless the file has been committed to your Source Control System.
 
-
-Java files
-----------
+<a name="java-files"></a>
+## Java files
 
 By default, Celerio generates the main Java file under the directory
 `${maven-celerio-plugin.outputDir}/src/main/generated-java` or `${maven-celerio-plugin.outputDir}/src/main/java`
@@ -50,6 +62,7 @@ The second approach involves inheritance of a base class. Both approaches have p
 > In any case, you should avoid to modify directly the generated Java file
 > as you may loose your changes as soon as you regenerate the code.
 
+<a name="moving-to-java"></a>
 ### Moving the file to ${baseDir}/src/main/java
 
 Before modifying the generated Java file, move it to the `${baseDir}/src/main/java`
@@ -83,6 +96,7 @@ file. Hopefully, to help you in this task, Celerio generates the file in
 a dedicated collision folder under the `target` folder. Please refer to
 [Collisions and merging](#collisions-merging) section.
 
+<a name="inheritance"></a>
 ### Code modifications through 'Base' inheritance
 
 Celerio enables you to extend a generated Java class without modifying
@@ -205,8 +219,9 @@ file, it deletes it to prevent class duplication.
 
 You can proceed by analogy to override other Java classes.
 
-Other files (non-Java) when baseDir equals Celerio's outputDir
------------------------------------------------------------------
+
+<a name="non-java-files-same-dir"></a>
+## Other files (non-Java) when baseDir equals Celerio's outputDir
 
 Ideally all generated files should be under a `generated` folder. In
 practice, this is not really convenient or possible as certain files are
@@ -223,6 +238,7 @@ Do not modify the generated flows, instead simply copy the files you need under
 By configuration, Spring Web Flow will first look up a flow by id in the
 `src/main/webapp/WEB-INF/flows` user's reserved folder.
 
+<a name="take-ownership"></a>
 ### Take ownership of a generated file
 
 In order to tell Celerio to do not overwrite a generated file, you must add this file to your source control system.
@@ -240,6 +256,7 @@ If you change your mind and want Celerio to generate the file again,
 simply remove the file from your source control and regenerate your
 code.
 
+<a name="gen-rule-same-dir"></a>
 #### Generation rule summary for non-java file (baseDir == outputDir)
 
 Before generating a non-java file, Celerio applies the following rules:
@@ -288,9 +305,8 @@ Before generating a non-java file, Celerio applies the following rules:
 	</tbody>
 </table>
 
-
-Other files (non-Java) when baseDir is different from Celerio's outputDir
--------------------------------------------------------------------------
+<a name="non-java-diff-dir"></a>
+### Other files (non-Java) when baseDir is different from Celerio's outputDir
 
 In the case when baseDir is different from Celerio's outputDir, all is much simpler as
 by definition all the files present under the ${baseDir} folder cannot be overwritten by Celerio.
@@ -306,6 +322,7 @@ For example move:
 Once you re-run Celerio, it will detect the file under ${baseDir} and therefore will no longer generate it in the ${maven-celerio-plugin.outputDir}.
 Instead, it will generate it in the collision folder.  Please refer to [Collisions and merging](#collisions-merging) section.
 
+<a name="gen-rule-diff-dir"></a>
 #### Generation rule summary for non-java file (baseDir =/= outputDir)
 
 Before generating a non-java file, Celerio applies the following rules:
@@ -340,10 +357,9 @@ Before generating a non-java file, Celerio applies the following rules:
 
 
 <a name="collisions-merging"></a>
+## Collisions and Merging
 
-Collisions and Merging
-----------------------
-
+<a name="collisions-folder"></a>
 ### Collision folder
 
 When Celerio detects that a file which should be generated is already
@@ -358,6 +374,7 @@ So, whenever appropriate, Celerio generates the original file, under the
 expected path, in the collision folder
 `target/maven-celerio-plugin/collisions`
 
+<a name="collisions-manual-merge"></a>
 ### Merging manually the files
 
 To merge the files in conflict, you can use a tool such as WinMerge.
@@ -372,6 +389,7 @@ directory and the collision directory
 Then, you can keep track of changes you made and eventually merge some
 of the newly generated code into your existing file.
 
+<a name="collisions-merging-tools"></a>
 #### Merging Tools
 
 * [WinMerge](http://winmerge.org/)
