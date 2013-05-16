@@ -99,7 +99,7 @@ information in the current thread.
 Celerio detects automatically your `Account` table. An account table
 candidate is expected to have at least the following columns:
 
-<table class="table">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th>Column</th>
@@ -107,6 +107,7 @@ candidate is expected to have at least the following columns:
       <th>Description</th>
     </tr>
   </thead>
+  <tbody>
   <tr>
     <td>username, login, user_name, identifiant</td>
     <td>String</td>
@@ -117,6 +118,7 @@ candidate is expected to have at least the following columns:
     <td>String</td>
     <td>Password (in clear) used by the end user to authenticate to this web application</td>
   </tr>
+  </tbody>
 </table>
 
 
@@ -140,7 +142,7 @@ If the detected `Account` table has an email column, it is used by the
 generated code in few places, mostly as an illustration of the
 EmailService usage.
 
-<table class="table">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th>Column</th>
@@ -148,11 +150,13 @@ EmailService usage.
       <th>Description</th>
     </tr>
   </thead>
+  <tbody>
   <tr>
     <td>email, email_address, emailAddress, mail</td>
     <td>String</td>
     <td>The user email</td>
   </tr>
+  </tbody>  
 </table>
 
 <a name="conventions-account-enabled"></a>
@@ -161,7 +165,7 @@ EmailService usage.
 If the detected Account table has an enabled column, it is used by the
 generated code related to Spring Security integration.
 
-<table class="table">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th>Column</th>
@@ -169,11 +173,13 @@ generated code related to Spring Security integration.
       <th>Description</th>
     </tr>
   </thead>
+  </tbody>
   <tr>
     <td>enabled, is_enabled, isenabled</td>
     <td>Boolean</td>
     <td>Only enabled users (enabled == true) can login.</td>
   </tr>
+  </tbody>
 </table>
 
 <a name="conventions-role-table"></a>
@@ -185,7 +191,7 @@ be detected by Celerio, it must have a many-to-many or a many-to-one
 relationship with the found `Account` table and contain the following
 mandatory column:
 
-<table class="table">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th>Column</th>
@@ -193,11 +199,13 @@ mandatory column:
       <th>Description</th>
     </tr>
   </thead>
+  <tbody>  
   <tr>
     <td>authority, role_name, role, name_locale</td>
     <td>String</td>
     <td>The generated code relies on the following authority's values: ROLE_USER, ROLE_ADMIN</td>
    </tr>
+  </tbody>   
 </table>
 
 Here is a sample SQL script (H2 Database) that complies to Celerio conventions
@@ -278,7 +286,7 @@ When the following columns are present simultaneously in a
 table, Celerio generates various helper methods to ease file
 manipulation from the web tier to the persistence layer.
 
-<table class="table">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th>Column</th>
@@ -286,6 +294,7 @@ manipulation from the web tier to the persistence layer.
       <th>Description</th>
     </tr>
   </thead>
+  <tbody>
   <tr>
     <td><i>prefix</i>_file_name</td>
     <td>Boolean</td>
@@ -306,6 +315,7 @@ manipulation from the web tier to the persistence layer.
     <td>Blob</td>
     <td>Binary content of the file</td>
   </tr>
+  </tbody>
 </table>
 
 Example: Here is the corresponding SQL code using `mydoc` as a prefix
@@ -328,7 +338,7 @@ save it to the corresponding table, then download it using a simple URL.
 When the following columns are present simultaneously in a
 table, Celerio will use these columns to save the creation and last update using jpa listeners.
 
-<table class="table">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th>Column</th>
@@ -336,6 +346,7 @@ table, Celerio will use these columns to save the creation and last update using
       <th>Description</th>
     </tr>
   </thead>
+  <tbody>
   <tr>
     <td>creation_author, creation_by, cree_par</td>
     <td>String</td>
@@ -356,8 +367,8 @@ table, Celerio will use these columns to save the creation and last update using
     <td>Date</td>
     <td>Last modification date</td>
   </tr>
+  </tbody>
 </table>
-
 
 Example: 
 
@@ -384,7 +395,7 @@ The table should be called either
 
 The table should contain the following columns
 
-<table class="table">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th>Column</th>
@@ -392,6 +403,7 @@ The table should contain the following columns
       <th>Description</th>
     </tr>
   </thead>
+  <tbody>  
   <tr>
     <td>author‚ auteur</td>
     <td>String</td>
@@ -417,6 +429,7 @@ The table should contain the following columns
     <td>String</td>
     <td>Third attribute</td>
   </tr>
+  </tbody>
 </table>
 
 <a name="conventions-saved-search"></a>
@@ -429,7 +442,7 @@ The table should be called either `saved_search` or `saved_search_form`
 
 The table should contain the following columns
 
-<table class="table">
+<table class="table table-bordered table-striped">
   <thead>
     <tr>
       <th>Column</th>
@@ -437,6 +450,7 @@ The table should contain the following columns
       <th>Description</th>
     </tr>
   </thead>
+  <tbody>
   <tr>
     <td>form_class, form_classname</td>
     <td>String</td>
@@ -457,6 +471,7 @@ The table should contain the following columns
     <td>String</td>
     <td>FK linked to Account (not required)</td>
   </tr>
+  </tbody>  
 </table>
 
 Example: 

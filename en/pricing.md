@@ -19,7 +19,7 @@ For more information regarding Celerio, please contact us.
 
 ## Features comparisons 
 
-<table class="table">
+<table class="table table-bordered table-striped">
 	<thead>
 		<tr>
 			<th>Feature</th>
