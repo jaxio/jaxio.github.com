@@ -41,7 +41,7 @@ depending on Celerio's outputDir [Please refer to Code Generation chapter](gener
 
 In this section you will learn how to modify a generated Java file
 without loosing your modifications. The first approach consists 
-simply in moving the file to ${baseDir}/src/main/java. 
+simply in moving the file to `${baseDir}/src/main/java`. 
 
 The second approach involves inheritance of a base class. Both approaches have pros and cons.
 
@@ -293,17 +293,17 @@ Other files (non-Java) when baseDir is different from Celerio's outputDir
 -------------------------------------------------------------------------
 
 In the case when baseDir is different from Celerio's outputDir, all is much simpler as
-by definition all the files present under the ${baseDir} folder cannot be overwritten by Celerio.
+by definition all the files present under the `${baseDir}` folder cannot be overwritten by Celerio.
 
 If you want to take ownership of a file, let's say the web.xml file, you should simply move the file from
-the ${maven-celerio-plugin.outputDir} to the ${baseDir}. In this process you should preserve the file's relative path.
+the `${maven-celerio-plugin.outputDir}` to the `${baseDir}`. In this process you should preserve the file's relative path.
 
 For example move:
 
-* ${maven-celerio-plugin.outputDir}/src/main/webapp/WEB-INF/web.xml to
-* ${baseDir}/src/main/webapp/WEB-INF/web.xml
+* `${maven-celerio-plugin.outputDir}/src/main/webapp/WEB-INF/web.xml`
+* to `${baseDir}/src/main/webapp/WEB-INF/web.xml`
 
-Once you re-run Celerio, it will detect the file under ${baseDir} and therefore will no longer generate it in the ${maven-celerio-plugin.outputDir}.
+Once you re-run Celerio, it will detect the file under `${baseDir}` and therefore will no longer generate it in the `${maven-celerio-plugin.outputDir}`.
 Instead, it will generate it in the collision folder.  Please refer to [Collisions and merging](#collisions-merging) section.
 
 #### Generation rule summary for non-java file (baseDir =/= outputDir)
@@ -351,12 +351,10 @@ present and under source control or manually modified, it does not overwrite you
 Instead, Celerio generates the files in conflict in the *collision folder*: `target/maven-celerio-plugin/collisions`
 
 All files generated in that folder have the same path as if they had
-been generated normally, except for the
-`target/maven-celerio-plugin/collisions` path prefix.
+been generated normally, except for the `target/maven-celerio-plugin/collisions` path prefix.
 
 So, whenever appropriate, Celerio generates the original file, under the
-expected path, in the collision folder
-`target/maven-celerio-plugin/collisions`
+expected path, in the collision folder `target/maven-celerio-plugin/collisions`
 
 ### Merging manually the files
 
