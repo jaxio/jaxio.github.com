@@ -58,27 +58,32 @@ data or modify your database.
 <a name="celerio-engine"></a>
 ### Celerio Engine
 
-Celerio Engine loads the raw entity-relationship model extracted from
-your database and a configuration file which instructs Celerio how to
-refine this model. Indeed, the extracted model does not carry all the
-meta information, it is up to you to enrich it. For example, through
-configuration, you may add inheritance to your model. From this enriched
-model, Celerio constructs a graph into memory and let the generation
-templates access to it when it executes them.
+Celerio Engine relies on the raw entity-relationship model extracted by
+the database schema extractor tool and a configuration file which instructs Celerio how to
+refine this model.
+
+Indeed, the extracted model does not carry all the meta information, it is up to you to enrich it.
+
+For example, through configuration, you may add inheritance to your model. From this enriched
+model, Celerio constructs a graph into memory and let the generation templates access to it when it executes them.
 
 <a name="celerio-template-packs"></a>
 ### Template packs
 
 The generation templates that Celerio executes are grouped into jar
-files called templates packs. Celerio loads all the template packs found
+files called templates packs.
+
+Celerio loads all the template packs found
 on the classpath, so make sure you add them as jar dependencies when
-executing Celerio. By default Celerio executes all the templates found
+executing Celerio.
+
+By default Celerio executes all the templates found
 in a pack, but this can be configured to filter out certain templates.
+
 The templates packs are regularly updated to take into account the
 latest industry standards and practices. The current template packs
 generate some source code that uses the following frameworks or
-standards: SpringFramework, JPA, Hibernate, Bean Validator, Spring Web
-Flow, RichFaces, etc.
+standards: JSF2, SpringFramework, JPA2, Bean Validation, PrimeFaces, etc.
 
 ![How Celerio works](images/celerio-phases.png)
 
@@ -91,7 +96,7 @@ the amount of configuration.
 
 The Database Schema Extractor and Celerio Engine are distributed as
 Maven 2 plugins, which simplifies their installation and make them
-compatible with IDE that already provide Maven 2 integration. Eclipse,
+compatible with IDE that already support Maven 2 integration. Eclipse,
 Netbeans and IntelliJ have outstanding Maven support.
 
 Celerio allows you to replace, skip, modify or extend the generated
