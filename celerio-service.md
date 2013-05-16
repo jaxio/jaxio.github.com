@@ -6,11 +6,13 @@ description: Générez votre projet en ligne avec le service Celerio.
 
 ## Service Celerio
 
-Le service Celerio vous permet d'évaluer Celerio en générant un projet sur notre serveur.
+Le service Celerio vous permet de générer un projet sur notre serveur et de le télécharger.
+
+Ainsi, vous pouvez évaluer le code source produit par Celerio et le gain de productivité qu'il apporte.
 
 <div><g:plusone></g:plusone></div>
 
-Avec la version en ligne de Celerio la génération se déroule de cette manière:
+__Avec la version en ligne de Celerio la génération se déroule de cette manière__:
 
 * Vous remplissez le formulaire ci-dessous pour préparer le lancement sur votre machine de notre plugin maven.
 * Notre plugin maven réalise une <strong>rétro-ingénierie</strong> de votre base de données pour récupérer

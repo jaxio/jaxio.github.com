@@ -8,15 +8,16 @@ title: Jaxio
     <h2>Code generation for humans</h2>
 	<p>Generate full Java EE web application stack in seconds</p>
     <p><a href="https://github.com/jaxio/generated-projects/tree/master/" class="btn btn-primary btn-large">Show me some code example &raquo;</a></p>
+    <p><a href="/en/celerio-service.html" class="btn btn-primary btn-large">Try Celerio</a></p>
 </div>
 
 <!-- Example row of columns -->
 <div class="row">
 
 <div class="span4">
-	<h2>Try Celerio Online</h2>
+	<h2>Try Celerio</h2>
 	<p><img src="/images/green-check.gif"/>
-		You can freely evaluate the code that Celerio generates on <a href="http://www.springfuse.com/">www.springfuse.com</a> 
+		You can <a href="/en/celerio-service.html">freely evaluate the code that Celerio generates</a>   
 		using your own database or a sample H2 database that we provide.
 	</p>
 </div>

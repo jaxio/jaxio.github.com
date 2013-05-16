@@ -1,29 +1,30 @@
 ---
 layout: english
-title: Features comparisons between Springfuse and Celerio 
+title: Features comparisons between Celerio Service and Celerio 
 ---
 
-## SpringFuse 
+## Celerio Pricing
 
-_Springfuse_ service allows you to generate as many projects as you want. The generation is done on our server, using Celerio.
+### Celerio Service (SpringFuse) 
 
-## Celerio
+[Celerio Service](/en/celerio-service.html) allows you to generate as many projects as you want. The generation is done on our server, using Celerio.
 
-With Celerio, instead of generating remotely, you generate everything locally on your computer. 
+### Celerio
+
+With [Celerio](/en/celerio.html), instead of generating remotely, you generate everything locally on your computer. 
 Celerio integrates smoothly within your build process. 
 It provides advanced features such as round-trip code generation which allows you to preserve manual changes when you regenerate after database schema changes. 
 Celerio is a pragmatic and agile code generator. 
 Celerio is distributed as a Maven 2 plugin.
-For more information regarding Celerio, please contact us.
+For more information regarding Celerio, [please contact us](/en/contact-us.html).
 
-
-## Features comparisons 
+### Features comparisons 
 
 <table class="table table-bordered table-striped">
 	<thead>
 		<tr>
 			<th>Feature</th>
-			<th style="text-align: center">Springfuse</th>
+			<th style="text-align: center">Celerio Service (SpringFuse)</th>
 			<th style="text-align: center">Celerio</th>
 		</tr>
 	</thead>
@@ -54,12 +55,22 @@ For more information regarding Celerio, please contact us.
 			<td class="checked"></td>
 		</tr>
 		<tr>
+			<td>Generation template packs source code</td>
+			<td></td>
+			<td class="checked"></td>
+		</tr>
+		<tr>
 			<td>Additional ready-to-use generation template packs</td>
 			<td></td>
 			<td class="checked"></td>
 		</tr>
 		<tr>
 			<td>Create your own generation templates</td>
+			<td></td>
+			<td class="checked"></td>
+		</tr>
+		<tr>
+			<td>Professional Support</td>
 			<td></td>
 			<td class="checked"></td>
 		</tr>
@@ -72,4 +83,3 @@ For more information regarding Celerio, please contact us.
 		</tr>
 	</tfoot>
 </table>
-

@@ -7,17 +7,17 @@ title: Celerio , a code generation tool for data-oriented application written in
 
 Celerio is a code generator tool for data-oriented application.
 
-<img src="/images/green-check.gif"/>
-Celerio uses as input the entity-relationship model used by all relational databases. 
+![great](/images/green-check.gif) Celerio uses as input the entity-relationship model used by all relational databases. 
 This model is present in production and most developers understand it.
-To obtain this model, Celerio connects to your database and does a "reverse engineering" of your database schema. Celerio supports Oracle, My Sql, Postgres, DB2, etc.
+To obtain this model, Celerio connects to your database and does a "reverse engineering" of your 
+database schema. Celerio supports Oracle, My Sql, Postgres, DB2, etc.
 
-<img src="/images/green-check.gif"/>
-The model can be augmented using a configuration file. You may for example configure inheritance, rename some variables, declare some bi-directional associations, etc.
+![great](/images/green-check.gif) The model can be augmented using a configuration file. 
+You may for example configure inheritance, rename some variables, declare some bi-directional associations, etc.
 Then Celerio executes code generation templates written in Velocity
 
-<img src="/images/green-check.gif"/>
-Celerio comes with code generation templates organized into packs ('Backend' pack', 'SpringMVC3' pack, 'JSF 2' pack, etc...). 
+![great](/images/green-check.gif) Celerio comes with code generation templates organized 
+into templates packs ('Backend' pack', 'JSF 2' pack, etc...). 
 These templates address most use cases of data-oriented applications.
 
 The code that Celerio generates leverages the best and latest Open Source technologies and standards and follows the best practices.
@@ -33,7 +33,7 @@ Here is a high level overview of Celerio
 * Database reverse engineering
     * Tables, columns, contraints, comments
 	* Detects auto-generated keys (depends on driver jdbc)
-	* Support composite key and composite x-to-one
+	* Support composite key and composite relations
 	* Dumps the reversed metadata in an XML file to avoid useless reverse operation.
 * Convention over Configuration
     * Camel case naming for entity and fields 
@@ -45,7 +45,7 @@ Here is a high level overview of Celerio
 	* Field renaming
 	* Business key
 	* Inheritance
-	* Refine x-to-one and many-to-many associations
+	* Refine x-to-one, and x-to-many associations
 	* Inverse association one-to-many, one-to-one, many-to-many
 	* Labels for fields
 	* Field visibility in search form, edit form, and search results tables
@@ -72,21 +72,21 @@ Here is a high level overview of Celerio
 	* Named-query
 	* Leverage generics
 	* Transactions with Spring Framework (@Transactional)
+	* Hibernate Search
 * Generate Unit tests
 * etc.
 
 #### 'JSF 2 & PrimeFaces' Pack
 * Depends on 'Backend' Pack
-* Generate Spring Web Flow for all entities
-	* Use flow composition for associated entities
-	* Leverage Extented persistence context
+* Generate advanced CRUD features for all entities
 * View generation
 	* Uses facelets
 	* Uses PrimeFaces
+	* Uses Conversation (home made scope)
 * Spring Security ready
 * etc.
 
-<p>Read our blog entry  "<a href="http://www.springfuse.com/2011/01/04/springfuse-generates-primefaces-with-spring-webflow-frontend.html">Springfuse generates Primefaces with Spring Web Flow front end</a>"</p>  
+<p>Read our blog entry "<a href="http://www.springfuse.com/2013/03/05/jsf2-conversation.html">Conversation with JSF2</a>"</p>  
 
 #### 'Spring MVC 3 & JQuery' Pack
 * Depends on 'Backend' Pack

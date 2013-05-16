@@ -9,7 +9,7 @@ title: Service
 
 Our consulting offer consists essentially in helping Celerio users to leverage the potential that our product has to offer. For example, you can have someone from Jaxio:
 
-* Join your team to work on project bootstrapped with Springfuse and make the difference
+* Join your team to work on project bootstrapped with Celerio and make the difference
 * Assess with you if Celerio may be used to migrate a legacy application that uses a database. We have already reversed successfully hundred of database schema, some of them having hundreds of tables.
 * Write some new code generation templates fitting exactly your needs.
 

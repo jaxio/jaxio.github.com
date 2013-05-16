@@ -8,8 +8,6 @@ title: Jaxio is a software editor for development teams
 
 Jaxio edits Celerio, a pragmatic code generator tool for data oriented application written in Java.
 
-Jaxio also operates <a href="http://www.springfuse.com/">SpringFuse</a>, the online version of Celerio.
-
 We are based in Paris, France but our tool is used from all over the planet.
 
 <a href="https://twitter.com/springfuse" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @springfuse</a>
