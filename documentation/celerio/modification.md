@@ -244,18 +244,17 @@ code.
 
 Before generating a non-java file, Celerio applies the following rules:
 
-<table class="table">
-	<tfoot>
-		<tr>
-			<td colspan="4">Generations rule summary for non-java file (baseDir same as Celerio's outputDir)</td>
-		</tr>
-	</tfoot>	
+<table class="table table-bordered table-striped">
+	<caption>Generations rule summary for non-java file (baseDir same as Celerio's outputDir)</caption>
+	<thead>
 	<tr>
 		<th>File is already present on disk</th>
 		<th>File is under source control</th>
 		<th>Generated file would be the same </th>
 		<th>Celerio action</th>
 	</tr>
+	</thead>
+	<tbody>
 	<tr>
 		<td>No</td>
 		<td>n/a</td>
@@ -286,6 +285,7 @@ Before generating a non-java file, Celerio applies the following rules:
 		<td>Yes</td>
 		<td>File is not generated</td>
 	</tr>
+	</tbody>
 </table>
 
 
@@ -310,17 +310,16 @@ Instead, it will generate it in the collision folder.  Please refer to [Collisio
 
 Before generating a non-java file, Celerio applies the following rules:
 
-<table class="table">
-	<tfoot>
-		<tr>
-			<td colspan="4">Generations rule summary for non-java file (baseDir different from Celerio's outputDir)</td>
-		</tr>
-	</tfoot>	
+<table class="table table-bordered table-striped">
+	<caption>Generations rule summary for non-java file (baseDir different from Celerio's outputDir)</caption>
+	<thead>
 	<tr>
 		<th>File is present under baseDir</th>
 		<th>Generated file would be the same </th>
 		<th>Celerio action</th>
 	</tr>
+	</thead>
+	<tbody>
 	<tr>
 		<td>No</td>
 		<td>n/a</td>
@@ -336,6 +335,7 @@ Before generating a non-java file, Celerio applies the following rules:
 		<td>Yes</td>
 		<td>File is not generated</td>
 	</tr>
+	</tbody>
 </table>
 
 

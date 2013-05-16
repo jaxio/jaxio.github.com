@@ -131,17 +131,15 @@ To do so, open the celerio-templates-packs.xml file and add the following `celer
 
 By default Celerio has some built-in namers. Theses can be used from your entity templates:
 
-<table class="table">
-	<tfoot>
-		<tr>
-			<td colspan="4">Entity's namer properties</td>
-		</tr>
-	</tfoot>
-	<tbody>	
+<table class="table table-bordered table-striped">
+	<caption>Entity's namer properties</caption>
+	<thead>
 	<tr>
 		<th>property name</th>
 		<th>description</th>
 	</tr>
+	</thead>
+	<tbody>	
 	<tr>
 		<td>dao</td>
 		<td>Namer for the entity Dao Interface</td>
