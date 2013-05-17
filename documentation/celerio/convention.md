@@ -146,7 +146,7 @@ EmailService usage.
   <thead>
     <tr>
       <th>Property</th>
-      <th>Java Type</th>
+      <th>Type</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -169,7 +169,7 @@ generated code related to Spring Security integration.
   <thead>
     <tr>
       <th>Property</th>
-      <th>Java Type</th>
+      <th>Type</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -195,7 +195,7 @@ mandatory column:
   <thead>
     <tr>
       <th>Property</th>
-      <th>Java Type</th>
+      <th>Type</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -293,7 +293,7 @@ manipulation from the web tier to the persistence layer.
   <thead>
     <tr>
       <th>Properties</th>
-      <th>Mapped Java Type</th>
+      <th>Java Type</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -355,7 +355,7 @@ By convention, Celerio activates this feature if *any* of the following properti
   <thead>
     <tr>
       <th>Description</th>
-      <th>Mapped Java Type</th>
+      <th>Java Type</th>
       <th>Required properties</th>
     </tr>
   </thead>
@@ -450,7 +450,7 @@ This audit entity must have the following properties:
   <thead>
     <tr>
       <th>Description</th>
-      <th>Mapped Java Type</th>
+      <th>Java Type</th>
       <th>Required properties</th>
     </tr>
   </thead>
