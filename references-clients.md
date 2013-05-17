@@ -4,9 +4,9 @@ title: Les références de Jaxio - Success-story
 ---
 # Références clients
 
-### Banque de France
+### ![great](/images/customers/logo-banque-de-france.gif)
 
-La Banque de France utilise Celerio en interne pour générer des applications de gestion.
+La <a href="http://www.banque-france.fr" target="_new">Banque de France</a> utilise Celerio en interne pour générer ses applications de gestion java.
 
 ### Thales
 
