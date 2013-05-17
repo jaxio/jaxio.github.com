@@ -26,8 +26,8 @@ download in your web application, in an optimal way.
 * [Version column and optimistic locking](#conventions-version-optimistic-locking)
 * [Many to many and inverse attribute](#conventions-many-to-many-inverse-attribute)
 * [File Upload and Download](#conventions-file-download)
-* [Audit entity](#conventions-audit-entity)
-* [Audit table](#conventions-audit-table)
+* [Audit in entity](#conventions-audit-entity)
+* [Audit log table](#conventions-audit-table)
 * [Saved search](#conventions-saved-search)
 
 
@@ -336,7 +336,7 @@ This convention allows you to upload a file transparently,
 save it to the corresponding table, then download it using a simple URL.
 
 <a name="conventions-audit-entity"></a>
-## Auditing entity
+## Audit in entity
 
 For a given entity, it is often desirable to know:
 
@@ -352,7 +352,7 @@ By convention, Celerio activates this feature if the following properties are pr
     <tr>
       <th>Description</th>
       <th>Mapped Java Type</th>
-      <th>Accepted property names</th>
+      <th>Required properties</th>
     </tr>
   </thead>
   <tbody>
@@ -422,55 +422,98 @@ Here is how looks the Java code in the corresponding entity:
 
 
 <a name="conventions-audit-table"></a>
-## Audit table
+## Audit log table
 
-When the following columns are present simultaneously in a
-table, Celerio will use these columns to save the creation and last update using jpa listeners.
+The simple auditing feature allows you to track for each entity creation/modifications/deletion events and store them in a
+dedicated table. More generally this feature allow you to save any relevant event.
+ 
+The audit log is stored in a single table. Its implementation uses JPA listeners.
 
-The table should be called either
+This feature is simple in the sense that it does not rely on a framework such as Envers, which can be complex to apprehend.
+Instead, the implementation is simple and probably satisfactory for 90% of the cases.
 
-* audit
-* audit_log
-* audit_trail
+By convention, Celerio generates the source code that implements this feature if the following conditions are met:
 
-The table should contain the following columns
+An audit entity must be present. Its name must be either:
+
+* Audit
+* AuditLog
+* AuditTrail
+
+This audit entity must have the following properties:
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Column</th>
-      <th>Mapped Java Type</th>
       <th>Description</th>
+      <th>Mapped Java Type</th>
+      <th>Required properties</th>
     </tr>
   </thead>
   <tbody>  
   <tr>
-    <td>author‚ auteur</td>
+    <td>Author</td>
     <td>String</td>
-    <td>Account id</td>
+    <td>author or auteur</td>
   </tr>
   <tr>
+    <td>Event type</td>
+    <td>String</td>
     <td>event</td>
-    <td>String</td>
-    <td>event type</td>
   </tr>
   <tr>
-    <td>string_attribute_1, attribute_1, string_1</td>
-    <td>String</td>
     <td>First attribute</td>
+    <td>String</td>
+    <td>stringAttribute1 or attribute1 or string1</td>
   </tr>
   <tr>
-    <td>string_attribute_2, attribute_2, string_2</td>
-    <td>String</td>
     <td>Second attribute</td>
+    <td>String</td>
+    <td>stringAttribute2 or attribute2 or string2</td>
   </tr>
   <tr>
-    <td>string_attribute_3, attribute_3, string_3</td>
-    <td>String</td>
     <td>Third attribute</td>
+    <td>String</td>
+    <td>stringAttribute3 or attribute3 or string3</td>
   </tr>
   </tbody>
 </table>
+
+> For entity related event:
+>
+> * event is either Creation, Modification, Deletion
+> * First attribute is used to store the entity name
+> * Second attribute is used to store the entity id
+> * Third attribute is used to store a description of the modifications
+>
+
+**SQL Example:**
+
+{% highlight sql %}
+
+CREATE TABLE AUDIT_LOG (
+    id                 int not null IDENTITY,
+    author             varchar(256),
+    event              varchar(256),
+    event_date         timestamp,
+    string_attribute_1 varchar(256),
+    string_attribute_2 varchar(256),
+    string_attribute_3 varchar(256),
+    primary key (id)
+);
+
+{% endhighlight %}
+
+With the column names above, the property names calculated by convention by Celerio match exactly 
+the properties required to activate the simple database auditing feature. 
+ 
+In case your column names are slightly different, you can set the fieldName attribute in the corresponding 
+column's columnConfig, and the feature will be activated. For example:
+
+{% highlight xml %}
+<columnConfig columnName="event_type" fieldName="event"/>
+{% endhighlight %}
+
 
 <a name="conventions-saved-search"></a>
 ## Saved search table
