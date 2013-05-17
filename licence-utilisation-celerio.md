@@ -19,7 +19,8 @@ Nous vous proposons d'évaluer Celerio lors d'une présentation dans vos locaux.
 
 ### Evaluer le code source généré par Celerio
 
-Pour évaluer le code généré par Celerio, il suffit de générer un projet en ligne avec notre service <a href="http://www.springfuse.com/">www.springfuse.com</a>.
+Pour évaluer le code généré par Celerio, il suffit de générer un projet en ligne 
+avec notre <a href="/celerio-service.html">Service Celerio</a>.
 
 <br/>
 <br/>
