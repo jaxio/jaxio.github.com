@@ -10,7 +10,7 @@ La <a href="http://www.banque-france.fr" target="_new">Banque de France</a> util
 
 ### Thales
 
-Thales utilise Celerio en interne pour des projets orientés-données.
+<a href="http://www.thalesgroup.com" target="_new">Thales</a> utilise Celerio en interne pour des projets orientés-données.
 
 ### ![great](/images/customers/logo-unibail-rodamco.gif)
 
