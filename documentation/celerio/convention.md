@@ -343,7 +343,7 @@ For a given entity, it is often desirable to know:
 * when this entity was created and who created it
 * the last time this entity was updated and who updated it
 
-With JPA this feature can be easily implemented using @PreUpdate and @PrePersist annotations in the entity itself.
+With JPA this feature can be implemented using `@PreUpdate` and `@PrePersist` annotations in the entity itself.
 
 By convention, Celerio activates this feature if *any* of the following properties is present in an entity.
 
