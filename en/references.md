@@ -16,10 +16,10 @@ Celerio to develop an internal application. The application connects to their ne
 </td>
 </tr>
 <tr>
-<td style="vertical-align: top">Central Bank</td>
+<td style="vertical-align: top"><img src="/images/customers/logo-banque-de-france.gif" title="Banque de France"/></td></td>
 <td>
 <p>
-A <strong>Central Bank in Europe</strong> is using Celerio to jumpstart and develop large data-oriented applications.
+<a href="http://www.banque-france.fr" target="_new"><strong>Central Bank in Europe</strong></a> is using Celerio to jumpstart and develop large data-oriented applications.
 </p>
 <p>
 This document (in french) was presented<br/> <img src="/images/pdf-icon.png" width="16" height="16"/>"<a href="/documents/jaxio-migration-application-client-serveur.pdf" 
