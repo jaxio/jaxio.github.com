@@ -25,20 +25,20 @@ title: Jaxio
 	<h2>Different</h2>
 	<p>
 		<strong>Simple Simple Simple</strong>
-	<br/>
+		<br/>
 		Celerio is pragmatic. There is no UML, no new language to learn, no new esoteric concepts understand, no specific IDE to use.
 		Celerio leverages existing technologies as you do as a developer.
 	</p>
 
 	<p>
 		<strong>Does one thing well</strong>
-	<br/>
+		<br/>
 		Celerio is not trying to address all technologies, all applications.
 		It targets Java Web applications based on Spring technologies and Hibernate and it does it well.</p>
 
 	<p>
 		<strong>Goes beyond the trivial</strong>
-	<br/>
+		<br/>
 		Celerio generated code address advanced topics and use cases.
 	</p>
 </div>
