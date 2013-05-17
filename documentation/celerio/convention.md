@@ -102,19 +102,19 @@ candidate is expected to have at least the following columns:
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Column</th>
-      <th>Mapped Java Type</th>
+      <th>Property</th>
+      <th>Type</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
   <tr>
-    <td>username, login, user_name, identifiant</td>
+    <td>username, login, userName, identifiant</td>
     <td>String</td>
     <td>Login used by the end user to authenticate to this web application</td>
   </tr>
   <tr>
-    <td>password, pwd, passwd, mot_de_passe, motdepasse</td>
+    <td>password, pwd, passwd, motDePasse</td>
     <td>String</td>
     <td>Password (in clear) used by the end user to authenticate to this web application</td>
   </tr>
@@ -145,14 +145,14 @@ EmailService usage.
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Column</th>
-      <th>Mapped Java Type</th>
+      <th>Property</th>
+      <th>Java Type</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
   <tr>
-    <td>email, email_address, emailAddress, mail</td>
+    <td>email, emailAddress, mail</td>
     <td>String</td>
     <td>The user email</td>
   </tr>
@@ -168,14 +168,14 @@ generated code related to Spring Security integration.
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Column</th>
-      <th>Mapped Java Type</th>
+      <th>Property</th>
+      <th>Java Type</th>
       <th>Description</th>
     </tr>
   </thead>
   </tbody>
   <tr>
-    <td>enabled, is_enabled, isenabled</td>
+    <td>enabled, isEnabled</td>
     <td>Boolean</td>
     <td>Only enabled users (enabled == true) can login.</td>
   </tr>
@@ -194,14 +194,14 @@ mandatory column:
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Column</th>
-      <th>Mapped Java Type</th>
+      <th>Property</th>
+      <th>Java Type</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>  
   <tr>
-    <td>authority, role_name, role, name_locale</td>
+    <td>authority, roleName, role, nameLocale</td>
     <td>String</td>
     <td>The generated code relies on the following authority's values: ROLE_USER, ROLE_ADMIN</td>
    </tr>
@@ -532,14 +532,14 @@ The table should contain the following columns
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Column</th>
-      <th>Mapped Java Type</th>
+      <th>Property</th>
+      <th>Java Type</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
   <tr>
-    <td>form_class, form_classname</td>
+    <td>formClass, formClassname</td>
     <td>String</td>
     <td>Fully qualified name of the search form type</td>
   </tr>
@@ -549,12 +549,12 @@ The table should contain the following columns
     <td>Name given to the saved search</td>
   </tr>
   <tr>
-    <td>form_content</td>
-    <td>blob</td>
+    <td>formContent</td>
+    <td>byte[]</td>
     <td>Serialized form of the search</td>
   </tr>
   <tr>
-    <td>account_id</td>
+    <td>accountId</td>
     <td>String</td>
     <td>FK linked to Account (not required)</td>
   </tr>
