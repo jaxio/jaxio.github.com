@@ -338,42 +338,48 @@ save it to the corresponding table, then download it using a simple URL.
 <a name="conventions-audit-entity"></a>
 ## Auditing entity
 
-When the following columns are present simultaneously in a
-table, Celerio will use these columns to save the creation and last update using jpa listeners.
+For a given entity, it is often desirable to know:
+
+* when this entity was created and who created it
+* the last time this entity was updated and who updated it
+
+With JPA this feature can be easily implemented using @PreUpdate and @PrePersist annotations in the entity itself.
+
+By convention, Celerio activates this feature if the following properties are present simultaneously in an entity.
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Column</th>
-      <th>Mapped Java Type</th>
       <th>Description</th>
+      <th>Mapped Java Type</th>
+      <th>Accepted property names</th>
     </tr>
   </thead>
   <tbody>
   <tr>
-    <td>creation_author, creation_by, cree_par</td>
+    <td>Creation author</td>
     <td>String</td>
-    <td>Creation author id</td>
+    <td>creationAuthor or creationBy or creePar</td>
   </tr>
   <tr>
-    <td>creation_date, date_creation</td>
-    <td>Date</td>
     <td>Creation date</td>
-  </tr>
-  <tr>
-    <td>last_modification_author, last_modification_at, derniere_modification_par, modifie_par</td>
-    <td>String</td>
-    <td>Last modification author id</td>
-  </tr>
-  <tr>
-    <td>last_modification_date, date_derniere_modification, derniere_modification</td>
     <td>Date</td>
+    <td>creationDate or dateCreation</td>
+  </tr>
+  <tr>
+    <td>Last modification author</td>
+    <td>String</td>
+    <td>lastModificationAuthor or lastModificationAt or derniereModificationPar or modifiePar</td>
+  </tr>
+  <tr>
     <td>Last modification date</td>
+    <td>Date</td>
+    <td>lastModificationDate or dateDerniereModification or derniereModification</td>
   </tr>
   </tbody>
 </table>
 
-Example: 
+**Example:**
 
 {% highlight sql %}
 
@@ -383,6 +389,37 @@ last_modification_date   timestamp,
 last_modification_author varchar(200),
 
 {% endhighlight %}
+
+With the column names above, the property names calculated by convention by Celerio match exactly 
+the properties required to activate the entity auditing feature. 
+ 
+In case your column names are slightly different, you can set the fieldName attribute in the corresponding 
+column's columnConfig, and the feature will be activated. For example:
+
+{% highlight xml %}
+<columnConfig columnName="last_update" fieldName="lastModificationDate"/>
+{% endhighlight %}
+
+Here is how looks the Java code in the corresponding entity:
+
+{% highlight java %}
+    @PrePersist
+    protected void prePersist() {
+        if (AuditContextHolder.audit()) {
+            setCreationAuthor(AuditContextHolder.username());
+            setCreationDate(new Date());
+        }
+    }
+
+    @PreUpdate
+    protected void preUpdate() {
+        if (AuditContextHolder.audit()) {
+            setLastModificationAuthor(AuditContextHolder.username());
+            setLastModificationDate(new Date());
+        }
+    }
+{% endhighlight %}
+
 
 <a name="conventions-audit-table"></a>
 ## Audit table
