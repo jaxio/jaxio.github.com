@@ -343,9 +343,9 @@ For a given entity, it is often desirable to know:
 * when this entity was created and who created it
 * the last time this entity was updated and who updated it
 
-With JPA this feature can be easily implemented using @PreUpdate and @PrePersist annotations in the entity itself.
+With JPA this feature can be implemented using `@PreUpdate` and `@PrePersist` annotations in the entity itself.
 
-By convention, Celerio activates this feature if the following properties are present simultaneously in an entity.
+By convention, Celerio activates this feature if *any* of the following properties is present in an entity.
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -393,7 +393,7 @@ last_modification_author varchar(200),
 With the column names above, the property names calculated by convention by Celerio match exactly 
 the properties required to activate the entity auditing feature. 
  
-In case your column names are slightly different, you can set the fieldName attribute in the corresponding 
+In case your column names are slightly different, you can set the `fieldName` attribute in the corresponding 
 column's columnConfig, and the feature will be activated. For example:
 
 {% highlight xml %}
