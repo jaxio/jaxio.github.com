@@ -5,7 +5,7 @@ title: Celerio Service
 
 ## Celerio Service
 
-Celerio service (formerly knows as SpringFuse) let you generate your project on our server with Celerio and download it.
+Celerio service (formerly known as SpringFuse) let you generate your project on our server with Celerio and download it.
 
 <div><g:plusone></g:plusone></div>
 
