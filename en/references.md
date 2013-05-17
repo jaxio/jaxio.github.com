@@ -22,8 +22,9 @@ Celerio to develop an internal application. The application connects to their ne
 <a href="http://www.banque-france.fr" target="_new"><strong>Central Bank in Europe</strong></a> is using Celerio to jumpstart and develop large data-oriented applications.
 </p>
 <p>
-This document (in french) was presented<br/> <img src="/images/pdf-icon.png" width="16" height="16"/>"<a href="/documents/jaxio-migration-application-client-serveur.pdf" 
-onclick="javascript: pageTracker._trackPageview('/documents/jaxio-migration-application-client-serveur.pdf'); "><strong>Migrate legacy application to a Java/JSF/SpringWebFlow/JPA stack</strong></a>"  at MD Day 2010 conference in Paris.
+<img src="/images/pdf-icon.png" width="16" height="16"/><a href="/documents/jaxio-migration-application-client-serveur.pdf" 
+onclick="javascript: pageTracker._trackPageview('/documents/jaxio-migration-application-client-serveur.pdf'); "><strong>Migrate legacy application to a Java/JSF/SpringWebFlow/JPA stack</strong></a> 
+was presented with our customer at MD Day 2010 conference in Paris.
 </p>
 </td>
 </tr>
