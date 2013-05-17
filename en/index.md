@@ -23,7 +23,6 @@ title: Jaxio
 </div>
 <div class="span4">
 	<h2>Different</h2>
-	<ul>
 	<p><img src="/images/green-check.gif"/>
 	<strong>Simple Simple Simple</strong>
 	<br/>
