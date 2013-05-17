@@ -20,9 +20,8 @@ title: Jaxio
 		You can <a href="/en/celerio-service.html">freely evaluate the code that Celerio generates</a>   
 		using your own database or a sample database we provide.
 	</p>
-	
 	<p>
-		It takes minutes, you save weeks.
+		Review, adopt and save weeks.
 	</p>
 </div>
 <div class="span4">
@@ -30,16 +29,15 @@ title: Jaxio
 	<p>
 		<strong>Simple Simple Simple</strong>
 		<br/>
-		Celerio is pragmatic. There is no UML, no new language to learn, no new esoteric concepts understand, no specific IDE to use.
+		Celerio is pragmatic. There is no UML, no new language to learn, no new esoteric concepts to understand, no specific IDE to use.
 		Celerio leverages existing technologies as you do as a developer.
 	</p>
-
 	<p>
 		<strong>Does one thing well</strong>
 		<br/>
 		Celerio is not trying to address all technologies, all applications.
-		It targets Java Web applications based on Spring technologies and Hibernate and it does it well.</p>
-
+		It targets Java Web applications based on Spring technologies and Hibernate and it does it well.
+	</p>
 	<p>
 		<strong>Goes beyond the trivial</strong>
 		<br/>
@@ -54,13 +52,11 @@ title: Jaxio
 		Deciding to rewrite an application is a tough decision. 
 		There are often many risks. Celerio helps your existing team make the first move toward your application rewriting.
 	</p>
-	
 	<p>
 		<strong>Jumpstart</strong>
 		<br/>
 		Celerio allows you to jumpstart new projects in a minute. Developers learn faster.
 	</p>
-	
 	<p>
 		<strong>Prototyping</strong>
 		<br/>
