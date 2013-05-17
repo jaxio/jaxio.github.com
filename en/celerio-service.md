@@ -3,9 +3,9 @@ layout: english
 title: Celerio Service
 ---
 
-## Celerio Service (SpringFuse)
+## Celerio Service
 
-Celerio service let you generate your project on our server with Celerio and download it.
+Celerio service (formerly knows as SpringFuse) let you generate your project on our server with Celerio and download it.
 
 <div><g:plusone></g:plusone></div>
 

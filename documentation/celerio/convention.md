@@ -267,9 +267,12 @@ of disabling it:
 <a name="conventions-version-optimistic-locking"></a>
 ## Version column and Optimistic Locking
 
-If your table has a column named `VERSION` whose type is an int, Celerio
-assumes by convention that you want to enable an optimistic locking
-strategy. As a result, the property is annotated with `@Version` .
+If your table has a column named `VERSION` whose type is compatible with the JPA `@Version` annotation, 
+then by convention Celerio assumes that you want to enable an optimistic locking strategy.
+
+As a result, the corresponding property is annotated with `@Version`.
+
+You can disable this convention in the configuration using columnConfig's version attribute.
 
 <a name="conventions-many-to-many-inverse-attribute"></a>
 ## Many to many and inverse attribute
