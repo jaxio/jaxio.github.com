@@ -16,48 +16,53 @@ title: Jaxio
 
 <div class="span4">
 	<h2>Try Celerio</h2>
-	<p><img src="/images/green-check.gif"/>
+	<p>
 		You can <a href="/en/celerio-service.html">freely evaluate the code that Celerio generates</a>   
 		using your own database or a sample H2 database that we provide.
 	</p>
 </div>
 <div class="span4">
 	<h2>Different</h2>
-	<p><img src="/images/green-check.gif"/>
-	<strong>Simple Simple Simple</strong>
+	<p>
+		<strong>Simple Simple Simple</strong>
 	<br/>
 		Celerio is pragmatic. There is no UML, no new language to learn, no new esoteric concepts understand, no specific IDE to use.
 		Celerio leverages existing technologies as you do as a developer.
 	</p>
 
-	<p><img src="/images/green-check.gif"/>
-	<strong>Does one thing well</strong>
+	<p>
+		<strong>Does one thing well</strong>
 	<br/>
 		Celerio is not trying to address all technologies, all applications.
 		It targets Java Web applications based on Spring technologies and Hibernate and it does it well.</p>
 
-	<p><img src="/images/green-check.gif"/>
-	<strong>Goes beyond the trivial</strong>
+	<p>
+		<strong>Goes beyond the trivial</strong>
 	<br/>
 		Celerio generated code address advanced topics and use cases.
 	</p>
 </div>
 <div class="span4">
 <h2>Use Cases</h2>
-	<p><img src="/images/green-check.gif"/>
-	<strong>Application rewriting</strong>
-	<br/>Deciding to rewrite an application is a tough decision. 
-	There are often many risks. Celerio helps your existing team make the first move toward your application rewriting.</p>
-	
-	<p><img src="/images/green-check.gif"/>
-	<strong>Jumpstart</strong>
-	<br/>Celerio allows you to jumpstart new projects in a minute. Developers learn faster.
+	<p>
+		<strong>Application rewriting</strong>
+		<br/>
+		Deciding to rewrite an application is a tough decision. 
+		There are often many risks. Celerio helps your existing team make the first move toward your application rewriting.
 	</p>
 	
-	<p><img src="/images/green-check.gif"/>
-	<strong>Prototyping</strong>
-	<br/>Writing a prototype for free is a common practice in the industry.
-	You have to work fast, for free, and deliver top notch quality to get the deal.
-	Celerio increases drastically your chances to succeed.</p>
+	<p>
+		<strong>Jumpstart</strong>
+		<br/>
+		Celerio allows you to jumpstart new projects in a minute. Developers learn faster.
+	</p>
+	
+	<p>
+		<strong>Prototyping</strong>
+		<br/>
+		Writing a prototype for free is a common practice in the industry.
+		You have to work fast, for free, and deliver top notch quality to get the deal.
+		Celerio increases drastically your chances to succeed.
+	</p>
 </div>
 </div>
