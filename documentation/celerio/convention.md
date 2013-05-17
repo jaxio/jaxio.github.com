@@ -293,7 +293,7 @@ manipulation from the web tier to the persistence layer.
   <thead>
     <tr>
       <th>Properties</th>
-      <th>Java Type</th>
+      <th>Type</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -355,7 +355,7 @@ By convention, Celerio activates this feature if *any* of the following properti
   <thead>
     <tr>
       <th>Description</th>
-      <th>Java Type</th>
+      <th>Type</th>
       <th>Required properties</th>
     </tr>
   </thead>
@@ -449,36 +449,36 @@ This audit entity must have the following properties:
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Description</th>
-      <th>Java Type</th>
       <th>Required properties</th>
+      <th>Type</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>  
   <tr>
+    <td>author, auteur</td>
+    <td>String</td>
     <td>Author</td>
-    <td>String</td>
-    <td>author or auteur</td>
   </tr>
   <tr>
-    <td>Event type</td>
-    <td>String</td>
     <td>event</td>
+    <td>String</td>
+    <td>Event type</td>
   </tr>
   <tr>
+    <td>stringAttribute1, attribute1, string1</td>
+    <td>String</td>
     <td>First attribute</td>
-    <td>String</td>
-    <td>stringAttribute1 or attribute1 or string1</td>
   </tr>
   <tr>
+    <td>stringAttribute2, attribute2, string2</td>
+    <td>String</td>
     <td>Second attribute</td>
-    <td>String</td>
-    <td>stringAttribute2 or attribute2 or string2</td>
   </tr>
   <tr>
-    <td>Third attribute</td>
+    <td>stringAttribute3, attribute3, string3</td>
     <td>String</td>
-    <td>stringAttribute3 or attribute3 or string3</td>
+    <td>Third attribute</td>
   </tr>
   </tbody>
 </table>
@@ -533,7 +533,7 @@ The table should contain the following columns
   <thead>
     <tr>
       <th>Property</th>
-      <th>Java Type</th>
+      <th>Type</th>
       <th>Description</th>
     </tr>
   </thead>
