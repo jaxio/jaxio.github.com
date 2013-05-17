@@ -20,6 +20,10 @@ title: Jaxio
 		You can <a href="/en/celerio-service.html">freely evaluate the code that Celerio generates</a>   
 		using your own database or a sample database we provide.
 	</p>
+	
+	<p>
+		It takes minutes, you save weeks.
+	</p>
 </div>
 <div class="span4">
 	<h2>Different</h2>
