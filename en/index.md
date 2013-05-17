@@ -18,7 +18,7 @@ title: Jaxio
 	<h2>Try Celerio</h2>
 	<p>
 		You can <a href="/en/celerio-service.html">freely evaluate the code that Celerio generates</a>   
-		using your own database or a sample H2 database that we provide.
+		using your own database or a sample database we provide.
 	</p>
 </div>
 <div class="span4">
