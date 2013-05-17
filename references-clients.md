@@ -46,15 +46,20 @@ ce produit à d'autres grands comptes. Enfin, au vu du succès rencontré par l'
 
 ### ![great](/images/customers/logo-ehealthobjects.png) 
 
-<p><a href="http://www.ehealthobjects.com" target="_new"><strong>eHealthObjects, Inc.</strong></a> provides Industry-leading NHIN (National Health Information Network) 
+<a href="http://www.ehealthobjects.com" target="_new"><strong>eHealthObjects, Inc.</strong></a> provides Industry-leading NHIN (National Health Information Network) 
 standards based Health Information Exchange (ThinkHIE), ONC-ATCB (ONC Certified Authorized
 Testing and Certification Body) certified Electronic Health Records (ThinkEHR),  
 Case/Disease Management & Patient-Centered Medical Home (ThinkCDM) products that help ensure
 quality care for patients at a reduced cost.
-</p>
-<p><strong>eHealthObjects</strong> uses open standards based frameworks and technologies to build and deliver the healthcare products and solutions. 
-<blockquote>Celerio helped us to develop the products faster than we ever thought as it generated all the backend code 
-and the screens using the industry standard frameworks. Using Celerio saved us about 40% of the total 
-development time and we highly recommend using Celerio for all who want to develop products faster 
-with top quality code</blockquote> says Sanjay Mittal, CEO of eHealthObjects, Inc.
-</p>
+
+
+<strong>eHealthObjects</strong> uses open standards based frameworks and technologies to build and deliver the healthcare products and solutions. 
+
+  <blockquote>Celerio helped us to develop the products faster than we ever thought as it generated all the backend code 
+  and the screens using the industry standard frameworks. Using Celerio saved us about 40% of the total 
+  development time and we highly recommend using Celerio for all who want to develop products faster 
+  with top quality code
+  </blockquote>
+
+says Sanjay Mittal, CEO of eHealthObjects, Inc.
+
