@@ -8,7 +8,7 @@ description: L'Offre Régie Outillée pour sécuriser vos projets
 
 Vous voulez renforcer votre équipe de développement et bénéficier de toute la puissance de Celerio sur un projet donné?
 
-### Détails de l'offre:
+### Offre
 
 * Un consultant Jaxio rejoint votre équipe de développement en mode "régie"
 * Les membres de votre équipe de développement disposent d'une licence  d'utilisation de Celerio limitée dans le temps
