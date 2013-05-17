@@ -6,7 +6,7 @@ description: Générez votre projet en ligne avec le service Celerio.
 
 ## Service Celerio
 
-Le service Celerio vous permet de générer un projet sur notre serveur et de le télécharger.
+Le service Celerio (anciennement SpringFuse) vous permet de générer un projet sur notre serveur et de le télécharger.
 
 Ainsi, vous pouvez évaluer le code source produit par Celerio et le gain de productivité qu'il apporte.
 
