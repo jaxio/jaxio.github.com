@@ -292,29 +292,29 @@ manipulation from the web tier to the persistence layer.
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Column</th>
+      <th>Properties</th>
       <th>Mapped Java Type</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
   <tr>
-    <td><i>prefix</i>_file_name</td>
+    <td><i>prefix</i>fileName</td>
     <td>Boolean</td>
     <td>File name</td>
   </tr>
   <tr>
-    <td><i>prefix</i>_size or <i>prefix</i>_length or <i>prefix</i>_content_length</td>
+    <td><i>prefix</i>Size or <i>prefix</i>Length or <i>prefix</i>ContentLength</td>
     <td>Int</td>
     <td>Length of the binary</td>
   </tr>
   <tr>
-    <td><i>prefix</i>_content_type</td>
+    <td><i>prefix</i>ContentType</td>
     <td>String</td>
     <td>Content type of the file</td>
   </tr>
   <tr>
-    <td><i>prefix</i>_binary or <i>prefix</i>_content or <i>prefix</i>_blob</td>
+    <td><i>prefix</i>Binary or <i>prefix</i>Content or <i>prefix</i>Blob</td>
     <td>Blob</td>
     <td>Binary content of the file</td>
   </tr>
@@ -331,6 +331,10 @@ mydoc_file_name         varchar(255)    not null,
 mydoc_binary            bytea,
 
 {% endhighlight %}
+
+With the column names above, the property names calculated by convention by Celerio match exactly 
+the properties required to activate the file upload/download feature. 
+
 
 This convention allows you to upload a file transparently, 
 save it to the corresponding table, then download it using a simple URL.
