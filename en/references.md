@@ -23,8 +23,7 @@ Celerio to develop an internal application. The application connects to their ne
 </p>
 <p>
 This document (in french) was presented<br/> <img src="/images/pdf-icon.png" width="16" height="16"/>"<a href="/documents/jaxio-migration-application-client-serveur.pdf" 
-onclick="javascript: pageTracker._trackPageview('/documents/jaxio-migration-application-client-serveur.pdf'); "><strong>Migrate legacy application to a Java/JSF/SpringWebFlow/JPA stack</strong></a>"
-<br/> at MD Day 2010 conference in Paris.
+onclick="javascript: pageTracker._trackPageview('/documents/jaxio-migration-application-client-serveur.pdf'); "><strong>Migrate legacy application to a Java/JSF/SpringWebFlow/JPA stack</strong></a>"  at MD Day 2010 conference in Paris.
 </p>
 </td>
 </tr>
