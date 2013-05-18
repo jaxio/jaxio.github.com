@@ -299,7 +299,7 @@ manipulation from the web tier to the persistence layer.
   </thead>
   <tbody>
   <tr>
-    <td><i>prefix</i>fileName</td>
+    <td><i>prefix</i>FileName</td>
     <td>Boolean</td>
     <td>File name</td>
   </tr>

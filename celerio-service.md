@@ -8,21 +8,21 @@ description: Générez votre projet en ligne avec le service Celerio.
 
 Le service Celerio (anciennement SpringFuse) vous permet de générer un projet sur notre serveur et de le télécharger.
 
-Ainsi, vous pouvez évaluer le code source produit par Celerio et le gain de productivité qu'il apporte.
+Ainsi, vous pouvez évaluer le code source généré par Celerio et le **gain de productivité** qu'il apporte.
 
 <div><g:plusone></g:plusone></div>
 
 __Avec la version en ligne de Celerio la génération se déroule de cette manière__:
 
-* Vous remplissez le formulaire ci-dessous pour préparer le lancement sur votre machine de notre plugin maven.
-* Notre plugin maven réalise une <strong>rétro-ingénierie</strong> de votre base de données pour récupérer
+* Vous remplissez le formulaire ci-dessous pour **préparer** le lancement sur votre machine de notre plugin maven.
+* Notre plugin maven réalise une **rétro-ingénierie** de votre base de données pour récupérer
 le nom des tables, le nom des colonnes, les contraintes d'intégrités, etc. En aucun cas, cette rétro-ingénierie ne récupère des vraies données.
 Seules les métadonnéées sont extraites. 
- * Notre plugin <strong>uploade</strong> ces métadonnées sur notre serveur ainsi que le fichier de configuration
+ * Notre plugin **uploade** ces métadonnées sur notre serveur ainsi que le fichier de configuration
 `maven-celerio-plugin.xml` présent dans le répertoire `src/main/config`. Ce fichier permet de configurer la génération de code.
-* Une fois l'upload terminé, <a href="/celerio.html" target="_new">Celerio</a> est appelé sur notre serveur pour générer
+* Une fois l'upload terminé, <a href="/celerio.html" target="_new">Celerio</a> est appelé sur notre serveur pour **générer**
 et zipper votre projet.
-* Notre plugin <strong>télécharge</strong> ensuite votre projet et le dézippe.
+* Notre plugin **télécharge** ensuite votre projet et le dézippe.
 Et voilà vous avez votre première release!
 
 
@@ -306,17 +306,17 @@ puis exécutez dans une console les commandes maven résultantes.
 Une fois que vous avez <span class="label label-info">renseigné les informations demandées</span>, 
 copier-coller séquentiellement les commandes maven des étapes 2 et 4 dans une console:
 
-### Step 2/4: Téléchargement de l'archetype maven
+### Etape 2/4: Téléchargement de l'archetype maven
 
 <p><span class="label label-info">Copier-coller</span> la commande maven suivante pour récupérer les quelques fichiers nécessaires à la rétro-ingénierie de la base de données (i.e. un pom.xml, etc.).</p>
 
 <textarea id="cmdLine" rows="6" cols="80" style="width:850px;height:80px;"></textarea>
 
-### Step 3/4:  Configuration (Optionelle)
+### Etape 3/4:  Configuration (Optionelle)
 
 Après avoir fait <span class="label label-info">vos premières armes</span> avec ce service, vous allez surement vouloir <a href="http://www.jaxio.com/documentation/celerio/configuration.html" target="_new">configurer la génération de code</a>.
 
-### Step 4/4: Rétro-ingénierie et Génération de code
+### Etape 4/4: Rétro-ingénierie et Génération de code
 
 <span class="label label-info">Copier-coller</span> ces commandes dans une console pour: 
 

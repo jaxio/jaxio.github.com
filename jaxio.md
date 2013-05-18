@@ -15,7 +15,7 @@ Jaxio est une société Française, basée à Paris.
 Jaxio édite le logiciel Celerio, un générateur de code pragmatique permettant d'accélérer 
 le développement des applications orientées-données en Java.
 
-<a href="https://twitter.com/springfuse" class="twitter-follow-button" data-show-count="false" data-lang="en">Suivre Jaxio sur twitter: @springfuse</a>
+<a href="https://twitter.com/jaxiosoft" class="twitter-follow-button" data-show-count="false" data-lang="en">Suivre Jaxio sur twitter: @jaxiosoft</a>
 
 ### Fondateurs
  
