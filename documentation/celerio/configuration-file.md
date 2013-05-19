@@ -10,11 +10,10 @@ Main Configuration File
 -----------------------
 
 The main Celerio configuration file is by convention located under
-`${basedir}/src/main/config/maven-celerio-plugin/maven-celerio-plugin.xml`
-The bootstrap goal creates one that you can customize. This
-configuration file must respect the `celerio.xsd` schema.
+`${basedir}/src/main/config/maven-celerio-plugin/maven-celerio-plugin.xml`.
+This configuration file must respect the `celerio.xsd` schema present in the same directory.
 
-Please refer to ? for a complete XSD reference.
+> *Note*: The bootstrap goal creates a configuration file that can be used as a starting point.
 
 Splitting the `entityConfigs` tag
 ---------------------------------
