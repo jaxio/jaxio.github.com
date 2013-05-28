@@ -1,6 +1,6 @@
 ---
-layout: english
-title: Celerio change log 
+layout: doc
+title: Celerio Guide - Celerio Change Log
 ---
 
 ## Celerio/Springfuse Change Log
