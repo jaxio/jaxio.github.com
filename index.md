@@ -64,14 +64,8 @@ $('.carousel').carousel({
 <div class="row">
 <div class="span4">
 	<h1>Evaluer Celerio</h1>
-	<ul>
-	<li>
-		<a href="/celerio-service.html">Evaluer Celerio sur votre base de données, en utilisant la version en ligne de Celerio.</a>
-	</li>
-	<li>
-		<a href="https://github.com/jaxio/generated-projects">Exemple de code déjà généré sur GitHub</a>	
-	</li>
-	</ul>
+	<p><a href="/celerio-service.html" class="btn btn-primary btn-large">Evaluer Celerio en ligne</a></p>
+	<p><a href="https://github.com/jaxio/generated-projects" class="btn btn-primary btn-large">Exemple de code généré</a></p>	
 </div>
 <div class="span4">
 	<h1>Success Story</h1>

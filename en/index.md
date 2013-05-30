@@ -2,30 +2,78 @@
 layout: english
 title: Jaxio
 ---
-<!-- Main hero unit for a primary marketing message or call to action -->
-<div class="hero-unit">
-    <h1>Celerio</h1>
-    <h2>Code generator for data-oriented applications</h2>
-	<p>Generate full Java EE web application stack in seconds</p>
-    <p><a href="https://github.com/jaxio/generated-projects/tree/master/" class="btn btn-primary btn-large">Show me some code example &raquo;</a></p>
-    <p><a href="/en/celerio-service.html" class="btn btn-primary btn-large">Try Celerio</a></p>
+
+<div id="myCarousel" class="carousel slide hero-unit">
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">
+	    <h1>Celerio</h1>
+		<h4>Code generator for Java data-oriented applications</h4>
+		<div class="carousel-caption">
+			<p>&gt; Reverse your database schema</p>
+			<p>&gt; Configure Celerio and generate your project foundation</p>
+			<p>&gt; Save weeks of R&amp;D in few seconds</p>
+		</div>
+    </div>
+    <div class="item">
+	    <h1>Celerio</h1>
+		<h4>Stay ahead</h4>		
+		<div class="carousel-caption">
+			<p>&gt; Generated code follows recent industry standards</p>
+			<p>&gt; 100% of generated code is already tested</p>
+			<p>&gt; Generated code implements advanced features</p>
+		</div>	
+    </div>
+    <div class="item">
+	    <h1>Celerio</h1>
+		<h4>Stay in control</h4>
+	     <div class="carousel-caption">
+			<p>&gt; The generated code is open</p>
+			<p>&gt; Code quality fosters self-learning</p>
+			<p>&gt; Celerio is not present at runtime</p>
+		</div>
+    </div>
+    <div class="item">
+	    <h1>Celerio</h1>
+		<h4>Boost your productivity</h4> 
+		<div class="carousel-caption">
+			<p>&gt; Focus your energy on business code right away</p>
+			<p>&gt; Homogeneous technical code across projects</p>
+			<p>&gt; Right to fail and retry</p>    
+		</div>
+    </div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
+
+<script type="text/javascript">
+$('.carousel').carousel({
+  interval: 10000
+});
+</script>
 
 <!-- Example row of columns -->
 <div class="row">
 
 <div class="span4">
-	<h2>Try Celerio</h2>
+	<h1>Try Celerio</h1>
 	<p>
-		You can <a href="/en/celerio-service.html">freely evaluate the code that Celerio generates</a>   
-		using your own database or a sample database we provide.
+		<a href="/en/celerio-service.html" class="btn btn-primary btn-large">Try Celerio online</a>   
 	</p>
 	<p>
-		Review, adopt and save weeks.
+    	<a href="https://github.com/jaxio/generated-projects/tree/master/" class="btn btn-primary btn-large">Generated example on GitHub</a>
 	</p>
 </div>
 <div class="span4">
-	<h2>Different</h2>
+	<h1>Different</h1>
 	<p>
 		<strong>Simple Simple Simple</strong>
 		<br/>
@@ -45,7 +93,7 @@ title: Jaxio
 	</p>
 </div>
 <div class="span4">
-<h2>Use Cases</h2>
+<h1>Use Cases</h1>
 	<p>
 		<strong>Application rewriting</strong>
 		<br/>
