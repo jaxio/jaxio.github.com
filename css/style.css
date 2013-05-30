@@ -13,6 +13,12 @@ body {
 	min-height: 480px;
 }
 
+.carousel-caption {
+	background: black;
+	color: green;
+}
+
+
 p {
 	margin: 5px;
 }
