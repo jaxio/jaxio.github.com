@@ -9,6 +9,9 @@ title: Celerio Guide - Celerio Change Log
 
 [Sample generated app diff 3.0.100-3.0.101](https://github.com/jaxio/generated-projects/commit/c58b3baf1f84a4031f05798d3a49776319fbb759) 
 
+Many thanks to Nicolas Rougé, Pierre-Henri Dezanneau, Vincent Beretti and Frederic Leroy for their ideas, feedbacks and patches.
+As always thanks also to all the springfuse users !
+
 ##### Database reverse 
 * We now extract enums definitions from mysql
 * We support mysql year(4) type
