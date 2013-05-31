@@ -10,6 +10,7 @@ title: Celerio Guide - Celerio Change Log
 [Sample generated app diff 3.0.100-3.0.101](https://github.com/jaxio/generated-projects/commit/c58b3baf1f84a4031f05798d3a49776319fbb759) 
 
 Many thanks to Nicolas Rougé, Pierre-Henri Dezanneau, Vincent Beretti and Frederic Leroy for their ideas, feedbacks and patches.
+
 As always thanks also to all the springfuse users !
 
 ##### Database reverse 
@@ -28,7 +29,7 @@ As always thanks also to all the springfuse users !
 #####  Convention
 
 * When your table/column name uses camelCase syntax we will use the table/column name as entity/field name.
-* Better var name clash detection and resolution (Thanks to all people who submitted esoteric schema...)
+* Better var name clash detection and resolution (Thanks to all people who submitted esoteric schemas...)
 
 ##### pack backend-jpa
 * support many-to-one and one-to-many associations with an intermediate table (as many-to-many). Please refer to [doc](http://www.jaxio.com/documentation/celerio/configuration.html#m2o-intermediate)
