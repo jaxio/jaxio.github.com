@@ -5,7 +5,9 @@ title: Celerio Guide - Celerio Change Log
 
 ## Celerio/Springfuse Change Log
 
-### 3.0.101-SNAPSHOT 
+### 3.0.101 (2013-05-31)
+
+[Sample generated app diff 3.0.100-3.0.101](https://github.com/jaxio/generated-projects/commit/c58b3baf1f84a4031f05798d3a49776319fbb759) 
 
 ##### Database reverse 
 * We now extract enums definitions from mysql

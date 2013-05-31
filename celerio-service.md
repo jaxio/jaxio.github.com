@@ -46,8 +46,8 @@ puis exécutez dans une console les commandes maven résultantes.
     <label class="control-label" for="celerioVersion">Version de Celerio</label>
     <div class="controls">
 		<select id="celerioVersion" name="celerioVersion" class="updateCommand">
-			<option value="3.0.100">3.0.100</option>
-			<option value="3.0.101-SNAPSHOT">3.0.101-SNAPSHOT</option>
+			<option value="3.0.101">3.0.101</option>
+			<option value="3.0.102-SNAPSHOT">3.0.102-SNAPSHOT</option>
 		</select>    
 	</div>
 </div>

@@ -66,10 +66,10 @@ $('.carousel').carousel({
 <div class="span4">
 	<h1>Try Celerio</h1>
 	<p>
-		<a href="/en/celerio-service.html" class="btn btn-primary btn-large">Try Celerio online</a>   
+		<a href="/en/celerio-service.html" class="btn btn-primary">Try Celerio online</a>   
 	</p>
 	<p>
-    	<a href="https://github.com/jaxio/generated-projects/tree/master/" class="btn btn-primary btn-large">Generated example on GitHub</a>
+    	<a href="https://github.com/jaxio/generated-projects/tree/master/" class="btn btn-primary">Generated example on GitHub</a>
 	</p>
 </div>
 <div class="span4">
