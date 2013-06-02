@@ -19,9 +19,9 @@ download in your web application, in an optimal way.
 	* [32 chars](#conventions-pk-32chars)
 	* [36 chars](#conventions-pk-36chars)
 	* [Other](#conventions-pk-other)
-* [Account table](#conventions-account-table)
-	* [Optional columns](#conventions-account-other-columns)		
-* [Role table](#conventions-role-table)
+* [Spring Security Integration](#conventions-spring-security-integration)
+	* [Account entity](#conventions-account-entity)
+	* [Role entity](#conventions-role-entity)
 * [ACCOUNT_ID column & Hibernate Filter](#conventions-hibernate-filter)
 * [Version column and optimistic locking](#conventions-version-optimistic-locking)
 * [Many to many and inverse attribute](#conventions-many-to-many-inverse-attribute)
@@ -86,116 +86,100 @@ For primary key that are `char(x)` where x is different from 32 or 36, Celerio
 map the column with an `assigned` generator, which means you must
 provide manually the primary key value.
 
-<a name="conventions-account-table"></a>
-The Account table
--------------------
 
-The `Account` table is a special table that contains the user's login and
-password columns and eventually the email and enabled columns. It has an
-important role during the login phase. It is also used by the
-`AccountContext` generated class which store the current `account`
-information in the current thread.
+<a name="conventions-spring-security-integration"></a>
+Spring Security Integration
+---------------------------
 
-Celerio detects automatically your `Account` table. An account table
-candidate is expected to have at least the following columns:
+The generated `UserDetailsServiceImpl` service is the link between the SpringSecurity's world
+and your user's credential information. As you expect, this class must know how to
+access the user's login and password.
+
+The generated implementation of this service varies depending on whether you follow
+or not Celerio's conventions.
+
+If your login credential are stored in your database, then you should make sure that the entity 
+playing the role of the `account` entity has the properties expected by Celerio (e.g. login &amp; password).
+
+Once Celerio has found your account entity, it looks up the account entity's many to many associations.
+If it finds a many to many association whose target entity is also playing the role
+of a `Role` entity (e.g. it has an 'authority' property), then it uses it.
+
+> **Note**
+>
+> The 'Account' and the 'Role' entities do not need to be named Account and Role.
+
+<a name="conventions-account-entity"></a>
+### The Account entity
+
+By convention, Celerio considers that an entity is the `Account` entity if it has the following properties:
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Property</th>
+      <th>Expected property</th>
       <th>Type</th>
+      <th>Required?</th>
       <th>Description</th>
     </tr>
   </thead>
   <tbody>
   <tr>
-    <td>username, login, userName, identifiant</td>
+    <td>username, login, userName, identifiant, email, emailAddress, mail</td>
     <td>String</td>
+    <td>Yes</td>
     <td>Login used by the end user to authenticate to this web application</td>
   </tr>
   <tr>
     <td>password, pwd, passwd, motDePasse</td>
     <td>String</td>
+    <td>Yes</td>    
     <td>Password (in clear) used by the end user to authenticate to this web application</td>
   </tr>
-  </tbody>
-</table>
-
-
-If no `Account` table candidate is found, Celerio will do as if it had
-found one and will generate a mock Account DAO implementation that
-returns 2 dummy users (user/user and admin/admin) instead of generating
-a real JPA DAO implementation. It is up to you to replace this DAO
-implementation with your own implementation.
-
-> **Note**
->
-> You may also elect the account table by configuration.
-
-<a name="conventions-account-other-columns"></a>
-### Other optional account columns
-
-<a name="conventions-account-email"></a>
-#### The Email column
-
-If the detected `Account` table has an email column, it is used by the
-generated code in few places, mostly as an illustration of the
-EmailService usage.
-
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>email, emailAddress, mail</td>
-    <td>String</td>
-    <td>The user email</td>
-  </tr>
-  </tbody>  
-</table>
-
-<a name="conventions-account-enabled"></a>
-#### The Enabled column
-
-If the detected Account table has an enabled column, it is used by the
-generated code related to Spring Security integration.
-
-<table class="table table-bordered table-striped">
-  <thead>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  </tbody>
   <tr>
     <td>enabled, isEnabled</td>
     <td>Boolean</td>
+    <td>No</td>    
     <td>Only enabled users (enabled == true) can login.</td>
   </tr>
   </tbody>
 </table>
 
-<a name="conventions-role-table"></a>
-The 'Role' table
+Bear in mind that you can match this convention using Celerio configuration.
+Let's assume that your users' credentials are stored in a table named
+User that has 2 columns user_login and user_password.
+
+Such a table would not be considered by default as the account table.
+
+To have Celerio consider this table as the account table, you must map the 
+user_login and user_password to one of the expected properties, for example:
+
+{% highlight sql %}
+<entityConfig tableName="USER">
+	<columnConfigs>
+		<columnConfig columnName="user_login" fieldName="username" />
+		<columnConfig columnName="user_password" fieldName="password" />
+	</columnConfigs>
+</entityConfig>	
+{% endhighlight %}
+
+> **Note**
+>
+> If no `Account` entity is found, the `UserDetailsServiceImpl` simply returns hard coded users and roles.
+
+
+<a name="conventions-role-entity"></a>
+The 'Role' entity
 ----------------
 
-The `Role` table is a special table that contains the account's roles. To
-be detected by Celerio, it must have a many-to-many or a many-to-one
-relationship with the found `Account` table and contain the following
-mandatory column:
+By convention, Celerio considers that an entity is the `Role` entity if it has the following property:
 
 <table class="table table-bordered table-striped">
   <thead>
     <tr>
-      <th>Property</th>
+      <th>Expected property</th>
       <th>Type</th>
+      <th>Required</th>
       <th>Description</th>
     </tr>
   </thead>
@@ -203,7 +187,8 @@ mandatory column:
   <tr>
     <td>authority, roleName, role, nameLocale</td>
     <td>String</td>
-    <td>The generated code relies on the following authority's values: ROLE_USER, ROLE_ADMIN</td>
+    <td>Yes</td>
+    <td>Note that the generated code relies on the following authority's values: ROLE_USER, ROLE_ADMIN</td>
    </tr>
   </tbody>   
 </table>
@@ -213,8 +198,8 @@ Here is a sample SQL script (H2 Database) that complies to Celerio conventions
 {% highlight sql %}
 
 CREATE TABLE ACCOUNT (
-    account_id char(32) not null, login
-    varchar(255) not null,
+    account_id char(32) not null, 
+    login varchar(255) not null,
     password varchar(255) not null,
     email varchar(255) not null,
 
@@ -285,9 +270,9 @@ You can override this convention using the parent's columnConfig's 'inverse' att
 <a name="conventions-file-download"></a>
 ## File Upload and Download
 
-When the following columns are present simultaneously in a
-table, Celerio generates various helper methods to ease file
-manipulation from the web tier to the persistence layer.
+When the following properties are present simultaneously in an entity, 
+Celerio generates various helper methods to ease file manipulation from the
+web tier to the persistence layer.
 
 <table class="table table-bordered table-striped">
   <thead>
@@ -334,7 +319,6 @@ mydoc_binary            bytea,
 
 With the column names above, the property names calculated by convention by Celerio match exactly 
 the properties required to activate the file upload/download feature. 
-
 
 This convention allows you to upload a file transparently, 
 save it to the corresponding table, then download it using a simple URL.
