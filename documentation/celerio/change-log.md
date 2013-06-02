@@ -9,7 +9,7 @@ title: Celerio Guide - Celerio Change Log
 
 ##### pack backend-jpa
 
-* Fix default values in the ```initDefaultValues()``` for specific floats and doubles 
+* Fix default values in ```initDefaultValues()``` for specific floats and doubles 
 * Gracefully fail when using a oneToOne in a super mapped class
 
 ### 3.0.101 (2013-05-31)
