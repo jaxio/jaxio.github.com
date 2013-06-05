@@ -9,8 +9,13 @@ title: Celerio Guide - Celerio Change Log
 
 ##### pack backend-jpa
 
-* Fix default values in ```initDefaultValues()``` for specific floats and doubles 
+* Fix default values in ```initDefaultValues()``` for specific floats and doubles
+* In ```initDefaultValues()``` consider "1" as "true" for boolean default value
 * Gracefully fail when using a oneToOne in a super mapped class
+
+##### pack jsf2-spring-conversation
+
+* remove the 'not sub' predicate present in rendered attribute of iconAdd, iconDelete, iconEdit, iconMultiSelect, iconRemove, iconSearch tags. 
 
 ### 3.0.101 (2013-05-31)
 
