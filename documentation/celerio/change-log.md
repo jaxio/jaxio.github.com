@@ -11,6 +11,7 @@ title: Celerio Guide - Celerio Change Log
 * move columnConfig's targetEntityName to association config (such as ManyToOneConfig)
 * apply some changes made in jsf2-spring-conversation to jsf2-spring-simple
 * configure all french labels in the sample app configuration
+* type safe selenium tests
  
 ##### pack backend-jpa
 
