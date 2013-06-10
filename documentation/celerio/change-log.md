@@ -17,8 +17,8 @@ title: Celerio Guide - Celerio Change Log
 * Fix in generated entity ```initDefaultValues()``` method
     * in certain cases default value for floats or doubles was causing a compilation error 
     * "1" was not properly translated to "true" for boolean default value
-    * default value of column mapped as enum (using CUSTOM option in Celerio configuration) was causing a compilation error 
-* In some cases, an entity involved in inheritance was generated twice.
+    * default value of column mapped as a custom enum was causing a compilation error 
+* In some cases, an entity involved in inheritance was generated twice
 
 ##### pack jsf2-spring-conversation
 
