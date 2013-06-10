@@ -27,6 +27,8 @@ title: Celerio Guide - Celerio Change Log
 * move some exception handling code present in MessageUtil to ExceptionHandler. As a result, we no longer handle all exceptions, 
   some exceptions are now be properly handled by the wrapped exception handler. You may now experience expired view exception. (Thanks to Sébastien Peralta)
 * fix some compilation errors visible in certain inheritance cases in XxxSearchForm. 
+* autocomplete and multiAutocomplete will use only visible indexed field
+* some refactoring of saved search service
 
 ##### sample schema
 * Fix sql initialization, the accountId was incorrect (one '0' was missing...). It was causing some error with the Saved Search form feature. 
