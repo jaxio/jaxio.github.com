@@ -25,7 +25,7 @@ go directly to [Conventions](convention.html) or [Configuration](configuration.h
 11. [Best practices](best-practices.html)
 12. [Troubleshooting](troubleshooting.html)
 13. [Miscellaneous](miscellaneous.html)
-13. [Change logs](change-log.html)
+13. [Change logs](changelog.html)
 
 *All copyright, confidential information, patents, design rights and all other 
 intellectual property rights of whatsoever nature contained herein are and 
