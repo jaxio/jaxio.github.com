@@ -5,17 +5,63 @@ title: Celerio Guide - Celerio Change Log
 
 ## Celerio/Springfuse Change Log
 
-### 3.0.102-SNAPSHOT
+### 3.0.102-SNAPSHOT (latest snapshot date 2013-06-10)
 
+##### TODOs:
+* move columnConfig's targetEntityName to association config (such as ManyToOneConfig)
+* apply some changes made in jsf2-spring-conversation to jsf2-spring-simple
+* configure all french labels in the sample app configuration
+ 
 ##### pack backend-jpa
 
-* Fix default values in ```initDefaultValues()``` for specific floats and doubles
-* In ```initDefaultValues()``` consider "1" as "true" for boolean default value
-* Gracefully fail when using a oneToOne in a super mapped class
+* Fix in generated entity ```initDefaultValues()``` method
+    * in certain cases default value for floats or doubles was causing a compilation error 
+    * "1" was not properly translated to "true" for boolean default value
+    * default value of column mapped as enum (using CUSTOM option in Celerio configuration) was causing a compilation error 
+* In some cases, an entity involved in inheritance was generated twice.
 
 ##### pack jsf2-spring-conversation
 
 * remove the 'not sub' predicate present in rendered attribute of iconAdd, iconDelete, iconEdit, iconMultiSelect, iconRemove, iconSearch tags. 
+* move some exception handling code present in MessageUtil to ExceptionHandler. As a result, we no longer handle all exceptions, 
+  some exceptions are now be properly handled by the wrapped exception handler. You may now experience expired view exception. (Thanks to Sébastien Peralta)
+* fix some compilation errors visible in certain inheritance cases in XxxSearchForm. 
+
+##### sample schema
+* Fix sql initialization, the accountId was incorrect (one '0' was missing...). It was causing some error with the Saved Search form feature. 
+
+##### celerio configuration
+
+* You can now define labels using the nested `labels` element under associations, entityConfig, columnConfig and enumValue.
+  Here are 2 examples:
+{% highlight xml %}
+<columnConfig columnName="address_id">
+	<manyToOneConfig var="homeAddress">
+		<labels>
+			<label value="Home Address" />
+			<label value="Adresse domicile" lang="fr" />
+		</labels>
+	</manyToOneConfig>
+</columnConfig>
+{% endhighlight %}
+{% highlight xml %}
+<entityConfig tableName="ACCOUNT">
+	<labels>
+		<label value="User Account" />
+		<label value="Compte Utilisateur" lang="fr" />
+	</labels>
+	<!-- ... -->
+</entityConfig>			
+{% endhighlight %}
+* default `associationAction` was not taken into account.
+* enum's subpackage was not processed properly. As a result some enum related code was generated under the wrong package.
+* It is no longer required to set `targetEntityName` for relations whose target entity is part of a `JOINED` or `PER_TABLE` inheritance
+  hierarchy as we can guess the `targetEntityName`.
+
+##### celerio engine
+* check consistency between foreign key type and referenced primary key type. In case of inconsistency, a warn message is logged
+  if the FK is not part of a composite primary key. Otherwise an error is logged and generation is 
+  aborted, as it leads anyway to a compilation error.
 
 ### 3.0.101 (2013-05-31)
 
