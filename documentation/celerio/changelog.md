@@ -29,6 +29,7 @@ title: Celerio Guide - Celerio Change Log
 * fix some compilation errors visible in certain inheritance cases in XxxSearchForm. 
 * autocomplete and multiAutocomplete will use only visible indexed field
 * some refactoring of saved search service
+* upgrade javamelody from 1.44.0 to 1.45.0
 
 ##### sample schema
 * Fix sql initialization, the accountId was incorrect (one '0' was missing...). It was causing some error with the Saved Search form feature. 
