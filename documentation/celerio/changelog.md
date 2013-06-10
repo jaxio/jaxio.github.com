@@ -31,6 +31,7 @@ title: Celerio Guide - Celerio Change Log
 * autocomplete and multiAutocomplete will use only visible indexed field
 * some refactoring of saved search service
 * upgrade javamelody from 1.44.0 to 1.45.0
+* upgrade omnifaces from 1.4.1 to 1.5
 
 ##### sample schema
 * Fix sql initialization, the accountId was incorrect (one '0' was missing...). It was causing some error with the Saved Search form feature. 
