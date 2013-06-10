@@ -20,6 +20,7 @@ title: Celerio Guide - Celerio Change Log
     * "1" was not properly translated to "true" for boolean default value
     * default value of column mapped as a custom enum was causing a compilation error 
 * In some cases, an entity involved in inheritance was generated twice
+* upgrade tomcat-jdbc from 7.0.40 to 7.0.41
 
 ##### pack jsf2-spring-conversation
 
