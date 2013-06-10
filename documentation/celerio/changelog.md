@@ -5,7 +5,7 @@ title: Celerio Guide - Celerio Change Log
 
 ## Celerio/Springfuse Change Log
 
-### 3.0.102-SNAPSHOT (latest snapshot date 2013-06-10)
+### 3.0.102-SNAPSHOT
 
 ##### TODOs:
 * move columnConfig's targetEntityName to association config (such as ManyToOneConfig)
