@@ -8,9 +8,7 @@ title: Celerio Guide - Celerio Change Log
 ### 3.0.102-SNAPSHOT
 
 ##### work in progress
-* move columnConfig's targetEntityName to association config (such as ManyToOneConfig)
 * apply some changes made in jsf2-spring-conversation to jsf2-spring-simple
-* configure all french labels in the sample app configuration
 * type safe selenium tests
  
 ##### pack backend-jpa
@@ -20,6 +18,8 @@ title: Celerio Guide - Celerio Change Log
     * "1" was not properly translated to "true" for boolean default value
     * default value of column mapped as a custom enum was causing a compilation error 
 * In some cases, an entity involved in inheritance was generated twice
+* improvement: In case of inheritance, we do not need to generate the hashCode method in child entities.
+* fix a compilation error when one of the composite primary key property is mapped to a byte[]
 * upgrade tomcat-jdbc from 7.0.40 to 7.0.41
 
 ##### pack jsf2-spring-conversation
@@ -30,17 +30,21 @@ title: Celerio Guide - Celerio Change Log
 * fix some compilation errors visible in certain inheritance cases in XxxSearchForm. 
 * autocomplete and multiAutocomplete will use only visible indexed field
 * some refactoring of saved search service
+* fix cast issue in XxxFileUpload (happened only when the file size was mapped to a Long)
+* fix jpaUniqueValidator usage in case of inheritance (now use the current entity instead of the property's entity in xxxEdit.xhtml view)
+* set immediate=true on ConversationBreadCrumb menuItem (this avoids a primefaces exception on the server side). 
 * upgrade javamelody from 1.44.0 to 1.45.0
 * upgrade omnifaces from 1.4.1 to 1.5
 * upgrade primefaces bootstrap theme from 1.0.9 to 1.0.10
 
 ##### sample schema
 * Fix sql initialization, the accountId was incorrect (one '0' was missing...). It was causing some error with the Saved Search form feature. 
+* configure all french labels in the sample app configuration
 
 ##### celerio configuration
 
 * You can now define labels using the nested `labels` element under associations, entityConfig, columnConfig and enumValue.
-  Here are 2 examples:
+  Note, currently we only support base and 'fr' labels in configuration. Here are 2 examples:
 {% highlight xml %}
 <columnConfig columnName="address_id">
 	<manyToOneConfig var="homeAddress">
@@ -64,6 +68,7 @@ title: Celerio Guide - Celerio Change Log
 * enum's subpackage was not processed properly. As a result some enum related code was generated under the wrong package.
 * It is no longer required to set `targetEntityName` for relations whose target entity is part of a `JOINED` or `PER_TABLE` inheritance
   hierarchy as we can guess the `targetEntityName`.
+* move columnConfig's targetEntityName to ManyToOneConfig and OneToOneConfig
 
 ##### celerio engine
 * check consistency between foreign key type and referenced primary key type. In case of inconsistency, a warn message is logged
