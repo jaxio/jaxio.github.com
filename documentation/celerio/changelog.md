@@ -6,20 +6,19 @@ title: Celerio Guide - Celerio Change Log
 ## Celerio/Springfuse Change Log
 
 ### 3.0.102-SNAPSHOT
-
-##### work in progress
-* apply some changes made in jsf2-spring-conversation to jsf2-spring-simple
-* type safe selenium tests
  
 ##### pack backend-jpa
 
-* Fix in generated entity ```initDefaultValues()``` method
+* We now require maven 3.0.3
+* Fix in generated entity initDefaultValues() method
     * in certain cases default value for floats or doubles was causing a compilation error 
     * "1" was not properly translated to "true" for boolean default value
     * default value of column mapped as a custom enum was causing a compilation error 
 * In some cases, an entity involved in inheritance was generated twice
 * improvement: In case of inheritance, we do not need to generate the hashCode method in child entities.
 * fix a compilation error when one of the composite primary key property is mapped to a byte[]
+* do not render password fields in domain toString() methods
+* add preconditions in SearchParameters
 * upgrade tomcat-jdbc from 7.0.40 to 7.0.41
 
 ##### pack jsf2-spring-conversation
@@ -29,15 +28,19 @@ title: Celerio Guide - Celerio Change Log
   some exceptions are now be properly handled by the wrapped exception handler. You may now experience expired view exception. (Thanks to Sébastien Peralta)
 * fix some compilation errors visible in certain inheritance cases in XxxSearchForm. 
 * autocomplete and multiAutocomplete will use only visible indexed field
-* some refactoring of saved search service
+* export only search results
+* fix potential leak in ExcelExportService
+* some refactoring of saved search service, enable public/private searches
 * fix cast issue in XxxFileUpload (happened only when the file size was mapped to a Long)
 * fix jpaUniqueValidator usage in case of inheritance (now use the current entity instead of the property's entity in xxxEdit.xhtml view)
 * set immediate=true on ConversationBreadCrumb menuItem (this avoids a primefaces exception on the server side). 
+* add css to columns for simplify web testability
 * upgrade javamelody from 1.44.0 to 1.45.0
 * upgrade omnifaces from 1.4.1 to 1.5
 * upgrade primefaces bootstrap theme from 1.0.9 to 1.0.10
 
 ##### sample schema
+
 * Fix sql initialization, the accountId was incorrect (one '0' was missing...). It was causing some error with the Saved Search form feature. 
 * configure all french labels in the sample app configuration
 
@@ -70,7 +73,17 @@ title: Celerio Guide - Celerio Change Log
   hierarchy as we can guess the `targetEntityName`.
 * move columnConfig's targetEntityName to ManyToOneConfig and OneToOneConfig
 
+##### Selenium
+
+* add many new selenium Elments
+* add moveOver in webClient
+* introduce EntityAction
+* add highlight on elements before clicking when followingVisually
+* so much more ...
+
+
 ##### celerio engine
+
 * check consistency between foreign key type and referenced primary key type. In case of inconsistency, a warn message is logged
   if the FK is not part of a composite primary key. Otherwise an error is logged and generation is 
   aborted, as it leads anyway to a compilation error.
