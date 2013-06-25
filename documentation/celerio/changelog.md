@@ -54,6 +54,12 @@ title: Celerio Guide - Celerio Change Log
 
 ##### celerio configuration
 
+* you can now configure sequence names globally
+{% highlight xml %}
+<sequences>
+   <sequence tableNamePattern="*" sequenceName="SEQ_{TABLE_NAME}" />
+</sequences>
+{% endhighlight %}
 * You can now define labels using the nested `labels` element under associations, entityConfig, columnConfig and enumValue.
   Note, currently we only support base and 'fr' labels in configuration. Here are 2 examples:
 {% highlight xml %}
