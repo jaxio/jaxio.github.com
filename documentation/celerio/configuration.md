@@ -88,6 +88,14 @@ public Integer getAddressId() {
 }
 {% endhighlight %}
 
+You can configure globally the sequence name pattern 
+
+```xml
+<sequences>
+   <sequence tableNamePattern="*" sequenceName="SEQ_{TABLE_NAME}" />
+</sequences>
+```
+
 <a name="cust_id_generator"></a>
 ### Use a custom Id generator
 
