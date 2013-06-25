@@ -18,7 +18,11 @@ title: Celerio Guide - Celerio Change Log
 * improvement: In case of inheritance, we do not need to generate the hashCode method in child entities.
 * fix a compilation error when one of the composite primary key property is mapped to a byte[]
 * do not render password fields in domain toString() methods
+* sort method parameters in dao.support package
+* indexed properties are now discovered dynamically in GenericDAO
+* repository now has isIndexed method
 * add preconditions in SearchParameters
+* add fromLabel in enums
 * upgrade tomcat-jdbc from 7.0.40 to 7.0.41
 
 ##### pack jsf2-spring-conversation
@@ -27,7 +31,11 @@ title: Celerio Guide - Celerio Change Log
 * move some exception handling code present in MessageUtil to ExceptionHandler. As a result, we no longer handle all exceptions, 
   some exceptions are now be properly handled by the wrapped exception handler. You may now experience expired view exception. (Thanks to Sébastien Peralta)
 * fix some compilation errors visible in certain inheritance cases in XxxSearchForm. 
-* autocomplete and multiAutocomplete will use only visible indexed field
+* saved search can now be public or private
+* introduce TypeAwarePermission
+* fix file download in case no filename is present
+* autocomplete values are now sorted, and input value is first
+* autocomplete and multiAutocomplete will use only visible indexed field either indexed or not
 * export only search results
 * fix potential leak in ExcelExportService
 * some refactoring of saved search service, enable public/private searches
@@ -87,6 +95,7 @@ title: Celerio Guide - Celerio Change Log
 * check consistency between foreign key type and referenced primary key type. In case of inconsistency, a warn message is logged
   if the FK is not part of a composite primary key. Otherwise an error is logged and generation is 
   aborted, as it leads anyway to a compilation error.
+* fix double generation when the integration test phase was reached
 
 ### 3.0.101 (2013-05-31)
 
