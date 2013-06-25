@@ -29,7 +29,7 @@ title: Celerio Guide - Celerio Change Log
 
 * remove the 'not sub' predicate present in rendered attribute of iconAdd, iconDelete, iconEdit, iconMultiSelect, iconRemove, iconSearch tags. 
 * move some exception handling code present in MessageUtil to ExceptionHandler. As a result, we no longer handle all exceptions, 
-  some exceptions are now be properly handled by the wrapped exception handler. You may now experience expired view exception. (Thanks to Sébastien Peralta)
+  some exceptions are now be properly handled by the wrapped exception handler. You may now experience expired view exception. (Thanks to Sébastien Péralta)
 * fix some compilation errors visible in certain inheritance cases in XxxSearchForm. 
 * saved search can now be public or private
 * introduce TypeAwarePermission
