@@ -90,11 +90,11 @@ public Integer getAddressId() {
 
 You can configure globally the sequence name pattern 
 
-```xml
+{% highlight xml %}
 <sequences>
    <sequence tableNamePattern="*" sequenceName="SEQ_{TABLE_NAME}" />
 </sequences>
-```
+{% endhighlight %}
 
 <a name="cust_id_generator"></a>
 ### Use a custom Id generator
