@@ -21,7 +21,9 @@ title: Celerio Guide - Celerio Change Log
 * sort method parameters in dao.support package
 * indexed properties are now discovered dynamically in GenericDAO
 * repository now has isIndexed method
-* add preconditions in SearchParameters
+* add preconditions in SearchParameters (Thanks to Javier Naval Araya)
+* add varargs in SearchParameters
+* change default behavior of maxSize, it's now unlimited unless you are in the lazyDataModel
 * add fromLabel in enums
 * upgrade tomcat-jdbc from 7.0.40 to 7.0.41
 
