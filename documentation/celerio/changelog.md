@@ -18,13 +18,16 @@ title: Celerio Guide - Celerio Change Log
 * improvement: In case of inheritance, we do not need to generate the hashCode method in child entities.
 * fix a compilation error when one of the composite primary key property is mapped to a byte[]
 * do not render password fields in domain toString() methods
-* sort method parameters in dao.support package
+* remove useless parameters and sort method parameters in dao.support package
 * indexed properties are now discovered dynamically in GenericDAO
 * repository now has isIndexed method
 * add preconditions in SearchParameters (Thanks to Javier Naval Araya)
 * add varargs in SearchParameters
 * change default behavior of maxSize, it's now unlimited unless you are in the lazyDataModel
+* change property visibility in AuditLogService to ease the customization
 * add fromLabel in enums
+* add loggers in logback.xml
+* remove legacy support for hibernate filters
 * upgrade tomcat-jdbc from 7.0.40 to 7.0.41
 
 ##### pack jsf2-spring-conversation
@@ -38,6 +41,7 @@ title: Celerio Guide - Celerio Change Log
 * fix file download in case no filename is present
 * autocomplete values are now sorted, and input value is first
 * autocomplete and multiAutocomplete will use only visible indexed field either indexed or not
+* printers now return the fields they do use, they are used as default values for autocompletes
 * export only search results
 * fix potential leak in ExcelExportService
 * some refactoring of saved search service, enable public/private searches
@@ -45,6 +49,7 @@ title: Celerio Guide - Celerio Change Log
 * fix jpaUniqueValidator usage in case of inheritance (now use the current entity instead of the property's entity in xxxEdit.xhtml view)
 * set immediate=true on ConversationBreadCrumb menuItem (this avoids a primefaces exception on the server side). 
 * add css to columns for simplify web testability
+* add navigators to datePickers
 * upgrade javamelody from 1.44.0 to 1.45.0
 * upgrade omnifaces from 1.4.1 to 1.5
 * upgrade primefaces bootstrap theme from 1.0.9 to 1.0.10
@@ -53,6 +58,7 @@ title: Celerio Guide - Celerio Change Log
 
 * Fix sql initialization, the accountId was incorrect (one '0' was missing...). It was causing some error with the Saved Search form feature. 
 * configure all french labels in the sample app configuration
+* add auditlog table to book schema
 
 ##### celerio configuration
 
