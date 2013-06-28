@@ -26,6 +26,7 @@ title: Celerio Guide - Celerio Change Log
 * change default behavior of maxSize, it's now unlimited unless you are in the lazyDataModel
 * change property visibility in AuditLogService to ease the customization
 * add fromLabel in enums
+* fix jpaUniqueUtil that did not handled @JoinColumn (Thanks to André Berenguel)
 * add loggers in logback.xml
 * remove legacy support for hibernate filters
 * upgrade tomcat-jdbc from 7.0.40 to 7.0.41
