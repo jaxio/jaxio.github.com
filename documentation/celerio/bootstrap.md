@@ -12,7 +12,7 @@ Bootstrap the skeleton
 To create a new project skeleton, invoke the `bootstrap` goal of the
 `maven-bootstrap-plugin` from a command line as follow:
 
-	mvn com.jaxio.celerio:maven-bootstrap-plugin:3.0.86
+	mvn com.jaxio.celerio:maven-bootstrap-plugin:3.0.101:bootstrap
 
 When prompted, enter your application name and the desired root package
 and select the desired type of application you want to generate (a

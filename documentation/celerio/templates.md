@@ -3,8 +3,32 @@ layout: doc
 title: Celerio Guide - Writing templates
 ---
 
+
 Writing Celerio Templates
 =========================
+
+
+Introduction
+------------
+
+Celerio code generation templates are written in Velocity.
+
+Celerio can either execute templates packaged in a jar file or templates that are present in a regular folder.
+
+Jaxio provides some ready-to-use generation templates.
+These templates are packaged in template packs.
+
+A template pack is a simple jar.
+
+To be executed by Celerio, a templates packaged  in a jar file must be explicitly added as a Celerio's dependency when running Celerio. Jaxio
+provides various template packs with Celerio. New template packs can be
+written either by Jaxio's consultants or Celerio's end users.
+
+Learn by example
+----------------
+
+The simplest way to get started with Celerio templates is to modify an existing template.
+
 
 Templates source folder
 -----------------------
