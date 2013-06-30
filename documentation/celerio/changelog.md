@@ -90,6 +90,18 @@ title: Celerio Guide - Celerio Change Log
 	<!-- ... -->
 </entityConfig>			
 {% endhighlight %}
+{% highlight xml %}
+<sharedEnumConfig name="Civility" type="STRING">
+	<enumValues>
+		<enumValue value="MR">
+			<labels>
+				<label value="Mister" />
+				<label value="Monsieur" lang="fr" />
+			</labels>
+		</enumValue>
+	</enumValues>
+</sharedEnumConfigs>
+{% endhighlight %}
 * default `associationAction` was not taken into account.
 * enum's subpackage was not processed properly. As a result some enum related code was generated under the wrong package.
 * It is no longer required to set `targetEntityName` for relations whose target entity is part of a `JOINED` or `PER_TABLE` inheritance
