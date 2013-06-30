@@ -346,7 +346,7 @@ In this example, the persisted value is the value returned by the enum's name() 
 	<sharedEnumConfigs>
 		<sharedEnumConfig name="Civility" type="STRING">
 			<enumValues>
-				<enumValue value="MR" label="Mister"/>
+				<enumValue value="MR" label="Mister" />
 				<enumValue value="MS" label="Miss" />
 			</enumValues>
 		</sharedEnumConfig>
