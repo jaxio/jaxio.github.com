@@ -354,6 +354,27 @@ In this example, the persisted value is the value returned by the enum's name() 
 </celerio>
 {% endhighlight %}
 
+You can configure multiple languages too
+
+{% highlight xml %}
+<sharedEnumConfig name="Civility" type="STRING">
+	<enumValues>
+		<enumValue value="MR">
+			<labels>
+				<label value="Mister" />
+				<label value="Monsieur" lang="fr" />
+			</labels>
+		</enumValue>
+		<enumValue value="MS">
+			<labels>
+				<label value="Miss" />
+				<label value="Madame" lang="fr" />
+			</labels>
+		</enumValue>
+	</enumValues>
+</sharedEnumConfig>
+{% endhighlight %}
+
 **Generated code**:
 {% highlight java %}
 public enum Civility {
