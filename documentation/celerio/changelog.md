@@ -5,7 +5,20 @@ title: Celerio Guide - Celerio Change Log
 
 ## Celerio/Springfuse Change Log
 
-### 3.0.102-SNAPSHOT
+### 3.0.103-SNAPSHOT
+
+##### pack backend-jpa
+
+* exclude commons-logging from dependencies
+* ByExampleUtil and ByPatternUtil are now fully compatible with inheritance
+
+##### pack jsf2-spring-conversation
+
+* Refactor how the selenium tests are run
+* add nb-results in dom to easy selenium tests
+
+### 3.0.102 (2013-07-01)
+[Sample generated app diff 3.0.101-3.0.101](https://github.com/jaxio/generated-projects/commit/e54a36b19a24872b45bd4bc50b04460006c12c71) 
  
 ##### pack backend-jpa
 
@@ -27,6 +40,9 @@ title: Celerio Guide - Celerio Change Log
 * change property visibility in AuditLogService to ease the customization
 * add fromLabel in enums
 * fix jpaUniqueUtil that did not handled @JoinColumn (Thanks to André Berenguel)
+* SearchParameter is now 
+    * caseSensitive by default
+    * noLimit by default
 * add loggers in logback.xml
 * remove legacy support for hibernate filters
 * upgrade tomcat-jdbc from 7.0.40 to 7.0.41
@@ -51,6 +67,7 @@ title: Celerio Guide - Celerio Change Log
 * set immediate=true on ConversationBreadCrumb menuItem (this avoids a primefaces exception on the server side). 
 * add css to columns for simplify web testability
 * add navigators to datePickers
+* fix GenericJsfConverter when setting an invalid value in the select box and navigating away
 * upgrade javamelody from 1.44.0 to 1.45.0
 * upgrade omnifaces from 1.4.1 to 1.5
 * upgrade primefaces bootstrap theme from 1.0.9 to 1.0.10
