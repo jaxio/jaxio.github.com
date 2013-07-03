@@ -11,6 +11,18 @@ title: Celerio Guide - Celerio Change Log
 
 * exclude commons-logging from dependencies
 * ByExampleUtil and ByPatternUtil are now fully compatible with inheritance
+* remove dao interface and implementation, extract repository interface and create JpaRepository
+* rename 'initDefaultValues' to 'withDefaults' to sync with getNewWithDefaults repository method
+* remove some useless final keywords
+* fix selenium tests when run via maven
+* extract some JpaUniqueUtil methods to JpaUtil
+* upgrade aspectj from 1.7.2 to 1.7.3
+* upgrade tika-parsers from 1.3 to 1.4
+
+##### pack jsf2-spring-conversation
+
+* in excel search form, produce only fields visible in html search form
+* fix selenium compilation failure in jdk 1.6.x
 
 ##### pack jsf2-spring-conversation
 
