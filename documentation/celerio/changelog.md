@@ -22,16 +22,19 @@ title: Celerio Guide - Celerio Change Log
 ##### pack jsf2-spring-conversation
 
 * in excel search form, produce only fields visible in html search form
-* fix selenium compilation failure in jdk 1.6.x
-
-##### pack jsf2-spring-conversation
-
 * Refactor how the selenium tests are run
-* add nb-results in dom to easy selenium tests
+* add nb-results in dom to ease selenium tests
+* GenericSearchForm now produces the default searchParameters to ease customization
+* multiple improvements completeProperty in GenericController
+* fix selenium compilation failure in jdk 1.6.x
 
 ##### pack javaEE
 
 * yes we have something almost ready, contact-us at [support@jaxio.com](mailto:support@jaxio.com) to know more :)
+
+##### celerio configuration
+
+* when the default value of maven-celerio-plugin.outputDir is overriden and entities are taken-over, the metamodel was not produced
 
 ### 3.0.102 (2013-07-01)
 [Sample generated app diff 3.0.101-3.0.101](https://github.com/jaxio/generated-projects/commit/e54a36b19a24872b45bd4bc50b04460006c12c71) 
