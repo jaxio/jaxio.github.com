@@ -16,6 +16,7 @@ title: Celerio Guide - Celerio Change Log
 * remove some useless final keywords
 * fix selenium tests when run via maven
 * extract some JpaUniqueUtil methods to JpaUtil
+* fix missing import when GeneratedStategy is specified in the configuration (Thanks Regis Limare)
 * upgrade aspectj from 1.7.2 to 1.7.3
 * upgrade tika-parsers from 1.3 to 1.4
 
