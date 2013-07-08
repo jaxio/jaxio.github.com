@@ -9,7 +9,7 @@ title: Celerio Guide - Celerio Change Log
 
 ##### pack backend-jpa
 
-* kickstart the extraction of the backend to https://github.com/jaxio/jpa-query-by-example/
+* [kickstart the extraction of the backend](https://github.com/jaxio/jpa-query-by-example/)
 * support deep path in PropertySelector (Thanks to the amazing Sébastien Péralta patch !)
 * exclude commons-logging from dependencies
 * ByExampleUtil and ByPatternUtil are now fully compatible with inheritance
@@ -26,7 +26,7 @@ title: Celerio Guide - Celerio Change Log
 
 ##### pack jsf2-spring-conversation
 
-* kickstart the extraction of the jsf conversation framework to https://github.com/jaxio/jsf-conversation
+* [kickstart the extraction of the jsf conversation framework](https://github.com/jaxio/jsf-conversation)
 * in excel search form, produce only fields visible in html search form
 * Refactor how the selenium tests are run
 * add nb-results in dom to ease selenium tests
