@@ -9,6 +9,8 @@ title: Celerio Guide - Celerio Change Log
 
 ##### pack backend-jpa
 
+* kickstart the extraction of the backend to https://github.com/jaxio/jpa-query-by-example/
+* support deep path in PropertySelector (Thanks to the amazing Sébastien Péralta patch !)
 * exclude commons-logging from dependencies
 * ByExampleUtil and ByPatternUtil are now fully compatible with inheritance
 * remove dao interface and implementation, extract repository interface and create JpaRepository
@@ -17,15 +19,19 @@ title: Celerio Guide - Celerio Change Log
 * fix selenium tests when run via maven
 * extract some JpaUniqueUtil methods to JpaUtil
 * fix missing import when GeneratedStategy is specified in the configuration (Thanks Regis Limare)
+* remove currentUserId and now magic named query parameter
 * upgrade aspectj from 1.7.2 to 1.7.3
 * upgrade tika-parsers from 1.3 to 1.4
+* upgrade tomcat-jdbc from 7.0.41 to 7.0.42
 
 ##### pack jsf2-spring-conversation
 
+* kickstart the extraction of the jsf conversation framework to https://github.com/jaxio/jsf-conversation
 * in excel search form, produce only fields visible in html search form
 * Refactor how the selenium tests are run
 * add nb-results in dom to ease selenium tests
 * GenericSearchForm now produces the default searchParameters to ease customization
+* extract LogContext setup from ConversationFilter to LogContextFilter
 * multiple improvements completeProperty in GenericController
 * fix selenium compilation failure in jdk 1.6.x
 
