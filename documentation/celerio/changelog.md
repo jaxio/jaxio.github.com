@@ -23,6 +23,7 @@ title: Celerio Guide - Celerio Change Log
 * do not override generated specified manually when using global sequences (Thanks Frederic Leroy)
 * apply global sequences on entities with composite pk, or with non numeric pk (Thanks Frederic Leroy)
 * exclude commons-logging from dependencies
+* upgrade hibernate from 4.2.0.Final to 4.2.3.Final
 * upgrade aspectj from 1.7.2 to 1.7.3
 * upgrade tika-parsers from 1.3 to 1.4
 * upgrade tomcat-jdbc from 7.0.41 to 7.0.42
