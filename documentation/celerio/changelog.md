@@ -36,8 +36,8 @@ title: Celerio Guide - Celerio Change Log
 * GenericSearchForm now produces the default searchParameters to ease customization, set distinct() by default
 * extract LogContext setup from ConversationFilter to LogContextFilter
 * multiple improvements completeProperty in GenericController
-* add sort to edit forms
-* sort only non blob columns
+* add sort on related entities in edit form
+* sort only non binary columns
 * fix selenium compilation failure in jdk 1.6.x
 
 ##### pack javaEE
