@@ -20,6 +20,8 @@ title: Celerio Guide - Celerio Change Log
 * extract some JpaUniqueUtil methods to JpaUtil
 * fix missing import when GeneratedStategy is specified in the configuration (Thanks Regis Limare)
 * remove currentUserId and now magic named query parameter
+* do not override generated specified manually when using global sequences (Thanks Frederic Leroy)
+* apply global sequences on entities with composite pk, or with non numeric pk (Thanks Frederic Leroy)
 * exclude commons-logging from dependencies
 * upgrade aspectj from 1.7.2 to 1.7.3
 * upgrade tika-parsers from 1.3 to 1.4
