@@ -11,7 +11,7 @@ title: Celerio Guide - Celerio Change Log
 
 * [kickstart the extraction of the backend](https://github.com/jaxio/jpa-query-by-example/)
 * support deep path in PropertySelector (Thanks to the amazing Sébastien Péralta patch !)
-* exclude commons-logging from dependencies
+* support correctly order by in both find and findCount (Great patch from Nicolas Rougé !)
 * ByExampleUtil and ByPatternUtil are now fully compatible with inheritance
 * remove dao interface and implementation, extract repository interface and create JpaRepository
 * rename 'initDefaultValues' to 'withDefaults' to sync with getNewWithDefaults repository method
@@ -20,6 +20,7 @@ title: Celerio Guide - Celerio Change Log
 * extract some JpaUniqueUtil methods to JpaUtil
 * fix missing import when GeneratedStategy is specified in the configuration (Thanks Regis Limare)
 * remove currentUserId and now magic named query parameter
+* exclude commons-logging from dependencies
 * upgrade aspectj from 1.7.2 to 1.7.3
 * upgrade tika-parsers from 1.3 to 1.4
 * upgrade tomcat-jdbc from 7.0.41 to 7.0.42
@@ -28,11 +29,15 @@ title: Celerio Guide - Celerio Change Log
 
 * [kickstart the extraction of the jsf conversation framework](https://github.com/jaxio/jsf-conversation)
 * in excel search form, produce only fields visible in html search form
+* extract logcontext support from conversation filter to LogContextFilter
+* maxlength in input is by default the given size
 * Refactor how the selenium tests are run
 * add nb-results in dom to ease selenium tests
-* GenericSearchForm now produces the default searchParameters to ease customization
+* GenericSearchForm now produces the default searchParameters to ease customization, set distinct() by default
 * extract LogContext setup from ConversationFilter to LogContextFilter
 * multiple improvements completeProperty in GenericController
+* add sort to edit forms
+* sort only non blob columns
 * fix selenium compilation failure in jdk 1.6.x
 
 ##### pack javaEE
