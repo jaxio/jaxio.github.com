@@ -77,6 +77,16 @@ This is a common pattern in Maven, where you can skip plugins using profiles to 
 * default value: true
 * description: Should the synonyms be retrieved ?
 
+#### jdbc.reverseIndexes
+* expression: jdbc.reverseIndexes
+* default value: true
+* description: When false, disable completely reverse of indexes. Can be useful when reversing large database full of data as reversing indexes can be slow.
+
+#### jdbc.reverseOnlyUniqueIndexes
+* expression: jdbc.reverseOnlyUniqueIndexes
+* default value: true
+* description: When true, reverse only indexes for unique values; when false, reverse indexes regardless of whether unique or not. Can be useful when reversing large database full of data as reversing indexes can be slow.
+
 #### jdbcReverseViews
 * expression: jdbc.reverseViews 
 * default value: false
