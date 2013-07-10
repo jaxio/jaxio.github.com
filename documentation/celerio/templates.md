@@ -3,11 +3,19 @@ layout: doc
 title: Celerio Guide - Writing templates
 ---
 
-
 Writing Celerio Templates
 =========================
 
+* [Introduction](#intro)
+* [Learn by example](#learn-by-example)
+* [Templates folder](#templates-folder)
+* [Template name conventions](#template-name-conventions)
+* [Create a new template](#create-new-template)
+* [Entity namers](#entity-namers)
+* [Create a new templates pack](#create-templates-pack)
 
+
+<a name="intro"></a>
 Introduction
 ------------
 
@@ -18,22 +26,27 @@ Celerio can either execute templates packaged in a jar file or templates that ar
 Jaxio provides some ready-to-use generation templates.
 These templates are packaged in template packs.
 
-A template pack is a simple jar.
+A template pack is a simple jar. To be executed by Celerio this jar file must be explicitly added
+as a Celerio's dependency when running Celerio.
 
-To be executed by Celerio, a templates packaged  in a jar file must be explicitly added as a Celerio's dependency when running Celerio. Jaxio
-provides various template packs with Celerio. New template packs can be
+Jaxio provides various template packs with Celerio. New template packs can be
 written either by Jaxio's consultants or Celerio's end users.
 
+<a name="learn-by-example"></a>
 Learn by example
 ----------------
 
-The simplest way to get started with Celerio templates is to modify an existing template.
+The simplest way to get started with Celerio templates is to modify existing templates.
 
+Templates source code is available directly by simply unjarring the templates pack jar file
+or if the pack is encrypted (legacy) by simply downloading the associated jar file sources.
 
-Templates source folder
------------------------
+<a name="templates-folder"></a>
+Templates folder
+----------------
+Before writing templates please update your Celerio configuration in order to specify your templates folder location.
 
-In celerio-templates-packs.xml declare your celerio template source folder using the template pack element.
+In celerio-templates-packs.xml declare your Celerio template source folder using the template pack element.
 For example:
 
 {% highlight xml %}
@@ -43,12 +56,29 @@ For example:
 </packs>
 {% endhighlight %}
 
-In the above example, Celerio considers any file present under 'src/main/celerio' and its subfolder as a template.
+In the above example, Celerio considers any file present under 'src/main/celerio' and its subfolder as a Celerio template.
 
-Template name convention
-------------------------
+Thanks to the configuration above you will be able. 
+
+<a name="template-name-conventions"></a>
+Template name conventions
+-------------------------
 
 There are several kinds of template:
+
+### Bootstrap templates
+
+A 'bootstrap template' is interpreted only when Celerio is run in 'bootstrap' mode.
+The bootstrap mode is active when you use the Celerio's maven-bootstrap-plugin.
+
+Its name must have this form: `TemplateName.boot.vm.ext` where:
+
+* TemplateName is a logical name for your template. It is not used by Celerio.
+* boot stands for bootstrap
+* vm means the templates is written in Velocity.
+* ext is your file extension. It is used by Celerio.
+
+Example: `pom.boot.vm.xml`
 
 ### Per entity template
 
@@ -87,8 +117,8 @@ Static files are not interpreted, they are just copied as is by Celerio.
 
 Exemple: `afolder/img.gif` would be copied to `yourProjectRootFolder/afolder/img.gif` 
 
-
-Writing a new Template
+<a name="create-new-template"></a>
+Create a new Template
 ----------------------
 
 ### Writing a new 'per entity' Java template
@@ -103,8 +133,6 @@ Writing a new Template
 
 {% highlight java %}
 $output.java($entity.acl)##
-
-package $entity.acl.packageName;
 
 public class $output.currentClass {
     // var: $entity.acl.var
@@ -151,7 +179,8 @@ To do so, open the celerio-templates-packs.xml file and add the following `celer
 </packs>
 {% endhighlight %}
 
-### Existing entity's namer properties
+<a name="entity-namers"></a>
+### Entity's Namers
 
 By default Celerio has some built-in namers. Theses can be used from your entity templates:
 
@@ -186,7 +215,38 @@ By default Celerio has some built-in namers. Theses can be used from your entity
 	</tbody>
 </table>	
 
- 
+<a name="create-templates-pack"></a>
+Create a templates pack
+-----------------------
 
+A template pack is simply a set of Celerio templates packaged in a jar file.
+The project must have the following structure:   
 
+<pre>
+pom.xml
+src
+   |- main
+          |- resources
+                      |- META-INF
+                      |          |- celerio.txt
+                      |       
+                      |- celerio
+                                |- bootstrap
+                                |           |- pom.boot.vm.xml
+                                |           |- anytemplate.boot.vm.xml
+                                |- <packName>
+                                             |- **/yourtemplate.e.vm.java
+</pre>
 
+The celerio.txt file contains some meta information that Celerio engine and the Celerio maven-bootstrap-plugin use.
+Here is a celerio.txt file example:
+
+<pre>
+packName=pack-${project.artifactId}
+packCrypted=false
+packDescription=Java EE backend pack: almost pure JPA 2 with Hibernate 4. No Spring at all. CDI.
+packDescription2=Some more info
+packCommand=mvn -Ph2,db,metadata,gen test
+</pre>
+
+It is important that the packName starts with the prefix 'pack-'.
