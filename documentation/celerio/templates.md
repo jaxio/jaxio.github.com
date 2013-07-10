@@ -57,9 +57,7 @@ For example:
 {% endhighlight %}
 
 In the above example, Celerio considers any file present under 'src/main/celerio' and its subfolder as a Celerio template.
-
-Thanks to the configuration above you will be able. 
-
+  
 <a name="template-name-conventions"></a>
 Template name conventions
 -------------------------
