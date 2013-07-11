@@ -13,6 +13,7 @@ title: Celerio Guide - Celerio Change Log
 * support deep path in PropertySelector (Thanks to the amazing Sébastien Péralta patch !)
 * support correctly order by in both find and findCount (Great patch from Nicolas Rougé !)
 * ByExampleUtil and ByPatternUtil are now fully compatible with inheritance
+* rename byExtraPredicate to byMandatoryPredicate to better match the and/or capability
 * remove dao interface and implementation, extract repository interface and create JpaRepository
 * rename 'initDefaultValues' to 'withDefaults' to sync with getNewWithDefaults repository method
 * remove some useless final keywords
@@ -23,6 +24,7 @@ title: Celerio Guide - Celerio Change Log
 * do not override generated specified manually when using global sequences (Thanks Frederic Leroy)
 * apply global sequences on entities with composite pk, or with non numeric pk (Thanks Frederic Leroy)
 * exclude commons-logging from dependencies
+* remove kuromoji support in hibernate search as the jar is very big for very few users
 * upgrade hibernate from 4.2.0.Final to 4.2.3.Final
 * upgrade aspectj from 1.7.2 to 1.7.3
 * upgrade tika-parsers from 1.3 to 1.4
@@ -42,6 +44,7 @@ title: Celerio Guide - Celerio Change Log
 * add sort on related entities in edit form
 * sort only non binary columns
 * fix selenium compilation failure in jdk 1.6.x
+* upgrade jsf from 2.1.22 to 2.1.24
 
 ##### pack javaEE
 
