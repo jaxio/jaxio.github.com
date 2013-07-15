@@ -232,8 +232,8 @@ src
                                 |- bootstrap
                                 |           |- pom.boot.vm.xml
                                 |           |- anytemplate.boot.vm.xml
-                                |- <packName>
-                                             |- **/yourtemplate.e.vm.java
+                                |- packName
+                                           |- **/yourtemplate.e.vm.java
 </pre>
 
 The celerio.txt file contains some meta information that Celerio engine and the Celerio maven-bootstrap-plugin use.
