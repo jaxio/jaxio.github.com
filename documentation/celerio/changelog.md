@@ -7,7 +7,13 @@ title: Celerio Guide - Celerio Change Log
 
 ### 3.0.103-SNAPSHOT
 
-##### pack backend-jpa
+#### celerio configuration
+
+* when the default value of maven-celerio-plugin.outputDir is overriden and entities are taken-over, the metamodel was not produced
+
+#### pack backend-jpa
+
+##### Search by example
 
 * [kickstart the extraction of the backend](https://github.com/jaxio/jpa-query-by-example/)
 * support deep path in PropertySelector (Thanks to the amazing Sébastien Péralta patch !)
@@ -16,13 +22,11 @@ title: Celerio Guide - Celerio Change Log
 * rename byExtraPredicate to byMandatoryPredicate to better match the and/or capability
 * remove dao interface and implementation, extract repository interface and create JpaRepository
 * rename 'initDefaultValues' to 'withDefaults' to sync with getNewWithDefaults repository method
-* remove some useless final keywords
-* fix selenium tests when run via maven
 * extract some JpaUniqueUtil methods to JpaUtil
-* fix missing import when GeneratedStategy is specified in the configuration (Thanks Regis Limare)
 * remove currentUserId and now magic named query parameter
-* do not override generated specified manually when using global sequences (Thanks Frederic Leroy)
-* apply global sequences on entities with composite pk, or with non numeric pk (Thanks Frederic Leroy)
+
+##### pom.xml
+
 * exclude commons-logging from dependencies
 * remove kuromoji support in hibernate search as the jar is very big for very few users
 * upgrade hibernate from 4.2.0.Final to 4.2.3.Final
@@ -30,29 +34,39 @@ title: Celerio Guide - Celerio Change Log
 * upgrade tika-parsers from 1.3 to 1.4
 * upgrade tomcat-jdbc from 7.0.41 to 7.0.42
 
-##### pack jsf2-spring-conversation
+##### Others
+
+* remove some useless final keywords
+* fix missing import when GeneratedStategy is specified in the configuration (Thanks Regis Limare)
+* do not override generated specified manually when using global sequences (Thanks Frederic Leroy)
+* apply global sequences on entities with composite pk, or with non numeric pk (Thanks Frederic Leroy)
+* in excel search form, produce only fields visible in html search form
+
+#### pack selenium-primefaces
+
+* fix selenium tests when run via maven
+* fix selenium compilation failure in jdk 1.6.x
+* Refactor how the selenium tests are run
+
+#### pack jsf2-spring-conversation
 
 * [kickstart the extraction of the jsf conversation framework](https://github.com/jaxio/jsf-conversation)
-* in excel search form, produce only fields visible in html search form
 * extract logcontext support from conversation filter to LogContextFilter
 * maxlength in input is by default the given size
-* Refactor how the selenium tests are run
 * add nb-results in dom to ease selenium tests
 * GenericSearchForm now produces the default searchParameters to ease customization, set distinct() by default
 * extract LogContext setup from ConversationFilter to LogContextFilter
 * multiple improvements completeProperty in GenericController
 * add sort on related entities in edit form
 * sort only non binary columns
-* fix selenium compilation failure in jdk 1.6.x
+
+##### pom.xml
 * upgrade jsf from 2.1.22 to 2.1.24
 
-##### pack javaEE
+#### pack javaEE
 
-* yes we have something almost ready, contact-us at [support@jaxio.com](mailto:support@jaxio.com) to know more :)
+* Full JavaEE 6 pack with conversation, deltaspike and shiro. No Spring! 
 
-##### celerio configuration
-
-* when the default value of maven-celerio-plugin.outputDir is overriden and entities are taken-over, the metamodel was not produced
 
 ### 3.0.102 (2013-07-01)
 [Sample generated app diff 3.0.101-3.0.101](https://github.com/jaxio/generated-projects/commit/e54a36b19a24872b45bd4bc50b04460006c12c71) 
