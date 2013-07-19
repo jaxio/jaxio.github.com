@@ -9,21 +9,21 @@ title: Celerio Guide - Celerio Change Log
 
 #### celerio configuration
 
-* when the default value of maven-celerio-plugin.outputDir is overriden and entities are taken-over, the metamodel was not produced
+* when the default value of maven-celerio-plugin.outputDir is overridden and entities are taken-over using Celerio's 'Base' inheritance, the metamodel is now generated properly (was a regression).
 
 #### pack backend-jpa
 
 ##### Search by example
 
-* [kickstart the extraction of the backend](https://github.com/jaxio/jpa-query-by-example/)
+* Merge dao package content to repository package and preserve only the repository layer. 
 * support deep path in PropertySelector (Thanks to the amazing Sébastien Péralta patch !)
 * support correctly order by in both find and findCount (Great patch from Nicolas Rougé !)
-* ByExampleUtil and ByPatternUtil are now fully compatible with inheritance
+* ByExampleUtil and ByPatternUtil are now fully compatible with Celerio's 'Base' inheritence.
 * rename byExtraPredicate to byMandatoryPredicate to better match the and/or capability
-* remove dao interface and implementation, extract repository interface and create JpaRepository
 * rename 'initDefaultValues' to 'withDefaults' to sync with getNewWithDefaults repository method
 * extract some JpaUniqueUtil methods to JpaUtil
-* remove currentUserId and now magic named query parameter
+* remove 'currentUserId' and 'now' magic named query parameters
+* [kickstart the extraction of the backend](https://github.com/jaxio/jpa-query-by-example/)
 
 ##### pom.xml
 
@@ -50,7 +50,8 @@ title: Celerio Guide - Celerio Change Log
 
 #### pack jsf2-spring-conversation
 
-* [kickstart the extraction of the jsf conversation framework](https://github.com/jaxio/jsf-conversation)
+* various fixes on excel export: full text query was missing, boolean value follows excel convention
+* introduce new facelet components for date rendering in datatables: outputDate, outputDateTime, outputTime, outputLocalDate, outpoutLocalDateTime/
 * extract logcontext support from conversation filter to LogContextFilter
 * maxlength in input is by default the given size
 * add nb-results in dom to ease selenium tests
@@ -59,14 +60,14 @@ title: Celerio Guide - Celerio Change Log
 * multiple improvements completeProperty in GenericController
 * add sort on related entities in edit form
 * sort only non binary columns
+* [kickstart the extraction of the jsf conversation framework](https://github.com/jaxio/jsf-conversation)
 
 ##### pom.xml
-* upgrade jsf from 2.1.22 to 2.1.24
+* upgrade Mojarra from 2.1.22 to 2.1.24. See [Mojarra release notes](https://javaserverfaces.java.net/nonav/2.1/releasenotes.html)
 
 #### pack javaEE
 
-* Full JavaEE 6 pack with conversation, deltaspike and shiro. No Spring! 
-
+* new! full JavaEE 6 pack with conversation, deltaspike and shiro. No Spring! 
 
 ### 3.0.102 (2013-07-01)
 [Sample generated app diff 3.0.101-3.0.101](https://github.com/jaxio/generated-projects/commit/e54a36b19a24872b45bd4bc50b04460006c12c71) 
