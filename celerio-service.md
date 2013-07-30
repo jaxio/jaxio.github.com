@@ -46,8 +46,7 @@ puis exécutez dans une console les commandes maven résultantes.
     <label class="control-label" for="celerioVersion">Version de Celerio</label>
     <div class="controls">
 		<select id="celerioVersion" name="celerioVersion" class="updateCommand">
-			<option value="3.0.102">3.0.102</option>
-			<option value="3.0.103-SNAPSHOT">3.0.103-SNAPSHOT</option>
+			<option value="3.0.103">3.0.103</option>
 		</select>    
 	</div>
 </div>
@@ -88,12 +87,6 @@ puis exécutez dans une console les commandes maven résultantes.
 				Parfait pour une application d'entreprise orientée données. Le code généré est 
 				bien organisé, propose des fonctionnalités puissantes, contient une API inégalée de `conversation`, etc.
 				C'est notre option préférée. Avec vous allez booster votre productivité.
-			</span>
-	  </label>	  
-      <label class="radio">
-		<input type="radio" name="frontEnd" id="jsf2Simple" value="jsf2Simple" class="updateCommand" />JSF 2, Primefaces 3.5
-			<span class="help-block">
-				Pareil que l'option ci-dessus, mais sans les conversations... plus simple mais beaucoup moins puissante.
 			</span>
 	  </label>	  
       <label class="radio">
