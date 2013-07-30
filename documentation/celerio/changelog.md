@@ -55,7 +55,8 @@ title: Celerio Guide - Celerio Change Log
 
 #### pack jsf2-spring-conversation
 
-* totally refactor excell export support. No longer use jxls, instead use poi directly
+* clearly separate full text search from regular search in search view/form.
+* totally refactor Excel export support. No longer use jxls, instead use poi directly
 * introduce new facelet components for date rendering in datatables: outputDate, outputDateTime, outputTime, outputLocalDate, outpoutLocalDateTime/
 * extract logcontext support from conversation filter to LogContextFilter
 * maxlength in input is by default the given size
@@ -73,6 +74,14 @@ title: Celerio Guide - Celerio Change Log
 #### pack javaEE
 
 * [not available online] new! full JavaEE 6 pack with conversation, deltaspike and shiro. No Spring! 
+
+#### pack JSF2 Simple
+
+* no longer available online
+
+#### pack JSF2 Spring Web Flow
+
+* no longer available online
 
 ### 3.0.102 (2013-07-01)
 [Sample generated app diff 3.0.101-3.0.101](https://github.com/jaxio/generated-projects/commit/e54a36b19a24872b45bd4bc50b04460006c12c71) 
