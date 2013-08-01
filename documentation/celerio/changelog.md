@@ -5,6 +5,12 @@ title: Celerio Guide - Celerio Change Log
 
 ## Celerio/Springfuse Change Log
 
+### 3.0.104-SNAPSHOT (last update on 2013-08-01)
+
+#### pack jsf2-spring-conversation
+
+* fix a compilation issue in XxxExcelExporter (occurs on entity having manually assigned primary key). 
+
 ### 3.0.103 (2013-07-29)
 [Sample generated app diff 3.0.102-3.0.103](https://github.com/jaxio/generated-projects/commit/13d5eaf54da2f088e94e0a10d88b2802ac46a9de) 
 
