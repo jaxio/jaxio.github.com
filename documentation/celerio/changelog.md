@@ -6,6 +6,7 @@ title: Celerio Guide - Celerio Change Log
 ## Celerio/Springfuse Change Log
 
 ### 3.0.103 (2013-07-29)
+[Sample generated app diff 3.0.102-3.0.103](https://github.com/jaxio/generated-projects/commit/13d5eaf54da2f088e94e0a10d88b2802ac46a9de) 
 
 #### celerio configuration
 
@@ -15,10 +16,10 @@ title: Celerio Guide - Celerio Change Log
 
 ##### Search by example
 
-* Merge dao package content to repository package and preserve only the repository layer. 
-* support deep path in PropertySelector (Thanks to the amazing Sébastien Péralta patch !)
-* support correctly order by in both find and findCount (Great patch from Nicolas Rougé !)
-* ByExampleUtil and ByPatternUtil are now fully compatible with Celerio's 'Base' inheritence.
+* merge dao package with repository package and preserve only the repository layer. 
+* support deep path in PropertySelector (Thanks to Sébastien Péralta). Note that it makes EntitySelector useless.
+* support correctly order by in both find and findCount (Thanks to Nicolas Rougé)
+* ByExampleUtil and ByPatternUtil are now fully compatible with Celerio's 'Base' inheritance.
 * rename byExtraPredicate to byMandatoryPredicate to better match the and/or capability
 * rename 'initDefaultValues' to 'withDefaults' to sync with getNewWithDefaults repository method
 * extract some JpaUniqueUtil methods to JpaUtil
@@ -30,7 +31,7 @@ title: Celerio Guide - Celerio Change Log
 * introduce TermSelector
 * refactoring and tuning
 
-##### pom.xml
+##### backend pom.xml
 
 * exclude commons-logging from dependencies
 * remove kuromoji support in hibernate search as the jar is very big for very few users
@@ -42,10 +43,9 @@ title: Celerio Guide - Celerio Change Log
 ##### Others
 
 * remove some useless final keywords
-* fix missing import when GeneratedStategy is specified in the configuration (Thanks Regis Limare)
-* do not override generated specified manually when using global sequences (Thanks Frederic Leroy)
-* apply global sequences on entities with composite pk, or with non numeric pk (Thanks Frederic Leroy)
-* in excel search form, produce only fields visible in html search form
+* fix missing import when GeneratedStategy is specified in the configuration (Thanks to Regis Limare)
+* do not override generated specified manually when using global sequences (Thanks to Frederic Leroy)
+* apply global sequences on entities with composite pk, or with non numeric pk (Thanks to Frederic Leroy)
 
 #### pack selenium-primefaces
 
@@ -56,7 +56,7 @@ title: Celerio Guide - Celerio Change Log
 #### pack jsf2-spring-conversation
 
 * clearly separate full text search from regular search in search view/form.
-* totally refactor Excel export support. No longer use jxls, instead use poi directly
+* totally refactor Excel export support and improve it. No longer use jxls, instead use poi directly.
 * introduce new facelet components for date rendering in datatables: outputDate, outputDateTime, outputTime, outputLocalDate, outpoutLocalDateTime/
 * extract logcontext support from conversation filter to LogContextFilter
 * maxlength in input is by default the given size
@@ -68,7 +68,7 @@ title: Celerio Guide - Celerio Change Log
 * sort only non binary columns
 * [kickstart the extraction of the jsf conversation framework](https://github.com/jaxio/jsf-conversation)
 
-##### pom.xml
+##### front end pom.xml
 * upgrade Mojarra from 2.1.22 to 2.1.24. See [Mojarra release notes](https://javaserverfaces.java.net/nonav/2.1/releasenotes.html)
 
 #### pack javaEE
@@ -84,7 +84,7 @@ title: Celerio Guide - Celerio Change Log
 * no longer available online
 
 ### 3.0.102 (2013-07-01)
-[Sample generated app diff 3.0.101-3.0.101](https://github.com/jaxio/generated-projects/commit/e54a36b19a24872b45bd4bc50b04460006c12c71) 
+[Sample generated app diff 3.0.101-3.0.102](https://github.com/jaxio/generated-projects/commit/e54a36b19a24872b45bd4bc50b04460006c12c71) 
  
 ##### pack backend-jpa
 
