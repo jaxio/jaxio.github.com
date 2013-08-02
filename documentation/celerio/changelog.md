@@ -5,7 +5,11 @@ title: Celerio Guide - Celerio Change Log
 
 ## Celerio/Springfuse Change Log
 
-### 3.0.104-SNAPSHOT (last update on 2013-08-01)
+### 3.0.105-SNAPSHOT (last update on 2013-08-02)
+
+* no changes yet
+
+### 3.0.104 (2013-08-02)
 
 #### pack jsf2-spring-conversation
 
