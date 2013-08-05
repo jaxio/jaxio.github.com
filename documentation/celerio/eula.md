@@ -1,8 +1,8 @@
 ---
 layout: doc
-title: Celerio End User Licence Agreement
+title: Celerio End User License Agreement
 ---
-# Celerio End User Licence Agreement
+# Celerio End User License Agreement
 
 The SOFTWARE PRODUCT (CELERIO) is protected by copyright laws and international copyright treaties,
 as well as other intellectual property laws and treaties.
