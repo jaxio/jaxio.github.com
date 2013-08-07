@@ -748,18 +748,18 @@ the association. For example:
 </entityConfig>
 {% endhighlight %}
 
-> **In case the join table is not detected**
->
-> In case Celerio does not detect the join table, for example if an
-> extra column is present, you can force it by setting to `true` the
-> `middleTable` attribute of the `entityConfig` element.
+#### In case the join table is not detected
 
-> **Inverse side convention**
->
-> Which side of the @ManyToMany relation is marked as `inverse="true"` ? 
->
-> By convention, the side whose corresponding column's order is the highest on the 'middle table'.
-> You can override this convention using the parent's columnConfig's 'inverse' attribute. 
+In case Celerio does not detect the join table, for example if an
+extra column is present, you can force it by setting to `true` the
+`middleTable` attribute of the `entityConfig` element.
+
+#### Inverse side convention
+
+Which side of the @ManyToMany relation is marked as `inverse="true"` ? 
+
+By convention, the side whose corresponding column's order is the highest on the 'middle table'.
+You can override this convention using the parent's columnConfig's 'inverse' attribute. 
 
 <a name="m2o-intermediate"></a>
 ### @ManyToOne and @OneToMany with an intermediate table
