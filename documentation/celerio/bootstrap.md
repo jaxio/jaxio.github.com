@@ -140,7 +140,7 @@ Import in Eclipse
 > **Note**
 >
 > We assume here that you have already configured Eclipse's Maven
-> plugin. If not please refer to [](http://m2eclipse.sonatype.org/).
+> plugin. If not please refer to [http://m2eclipse.sonatype.org/](http://m2eclipse.sonatype.org/).
 
 You can now import your first generated project into Eclipse. Make sure
 to import it as an *existing Maven project*.

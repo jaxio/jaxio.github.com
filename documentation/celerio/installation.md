@@ -12,7 +12,7 @@ Requirements
 ### JDK 6 or above
 
 Celerio and the generated code require at least JDK 1.6.0_24 to compile and run.
-*Download and install the latest JDK from [](http://java.oracle.com)*
+*Download and install the latest JDK from [http://java.oracle.com](http://java.oracle.com)*
 
 Once installed, make sure you can run `javac` from the command line.
 Open a command line and run:
@@ -27,7 +27,7 @@ You should get a result similar to this:
 
 Celerio and the generated code require Maven 2.
 
-*Download and install Maven 2 from [](http://maven.apache.org)*
+*Download and install Maven 2 from [http://maven.apache.org](http://maven.apache.org)*
 
 Once installed, make sure you can run Maven 2 from the command line.
 Open a command line and run:
@@ -62,7 +62,7 @@ Celerio is distributed as a Maven 2 plugin. Celerio plugin is hosted on Jaxio Ma
 
 ### Access Jaxio Maven 2 repository
 
-As explained at [](http://maven.apache.org/settings.html#Servers) the username and password (provided by Jaxio once you purchase a License) 
+As explained at [http://maven.apache.org/settings.html#Servers](http://maven.apache.org/settings.html#Servers) the username and password (provided by Jaxio once you purchase a License) 
 should be set in your settings.xml file. Here is how:
 
 {% highlight xml %}
