@@ -3,8 +3,8 @@ layout: doc
 title: Celerio Guide - Installation
 ---
 
-Installation
-============
+Celerio Installation
+====================
 
 Requirements
 ------------
@@ -58,11 +58,13 @@ Celerio.
 Celerio
 -------
 
-Celerio is distributed as a Maven 2 plugin. Celerio plugin is hosted on Jaxio Maven 2 private repository.
+Celerio is distributed as a Maven plugin. It is available on Jaxio's private Maven repository.
 
-### Access Jaxio Maven 2 repository
+Once you purchase a License, Jaxio provides you with some credential to access Jaxio's private Maven repository.
 
-As explained at [http://maven.apache.org/settings.html#Servers](http://maven.apache.org/settings.html#Servers) the username and password (provided by Jaxio once you purchase a License) 
+### Configure your access to Jaxio's private Maven repository
+
+As explained at [http://maven.apache.org/settings.html#Servers](http://maven.apache.org/settings.html#Servers) the username and password 
 should be set in your settings.xml file. Here is how:
 
 {% highlight xml %}
@@ -113,10 +115,11 @@ should be set in your settings.xml file. Here is how:
 
 {% endhighlight %}
 
+
 ### License key installation
 
 Celerio License Key comes as a jar file named brand-1.0.0.jar.
 
 To install it, run this maven command from a folder containing the brand-1.0.0.jar file provided by Jaxio:
 
-> mvn install:install-file -Dfile=brand-1.0.0.jar -DgroupId=com.jaxio.celerio -DartifactId=brand-Dversion=1.0.0 -Dpackaging=jar
+	mvn install:install-file -Dfile=brand-1.0.0.jar -DgroupId=com.jaxio.celerio -DartifactId=brand-Dversion=1.0.0 -Dpackaging=jar
