@@ -62,7 +62,7 @@ Celerio is distributed as a Maven 2 plugin. Celerio plugin is hosted on Jaxio Ma
 
 ### Access Jaxio Maven 2 repository
 
-As explained at ()[http://maven.apache.org/settings.html#Servers] the username and password (provided by Jaxio once you purchase a License) 
+As explained at [](http://maven.apache.org/settings.html#Servers) the username and password (provided by Jaxio once you purchase a License) 
 should be set in your settings.xml file. Here is how:
 
 {% highlight xml %}
