@@ -17,8 +17,6 @@ Voici quelques tâches à prendre en compte dans votre calcul:
 
 Bien entendu, pensez à inclure dans votre calcul les éventuels aléas liés à la présence de bugs dans le code écrit à la main.
 
-Pour finaliser votre calcul, <a href="/nous-contacter.html">contactez-nous</a> pour un devis.
-
 ### Rupture
 
 Celerio permet également de débloquer des situations où le projet est simplement irréalisable soit, par manque de ressources internes, soit par manque de temps.

@@ -64,9 +64,10 @@ $('.carousel').carousel({
 <!-- Example row of columns -->
 <div class="row">
 <div class="span4">
-	<h1>Evaluer Celerio</h1>
-	<p><a href="/celerio-service.html" class="btn btn-primary">Evaluer Celerio en ligne</a></p>
+	<h1>Celerio</h1>
+	<p><a href="/licence-utilisation-celerio.html" class="btn btn-primary">Acheter</a></p>
 	<p><a href="https://github.com/jaxio/generated-projects" class="btn btn-primary">Exemple de code généré</a></p>	
+	<p><a href="/celerio-service.html" class="btn btn-primary">Evaluer Celerio en ligne</a></p>
 </div>
 <div class="span4">
 	<h1>Success Story</h1>

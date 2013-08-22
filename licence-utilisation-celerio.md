@@ -5,22 +5,35 @@ description: Evaluer Celerio en réalisant un prototype
 ---
 ## Licence d'utilisation de Celerio
 
-### Licence
-
 Celerio est un produit commercial qui requiert l'acquisition d'une licence d'utilisation.
-Différentes formes de licences sont disponibles en fonction de votre organisation.
 
-Pour en savoir plus merci de <a href="/nous-contacter.html">nous contacter</a>.
+Nous proposons trois types de licences. 
 
-### Evaluer Celerio
+### Licence par Utilisateur
 
-Nous vous proposons d'évaluer Celerio lors d'une présentation dans vos locaux. Pour prendre rendez-vous, 
-<a href="/nous-contacter.html">contactez-nous</a>.
+La License Utilisateur donne le droit à un utilisateur nommé d'utiliser Celerio sur autant de projets qu'il le souhaite.
 
-### Evaluer le code source généré par Celerio
+** Prix: 900 € HT **
 
-Pour évaluer le code généré par Celerio, il suffit de générer un projet en ligne 
-avec notre <a href="/celerio-service.html">Service Celerio</a>.
+Le prix inclut l'accès aux mises à jour pendant 1 an.
+
+<p><a href="mailto:info@jaxio.com?subject=Achat Licence Utilisateur" class="btn btn-primary" target="_new">Acheter</a></p>
+
+### Licence par Projet
+
+La Licence Projet donne le droit à tous les utilisateurs travaillant sur un projet donné d'utiliser Celerio sur ce projet.
+
+** Prix: 4 500 € HT **
+
+Le prix inclut l'accès aux mises à jour pendant 1 an.
+
+<p><a href="mailto:info@jaxio.com?subject=Achat Licence Projet" class="btn btn-primary" target="_new">Acheter</a></p>
+
+### License Site
+
+La Licence Site permet au personnel de votre société d'utiliser Celerio sur autant de projets que nécessaire.
+
+** Prix: ** <a href="/nous-contacter.html">nous contacter</a>.
 
 <br/>
 <br/>

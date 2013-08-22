@@ -3,83 +3,37 @@ layout: english
 title: Features comparisons between Celerio Service and Celerio 
 ---
 
-## Celerio Pricing
+## Celerio License and Pricing
 
-### Celerio Service (SpringFuse) 
+We offer 3 types of Celerio license.
 
-[Celerio Service](/en/celerio-service.html) allows you to generate as many projects as you want. The generation is done on our server, using Celerio.
+### Per User License
 
-### Celerio
+The User License gives the right to one named user to use Celerio on any number of projets.
 
-With [Celerio](/en/celerio.html), instead of generating remotely, you generate everything locally on your computer. 
-Celerio integrates smoothly within your build process. 
-It provides advanced features such as round-trip code generation which allows you to preserve manual changes when you regenerate after database schema changes. 
-Celerio is a pragmatic and agile code generator. 
-Celerio is distributed as a Maven 2 plugin.
-For more information regarding Celerio, [please contact us](/en/contact-us.html).
+** Price: 900 € ** (before tax)
 
-### Features comparisons 
+The price includes access to Celerio upgrades during 1 year. 
 
-<table class="table table-bordered table-striped">
-	<thead>
-		<tr>
-			<th>Feature</th>
-			<th style="text-align: center">Celerio Service (SpringFuse)</th>
-			<th style="text-align: center">Celerio</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>Generates all layers</td>
-			<td class="checked"></td>
-			<td class="checked"></td>
-		</tr>
-		<tr>
-			<td>Generates unit tests</td>
-			<td class="checked"></td>
-			<td class="checked"></td>
-		</tr>
-		<tr>
-			<td>Configure generation output:inheritance, renaming, relations, etc.</td>
-			<td class="checked"></td>
-			<td class="checked"></td>
-		</tr>
-		<tr>
-			<td>Generate on your computer (not remotely)</td>
-			<td></td>
-			<td class="checked"></td>
-		</tr>
-		<tr>
-			<td>Code generation round-trip</td>
-			<td></td>
-			<td class="checked"></td>
-		</tr>
-		<tr>
-			<td>Generation template packs source code</td>
-			<td></td>
-			<td class="checked"></td>
-		</tr>
-		<tr>
-			<td>Additional ready-to-use generation template packs</td>
-			<td></td>
-			<td class="checked"></td>
-		</tr>
-		<tr>
-			<td>Create your own generation templates</td>
-			<td></td>
-			<td class="checked"></td>
-		</tr>
-		<tr>
-			<td>Professional Support</td>
-			<td></td>
-			<td class="checked"></td>
-		</tr>
-	</tbody>
-	<tfoot>
-		<tr>
-			<th>Price</th>
-			<th style="text-align: center">Free</th>
-			<th style="text-align: center"><a href="/en/contact-us.html">Contact us</a></th>
-		</tr>
-	</tfoot>
-</table>
+<p><a href="mailto:info@jaxio.com?subject=Buy Celerio User Licence" class="btn btn-primary" target="_new">Buy</a></p>
+
+### Per Project License
+
+The Project License gives the right to all persons involved on a project to use Celerio on this project.
+
+** Price: 4 500 € ** (before tax)
+
+The price includes access to Celerio upgrades during 1 year. 
+
+<p><a href="mailto:info@jaxio.com?subject=Buy Celerio Project Licence" class="btn btn-primary" target="_new">Buy</a></p>
+
+### Per Company License
+
+The Company License gives the right to your company staff to use Celerio on any number of projects.
+
+** Prix: ** <a href="/en/contact-us.html">Contact us</a>.
+
+<br/>
+<br/>
+<br/>
+<br/>
