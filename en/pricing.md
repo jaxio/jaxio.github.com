@@ -1,6 +1,6 @@
 ---
 layout: english
-title: Features comparisons between Celerio Service and Celerio 
+title: Celerio License and Pricing 
 ---
 
 ## Celerio License and Pricing
@@ -31,7 +31,7 @@ The price includes access to Celerio upgrades during 1 year.
 
 The Company License gives the right to your company staff to use Celerio on any number of projects.
 
-** Prix: ** <a href="/en/contact-us.html">Contact us</a>.
+** Price: ** <a href="/en/contact-us.html">Contact us</a>.
 
 <br/>
 <br/>
