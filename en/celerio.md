@@ -9,7 +9,7 @@ Celerio is a code generator tool for data-oriented application.
 
 ![great](/images/green-check.gif) Celerio uses as input the entity-relationship model used by all relational databases. 
 This model is present in production and most developers understand it.
-To obtain this model, Celerio connects to your database and does a "reverse engineering" of your 
+To obtain this model, Celerio connects to your database and performs a "reverse engineering" of your 
 database schema. Celerio supports Oracle, My Sql, Postgres, DB2, etc.
 
 ![great](/images/green-check.gif) The model can be augmented using a configuration file. 

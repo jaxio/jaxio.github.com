@@ -5,8 +5,6 @@ description: Evaluer Celerio en réalisant un prototype
 ---
 ## Licence d'utilisation de Celerio
 
-Celerio est un produit commercial qui requiert l'acquisition d'une licence d'utilisation.
-
 Nous proposons trois types de licences. 
 
 ### Licence par Utilisateur
@@ -15,7 +13,7 @@ La License Utilisateur donne le droit à un utilisateur nommé d'utiliser Celeri
 
 ** Prix: 900 € HT **
 
-Le prix inclut l'accès aux mises à jour pendant 1 an.
+Le prix inclut l'accès aux mises à jour et aux templates pendant 1 an.
 
 <p><a href="mailto:info@jaxio.com?subject=Achat Licence Utilisateur" class="btn btn-primary" target="_new">Acheter</a></p>
 
@@ -25,7 +23,7 @@ La Licence Projet donne le droit à tous les utilisateurs travaillant sur un pro
 
 ** Prix: 4 500 € HT **
 
-Le prix inclut l'accès aux mises à jour pendant 1 an.
+Le prix inclut l'accès aux mises à jour et aux templates pendant 1 an.
 
 <p><a href="mailto:info@jaxio.com?subject=Achat Licence Projet" class="btn btn-primary" target="_new">Acheter</a></p>
 

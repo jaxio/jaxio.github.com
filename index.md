@@ -65,9 +65,12 @@ $('.carousel').carousel({
 <div class="row">
 <div class="span4">
 	<h1>Celerio</h1>
-	<p><a href="/licence-utilisation-celerio.html" class="btn btn-primary">Acheter</a></p>
-	<p><a href="https://github.com/jaxio/generated-projects" class="btn btn-primary">Exemple de code généré</a></p>	
-	<p><a href="/celerio-service.html" class="btn btn-primary">Evaluer Celerio en ligne</a></p>
+	<ul>
+	
+	<li><a href="https://github.com/jaxio/generated-projects">Exemple de code généré</a></li>	
+	<li><a href="/celerio-service.html">Evaluer Celerio en ligne</a></li>
+	</ul>
+	<p><a href="/licence-utilisation-celerio.html" class="btn btn-primary">Acheter Celerio</a></p>
 </div>
 <div class="span4">
 	<h1>Success Story</h1>
@@ -90,7 +93,8 @@ $('.carousel').carousel({
     {% for post in site.posts limit:3 %}
     	<li><a href="{{ post.url }}">{{ post.date | date_to_string }} - {{ post.title }}</a></li>
 	{% endfor %}
+		<li><a href="actualites.html"> [ ... ] </a></li>
 	</ul>
-	<p><a class="btn" href="actualites.html">Plus d'actualités &raquo;</a></p>
+	<p>
 </div>
 </div>
