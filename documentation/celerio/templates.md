@@ -171,35 +171,98 @@ The template context is the velocity execution context. It exposes your project 
 
 Here is the list of objects present in the template context:
 
-* output: The `output` controls where to write the result of the template evaluation. It also offers several methods to import java packages
-* project: The metamodel root. The project contains all the entities.
-* entity: The current entity when working with per entity or composite pk templates
-
 <a name="api-output"></a>
 ### output
 
-As you will discover, when writing a java template, one of the challenge is to manage your Java imports and make sure that you do not import twice the same
-class or that you do not import useless classes. Hopefully the `output` is here to facilitate your task?
+Full javadoc: [output - TemplateExcecution](/documentation/celerio-api/com/jaxio/celerio/template/TemplateExecution.html)
 
-<table class="table table-bordered table-striped">
-	<caption>output</caption>
-	<thead>
-	<tr>
-		<th>method</th>
-		<th>example</th>
-		<th>description</th>
-	</tr>
-	</thead>
-	<tbody>	
-	<tr>
-		<td>$output.java</td>
-		<td>$output.java($Root,"MyClass")</td>
-		<td>Write this template evaluation result to src/main/java/your-root-package/MyClass.java</td>
-	</tr>
-</table>
+The `output` has 2 roles:
+
+** it controls where to write the result of the template evaluation **
+
+At the beginning of your template, you use the `output` to tell Celerio where to write the genereted file.
+
+> $output.java($Root,"MyClass")
+
+Writes the above template evaluation result to src/main/java/your-root-package/MyClass.java
+
+> $output.java($WebSecurity, "LoginForm")##
+
+Writes the above template evaluation result to src/main/java/your-root-package/web/security/LoginForm.java
+
+* Note that the class name is available using $output.currentClass * 
+
+** it helps you with Java imports **
+
+One of the challenge of writing a java template is to manage the Java imports.
+You have to make sure that you do not import twice the same class or that you do not import useless classes.
+
+`$output.require` or  methods helps you in this task.
+
+> $output.require("org.apache.shiro.SecurityUtils")##
+
+Make sure "import org.apache.shiro.SecurityUtils;" is present in the generated file. 
+
+Note that you can use require conditionally, anywhere in your template code, for example:
+
+> \#if(something)
+> 
+> $output.requireStatic("com.google.common.collect.Lists.newArrayList")##
+> $output.require("java.util.List")##
+>
+> \#end
+
+In case 'something' evals to true, the 2 import statements will be properly inserted in your generated java file, not in the middle 
+of a java method of course.
+
+### project
+
+The `project` is the metamodel root. The project contains all the entities.
+
+Full javadoc: [project - Project](/documentation/celerio-api/com/jaxio/celerio/model/Project.html)
+
+### entity
+
+The `entity` references the current entity when working with per entity or composite pk templates
+
+Full javadoc: [entity - Entity](/documentation/celerio-api/com/jaxio/celerio/model/Entity.html)
+
+** Root and primary key **  
+
+* $entity.root returns the root entity or the entity itself.
+* $entity.root.primaryKey returns the entity's [PrimaryKey](/documentation/celerio-api/com/jaxio/celerio/model/PrimaryKey.html).
+
+** Lists ** 
+
+The entity gives you access to various kind of lists. Lists are often encapsulated in 
+a [SimpleListHolder](/documentation/celerio-api/com/jaxio/celerio/util/SimpleListHolder.html) or a 
+[CurrentAndFlatListHolder](/documentation/celerio-api/com/jaxio/celerio/util/CurrentAndFlatListHolder.html).
+
+The list contains mainly the following types:
+
+* [Attribute](/documentation/celerio-api/com/jaxio/celerio/model/Attribute.html)
+* [Relation](/documentation/celerio-api/com/jaxio/celerio/model/Relation.html)
+* [Entity](/documentation/celerio-api/com/jaxio/celerio/model/Entity.html)
+
+** namers **
+
+The entity provides getters to predefined [Namer](/documentation/celerio-api/com/jaxio/celerio/support/Namer.html).
+see section below.
+
+### enum
+
+The `enum` references the current enum when working with per enum template
+
+Full javadoc: [enum - EnumType](/documentation/celerio-api/com/jaxio/celerio/model/EnumType.html)
+
+** example: **
+
+> public class $output.currentClass extends GenericEnumController<**${enum.model.type}**> { ...
 
 <a name="entity-namers"></a>
 ### Entity's Namers
+
+Full javadoc: [Namer](/documentation/celerio-api/com/jaxio/celerio/support/Namer.html)
 
 An entity namer allows you to construct easily some var/method/class name that are derived from the current entity name.
 The entity object, has several built-in namers but other namers can be created using Celerio configuration.
