@@ -176,44 +176,60 @@ Here is the list of objects present in the template context:
 
 Full javadoc: [output - TemplateExcecution](/documentation/celerio-api/com/jaxio/celerio/template/TemplateExecution.html)
 
-The `output` has 2 roles:
+The `output` has several roles:
 
-** it controls where to write the result of the template evaluation **
+#### `output` controls where to write the result of the template evaluation
 
 At the beginning of your template, you use the `output` to tell Celerio where to write the genereted file.
 
-> $output.java($Root,"MyClass")
+{% highlight javascript %}
+$output.java($Root,"MyClass")
+{% endhighlight %}
 
 Writes the above template evaluation result to src/main/java/your-root-package/MyClass.java
 
-> $output.java($WebSecurity, "LoginForm")##
+> ** Note **: Check the full list of [GeneratedPackage](/documentation/celerio-api/com/jaxio/celerio/convention/GeneratedPackage.html), that you can pass as the first argument of $output.java 
+
+{% highlight javascript %}
+$output.java($WebSecurity, "LoginForm")##
+{% endhighlight %}
 
 Writes the above template evaluation result to src/main/java/your-root-package/web/security/LoginForm.java
 
-* Note that the class name is available using $output.currentClass * 
+> ** Note **: the class name is available using $output.currentClass 
 
-** it helps you with Java imports **
+#### `output` manages Java imports
 
 One of the challenge of writing a java template is to manage the Java imports.
 You have to make sure that you do not import twice the same class or that you do not import useless classes.
 
-`$output.require` or  methods helps you in this task.
+`$output.require` or `$output.requireStatic` methods help you in this task.
 
-> $output.require("org.apache.shiro.SecurityUtils")##
+{% highlight javascript %}
+$output.require("org.apache.shiro.SecurityUtils")##
+{% endhighlight %}
 
 Make sure "import org.apache.shiro.SecurityUtils;" is present in the generated file. 
 
 Note that you can use require conditionally, anywhere in your template code, for example:
 
-> \#if(something)
-> 
-> $output.requireStatic("com.google.common.collect.Lists.newArrayList")##
-> $output.require("java.util.List")##
->
-> \#end
+{% highlight javascript %}
+#if(something)
+$output.requireStatic("com.google.common.collect.Lists.newArrayList")
+$output.require("java.util.List")
+#end
+{% endhighlight %}
 
-In case 'something' evals to true, the 2 import statements will be properly inserted in your generated java file, not in the middle 
-of a java method of course.
+In case 'something' evals to true, the 2 import statements will be properly inserted in your generated java file,
+not in the middle of a java method of course.
+
+#### `output` provides helper for annotation and Java imports
+
+{% highlight javascript %}
+$output.dynamicAnnotation("com.company.project.MyAnnotation")
+{% endhighlight %}
+
+returns @MyAnnotation and ensure "import com.company.project.MyAnnotation;" statement is properly generated. 
 
 ### project
 
@@ -256,8 +272,9 @@ The `enum` references the current enum when working with per enum template
 Full javadoc: [enum - EnumType](/documentation/celerio-api/com/jaxio/celerio/model/EnumType.html)
 
 ** example: **
-
-> public class $output.currentClass extends GenericEnumController<**${enum.model.type}**> { ...
+{% highlight java %}
+public class $output.currentClass extends GenericEnumController<${enum.model.type}> { ...
+{% endhighlight %}
 
 <a name="entity-namers"></a>
 ### Entity's Namers
