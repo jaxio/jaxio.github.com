@@ -25,12 +25,11 @@ Writing Celerio Templates
 Introduction
 ------------
 
-Celerio code generation templates are written in Velocity.
+Celerio code generation templates are written in [Velocity](http://velocity.apache.org/engine/releases/velocity-1.7/user-guide.html).
 
 Celerio can either execute templates packaged in a jar file or templates that are present in a regular folder.
 
-Jaxio provides some ready-to-use generation templates.
-These templates are packaged in template packs.
+Jaxio provides some ready-to-use generation templates. These templates are packaged in template packs.
 
 A template pack is a simple jar. To be executed by Celerio this jar file must be explicitly added
 as a Celerio's dependency when running Celerio.
@@ -114,10 +113,10 @@ The bootstrap mode is active when you use the Celerio's maven-bootstrap-plugin.
 
 Its name must have this form: `TemplateName.boot.vm.ext` where:
 
-* TemplateName is a logical name for your template. It is not used by Celerio.
-* boot stands for bootstrap
-* vm means the templates is written in Velocity.
-* ext is your file extension. It is used by Celerio.
+* `TemplateName` is a logical name for your template. It is not used by Celerio.
+* `boot` stands for bootstrap
+* `vm` means the templates is written in Velocity.
+* `ext` should be the same as the extension of the generated file. It is used by Celerio.
 
 Example: `pom.boot.vm.xml`
 
@@ -127,10 +126,7 @@ Example: `pom.boot.vm.xml`
 A 'per entity template' is interpreted for each entity.
 Its name must have this form: `TemplateName.e.vm.ext` where:
 
-* TemplateName is a logical name for your template. It is not used by Celerio.
-* e stands for entity.
-* vm means the templates is written in Velocity.
-* ext is your file extension. It is used by Celerio.
+* `e` stands for entity.
 
 Example: `Controller.e.vm.java`
 
@@ -140,7 +136,9 @@ Example: `Controller.e.vm.java`
 A 'per project template' is interpreted one time per projet.
 Its name must have this form: `TemplateName.p.vm.ext` where:
 
-* p stands for project.
+* `p` stands for project.
+
+Example: `web.p.vm.xml`
 
 <a name="enum-template"></a>
 ### Per enum template
@@ -148,13 +146,19 @@ Its name must have this form: `TemplateName.p.vm.ext` where:
 A 'per enum template' is interpreted for each enum.
 Its name must have this form: `TemplateName.enum.vm.ext`
 
+* `enum` stands for enum.
+
+Example: `EnumController.enum.vm.java`
+
 <a name="cpk-template"></a>
 ### Per composite primary key template
 
 A 'per composite primary key template' is interpreted for each composite primary key.
 Its name must have this form: `TemplateName.cpk.vm.ext` where:
 
-* cpk stands for composite primary key
+* `cpk` stands for composite primary key
+
+Example: `CompositePkBridge.cpk.vm.java`
 
 <a name="static-files"></a>
 ### Static files
