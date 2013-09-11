@@ -180,7 +180,7 @@ The `output` has several roles:
 
 #### `output` controls where to write the result of the template evaluation
 
-At the beginning of your template, you use the `output` to tell Celerio where to write the genereted file.
+At the beginning of your template, use the `output` to specify where to write the genereted file.
 
 {% highlight javascript %}
 $output.java($Root,"MyClass")
