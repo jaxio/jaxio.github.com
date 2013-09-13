@@ -20,6 +20,7 @@ Writing Celerio Templates
 * [Template context](#template-context)
 * [Entity namers](#entity-namers)
 * [Create an entity namer](#create-entity-namer)
+* [Celerio SPI](#celerio-spi)
 
 <a name="intro"></a>
 Introduction
@@ -184,23 +185,20 @@ The `output` has several roles:
 
 #### `output` controls where to write the result of the template evaluation
 
-At the beginning of your template, use the `output` to specify where to write the genereted file.
+At the beginning of your template, use `output` to specify where to write the generated file.
+For example:
 
-{% highlight javascript %}
-$output.java($Root,"MyClass")
-{% endhighlight %}
+	$output.java($Root,"MyClass")
 
-Writes the above template evaluation result to src/main/java/your-root-package/MyClass.java
+Writes the result of the template evaluation to _src/main/java/your-root-package/MyClass.java_
 
-> ** Note **: Check the full list of [GeneratedPackage](/documentation/celerio-api/com/jaxio/celerio/convention/GeneratedPackage.html), that you can pass as the first argument of $output.java 
+> _** Note **: Check the full list of [GeneratedPackage](/documentation/celerio-api/com/jaxio/celerio/convention/GeneratedPackage.html), that you can pass as the first argument of $output.java_ 
 
-{% highlight javascript %}
-$output.java($WebSecurity, "LoginForm")##
-{% endhighlight %}
+	$output.java($WebSecurity, "LoginForm")##
 
-Writes the above template evaluation result to src/main/java/your-root-package/web/security/LoginForm.java
+Writes the result of the template evaluation to _src/main/java/your-root-package/web/security/LoginForm.java_
 
-> ** Note **: the class name is available using $output.currentClass 
+> _** Note **: the class name is available using $output.currentClass_
 
 #### `output` manages Java imports
 
@@ -209,31 +207,25 @@ You have to make sure that you do not import twice the same class or that you do
 
 `$output.require` or `$output.requireStatic` methods help you in this task.
 
-{% highlight javascript %}
-$output.require("org.apache.shiro.SecurityUtils")##
-{% endhighlight %}
+	$output.require("org.apache.shiro.SecurityUtils")##
 
 Make sure "import org.apache.shiro.SecurityUtils;" is present in the generated file. 
 
-Note that you can use require conditionally, anywhere in your template code, for example:
+Note that you can use $output.require conditionally, anywhere in your template code, for example:
 
-{% highlight javascript %}
-#if(something)
-$output.requireStatic("com.google.common.collect.Lists.newArrayList")
-$output.require("java.util.List")
-#end
-{% endhighlight %}
+	#if(something)
+	$output.requireStatic("com.google.common.collect.Lists.newArrayList")
+	$output.require("java.util.List")
+	#end
 
-In case 'something' evals to true, the 2 import statements will be properly inserted in your generated java file,
-not in the middle of a java method of course.
+In case 'something' evals to true, the 2 import statements will be properly inserted in your 
+generated java file, not in the middle of a java method of course.
 
 #### `output` provides helper for annotation and Java imports
 
-{% highlight javascript %}
-$output.dynamicAnnotation("com.company.project.MyAnnotation")
-{% endhighlight %}
+	$output.dynamicAnnotation("com.company.project.MyAnnotation")
 
-returns @MyAnnotation and ensure "import com.company.project.MyAnnotation;" statement is properly generated. 
+returns _@MyAnnotation_ and ensure _import com.company.project.MyAnnotation;_ statement is properly generated. 
 
 ### project
 
@@ -276,9 +268,8 @@ The `enum` references the current enum when working with per enum template
 Full javadoc: [enum - EnumType](/documentation/celerio-api/com/jaxio/celerio/model/EnumType.html)
 
 ** example: **
-{% highlight java %}
-public class $output.currentClass extends GenericEnumController<${enum.model.type}> { ...
-{% endhighlight %}
+
+	public class $output.currentClass extends GenericEnumController<${enum.model.type}> { ...
 
 <a name="entity-namers"></a>
 ### Entity's Namers
@@ -337,15 +328,13 @@ By default Celerio has some built-in namers. Theses can be used from your entity
 
 **Here is the content of the entityAcl.vm.e.java template that you may create:**
 
-{% highlight java %}
-$output.java($entity.acl)##
-
-public class $output.currentClass {
-    // var: $entity.acl.var
-    // type: $entity.acl.type
-    // etc...    
-}
-{% endhighlight %}
+	$output.java($entity.acl)##
+	
+	public class $output.currentClass {
+	    // var: $entity.acl.var
+	    // type: $entity.acl.type
+	    // etc...    
+	}
 
 The 'acl' entity's property implements Celerio's `Namer` Interface.
 The `Namer` interface exposes simple getter methods to access var name, getter name, etc...
@@ -365,3 +354,54 @@ To do so, open the celerio-templates-packs.xml file and add the following `celer
 	<pack name="pack-custom" path="src/main/celerio" enable="true" />
 </packs>
 {% endhighlight %}
+
+<a name="celerio-spi"></a>
+### Celerio Service Provider Interface (SPI)
+
+Celerio exposes the following SPIs:
+
+* [ProjectSpi](/documentation/celerio-api/com/jaxio/celerio/spi/ProjectSpi.html)
+* [EntitySpi](/documentation/celerio-api/com/jaxio/celerio/spi/EntitySpi.html)
+* [AttributeSpi](/documentation/celerio-api/com/jaxio/celerio/spi/AttributeSpi.html)
+
+You can create some extension by following [ServiceLoader](http://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html) convention.
+To plug your extension, add it as a dependency to maven-celerio-plugin, for example:
+
+{% highlight xml %}
+		<profile>
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+			<!-- Generate the code using Celerio -->
+			<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+			<id>gen</id>
+			<build>
+				<defaultGoal>generate-sources</defaultGoal>
+				<plugins>
+					<plugin>
+						<groupId>com.jaxio.celerio</groupId>
+						<artifactId>maven-celerio-plugin</artifactId>
+						<version>${maven-celerio-plugin.version}</version>
+						<executions>
+							<execution>
+								<id>Generates files using the extracted database schema.</id>
+								<goals>
+									<goal>generate</goal>
+								</goals>
+							</execution>
+						</executions>
+						<dependencies>
+							<dependency>
+								<groupId>com.jaxio.celerio.packs</groupId>
+								<artifactId>backend-jpa</artifactId>
+								<version>${maven-celerio-plugin.version}</version>
+							</dependency>
+							<dependency>
+								<groupId>com.yourcompany.celerio</groupId>
+								<artifactId>my-celerio-extension</artifactId>
+								<version>1.0.0</version>
+							</dependency>
+						</dependencies>
+					</plugin>
+				</plugins>
+			</build>
+{% endhighlight %}
+

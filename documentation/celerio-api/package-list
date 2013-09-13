@@ -26,6 +26,7 @@ com.jaxio.celerio.model.support.search
 com.jaxio.celerio.model.support.springmvc
 com.jaxio.celerio.model.support.validation
 com.jaxio.celerio.model.unique
+com.jaxio.celerio.spi
 com.jaxio.celerio.support
 com.jaxio.celerio.template
 com.jaxio.celerio.template.pack
