@@ -5,9 +5,30 @@ title: Celerio Guide - Celerio Change Log
 
 ## Celerio/Springfuse Change Log
 
-### 3.0.105-SNAPSHOT (last update on 2013-08-02)
+### 3.0.105-SNAPSHOT (last updated on 2013-09-15)
 
-* no changes yet
+#### maven-bootstrap-plugin (celerio bootstrap)
+
+* fix regression in app name checking
+
+#### pack jsf2-spring-conversation
+
+* TermSelector was missing in excel exporter.
+* remove 'not sub' predicate in iconDelete and iconEdit rendered attribute. 
+* add nullAllowed param to selectOneRadio. 
+* GenericExcelExporter is now 'take over' compliant
+* add size attribute to app:input in case the type is numeric
+* fix app:input maxlength logic
+* by convention, we now exclude binary (clob, lob, blob) from regular search criteria
+*  improve app:textArea display when in read-only mode
+
+#### pack backend-jpa
+
+* in @Digits annotation, integer value should be 'size - decimalDigits' instead of 'size'
+* Range can now be applied to an attribute present in an associated entity.
+* introduce findProperty method in GenericRepository.
+* fix AuditLogListener and AuditLogService compilation when LocalDateTime is used.
+* some code factorization
 
 ### 3.0.104 (2013-08-02)
 

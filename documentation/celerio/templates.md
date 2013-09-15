@@ -44,7 +44,7 @@ Learn by example
 
 The simplest way to get started with Celerio templates is to modify existing templates.
 
-Templates source code is available directly by simply unjarring the templates pack jar file
+Templates source code is available directly by simply un-jarring the templates pack jar file
 or if the pack is encrypted (legacy) by simply downloading the associated jar file sources.
 
 <a name="templates-folder"></a>
@@ -71,35 +71,31 @@ Create a templates pack
 A template pack is simply a set of Celerio templates packaged in a jar file.
 The project must have the following structure:   
 
-<pre>
-pom.xml
-src
-   |- main
-          |- resources
-                      |- META-INF
-                      |          |- celerio.txt
-                      |       
-                      |- celerio
-                                |- bootstrap
-                                |           |- pom.boot.vm.xml
-                                |           |- anytemplate.boot.vm.xml
-                                |- packName
-                                           |- **/yourtemplate.e.vm.java
-</pre>
+	pom.xml
+	src
+	   |- main
+	          |- resources
+	                      |- META-INF
+	                      |          |- celerio.txt
+	                      |       
+	                      |- celerio
+	                                |- bootstrap
+	                                |           |- pom.boot.vm.xml
+	                                |           |- anytemplate.boot.vm.xml
+	                                |- packName
+	                                           |- **/yourtemplate.e.vm.java
 
 The celerio.txt file contains some meta information that Celerio engine and the Celerio maven-bootstrap-plugin use.
 Here is a celerio.txt file example:
 
-<pre>
-packName=pack-${project.artifactId}
-packCrypted=false
-packDescription=Java EE backend pack: almost pure JPA 2 with Hibernate 4. No Spring at all. CDI.
-packDescription2=Some more info
-packCommand=mvn -Ph2,db,metadata,gen test
-</pre>
+	packName=pack-${project.artifactId}
+	packCrypted=false
+	packDescription=Java EE backend pack: almost pure JPA 2 with Hibernate 4. No Spring at all. CDI.
+	packDescription2=Some more info
+	packCommand=mvn -Ph2,db,metadata,gen test
 
-It is important that the packName starts with the prefix 'pack-'.
-  
+It is important that the packName starts with the prefix `pack-`.
+
 <a name="template-name-conventions"></a>
 Template name conventions
 -------------------------
@@ -109,8 +105,8 @@ There are several kinds of template:
 <a name="bootstrap-template"></a>
 ### Bootstrap templates
 
-A 'bootstrap template' is interpreted only when Celerio is run in 'bootstrap' mode.
-The bootstrap mode is active when you use the Celerio's maven-bootstrap-plugin.
+A _bootstrap template_ is interpreted only when Celerio is run in _bootstrap mode_.
+The _bootstrap mode_ is active when you use the Celerio's maven-bootstrap-plugin.
 
 Its name must have this form: `TemplateName.boot.vm.ext` where:
 
@@ -174,7 +170,7 @@ Template context
 
 The template context is the velocity execution context. It exposes your project metamodel and various facilities.  
 
-Here is the list of objects present in the template context:
+Here is the list of object variables present in the template context:
 
 <a name="api-output"></a>
 ### output
@@ -365,7 +361,55 @@ Celerio exposes the following SPIs:
 * [AttributeSpi](/documentation/celerio-api/com/jaxio/celerio/spi/AttributeSpi.html)
 
 You can create some extension by following [ServiceLoader](http://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html) convention.
-To plug your extension, add it as a dependency to maven-celerio-plugin, for example:
+Your extension must be packaged in a jar file containing your classes and the expected service files.
+
+	src
+	   |- main
+	          |- resources
+	                      |- META-INF
+	                                 |- services
+                                                |
+                                                - com.jaxio.celerio.spi.ProjectSpi
+                                                - com.jaxio.celerio.spi.EntitySpi
+                                                - com.jaxio.celerio.spi.AttributeSpi                                                
+
+You extension implementation must be listed in one of the file above.
+
+Assuming you have created an entity extension whose full type is _com.jaxio.celerio.spi.example.ExampleEntity_,
+the content of the _com.jaxio.celerio.spi.EntitySpi_ file must be: 
+
+	com.jaxio.celerio.spi.example.ExampleEntity
+
+Here is our dummy ExampleEntity extension source code:
+
+{% highlight java %}
+package com.jaxio.celerio.spi.example;
+
+import com.jaxio.celerio.model.Entity;
+import com.jaxio.celerio.spi.EntitySpi;
+
+public class ExampleEntity implements EntitySpi {
+
+    private Entity entity;
+    
+    @Override
+    public void init(Entity entity) {
+        this.entity = entity;
+    }
+
+    @Override
+    public String velocityVar() {
+        return "example";
+    }
+
+    public String getHello() {
+        return "Hello from ExampleEntity: this entity has " + entity.getCurrentAttributes().size() + " attributes";
+    }
+}
+{% endhighlight %}
+
+To activate it and be able to use it through `$entity.example` and invoke `$entity.example.hello` from your templates, 
+add the extension's jar as a dependency when running maven-celerio-plugin, for example:
 
 {% highlight xml %}
 		<profile>
