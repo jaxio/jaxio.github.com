@@ -5,7 +5,7 @@ title: Celerio Guide - Celerio Change Log
 
 ## Celerio/Springfuse Change Log
 
-### 3.0.105-SNAPSHOT (last updated on 2013-09-15)
+### 3.0.105 (2013-09-23)
 
 #### maven-bootstrap-plugin (celerio bootstrap)
 
