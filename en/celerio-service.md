@@ -24,6 +24,8 @@ __Requirements__
 * at least Java 1.6 (recent build)
 * at least Maven 2
 
+Current version: 3.0.105 - 3.0.106-SNAPSHOT | <a href="/documentation/celerio/changelog.html">Change Logs</a>
+
 <span class="label label-info">To generate a project</span>, adjust the settings below and execute the resulting command lines in a console.
 
 ### Step 1/4: Configure your project 
