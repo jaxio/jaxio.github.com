@@ -14,7 +14,7 @@ Despite our efforts, there are still few limitations, but overall we are quite h
 
 #### `new` pack javaee7-glassfish
 
-> _**Note:** This pack is in BETA. We welcome any constructive feedbacks._
+> _**Note:** This pack is in BETA. We welcome all feedbacks._
 >
 > _pom.xml is optimized for GlassFish 4._
 
@@ -32,7 +32,7 @@ Despite our efforts, there are still few limitations, but overall we are quite h
 
 ####  `new` pack javaee6-jboss
 
-> _**Note:** This pack is in BETA. We welcome any constructive feedbacks._
+> _**Note:** This pack is in BETA. We welcome all feedbacks._
 >
 > _pom.xml is optimized for JBoss EAP 6.1_
 
