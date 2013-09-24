@@ -47,6 +47,7 @@ puis exécutez dans une console les commandes maven résultantes.
     <div class="controls">
 		<select id="celerioVersion" name="celerioVersion" class="updateCommand">
 			<option value="3.0.105" selected="selected">3.0.105</option>
+			<option value="3.0.106-SNAPSHOT">3.0.106-SNAPSHOT</option>
 		</select>
 	</div>
 </div>
@@ -79,22 +80,43 @@ puis exécutez dans une console les commandes maven résultantes.
 
 <hr/>
 <div class="control-group">
-	<label class="control-label" for="frontEnd">Type de Project</label>
-    <div class="controls">
+	<label class="control-label" for="frontEnd">Type de project</label>
+
+	
+    <div class="controls">    
+      <h4>JavaEE 6 + Spring Framework (targeting Jetty, Tomcat, JBoss, etc.) </h4>
       <label class="radio">
-		<input type="radio" name="frontEnd" id="jsf2Spring" value="jsf2Spring" class="updateCommand" checked="checked"/>JSF 2, Primefaces 3.5, avec une API conversation
+		<input type="radio" name="frontEnd" id="jsf2Spring" value="jsf2Spring" class="updateCommand" checked="checked"/>Web application. 
 			<span class="help-block">
-				Parfait pour une application d'entreprise orientée données. Le code généré est 
-				bien organisé, propose des fonctionnalités puissantes, contient une API inégalée de `conversation`, etc.
-				C'est notre option préférée. Avec vous allez booster votre productivité.
+				JSF 2.1, Primefaces 3.5, JPA 2.0, Hibernate 4.2, Spring 3.2, BeanValidation, SpringSecurity, etc.<br/>
+				Notre stack préférée!
 			</span>
-	  </label>	  
+	  </label>
+      
+      <h4>JavaEE 6 + Spring Framework (backend only) </h4>      
       <label class="radio">
-      <input type="radio" name="frontEnd" id="backendJpa" value="backendJpa" class="updateCommand"/>JPA 2 backend, Query By Example feature
+      <input type="radio" name="frontEnd" id="backendJpa" value="backendJpa" class="updateCommand"/>Backend only.
 		<span class="help-block">      
-      		Juste la partie backend... Parfait si vous ne voulez pas du front JSF...
+				JPA 2.0, Hibernate 4.2, Spring 3.2, BeanValidation, SpringSecurity, etc.
 		</span>
       </label>
+
+      <h4>JavaEE 6 (targeting JBoss EAS 7.1) - requires v3.0.106-SNAPSHOT</h4>
+      <label class="radio">
+		<input type="radio" name="frontEnd" id="javaee6Jboss" value="javaee6Jboss" class="updateCommand"/>Web application.
+			<span class="help-block">
+				JSF 2.1, Primefaces 3.5, JPA 2.0, Hibernate 4.2, BeanValidation, Apache Shiro, Apache DeltaSpike, Arquillian, etc.
+			</span>
+	  </label>	  
+
+      <h4>JavaEE 7 (targeting GlassFish 4.0) - requires v3.0.106-SNAPSHOT</h4></h4>
+      <label class="radio">
+		<input type="radio" name="frontEnd" id="javaee7Glassfish" value="javaee7Glassfish" class="updateCommand"/>Web application.
+			<span class="help-block">
+				JSF 2.2, Primefaces 3.5, JPA 2.1, Hibernate 4.3, BeanValidation, Apache Shiro, Apache DeltaSpike, Glassfish Embedded from maven, etc.<br/>
+				IMPORTANT: not compatible yet with hibernate search!				
+			</span>
+	  </label>
     </div>
 </div>
 
@@ -107,10 +129,13 @@ puis exécutez dans une console les commandes maven résultantes.
 	<label class="control-label" for="archetypeArtifactId3">Au choix</label>
     <div class="controls">
       <label class="radio">
-			<input type="radio" name="archetypeArtifactId" id="archetypeArtifactId3" value="quickstart-embedded-db-with-configuration" class="updateCommand" checked="checked"/>Utiliser une base de données d'exemple, fournie par Jaxio.
+			<input type="radio" name="archetypeArtifactId" id="archetypeArtifactId3" value="quickstart-embedded-db-with-configuration" class="updateCommand" checked="checked"/>Utiliser une base de données d'exemple, fournie par Jaxio (non compatible JavaEE7)
 	  </label>
       <label class="radio">
-			<input type="radio" name="archetypeArtifactId" id="archetypeArtifactId1" value="quickstart" class="updateCommand"/>Utiliser votre propre base de données.
+			<input type="radio" name="archetypeArtifactId" id="archetypeArtifactId3" value="quickstart-embedded-db-wo-hibernate-search" class="updateCommand"/>Utiliser une base de données d'exemple, fournie par Jaxio (compatible JavaEE7)
+	  </label>	  
+      <label class="radio">
+			<input type="radio" name="archetypeArtifactId" id="archetypeArtifactId1" value="quickstart" class="updateCommand"/>Your own database and use your own configuration file.
       </label>
     </div>
 </div>
