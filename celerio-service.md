@@ -84,7 +84,7 @@ puis exécutez dans une console les commandes maven résultantes.
 
 	
     <div class="controls">    
-      <h4>JavaEE 6 + Spring Framework (targeting Jetty, Tomcat, JBoss, etc.) </h4>
+      <h4>JavaEE 6 + Spring Framework (serveur cible: Jetty, Tomcat, JBoss, etc.) </h4>
       <label class="radio">
 		<input type="radio" name="frontEnd" id="jsf2Spring" value="jsf2Spring" class="updateCommand" checked="checked"/>Web application. 
 			<span class="help-block">
@@ -101,7 +101,7 @@ puis exécutez dans une console les commandes maven résultantes.
 		</span>
       </label>
 
-      <h4>JavaEE 6 (targeting JBoss EAS 7.1) - requires v3.0.106-SNAPSHOT</h4>
+      <h4>JavaEE 6 (serveur cible; JBoss EAS 7.1) - nécessite v3.0.106-SNAPSHOT</h4>
       <label class="radio">
 		<input type="radio" name="frontEnd" id="javaee6Jboss" value="javaee6Jboss" class="updateCommand"/>Web application.
 			<span class="help-block">
@@ -109,12 +109,12 @@ puis exécutez dans une console les commandes maven résultantes.
 			</span>
 	  </label>	  
 
-      <h4>JavaEE 7 (targeting GlassFish 4.0) - requires v3.0.106-SNAPSHOT</h4></h4>
+      <h4>JavaEE 7 (serveur cible: GlassFish 4.0) - nécessite v3.0.106-SNAPSHOT</h4></h4>
       <label class="radio">
 		<input type="radio" name="frontEnd" id="javaee7Glassfish" value="javaee7Glassfish" class="updateCommand"/>Web application.
 			<span class="help-block">
 				JSF 2.2, Primefaces 3.5, JPA 2.1, Hibernate 4.3, BeanValidation, Apache Shiro, Apache DeltaSpike, Glassfish Embedded from maven, etc.<br/>
-				IMPORTANT: not compatible yet with hibernate search!				
+				IMPORTANT: pas encore compatible avec hibernate search.			
 			</span>
 	  </label>
     </div>
@@ -132,10 +132,10 @@ puis exécutez dans une console les commandes maven résultantes.
 			<input type="radio" name="archetypeArtifactId" id="archetypeArtifactId3" value="quickstart-embedded-db-with-configuration" class="updateCommand" checked="checked"/>Utiliser une base de données d'exemple, fournie par Jaxio (non compatible JavaEE7)
 	  </label>
       <label class="radio">
-			<input type="radio" name="archetypeArtifactId" id="archetypeArtifactId3" value="quickstart-embedded-db-wo-hibernate-search" class="updateCommand"/>Utiliser une base de données d'exemple, fournie par Jaxio (compatible JavaEE7)
+			<input type="radio" name="archetypeArtifactId" id="archetypeArtifactId3" value="quickstart-embedded-db-wo-hibernate-search" class="updateCommand"/>Utiliser une base de données d'exemple, fournie par Jaxio (sans hibernate search, compatible JavaEE7)
 	  </label>	  
       <label class="radio">
-			<input type="radio" name="archetypeArtifactId" id="archetypeArtifactId1" value="quickstart" class="updateCommand"/>Your own database and use your own configuration file.
+			<input type="radio" name="archetypeArtifactId" id="archetypeArtifactId1" value="quickstart" class="updateCommand"/>Utiliser votre propre base de données
       </label>
     </div>
 </div>
