@@ -48,6 +48,19 @@ Despite our efforts, there are still few limitations, but overall we are quite h
 * Arquillian
 * ...
 
+##### Versions upgrade
+
+* upgrade spring from 3.2.3.RELEASE to 3.2.4.RELEASE
+* upgrade hibernate from 4.2.3.Final to 4.2.6.Final
+* upgrade hibernate-search from 4.2.0.Final to 4.3.0.Final
+* upgrade hibernate-validator from 4.2.0.Final to 4.3.1.Final
+* upgrade joda-time from 2.2 to 2.3
+* upgrade guava from 14.0.1 to 15.0
+* upgrade selenium from 2.33.0 to 2.35.0
+* upgrade omnifaces from 1.5 to 1.6
+* upgrade javamelody from 1.45.0 to 1.47.0
+
+
 ### 3.0.105 (2013-09-23)
 
 #### maven-bootstrap-plugin (celerio bootstrap)
