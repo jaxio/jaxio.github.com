@@ -65,9 +65,9 @@ $('.carousel').carousel({
 
 <div class="span4">
 	<h1>Celerio</h1>
-	<p><a href="/en/pricing.html" class="btn btn-primary">Buy Celerio</a></p>
 	<p><a href="https://github.com/jaxio/generated-projects" class="btn btn-primary">Generated example on GitHub</a></p>
 	<p><a href="/en/celerio-service.html" class="btn btn-primary">Try Celerio online</a></p>		
+	<p><a href="/en/pricing.html" class="btn btn-primary">Buy Celerio</a></p>
 </div>
 <div class="span4">
 	<h1>Different</h1>
