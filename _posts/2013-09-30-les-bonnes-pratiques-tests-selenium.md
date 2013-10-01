@@ -26,15 +26,13 @@ On ne peut faire plus simple.
 
 Pour comprendre mieux Selenium, et savoir ce que l'on peut lui demander il est nécessaire de prendre un cas d'usage fonctionnel non trivial qui utilise des composants riches.
 
-Pour cela prenons l'application générée [Celerio](/celerio.html) que vous pouvez reproduire [vous même en ligne](/celerio-service.html).
+Pour cela prenons l'application générée par [Celerio](/celerio.html) que vous pouvez reproduire [vous même en ligne](/celerio-service.html).
 
 ## Objectif
 
 En tant qu'administrateur je veux modifier un compte existant, m'identifier avec, me déconnecter, et me réidentifier en tant qu'administrateur et remettre le compte dans l'état précédent.
 
 ## Actions métier
-
-<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/WIkJTdsQyFc&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/WIkJTdsQyFc&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
 
 Le chemin fonctionnel souhaité est donc le suivant:
 
@@ -51,9 +49,12 @@ Le chemin fonctionnel souhaité est donc le suivant:
 1. Se reconnecter en tant qu'administrateur
 1. Remettre en état le compte
 
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/WIkJTdsQyFc&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/WIkJTdsQyFc&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+
+
 ## Actions utilisateur
 
-Pour faire cela il y a des étapes intermédiaires
+Ce chemin fonctionnels correspond aux étapes unitaires suivantes
 
 1. S'identifier en tant qu'administrateur
     * Aller sur la page d'acceuil
@@ -144,7 +145,7 @@ Nous pouvons ajouter des tests en plus pour vérifier le résultat des actions p
 
 ## Gestion du temps
 
-Pour s'affranchir du temps, il est nécessaire d'utiliser les mécanismes de réessai de Selenium de façon judicieuse.
+Pour s'affranchir du temps, il est nécessaire d'utiliser les mécanismes de réessai de Selenium de façon judicieuse. L'utilisation de `Thread.sleep()` à tire larigot est à proscrire.
 
 <script src="https://gist.github.com/framiere/6780992.js"></script>
 
@@ -155,17 +156,17 @@ L'objet WebElement est un objet trop bas niveau, nous pouvons utiliser des helpe
 
 ## Bonne pratiques logicielle
 
-Nous pouvons appliquer toutes les bonnes pratiques de développement pour améliorer le script original en code propre et efficace.
+Nous pouvons également appliquer l'ensemble des bonnes pratiques de développement pour améliorer le script original et ainsi le rendre propre et efficace.
 
 Toutefois, ces actions techniques pour améliorer le code de test masquent un sujet plus important.
 
 # Que voulons nous tester ?
 
-Pour une application de gestion, il me semble que les bénéfices les plus interressants apportés par Selenium sont sur des cas fonctionnels en tant que succession d'action sur l'application, et non en tant que test d'IHM.
+Pour une application de gestion, il me semble que les bénéfices les plus interressants apportés par Selenium sont sur des cas fonctionnels en tant que succession d'action sur l'application... et non pas en tant que test d'IHM.
 
 Ces cas fonctionnels sont donc décorrélés du dom... et presque du web.
 
-Dans un mode parfait, le cas d'usage devrait exprimé dans un dsl, et celui-ci devrait s'executer.
+Dans un mode parfait, le cas d'usage devrait être exprimé dans un dsl, et celui-ci devrait s'executer.
 
 Ce dsl devrait proposer sous une forme ou une autre les fonctionnalités utilisées pour la production d'IHM.
 
@@ -191,7 +192,6 @@ La recherche d'utilisateur présente les fonctionnalités suivantes:
     * que l'on peut selectionner
 
 Ces fonctionnalités sont les mêmes sur les autres entités manipulées par l'application.
-
 
 ### AccountSearch
 
@@ -234,17 +234,24 @@ La selection de la civilité est interressante, voici le code
 Cela permet d'avoir côté test unitaire de la completion avec le type de donnée adéquate.
 
 <script src="https://gist.github.com/framiere/6781069.js"></script>
+
 ### Autocomplete
 
 La suite est de componentariser les autocomplete qui est un composant plus complexe, celui-ci fait appel a de nombreuses requêtes Xpath 
 
 <script src="https://gist.github.com/framiere/6781030.js"></script>
 
+## AccountEdit
+
+Pour la page d'édition d'un compte, nous avons ceci
+
+<script src="https://gist.github.com/framiere/6781812.js"></script>
+
 ## Test client 
 
 Vous l'aurez compris, une fois le code du composant produit, nous pouvons créer des tests totalement décorrolés de leur implémentations
 
-<script src="https://gist.github.com/framiere/6781030.js"></script>
+<script src="https://gist.github.com/framiere/6777910.js"></script>
 
 ## SeleniumTest
 
