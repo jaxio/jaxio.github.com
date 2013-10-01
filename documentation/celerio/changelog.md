@@ -63,6 +63,9 @@ Despite our efforts, there are still few limitations, but overall we are quite h
 
 ### 3.0.105 (2013-09-23)
 
+[Sample generated app diff 3.0.104-3.0.105](https://github.com/jaxio/generated-projects/commit/ea72718b380f37dea7b89457976d5a7d8cfab037) 
+
+
 #### maven-bootstrap-plugin (celerio bootstrap)
 
 * fix regression in app name checking
@@ -87,6 +90,8 @@ Despite our efforts, there are still few limitations, but overall we are quite h
 * some code factorization
 
 ### 3.0.104 (2013-08-02)
+
+[Sample generated app diff 3.0.103-3.0.104](https://github.com/jaxio/generated-projects/commit/4aa56546b1d3d772b5f5c8b499ec7fc96790d6f2)
 
 #### pack jsf2-spring-conversation
 
