@@ -118,6 +118,8 @@ En l'état la capture de Selenium IDE n'est pas utilisable pour les raisons suiv
 
 # Axes d'amélioration
 
+Plusieurs axes d'amélioration s'offrent à nous.
+
 ## Cookies 
 Nous pouvons ajouter du code pour supprimer les cookies
 
@@ -127,6 +129,7 @@ Nous pouvons ajouter du code pour supprimer les cookies
 Nous pouvons refactorer le code pour extraire les actions métiers
 
 <script src="https://gist.github.com/framiere/6777332.js"></script>
+
 
 ## Dom & Page factory pattern
 Le [Page factory pattern](https://code.google.com/p/selenium/wiki/PageFactory) permet de résoudre en partie la dépendance forte au DOM
@@ -141,77 +144,16 @@ Nous pouvons ajouter des tests en plus pour vérifier le résultat des actions p
 
 ## Gestion du temps
 
-Pour s'affranchir du temps, il est nécessaire d'utiliser les mécanismes de réessai de Selenium.
+Pour s'affranchir du temps, il est nécessaire d'utiliser les mécanismes de réessai de Selenium de façon judicieuse.
 
+<script src="https://gist.github.com/framiere/6780992.js"></script>
 
-{% highlight java %}
-    public void waitUntilRemoved(final By by) {
-        try {
-            until(new ExpectedCondition<Boolean>() {
-                @Override
-                public Boolean apply(WebDriver from) {
-                    from.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-                    try {
-                        return from.findElements(by).isEmpty();
-                    } catch (NoSuchElementException e) {
-                        return true;
-                    } finally {
-                        from.manage().timeouts().implicitlyWait(driverWaitBeforeStopInSeconds, TimeUnit.SECONDS);
-                    }
-                }
-            });
-        } catch (RuntimeException e) {
-            error("not removed " + by, e);
-        }
-    }
+## Composant
+L'objet WebElement est un objet trop bas niveau, nous pouvons utiliser des helpers pour être plus efficaces
 
-    public void waitUntilDisplayed(final WebElement webElement) {
-        try {
-            until(new ExpectedCondition<Boolean>() {
-                @Override
-                public Boolean apply(WebDriver from) {
-                    return webElement.isDisplayed();
-                }
-            });
-        } catch (RuntimeException e) {
-            error("element " + webElement.getTagName() + " is not displayed", e);
-        }
-    }
+<script src="https://gist.github.com/framiere/6781000.js"></script>
 
-    public boolean until(Function<WebDriver, Boolean> function) {
-        // iterate until we have no more StaleElementReferenceException
-        while (true) {
-            try {
-                return tryUntil(function);
-            } catch (StaleElementReferenceException e) {
-                //
-            }
-        }
-    }
-
-    private boolean tryUntil(Function<WebDriver, Boolean> function) {
-        // test the function now
-        if (function.apply(webDriver)) {
-            return true;
-        }
-        // nope ? ok, once more
-        if (function.apply(webDriver)) {
-            return true;
-        }
-        // test for 1 second with very rapid tests
-        try {
-            if (new WebDriverWait(webDriver, 1).until(function)) {
-                return true;
-            }
-        } catch (Exception e) {
-            // no op
-        }
-        // ok it's still not ready, so let's wait
-        return new WebDriverWait(webDriver, driverWaitBeforeStopInSeconds).until(function);
-    }
-{% endhighlight  %}
-
-## Bonne pratiques
+## Bonne pratiques logicielle
 
 Nous pouvons appliquer toutes les bonnes pratiques de développement pour améliorer le script original en code propre et efficace.
 
@@ -230,37 +172,100 @@ Ce dsl devrait proposer sous une forme ou une autre les fonctionnalités utilis�
 
 ## Recherche de comptes utilisateurs
 
-La production de recherche d'utilisateur présente les fonctionnalités suivantes:
+La recherche d'utilisateur présente les fonctionnalités suivantes:
 
-1. Formulaire de recherche
-    a. qui contient des composants autocomplete
-    a. qui contient des composants d'interval de date
+1. Une barre d'action
+    * pour créer un objet
+    * pour quitter la recherche
+1. Un formulaire de recherche
+    * qui contient des composants autocomplete
+    * qui contient des composants d'interval de date
+    * qui peut être réininitialisé, sauvé, chargé
 1. Un tableau
-    a. avec des headers cliquable pour trier par colonne
-    a. des résultats
-    a. un composant de pagination
+    * avec des headers cliquable pour trier par colonne
+    * un composant de pagination
 1. Des lignes de résultat
-    a. que l'on peut supprimer
-    a. que l'on peut éditer
-    a. que l'on peut visualiser
-    a. que l'on peut selectionner
+    * que l'on peut supprimer
+    * que l'on peut éditer
+    * que l'on peut visualiser
+    * que l'on peut selectionner
 
 Ces fonctionnalités sont les mêmes sur les autres entités manipulées par l'application.
 
-Il faut donc les componentariser pour travailler au mieux.
+
+### AccountSearch
+
+Il faudrait à l'image du code des composants qui produisent la page via le DOM, produire code client qui les consomme via selenium et arriver à ce genre de chose:
+
+<script src="https://gist.github.com/framiere/6781001.js"></script>
+
+Les composants `Table`, `EntityAction`, `Messages`, `OrderBy`, `Autocomplete`, `ManyBooleans`, `ChooseEnum`, `StringRange` doivent être écrits de façon indépendantes des tests.
+
+### EntityAction
+
+Le composant `EntityAction` n'est qu'un aggregat de boutons
+
+<script src="https://gist.github.com/framiere/6781005.js"></script>
+
+### Button
+Un bouton est lui-même définit comme suit
+
+<script src="https://gist.github.com/framiere/6781010.js"></script>
+
+En tant que client nous pouvons désormais ajouter ce type d'action
+
+<script src="https://gist.github.com/framiere/6781016.js"></script>
+### OrderBy
+
+Le composant `OrderBy` est écrit en connaissant comme le composant serveur produit le DOM côté client. Nous pouvons alors créer les méthodes `isUp()`, `isDown()`, `up()`, `down()`
+
+<script src="https://gist.github.com/framiere/6781023.js"></script>
+
+En tant que client nous pouvons désormais ajouter ce type d'assertions
+
+<script src="https://gist.github.com/framiere/6781065.js"></script>
+
+### ChooseEnum & Typage
+
+La selection de la civilité est interressante, voici le code 
+
+<script src="https://gist.github.com/framiere/6781023.js"></script>
+
+Cela permet d'avoir côté test unitaire de la completion avec le type de donnée adéquate.
+
+<script src="https://gist.github.com/framiere/6781069.js"></script>
+### Autocomplete
+
+La suite est de componentariser les autocomplete qui est un composant plus complexe, celui-ci fait appel a de nombreuses requêtes Xpath 
+
+<script src="https://gist.github.com/framiere/6781030.js"></script>
+
+## Test client 
+
+Vous l'aurez compris, une fois le code du composant produit, nous pouvons créer des tests totalement décorrolés de leur implémentations
+
+<script src="https://gist.github.com/framiere/6781030.js"></script>
+
+## SeleniumTest
+
+L'objet [AccountSearch](https://gist.github.com/framiere/6781001#file-accountsearch-java) ne contient que des références de composants, leur instanciation est réalisé à la façon du Page Factory Pattern.
+Sauf qu'ici, leur instanciation est récursive, une class annotée `@Page` peut avoir des propriétés `@Page`. Les propriétés déjà créées sont wrappées également.
+
+<script src="https://gist.github.com/framiere/6781034.js"></script>
+
+# Test documentés
+
+Après ces pérégrinations techniques, il faut revenir au besoin client final, et savoir communiquer au métier ce que réalise le test.
+
+Pour cela, nous avons ajouté des méthodes qui présentent lors des actions réalisées sur le dom des messages et ajouté [FollowVisually](https://gist.github.com/framiere/6781129) à la classe de test
+
+<script src="https://gist.github.com/framiere/6781039.js"></script>
+
+La notification en elle même est l'appel direct à un composant javascript déjà présent sur la page cliente.
+
+<script src="https://gist.github.com/framiere/6781045.js"></script>
+
+Nous pouvons désormais présenter au client final le test, et pouvons itérer sur ce qui est à tester fonctionnellement.
 
 
-
-# Résultat final
-
-<script src="https://gist.github.com/framiere/6777910.js"></script>
-
-1. Les étapes du test sont exprimées clairement
-1. Toute action est suivie d'une vérification
-1. Le test n'est pas dépendant du temps
-1. Le test n'est pas dépendant du DOM
-1. Le test n'est dépendant de la langue
-1. Le test n'est pas dépendant du cookie courant
-1. Le test est refactorable
-1. Le test est composable
-1. Le test s'execute rapidement
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/yX6HhUohjIk&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/yX6HhUohjIk&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
