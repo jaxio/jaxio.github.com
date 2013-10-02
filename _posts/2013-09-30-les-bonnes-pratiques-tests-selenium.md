@@ -7,29 +7,20 @@ date: 2013-09-30
 
 # Selenium
 
-[Selenium](http://docs.seleniumhq.org/) est un outil qui permet d'effectuer des [tests fonctionnels](http://referentiel.institut-agile.fr/acceptance.html) web automatisés.
+[Selenium](http://docs.seleniumhq.org/) est un outil qui permet d'effectuer des [tests fonctionnels](http://referentiel.institut-agile.fr/acceptance.html) web automatisés sur la plupart des [navigateurs](http://docs.seleniumhq.org/about/platforms.jsp#browsers), [plateformes](http://docs.seleniumhq.org/about/platforms.jsp#operating-systems) et [languages](http://docs.seleniumhq.org/about/platforms.jsp#programming-languages).
 
-Celui-ci permet d'exécuter des scénarii web sur la plupart des [navigateurs](http://docs.seleniumhq.org/about/platforms.jsp#browsers), [plateformes](http://docs.seleniumhq.org/about/platforms.jsp#operating-systems) et [languages](http://docs.seleniumhq.org/about/platforms.jsp#programming-languages).
+Cet article présente 
 
-Cet article propose d'utiliser au mieux le typage de java pour aider dans la réalisation de tests fonctionnels automatisés. 
+* les principaux éceuils des scripts rencontrés dans les scripts réalisés à main ou ceux produits par [Selenium IDE](http://docs.seleniumhq.org/projects/ide/).
+* une alternative qui permet d'utiser au mieux le typage de java pour une écriture des tests expressifs, puissants, et rapide.
 
-Si vous êtes impatient et voulez voir directement une vidéo du test Selenium [allez ici](http://www.youtube.com/watch?v=yX6HhUohjIk) et pour le code du test [c'est par là](https://gist.github.com/framiere/6777910).
+Si vous êtes impatient vous pouvez aller directement à [la vidéo du test Selenium](http://www.youtube.com/watch?v=yX6HhUohjIk) ou au [code du test](https://gist.github.com/framiere/6777910).
 
-# Selenium IDE
+## Cas d'usage
 
-[Selenium IDE](http://docs.seleniumhq.org/projects/ide/) est un plugin Firefox qui permet de capturer des tests, de les éditer puis de les exécuter.
+Pour bien comprendre Selenium, et savoir ce que l'on peut lui demander il est nécessaire de prendre un cas d'usage fonctionnel non trivial qui utilise des composants riches.
 
-![Selenium IDE](/images/blog/selenium/selenium-ide-google.png)
-
-Ici est présenté le résultat de l'enregistrement de Selenium IDE pour la recherche du mot `Jaxio` sur [google.fr](http://google.fr) et du click sur le premier lien de la page de résultat.
-
-On ne peut faire plus simple.
-
-# Cas d'usage
-
-Pour comprendre mieux Selenium, et savoir ce que l'on peut lui demander il est nécessaire de prendre un cas d'usage fonctionnel non trivial qui utilise des composants riches.
-
-Pour cela prenons l'application générée par [Celerio](/celerio.html) que vous pouvez reproduire [vous même en ligne](/celerio-service.html) et prenons un cas d'usage plus conséquent.
+Pour cela prenons l'application générée par [Celerio](/celerio.html) que vous pouvez reproduire [vous même en ligne](/celerio-service.html) et prenons un cas d'usage conséquent.
 
 ## Objectif
 
@@ -62,30 +53,30 @@ Voici un screencast de ce cas d'usage réalisé "manuellement".
 Ce chemin fonctionnels correspond aux étapes unitaires suivantes
 
 1. S'identifier en tant qu'administrateur
-    * Aller sur la page d'acceuil
+    * Aller sur la page d'accueil
     * Cliquer sur le lien connexion
     * Taper `admin` dans le champ identifiant
     * Taper `admin` dans le champ mot de passe
     * Cliquer sur le bouton de login
-1. Faire une recherche et selection un compte
+1. Faire une recherche et sélection un compte
     * Cliquer sur le lien 'Compte utilisateur'
-    * Tapper `homer` dans le champ identifiant
+    * Taper `homer` dans le champ identifiant
     * Sélectionner `homer` dans la liste de completion proposée
     * Sélectionner la ligne où `homer` est affichée
 1. Modifier les attributs de ce compte
-    * Tapper `cnorris` comme identifiant
-    * Tapper `kickass` comme mot de passe
-    * Tapper `gmail@chucknorris.com` comme email
+    * Taper `cnorris` comme identifiant
+    * Taper `kickass` comme mot de passe
+    * Taper `gmail@chucknorris.com` comme email
     * Choisir `Paris` comme addresse
 1. Ajouter un role déjà existant au compte
     * Sélectionner l'onglet `Droits attribués`
     * Cliquer sur le bouton de recherche de droits
-    * Tapper `admin` comme nom
+    * Taper `admin` comme nom
     * Cliquer sur rechercher
     * Sélectionner `ROLE_ADMIN`
 1. Créer un role et l'ajouter au compte
     * Cliquer sur le bouton de création de droits
-    * Tapper `ROLE_GOD`
+    * Taper `ROLE_GOD`
     * Enregistrer le role
 1. Ajouter un document au compte
     * Sélectionner l'onglet `Documents attachés`
@@ -103,7 +94,7 @@ La présentation est assez longue, mais notez que chaque élément de cette list
 
 ## Résultat brut
 
-La liste complète des actions capturées par l'outil est présenté ci-dessous
+La liste complète des actions capturées par [Selenium IDE](http://docs.seleniumhq.org/projects/ide/) est présenté ci-dessous
 
 <script src="https://gist.github.com/framiere/6777267.js"></script>
 
@@ -140,10 +131,9 @@ Nous pouvons refactorer le code pour extraire les actions métiers
 
 <script src="https://gist.github.com/framiere/6777332.js"></script>
 
+### DOM & Page factory pattern
 
-### Dom & Page factory pattern
-
-Nous pouvons mettre en oeuvre le [Page factory pattern](https://code.google.com/p/selenium/wiki/PageFactory) qui permet à la fois d'apporter du typage et de résoudre en partie la dépendance forte au DOM et .
+Nous pouvons mettre en oeuvre le [Page factory pattern](https://code.google.com/p/selenium/wiki/PageFactory) qui permet à la fois d'apporter du typage et de résoudre en partie la dépendance forte au DOM.
 
 <script src="https://gist.github.com/framiere/6777584.js"></script>
 
@@ -159,13 +149,13 @@ Pour s'affranchir du temps de rendu des pages et des modifications du DOM, il es
 
 <script src="https://gist.github.com/framiere/6780992.js"></script>
 
-### Bonne pratiques logicielle
+### Bonnes pratiques logiciel
 
 Nous pouvons également appliquer l'ensemble des bonnes pratiques de développement pour améliorer le script original et ainsi le rendre propre et efficace.
 
 ### Helpers de WebElement
 
-L'objet [WebElement](http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html) est un objet de trop bas niveau, nous pouvons utiliser des helpers pour être plus efficaces
+L'objet [WebElement](http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html) est un objet de trop bas niveau, nous pouvons utiliser des helpers pour être plus efficace
 
 <script src="https://gist.github.com/framiere/6781000.js"></script>
 
@@ -176,7 +166,6 @@ La problématique liée à l'utilisation de helpers est que la liste de fonction
 La complétion dans votre IDE favori ne pourra pas vous aider sur les opérations possibles pour un `WebElement` et un contexte donné.
 
 Il faudrait que le l'élément porte lui-même les actions qu'il peut réaliser. Ainsi un bouton ne serait pas `webElement`, mais un un objet de class `Button` où seule la méthode `click()` serait disponible.
-
 
 ### Recherche de comptes utilisateurs
 
@@ -198,9 +187,9 @@ Ces fonctionnalités sont les mêmes sur les autres entités manipulées par l'a
 
 ### AccountSearch
 
-Il faudrait qu'à l'image du code des composants qui produisent la page via le DOM, produire code client qui les consomme via selenium.
+Il faudrait qu'à l'image du code des composants qui produisent la page via le DOM, produire le code client qui les consomme via selenium.
 
-Ceci dans le but d'arriver à la description de la page:
+Ceci dans le but d'arriver à une description des composants de la page:
 
 <script src="https://gist.github.com/framiere/6781001.js"></script>
 
@@ -213,6 +202,7 @@ Le composant `EntityAction` n'est qu'un aggregat de boutons
 <script src="https://gist.github.com/framiere/6781005.js"></script>
 
 ### Button
+
 Un bouton est lui-même définit comme suit
 
 <script src="https://gist.github.com/framiere/6781010.js"></script>
@@ -220,6 +210,7 @@ Un bouton est lui-même définit comme suit
 Nous pouvons désormais ajouter dans le test ce type d'action
 
 <script src="https://gist.github.com/framiere/6781016.js"></script>
+
 ### OrderBy
 
 Le composant `OrderBy` est écrit en connaissant comme le composant serveur produit le DOM côté client. Nous pouvons alors créer les méthodes `isUp()`, `isDown()`, `up()`, `down()`
@@ -232,7 +223,7 @@ Dans le test nous pouvons donc réaliser les actions et assertions suivantes:
 
 ### ChooseEnum & Typage
 
-La selection de la civilité est interressante, voici le code 
+La sélection de la civilité est interressante, voici le code 
 
 <script src="https://gist.github.com/framiere/6781023.js"></script>
 
@@ -266,7 +257,7 @@ Sauf qu'ici, leur instanciation est récursive, une class annotée `@Page` peut 
 
 <script src="https://gist.github.com/framiere/6781034.js"></script>
 
-# Test documentés
+# Test auto-documentés
 
 Après ces pérégrinations techniques, il faut revenir au besoin client final, et savoir communiquer au métier ce que réalise le test.
 
@@ -284,5 +275,10 @@ Nous pouvons désormais présenter au client final le test, et pouvons améliore
 
 <object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/yX6HhUohjIk&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/yX6HhUohjIk&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
 
-Le build continu lui execute les tests sans effets visuels, ainsi ceux-ci se déroulent aussi vite que le rendu et la vitesse de processing des pages le permettent.
+Le build continu lui exécute les tests sans effets visuels, ainsi ceux-ci se déroulent aussi vite que le rendu et la vitesse de processing des pages le permettent.
 
+# Conclusion
+
+Il est possible de pouvoir écrire des tests fonctionnels clairs, typés et rapide avec Selenium. 
+
+Pour cela, il faut investir du temps sur la création de composants qui savent intéragir avec le DOM.
