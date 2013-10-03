@@ -1,13 +1,17 @@
 ---
 layout: french
-title: Demande d'évaluation de Celerio
-description: Evaluer Celerio en réalisant un prototype 
+title: Licences Celerio
+description: Acheter Licence Celerio 
 ---
-## Licence d'utilisation de Celerio
+## Licences d'utilisation de Celerio
 
-Nous proposons trois types de licences. 
+Nous proposons trois types de licences.
 
-### Licence par Utilisateur
+> Le paiement est sécurisé par PayPal.
+>
+> Vous pouvez régler soit par carte bancaire (`ne nécessite pas de compte PayPal`), soit en utilisant votre compte PayPal.
+
+### Licence Utilisateur
 
 La License Utilisateur donne le droit à un utilisateur nommé d'utiliser Celerio sur autant de projets qu'il le souhaite.
 
@@ -15,15 +19,14 @@ La License Utilisateur donne le droit à un utilisateur nommé d'utiliser Celeri
 
 Le prix inclut l'accès aux mises à jour et aux templates pendant 1 an.
 
-> ** Acheter en utilisant une carte bancaire ou un compte PayPal **:
-> 
-> 1. <a href="mailto:info@jaxio.com?subject=Achat Licence Utilisateur" target="_new">Ecrivez à info@jaxio.com</a> en précisant votre prénom, nom, société et pays.  
-> 2. Nous vous facturons par email en utilisant PayPal.
-> 3. Lorsque vous recevez la facture de PayPal, vous réglez soit par carte bancaire (`ne nécessite pas de compte PayPal`), soit en utilisant votre compte PayPal.
-> 4. Une fois le paiement confirmé par PayPal nous activons votre accès à notre repository maven privé et vous envoyons votre clé d'activation.
-> 5. Enfin, si vous le souhaitez, nous vérifions ensemble que vous parvenez à générer un premier projet.
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="Z3RPDXLKTQNSW">
+<input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
+<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
 
-### Licence par Projet
+### Licence Projet
 
 La Licence Projet donne le droit à tous les utilisateurs travaillant sur un projet donné (avec une limite de 20 utilisateurs) d'utiliser Celerio sur ce projet.
 
@@ -31,13 +34,12 @@ La Licence Projet donne le droit à tous les utilisateurs travaillant sur un pro
 
 Le prix inclut l'accès aux mises à jour et aux templates pendant 1 an.
 
-> ** Acheter en utilisant une carte bancaire ou un compte PayPal **:
-> 
-> 1. <a href="mailto:info@jaxio.com?subject=Achat Licence Projet" target="_new">Ecrivez à info@jaxio.com</a> en précisant votre prénom, nom, société, nom du projet et pays.
-> 2. Nous vous facturons par email en utilisant PayPal.
-> 3. Lorsque vous recevez la facture de PayPal, vous réglez soit par carte bancaire (`ne nécessite pas de compte PayPal`), soit en utilisant votre compte PayPal.
-> 4. Une fois le paiement confirmé par PayPal nous activons votre accès à notre repository maven privé et vous envoyons votre clé d'activation.
-> 5. Enfin, si vous le souhaitez, nous vérifions ensemble que vous parvenez à générer un projet.
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="NVJPKZ7JLBPSN">
+<input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
+<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+</form>
 
 ### License Site
 
