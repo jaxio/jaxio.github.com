@@ -1,7 +1,7 @@
 ---
 layout: french
-title: Demande d'évaluation de Celerio
-description: Evaluer Celerio en réalisant un prototype 
+title: Paypal - retour ok
+description: Paypal - retour ok 
 ---
 
 ## Merci pour votre achat.
