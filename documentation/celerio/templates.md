@@ -359,6 +359,7 @@ Celerio exposes the following SPIs:
 * [ProjectSpi](/documentation/celerio-api/com/jaxio/celerio/spi/ProjectSpi.html)
 * [EntitySpi](/documentation/celerio-api/com/jaxio/celerio/spi/EntitySpi.html)
 * [AttributeSpi](/documentation/celerio-api/com/jaxio/celerio/spi/AttributeSpi.html)
+* [RelationSpi](/documentation/celerio-api/com/jaxio/celerio/spi/RelationSpi.html)
 
 You can create some extension by following [ServiceLoader](http://docs.oracle.com/javase/6/docs/api/java/util/ServiceLoader.html) convention.
 Your extension must be packaged in a jar file containing your classes and the expected service files.
@@ -372,6 +373,7 @@ Your extension must be packaged in a jar file containing your classes and the ex
                                                 - com.jaxio.celerio.spi.ProjectSpi
                                                 - com.jaxio.celerio.spi.EntitySpi
                                                 - com.jaxio.celerio.spi.AttributeSpi                                                
+                                                - com.jaxio.celerio.spi.RelationSpi                                                
 
 You extension implementation must be listed in one of the file above.
 
