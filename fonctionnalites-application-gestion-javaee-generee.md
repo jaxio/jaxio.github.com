@@ -384,7 +384,7 @@ Voir [démo du composant pagination](http://www.primefaces.org/showcase/ui/datat
 #### Colonnes triables
 
 Toutes les colonnes sont par défaut triables.
-Coté Java, le développeurs peut configurer un tri par défaut.
+Coté Java, le développeur peut configurer un tri par défaut.
 
 Si la colonne correspond à une foreign key, le tri est effectué non pas sur la valeur de la foreign
 key mais sur une colonne (au choix du développeur) de la table cible. La requête SQL coté serveur aura une jointure avec la table cible.
