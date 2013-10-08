@@ -463,30 +463,41 @@ This mapping allows you to customize the persisted value instead of relying on t
 
 **Generated code**:
 {% highlight java %}
-public enum Civility {
-    MISTER("MR"), MISS("MS");
-    private String code;
+public enum Civility implements LabelizedEnum {
+    MISTER("MR"), //
+    MISS("MS");
+    private final String value;
 
-    Civility(String code) {
-        this.code = code;
+    /**
+     * @param value The value that is persisted in the database.
+     */
+    Civility(String value) {
+        this.value = value;
     }
 
-    public String toString() {
-        return this.code;
+    /**
+     * @return the value that is persisted in the database.
+     */
+    public String getValue() {
+        return value;
     }
 
-    public static Civility fromString(String value) {
+    /**
+     * @return the Civility instance having its value matching exactly the passed value. 
+     */
+    public static Civility fromValue(String value) {
         if (value == null) {
             return null;
         }
-        for (Civility enumValue : Civility.values()) {
-            if (value.equals(enumValue.toString())) {
-                return enumValue;
+        for (Civility e : Civility.values()) {
+            if (value.equals(e.getValue())) {
+                return e;
             }
         }
         return null;
     }
 
+    @Override
     public String getLabel() {
         return ResourcesUtil.getInstance().getProperty("Civility_" + name());
     }
@@ -496,8 +507,8 @@ public enum Civility {
 @Column(name = "CIVILITY")
 @Type(type = "org.jadira.usertype.corejava.PersistentEnum", parameters = { //
 @Parameter(name = "enumClass", value = "com.mycompany.myproject.domain.Civility"), //
-        @Parameter(name = "valueOfMethod", value = "fromString"), //
-        @Parameter(name = "identifierMethod", value = "toString") //
+            @Parameter(name = "valueOfMethod", value = "fromValue"), //
+            @Parameter(name = "identifierMethod", value = "getValue") //
 })
 public Civility getCivility() {
     return civility;
