@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: english
 title: Celerio End User License Agreement
 ---
 # Celerio End User License Agreement

@@ -1,5 +1,5 @@
 ---
-layout: doc
+layout: english
 title: Celerio Guide 
 ---
 
