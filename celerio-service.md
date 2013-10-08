@@ -10,8 +10,6 @@ Le service Celerio (anciennement SpringFuse) vous permet de générer un projet 
 
 Ainsi, vous pouvez évaluer le code source généré par Celerio et le **gain de productivité** qu'il apporte.
 
-<div><g:plusone></g:plusone></div>
-
 __Avec la version en ligne de Celerio la génération se déroule de cette manière__:
 
 * Vous remplissez le formulaire ci-dessous pour **préparer** le lancement sur votre machine de notre plugin maven.

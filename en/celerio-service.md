@@ -7,8 +7,6 @@ title: Celerio Service
 
 Celerio lets you generate your project on our server and download it.
 
-<div><g:plusone></g:plusone></div>
-
 __With the online version of Celerio, the code generation works as follow__:
 
 * You fill the form below to prepare a bootstrap that invoke our Maven plugin.
