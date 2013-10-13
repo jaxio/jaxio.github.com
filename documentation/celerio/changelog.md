@@ -11,7 +11,7 @@ This new version comes with 2 new generation options (we call them packs) to gen
 
 Despite our efforts, there are still few limitations, but overall we are quite happy to share it here.
 
-#### `new` pack javaee7-glassfish
+#### pack javaee7-glassfish - `new`
 
 > _**Note:** This pack is in BETA. We welcome all feedbacks._
 >
@@ -29,7 +29,7 @@ Despite our efforts, there are still few limitations, but overall we are quite h
 * embedded glassfish 4 from maven
 * ...
 
-####  `new` pack javaee6-jboss
+#### pack javaee6-jboss - `new`
 
 > _**Note:** This pack is in BETA. We welcome all feedbacks._
 >
@@ -46,6 +46,10 @@ Despite our efforts, there are still few limitations, but overall we are quite h
 * Apache Shiro
 * Arquillian
 * ...
+
+#### pack jsf2-spring-conversation
+
+#### pack backend-jpa
 
 ##### Versions upgrade
 
