@@ -5,12 +5,11 @@ title: Celerio Guide - Celerio Change Log
 
 ## Celerio/Springfuse Change Log
 
-### 3.0.106-SNAPSHOT (2013-09-24)
+### 3.0.106-SNAPSHOT (2013-10-12)
 
-This new version 2 new generation options (we call them packs) to generate pure JavaEE application.
+This new version comes with 2 new generation options (we call them packs) to generate pure JavaEE web applications.
 
 Despite our efforts, there are still few limitations, but overall we are quite happy to share it here.
-
 
 #### `new` pack javaee7-glassfish
 
@@ -21,13 +20,13 @@ Despite our efforts, there are still few limitations, but overall we are quite h
 **Technical stack:**
 
 * JavaEE 7 (no spring at all)
+* EJB 3.1
 * JSF 2.2 + EL 3.0
 * JavaEE Conversation
 * JPA 2.1
 * Bean Validation
-* Apache DeltaSpike (uses @Transactional)
 * Apache Shiro
-* embedded glassfish 4
+* embedded glassfish 4 from maven
 * ...
 
 ####  `new` pack javaee6-jboss
@@ -39,11 +38,11 @@ Despite our efforts, there are still few limitations, but overall we are quite h
 **Technical stack:**
  
 * JavaEE 6 (no spring at all, uses jboss bom)
+* EJB 3.1
 * JSF 2.1
 * JavaEE Conversation
 * JPA 2.0
 * Bean Validation
-* Apache DeltaSpike (uses @Transactional)
 * Apache Shiro
 * Arquillian
 * ...
