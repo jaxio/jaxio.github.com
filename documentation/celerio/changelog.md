@@ -5,15 +5,15 @@ title: Celerio Guide - Celerio Change Log
 
 ## Celerio/Springfuse Change Log
 
-### 3.0.106-SNAPSHOT (2013-10-12)
+### 3.0.106 (2013-10-15)
 
 This new version comes with 2 new generation options (we call them packs) to generate pure JavaEE web applications.
 
-Despite our efforts, there are still few limitations, but overall we are quite happy to share it here.
+Despite our efforts, there are still few limitations/bugs, but overall we are quite happy to share it here. You won't find better elsewhere ;-)
 
-#### pack javaee7-glassfish - `new`
+#### pack javaee7-glassfish - `new` (w/o Spring)
 
-> _**Note:** This pack is in BETA. We welcome all feedbacks._
+> _**Note:** This pack is pretty new. We welcome all feedbacks._
 >
 > _pom.xml is optimized for GlassFish 4._
 
@@ -29,9 +29,9 @@ Despite our efforts, there are still few limitations, but overall we are quite h
 * embedded glassfish 4 from maven
 * ...
 
-#### pack javaee6-jboss - `new`
+#### pack javaee6-jboss - `new` (w/o Spring)
 
-> _**Note:** This pack is in BETA. We welcome all feedbacks._
+> _**Note:** This pack is pretty new. We welcome all feedbacks._
 >
 > _pom.xml is optimized for JBoss EAP 6.1_
 
@@ -47,12 +47,19 @@ Despite our efforts, there are still few limitations, but overall we are quite h
 * Arquillian
 * ...
 
-#### pack jsf2-spring-conversation
+#### pack jsf2-spring-conversation (with Spring)
 
-#### pack backend-jpa
+* primefaces4 support
+* provide outputDecimal outputInteger and outputCurrency
+* upgrade omnifaces from 1.5 to 1.6
+* upgrade javamelody from 1.45.0 to 1.47.0
 
-##### Versions upgrade
+#### pack backend-jpa (with Spring)
 
+* Refactor custom enum (rename code to value)
+* Some refactoring in repository/support (feedbacks from users)
+* reduce Spring footprint (to ease merge with javaee)
+* better H2 SQL generation to avoid errors in logs
 * upgrade spring from 3.2.3.RELEASE to 3.2.4.RELEASE
 * upgrade hibernate from 4.2.3.Final to 4.2.6.Final
 * upgrade hibernate-search from 4.2.0.Final to 4.3.0.Final
@@ -60,9 +67,15 @@ Despite our efforts, there are still few limitations, but overall we are quite h
 * upgrade joda-time from 2.2 to 2.3
 * upgrade guava from 14.0.1 to 15.0
 * upgrade selenium from 2.33.0 to 2.35.0
-* upgrade omnifaces from 1.5 to 1.6
-* upgrade javamelody from 1.45.0 to 1.47.0
 
+
+#### Celerio engine
+
+* SPI for Relation
+* Most attributes internal helpers have been moved to Attribute SPI.
+* Remove magic imports for Entity
+* Merge IntermediateRelation to Relation interface
+* No longer rely on VM_global_library.vm
 
 ### 3.0.105 (2013-09-23)
 

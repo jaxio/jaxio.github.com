@@ -22,7 +22,7 @@ __Requirements__
 * at least Java 1.6 (recent build)
 * at least Maven 2
 
-Current version: 3.0.105 - 3.0.106-SNAPSHOT | <a href="/documentation/celerio/changelog.html">Change Logs</a>
+Current version: 3.0.106 | <a href="/documentation/celerio/changelog.html">Change Logs</a>
 
 <span class="label label-info">To generate a project</span>, adjust the settings below and execute the resulting command lines in a console.
 
@@ -39,8 +39,7 @@ Current version: 3.0.105 - 3.0.106-SNAPSHOT | <a href="/documentation/celerio/ch
     <label class="control-label" for="celerioVersion">Celerio Version</label>
     <div class="controls">
 		<select id="celerioVersion" name="celerioVersion" class="updateCommand">
-			<option value="3.0.105">3.0.105</option>
-			<option value="3.0.106-SNAPSHOT" selected="selected">3.0.106-SNAPSHOT</option>
+			<option value="3.0.106">3.0.106</option>
 		</select>
 		<span class="help-inline">The Celerio version used on our server.</span>
 	</div>
