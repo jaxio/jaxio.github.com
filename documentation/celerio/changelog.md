@@ -9,7 +9,7 @@ title: Celerio Guide - Celerio Change Log
 
 #### Celerio engine
 
-* fix: parameters were not always taken into account when generating @GenericGenerator
+* fix: parameters were not always taken into account when generating @GenericGenerator (Thanks to Ruben Robles for reporting it)
 
 #### pack jsf2-spring-conversation (with Spring)
 
