@@ -22,7 +22,7 @@ __Requirements__
 * at least Java 1.6 (recent build)
 * at least Maven 2
 
-Current version: 3.0.106 | <a href="/documentation/celerio/changelog.html">Change Logs</a>
+Current versions: 3.0.106 / 3.0.107-SNAPSHOT | <a href="/documentation/celerio/changelog.html">Change Logs</a>
 
 <span class="label label-info">To generate a project</span>, adjust the settings below and execute the resulting command lines in a console.
 
@@ -40,6 +40,7 @@ Current version: 3.0.106 | <a href="/documentation/celerio/changelog.html">Chang
     <div class="controls">
 		<select id="celerioVersion" name="celerioVersion" class="updateCommand">
 			<option value="3.0.106">3.0.106</option>
+			<option value="3.0.107-SNAPSHOT">3.0.107-SNAPSHOT</option>
 		</select>
 		<span class="help-inline">The Celerio version used on our server.</span>
 	</div>
@@ -96,7 +97,7 @@ Current version: 3.0.106 | <a href="/documentation/celerio/changelog.html">Chang
 		</span>
       </label>
 
-      <h4>JavaEE 6 (targeting JBoss EAS 7.1) - requires v3.0.106-SNAPSHOT</h4>
+      <h4>JavaEE 6 (targeting JBoss EAS 7.1)</h4>
       <label class="radio">
 		<input type="radio" name="frontEnd" id="javaee6Jboss" value="javaee6Jboss" class="updateCommand"/>Web application.
 			<span class="help-block">
@@ -104,7 +105,7 @@ Current version: 3.0.106 | <a href="/documentation/celerio/changelog.html">Chang
 			</span>
 	  </label>	  
 
-      <h4>JavaEE 7 (targeting GlassFish 4.0) - requires v3.0.106-SNAPSHOT</h4></h4>
+      <h4>JavaEE 7 (targeting GlassFish 4.0)</h4>
       <label class="radio">
 		<input type="radio" name="frontEnd" id="javaee7Glassfish" value="javaee7Glassfish" class="updateCommand"/>Web application.
 		<span class="help-block">      

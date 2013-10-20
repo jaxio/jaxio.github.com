@@ -45,6 +45,7 @@ puis exécutez dans une console les commandes maven résultantes.
     <div class="controls">
 		<select id="celerioVersion" name="celerioVersion" class="updateCommand">
 			<option value="3.0.106">3.0.106</option>
+			<option value="3.0.107-SNAPSHOT">3.0.107-SNAPSHOT</option>
 		</select>
 	</div>
 </div>
@@ -98,7 +99,7 @@ puis exécutez dans une console les commandes maven résultantes.
 		</span>
       </label>
 
-      <h4>JavaEE 6 (serveur cible; JBoss EAS 7.1) - nécessite v3.0.106-SNAPSHOT</h4>
+      <h4>JavaEE 6 (serveur cible; JBoss EAS 7.1)</h4>
       <label class="radio">
 		<input type="radio" name="frontEnd" id="javaee6Jboss" value="javaee6Jboss" class="updateCommand"/>Web application.
 			<span class="help-block">
@@ -106,7 +107,7 @@ puis exécutez dans une console les commandes maven résultantes.
 			</span>
 	  </label>	  
 
-      <h4>JavaEE 7 (serveur cible: GlassFish 4.0) - nécessite v3.0.106-SNAPSHOT</h4></h4>
+      <h4>JavaEE 7 (serveur cible: GlassFish 4.0)</h4>
       <label class="radio">
 		<input type="radio" name="frontEnd" id="javaee7Glassfish" value="javaee7Glassfish" class="updateCommand"/>Web application.
 			<span class="help-block">

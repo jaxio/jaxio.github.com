@@ -5,6 +5,24 @@ title: Celerio Guide - Celerio Change Log
 
 ## Celerio/Springfuse Change Log
 
+### 3.0.107-SNAPSHOT (last version uploaded on 2013-10-20)
+
+#### Celerio engine
+
+* fix: parameters were not always taken into account when generating @GenericGenerator
+
+#### pack jsf2-spring-conversation (with Spring)
+
+* fix jodatime jsf converter
+* fix error handling during ajax request
+
+#### pack backend-jpa (with Spring)
+
+* add explicit dependency on commons-collections
+* classes with only static methods are now final with private constructor.
+* make TypeAwarePrinter a javax.inject.Singleton
+* introduce `Path` class in repository/support subpackage and change the code accordingly to leverage it.
+
 ### 3.0.106 (2013-10-15)
 
 This new version comes with 2 new generation options (we call them packs) to generate pure JavaEE web applications.
