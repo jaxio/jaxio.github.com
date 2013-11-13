@@ -5,6 +5,18 @@ title: Celerio Guide - Celerio Change Log
 
 ## Celerio/Springfuse Change Log
 
+### Special addition for DEVOXX 2013 (2013-11-13)
+
+From now on, SpringFuse generates Type Safe Selenium  tests.
+
+[Check Florent's talk at DEVOXX to know more](http://www.devoxx.be/dv13-florent-ramire.html)
+
+#### pack selenium-primefaces:
+
+* this feature is only available with the option using Spring.
+* springfuse generates real tests when the sample schema provided is used.
+
+
 ### 3.0.107-SNAPSHOT (last version uploaded on 2013-10-20)
 
 #### Celerio engine
