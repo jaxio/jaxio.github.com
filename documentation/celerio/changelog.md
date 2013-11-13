@@ -14,7 +14,7 @@ From now on, SpringFuse generates Type Safe Selenium  tests.
 #### pack selenium-primefaces:
 
 * this feature is only available with the option using Spring.
-* springfuse generates real tests when the sample schema provided is used.
+* springfuse generates real tests when the sample schema that we provide is used.
 
 
 ### 3.0.107-SNAPSHOT (last version uploaded on 2013-10-20)
