@@ -17,19 +17,26 @@ From now on, SpringFuse generates Type Safe Selenium  tests.
 * springfuse generates real tests when the sample schema that we provide is used.
 
 
-### 3.0.107-SNAPSHOT (last version uploaded on 2013-10-20)
+### 3.0.107-SNAPSHOT (last version uploaded on 2013-11-14)
 
 #### Celerio engine
 
 * fix: parameters were not always taken into account when generating @GenericGenerator (Thanks to Ruben Robles for reporting it)
+* fix duplicate class when both the entity and the metamodel are taken over
+* improvement: sequence initialValue and allocationSize are now configurable.
 
 #### pack jsf2-spring-conversation (with Spring)
 
+* fix compilation issue in excel exporter when jdbc type is TIME
 * fix jodatime jsf converter
 * fix error handling during ajax request
 
 #### pack backend-jpa (with Spring)
 
+* in DefaultLucenceQueryBuilder: lower case some term
+* cache some information collected (using reflection) on pk key to improve performances 
+* fix Audit context that was not always cleared
+* add criteriaQuery to getPredicate method signature in GenericRepository
 * add explicit dependency on commons-collections
 * classes with only static methods are now final with private constructor.
 * make TypeAwarePrinter a javax.inject.Singleton
