@@ -5,25 +5,14 @@ title: Celerio Guide - Celerio Change Log
 
 ## Celerio/Springfuse Change Log
 
-### Special addition for DEVOXX 2013 (2013-11-13)
-
-From now on, SpringFuse generates Type Safe Selenium  tests.
-
-[Check Florent's talk at DEVOXX to know more](http://www.devoxx.be/dv13-florent-ramire.html)
-
-#### pack selenium-primefaces:
-
-* this feature is only available with the option using Spring.
-* springfuse generates real tests when the sample schema that we provide is used.
-
-
-### 3.0.107-SNAPSHOT (last version uploaded on 2013-11-14)
+### 3.0.107 (last version uploaded on 2013-11-18)
 
 #### Celerio engine
 
+* improvement: sequence initialValue and allocationSize are now configurable.
 * fix: parameters were not always taken into account when generating @GenericGenerator (Thanks to Ruben Robles for reporting it)
 * fix duplicate class when both the entity and the metamodel are taken over
-* improvement: sequence initialValue and allocationSize are now configurable.
+* fix: generation of @MapIds and @OneToOne annotation when the dependent entity's PK is the FK.
 
 #### pack jsf2-spring-conversation (with Spring)
 
@@ -41,6 +30,14 @@ From now on, SpringFuse generates Type Safe Selenium  tests.
 * classes with only static methods are now final with private constructor.
 * make TypeAwarePrinter a javax.inject.Singleton
 * introduce `Path` class in repository/support subpackage and change the code accordingly to leverage it.
+
+#### NEW pack selenium-primefaces:
+
+From now on, SpringFuse generates Type Safe Selenium  tests.
+
+* this feature is only available with the option using Spring.
+* springfuse generates real tests when the sample schema that we provide is used.
+
 
 ### 3.0.106 (2013-10-15)
 
