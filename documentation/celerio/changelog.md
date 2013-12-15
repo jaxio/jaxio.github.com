@@ -5,7 +5,15 @@ title: Celerio Guide - Celerio Change Log
 
 ## Celerio/Springfuse Change Log
 
-### 3.0.107 (last version uploaded on 2013-11-18)
+## Celerio/Springfuse Change Log
+
+### 3.0.108 (2013-12-15)
+
+#### Celerio engine
+
+* Business key by convention: no longer consider a nullable unique property as a good bk candidate. To be a good bk candidate, the property must be not nullable and unique.     
+
+### 3.0.107
 
 #### Celerio engine
 
