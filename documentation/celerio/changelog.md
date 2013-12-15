@@ -13,7 +13,7 @@ title: Celerio Guide - Celerio Change Log
 
 * Business key by convention: no longer consider a nullable unique property as a good bk candidate. To be a good bk candidate, the property must be not nullable and unique.     
 
-### 3.0.107
+### 3.0.107 (2013-11-18)
 
 #### Celerio engine
 
