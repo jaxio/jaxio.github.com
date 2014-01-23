@@ -322,7 +322,7 @@ By default Celerio has some built-in namers. Theses can be used from your entity
 * each ACL class should be named EntityNameAcl
 * each class should be located under the security sub package
 
-**Here is the content of the entityAcl.vm.e.java template that you may create:**
+**Here is the content of the entityAcl.e.vm.java template that you may create:**
 
 	$output.java($entity.acl)##
 	
@@ -336,7 +336,7 @@ The 'acl' entity's property implements Celerio's `Namer` Interface.
 The `Namer` interface exposes simple getter methods to access var name, getter name, etc...
 
 Before running Celerio with the above template, you must first create the 'acl' Namer.
-To do so, open the celerio-templates-packs.xml file and add the following `celerioTemplateContext` element:
+To do so, open the celerio-template-packs.xml file and add the following `celerioTemplateContext` element:
 
 {% highlight xml %}
 <packs>
