@@ -5,8 +5,6 @@ title: Celerio Guide - Celerio Change Log
 
 ## Celerio/Springfuse Change Log
 
-## Celerio/Springfuse Change Log
-
 ### 3.0.109 (2014-02-05)
 
 #### Celerio engine
