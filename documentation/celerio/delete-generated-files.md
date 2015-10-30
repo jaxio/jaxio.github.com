@@ -12,23 +12,23 @@ Principle
 Celerio tracks all the files it generates. For this purpose Celerio creates and maintains the file `.celerio/generated.xml`.
 Do not edit or delete this file!
 
-You can delete the generated files using the cleanGenerated goal of the maven-celerio-plugin.
+You can delete the generated files using the cleanGenerated goal of the celerio-maven-plugin.
 
 Plugin details
 --------------
 
 ### Full name
 
-* name: com.jaxio.celerio:maven-celerio-plugin:3.0.86
+* name: com.jaxio.celerio:celerio-maven-plugin:4.0.0
 * goal: cleanGenerated
 * maven phase: clean
 
-This goal uses the file `.celerio/generated.xml` which is created by the maven-celerio-plugin:generate goal.
+This goal uses the file `.celerio/generated.xml` which is created by the celerio-maven-plugin:generate goal.
 
 ### Attribute
 
 #### skip
-* expression: maven-celerio-plugin.cleanGenerated.skip
+* expression: celerio-maven-plugin.cleanGenerated.skip
 * default value: false
 * description: Should this goal be skipped ? This is a common pattern in Maven, 
 where you can skip plugins using profiles to fully adapt your build.
@@ -53,8 +53,8 @@ Here is the cleanGen profile detail:
 			<plugins>
 				<plugin>
 					<groupId>com.jaxio.celerio</groupId>
-					<artifactId>maven-celerio-plugin</artifactId>
-					<version>${dollar}{maven-celerio-plugin.version}</version>
+					<artifactId>celerio-maven-plugin</artifactId>
+					<version>${dollar}{celerio-maven-plugin.version}</version>
 					<executions>
 						<execution>
 							<id>Delete previously generated files (use .celerio/ folder)</id>
@@ -68,14 +68,14 @@ Here is the cleanGen profile detail:
 		</build>
 		<repositories>
 			<repository>
-				<id>springfuse-repository</id>
-				<url>http://maven2.springfuse.com/</url>
+				<id>jaxio-repository</id>
+				<url>http://maven.jaxio.com/repository</url>
 			</repository>
 		</repositories>
 		<pluginRepositories>
 			<pluginRepository>
-				<id>springfuse-repository</id>
-				<url>http://maven2.springfuse.com/</url>
+				<id>jaxio-repository</id>
+				<url>http://maven.jaxio.com/repository</url>
 			</pluginRepository>
 		</pluginRepositories>
 	</profile>

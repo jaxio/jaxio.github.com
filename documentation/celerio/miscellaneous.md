@@ -70,9 +70,7 @@ You can now add the driver dependency in your pom.xml
 &lt;/dependency&gt;
 </pre>
  
-You are now ready to reverse your Oracle database using Springfuse and generate a complete Java/JPA/Hibernate/Spring project!
-
-
+You are now ready to reverse your Oracle database using Celerio and generate a complete Java/JPA/Hibernate/Spring project!
 
 <a name="install-db2-jdbc-driver-maven-repository"></a>
 

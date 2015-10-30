@@ -10,7 +10,7 @@ Main Configuration File
 -----------------------
 
 The main Celerio configuration file is by convention located under
-`${basedir}/src/main/config/maven-celerio-plugin/maven-celerio-plugin.xml`.
+`${basedir}/src/main/config/celerio-maven-plugin/celerio-maven-plugin.xml`.
 This configuration file must respect the `celerio.xsd` schema present in the same directory.
 
 > *Note*: The bootstrap goal creates a configuration file that can be used as a starting point.
@@ -26,7 +26,7 @@ the `entityConfigs` tag is loaded by Celerio. Here is an example:
 {% highlight xml %}
 <celerio>
  <includes>
-  <include filename="maven-celerio-plugin-secondary.xml"/>
+  <include filename="celerio-maven-plugin-secondary.xml"/>
  </includes>
  <entityConfigs>
   <entityConfig tableName="BOOK" subPackage="fromMainConfig"/>
@@ -49,7 +49,7 @@ Template pack configuration file
 
 The template packs can be declared in the main Celerio configuration
 file OR in the file
-`${basedir}/src/main/config/maven-celerio-plugin/celerio-template-packs.xml`
+`${basedir}/src/main/config/celerio-maven-plugin/celerio-template-packs.xml`
 . When this file is present Celerio loads from it the `packs` tag
 instead of loading it from the main Celerio configuration file.
 
@@ -72,5 +72,5 @@ instead of loading it from the main Celerio configuration file.
 
 This separated file was mainly introduced for multi-module maven
 projects. The various modules (e.g. core and web) shares the same
-`maven-celerio-plugin.xml` configuration file but uses their own
+`celerio-maven-plugin.xml` configuration file but uses their own
 `celerio-template-packs.xml` configuration file.

@@ -3,7 +3,6 @@ layout: english
 title: Celerio Guide - Introduction
 ---
 
-
 Introduction
 ============
 
@@ -24,7 +23,7 @@ Introduction
 
 Celerio is a code generator designed to generate the foundation of data oriented applications.
 
-Celerio is distributed as a Maven 2 plugin which greatly eases its
+Celerio is distributed as a Maven plugin which greatly eases its
 integration in your project development.
 
 Celerio itself is written in Java. It executes generation templates that
@@ -95,8 +94,8 @@ Celerio also uses some conventions. If you follow them, you can reduce
 the amount of configuration.
 
 The Database Schema Extractor and Celerio Engine are distributed as
-Maven 2 plugins, which simplifies their installation and make them
-compatible with IDE that already support Maven 2 integration. Eclipse,
+Maven plugins, which simplifies their installation and make them
+compatible with IDE that already support Maven integration. Eclipse,
 Netbeans and IntelliJ have outstanding Maven support.
 
 Celerio allows you to replace, skip, modify or extend the generated

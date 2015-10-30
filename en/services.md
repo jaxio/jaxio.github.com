@@ -15,14 +15,8 @@ Our consulting offer consists essentially in helping Celerio users to leverage t
 
 <a href="/en/contact-us.html">Contact us</a>, we would be happy to discuss that with you.
 
-### Support
+### Commercial Support
 
-We provide different support packages with specific service level agreements for Celerio product.
+We provide different commercial support packages with specific service level agreements for Celerio product.
 
 <a href="/contact.html">Contact us</a>, we could help you to select the best offer for your needs.
-
-### Training
-
-You would like to attend a training class introducing Celerio and covering the code that it generates?
-
-You may be interested in our training offer with our partner <a href="http://www.zenika.com/formation_celerio.php">Zenika</a>

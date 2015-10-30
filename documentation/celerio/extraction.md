@@ -10,7 +10,7 @@ Principle
 ---------
 
 The database schema extraction is performed by
-`maven-dbmetadata-plugin`, a Maven 2 plugin provided by Jaxio.
+`dbmetadata-maven-plugin`, a Maven plugin provided by Jaxio.
 
 This plugin connects to a relational database using JDBC, retrieves 
 the database schema metadata and write it into an XML file.
@@ -33,14 +33,14 @@ Plugin details
 
 ### Full name
 
-* name: com.jaxio.celerio:maven-dbmetadata-plugin:3.0.86
+* name: com.jaxio.celerio:dbmetadata-maven-plugin:4.0.0
 * goal: extract-metadata
 * maven phase: generate-sources
 
 ### Attributes
 
 #### skip
-* expression: maven-celerio-plugin.skip
+* expression: celerio-maven-plugin.skip
 * default value: false
 * description: Should the database meta data extraction be skipped ? 
 This is a common pattern in Maven, where you can skip plugins using profiles to fully adapt your build.
@@ -98,7 +98,7 @@ This is a common pattern in Maven, where you can skip plugins using profiles to 
 
 #### targetFilename 
 * expression: maven-metadata-plugin.targetFilename 
-* default value: `${basedir}/src/main/config/maven-celerio-plugin/metadata.xml`
+* default value: `${basedir}/src/main/config/celerio-maven-plugin/metadata.xml`
 * description: The fully qualified name of the XML file created by this plugin.
 
 Simple Usage
@@ -131,8 +131,8 @@ Then create a dedicated profile to execute the plugin.
 		<plugins>
 			<plugin>
 				<groupId>com.jaxio.celerio</groupId>
-				<artifactId>maven-dbmetadata-plugin</artifactId>
-				<version>${maven-celerio-plugin.version}</version>
+				<artifactId>dbmetadata-maven-plugin</artifactId>
+				<version>${celerio-maven-plugin.version}</version>
 				<executions>
 					<execution>
 						<id>Extract the database schema.</id>
@@ -153,14 +153,14 @@ Then create a dedicated profile to execute the plugin.
 	</build>
 	<repositories>
 		<repository>
-			<id>springfuse-repository</id>
-			<url>http://maven2.springfuse.com/</url>
+				<id>jaxio-repository</id>
+				<url>http://maven.jaxio.com/repository</url>
 		</repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
-			<id>springfuse-repository</id>
-			<url>http://maven2.springfuse.com/</url>
+				<id>jaxio-repository</id>
+				<url>http://maven.jaxio.com/repository</url>
 		</pluginRepository>
 	</pluginRepositories>
 </profile>

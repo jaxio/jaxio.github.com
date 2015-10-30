@@ -7,7 +7,7 @@ Celerio Configuration
 =====================
 
 A thorough configuration file example is provided when you create a project out of the sample H2 database that we provide.
-The file is located under `src/main/config/maven-celerio-plugin/maven-celerio-plugin.xml`.
+The file is located under `src/main/config/celerio-maven-plugin/celerio-maven-plugin.xml`.
 
 This configuration file allows you to override conventions and control more precisely what is generated. 
 For example, you may want to rename some variables, make some associations bidirectional, change a type, etc.

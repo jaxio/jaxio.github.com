@@ -8,9 +8,6 @@ Celerio Reference Guide
 
 Celerio is a code generator tool for data-driven application.
 
-**Note** *If you are using Celerio remotely through [Celerio Service](/en/celerio-service.html) or [Springfuse](http://www.springfuse.com),
-go directly to [Conventions](convention.html) or [Configuration](configuration.html).*
-
 1. [Introduction](introduction.html)
 2. [Installation](installation.html)
 3. [Bootstrap](bootstrap.html)
@@ -26,6 +23,8 @@ go directly to [Conventions](convention.html) or [Configuration](configuration.h
 12. [Troubleshooting](troubleshooting.html)
 13. [Miscellaneous](miscellaneous.html)
 13. [Change logs](changelog.html)
+14. [License Agreement](celerio-license-agreement.html)
+
 
 *All copyright, confidential information, patents, design rights and all other 
 intellectual property rights of whatsoever nature contained herein are and 

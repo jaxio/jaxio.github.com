@@ -44,8 +44,10 @@ Learn by example
 
 The simplest way to get started with Celerio templates is to modify existing templates.
 
-Templates source code is available directly by simply un-jarring the templates pack jar file
-or if the pack is encrypted (legacy) by simply downloading the associated jar file sources.
+Checkout our Open Source template packs:
+
+* backend templates: [https://github.com/jaxio/pack-backend-jpa](https://github.com/jaxio/pack-backend-jpa)
+* frontend templates: [https://github.com/jaxio/pack-jsf2-spring-conversation](https://github.com/jaxio/pack-jsf2-spring-conversation)
 
 <a name="templates-folder"></a>
 Templates folder
@@ -69,7 +71,7 @@ Create a templates pack
 -----------------------
 
 A template pack is simply a set of Celerio templates packaged in a jar file.
-The project must have the following structure:   
+The project must have the following structure:
 
 	pom.xml
 	src
@@ -77,19 +79,19 @@ The project must have the following structure:
 	          |- resources
 	                      |- META-INF
 	                      |          |- celerio.txt
-	                      |       
+	                      |
 	                      |- celerio
 	                                |- bootstrap
 	                                |           |- pom.boot.vm.xml
 	                                |           |- anytemplate.boot.vm.xml
-	                                |- packName
-	                                           |- **/yourtemplate.e.vm.java
+	                                |
+	                                |- pack-the-name-of-the-pack
+	                                                          |- **/yourtemplate.e.vm.java
 
-The celerio.txt file contains some meta information that Celerio engine and the Celerio maven-bootstrap-plugin use.
+The celerio.txt file contains some meta information that Celerio engine and the Celerio bootstrap-maven-plugin use.
 Here is a celerio.txt file example:
 
-	packName=pack-${project.artifactId}
-	packCrypted=false
+	packName=pack-the-name-of-the-pack
 	packDescription=Java EE backend pack: almost pure JPA 2 with Hibernate 4. No Spring at all. CDI.
 	packDescription2=Some more info
 	packCommand=mvn -Ph2,db,metadata,gen test
@@ -105,8 +107,8 @@ There are several kinds of template:
 <a name="bootstrap-template"></a>
 ### Bootstrap templates
 
-A _bootstrap template_ is interpreted only when Celerio is run in _bootstrap mode_.
-The _bootstrap mode_ is active when you use the Celerio's maven-bootstrap-plugin.
+A _bootstrap template_ is interpreted only when Celerio is run in _bootstrap mode_. The _bootstrap mode_ is active when
+you use the Celerio's `bootstrap-maven-plugin`.
 
 Its name must have this form: `TemplateName.boot.vm.ext` where:
 
@@ -120,7 +122,7 @@ Example: `pom.boot.vm.xml`
 <a name="entity-template"></a>
 ### Per entity template
 
-A 'per entity template' is interpreted for each entity.
+A **per entity template** is interpreted for each entity.
 Its name must have this form: `TemplateName.e.vm.ext` where:
 
 * `e` stands for entity.
@@ -130,7 +132,7 @@ Example: `Controller.e.vm.java`
 <a name="project-template"></a>
 ### Per projet template
 
-A 'per project template' is interpreted one time per projet.
+A **per project template** is interpreted one time per projet.
 Its name must have this form: `TemplateName.p.vm.ext` where:
 
 * `p` stands for project.
@@ -140,7 +142,7 @@ Example: `web.p.vm.xml`
 <a name="enum-template"></a>
 ### Per enum template
 
-A 'per enum template' is interpreted for each enum.
+A **per enum template** is interpreted for each enum.
 Its name must have this form: `TemplateName.enum.vm.ext`
 
 * `enum` stands for enum.
@@ -150,7 +152,7 @@ Example: `EnumController.enum.vm.java`
 <a name="cpk-template"></a>
 ### Per composite primary key template
 
-A 'per composite primary key template' is interpreted for each composite primary key.
+A **per composite primary key template** is interpreted for each composite primary key.
 Its name must have this form: `TemplateName.cpk.vm.ext` where:
 
 * `cpk` stands for composite primary key
@@ -162,13 +164,13 @@ Example: `CompositePkBridge.cpk.vm.java`
 
 Static files are not interpreted, they are just copied as is by Celerio.
 
-Exemple: `afolder/img.gif` would be copied to `yourProjectRootFolder/afolder/img.gif` 
+Exemple: `afolder/img.gif` would be copied to `yourProjectRootFolder/afolder/img.gif`
 
 <a name="template-context"></a>
 Template context
 ----------------
 
-The template context is the velocity execution context. It exposes your project metamodel and various facilities.  
+The template context is the velocity execution context. It exposes your project metamodel and various facilities.
 
 Here is the list of object variables present in the template context:
 
@@ -188,7 +190,7 @@ For example:
 
 Writes the result of the template evaluation to _src/main/java/your-root-package/MyClass.java_
 
-> _** Note **: Check the full list of [GeneratedPackage](/documentation/celerio-api/com/jaxio/celerio/convention/GeneratedPackage.html), that you can pass as the first argument of $output.java_ 
+> _** Note **: Check the full list of [GeneratedPackage](/documentation/celerio-api/com/jaxio/celerio/convention/GeneratedPackage.html), that you can pass as the first argument of $output.java_
 
 	$output.java($WebSecurity, "LoginForm")##
 
@@ -205,7 +207,7 @@ You have to make sure that you do not import twice the same class or that you do
 
 	$output.require("org.apache.shiro.SecurityUtils")##
 
-Make sure "import org.apache.shiro.SecurityUtils;" is present in the generated file. 
+Make sure "import org.apache.shiro.SecurityUtils;" is present in the generated file.
 
 Note that you can use $output.require conditionally, anywhere in your template code, for example:
 
@@ -214,14 +216,14 @@ Note that you can use $output.require conditionally, anywhere in your template c
 	$output.require("java.util.List")
 	#end
 
-In case 'something' evals to true, the 2 import statements will be properly inserted in your 
+In case 'something' evals to true, the 2 import statements will be properly inserted in your
 generated java file, not in the middle of a java method of course.
 
 #### `output` provides helper for annotation and Java imports
 
 	$output.dynamicAnnotation("com.company.project.MyAnnotation")
 
-returns _@MyAnnotation_ and ensure _import com.company.project.MyAnnotation;_ statement is properly generated. 
+returns _@MyAnnotation_ and ensure _import com.company.project.MyAnnotation;_ statement is properly generated.
 
 ### project
 
@@ -235,15 +237,15 @@ The `entity` references the current entity when working with per entity or compo
 
 Full javadoc: [entity - Entity](/documentation/celerio-api/com/jaxio/celerio/model/Entity.html)
 
-** Root and primary key **  
+** Root and primary key **
 
 * $entity.root returns the root entity or the entity itself.
 * $entity.root.primaryKey returns the entity's [PrimaryKey](/documentation/celerio-api/com/jaxio/celerio/model/PrimaryKey.html).
 
-** Lists ** 
+** Lists **
 
-The entity gives you access to various kind of lists. Lists are often encapsulated in 
-a [SimpleListHolder](/documentation/celerio-api/com/jaxio/celerio/util/SimpleListHolder.html) or a 
+The entity gives you access to various kind of lists. Lists are often encapsulated in
+a [SimpleListHolder](/documentation/celerio-api/com/jaxio/celerio/util/SimpleListHolder.html) or a
 [CurrentAndFlatListHolder](/documentation/celerio-api/com/jaxio/celerio/util/CurrentAndFlatListHolder.html).
 
 The list contains mainly the following types:
@@ -278,10 +280,10 @@ The entity object, has several built-in namers but other namers can be created u
 One of the most used namer is the `model` namer. Assuming that the current entity full name is com.example.domain.Bank here are the various value returned when invoking
 the namer's methods:
 
-* $entity.model.var: bank 
+* $entity.model.var: bank
 * $entity.model.type: Bank
 * $entity.model.fullType: com.example.Bank
-* $entity.model.packageName: com.example  
+* $entity.model.packageName: com.example
 * $entity.model.path: com/example
 * $entity.model.varUp: Bank
 * $entity.model.vars: banks
@@ -325,11 +327,11 @@ By default Celerio has some built-in namers. Theses can be used from your entity
 **Here is the content of the entityAcl.e.vm.java template that you may create:**
 
 	$output.java($entity.acl)##
-	
+
 	public class $output.currentClass {
 	    // var: $entity.acl.var
 	    // type: $entity.acl.type
-	    // etc...    
+	    // etc...
 	}
 
 The 'acl' entity's property implements Celerio's `Namer` Interface.
@@ -343,7 +345,7 @@ To do so, open the celerio-template-packs.xml file and add the following `celeri
 	<celerioTemplateContext>
 		<entityContextProperties>
 			<entityContextProperty property="acl" subPackage="security" suffix="Acl"/>
-		</entityContextProperties>			
+		</entityContextProperties>
 	</celerioTemplateContext>
 
 	<!-- ... other packs skipped... -->
@@ -372,13 +374,13 @@ Your extension must be packaged in a jar file containing your classes and the ex
                                                 |
                                                 - com.jaxio.celerio.spi.ProjectSpi
                                                 - com.jaxio.celerio.spi.EntitySpi
-                                                - com.jaxio.celerio.spi.AttributeSpi                                                
-                                                - com.jaxio.celerio.spi.RelationSpi                                                
+                                                - com.jaxio.celerio.spi.AttributeSpi
+                                                - com.jaxio.celerio.spi.RelationSpi
 
 You extension implementation must be listed in one of the file above.
 
 Assuming you have created an entity extension whose full type is _com.jaxio.celerio.spi.example.ExampleEntity_,
-the content of the _com.jaxio.celerio.spi.EntitySpi_ file must be: 
+the content of the _com.jaxio.celerio.spi.EntitySpi_ file must be:
 
 	com.jaxio.celerio.spi.example.ExampleEntity
 
@@ -393,7 +395,7 @@ import com.jaxio.celerio.spi.EntitySpi;
 public class ExampleEntity implements EntitySpi {
 
     private Entity entity;
-    
+
     @Override
     public void init(Entity entity) {
         this.entity = entity;
@@ -410,8 +412,8 @@ public class ExampleEntity implements EntitySpi {
 }
 {% endhighlight %}
 
-To activate it and be able to use it through `$entity.example` and invoke `$entity.example.hello` from your templates, 
-add the extension's jar as a dependency when running maven-celerio-plugin, for example:
+To activate it and be able to use it through `$entity.example` and invoke `$entity.example.hello` from your templates,
+add the extension's jar as a dependency when running celerio-maven-plugin, for example:
 
 {% highlight xml %}
 		<profile>
@@ -424,8 +426,8 @@ add the extension's jar as a dependency when running maven-celerio-plugin, for e
 				<plugins>
 					<plugin>
 						<groupId>com.jaxio.celerio</groupId>
-						<artifactId>maven-celerio-plugin</artifactId>
-						<version>${maven-celerio-plugin.version}</version>
+						<artifactId>celerio-maven-plugin</artifactId>
+						<version>${celerio-maven-plugin.version}</version>
 						<executions>
 							<execution>
 								<id>Generates files using the extracted database schema.</id>
@@ -437,8 +439,8 @@ add the extension's jar as a dependency when running maven-celerio-plugin, for e
 						<dependencies>
 							<dependency>
 								<groupId>com.jaxio.celerio.packs</groupId>
-								<artifactId>backend-jpa</artifactId>
-								<version>${maven-celerio-plugin.version}</version>
+								<artifactId>pack-backend-jpa</artifactId>
+								<version>1.0.0</version>
 							</dependency>
 							<dependency>
 								<groupId>com.yourcompany.celerio</groupId>

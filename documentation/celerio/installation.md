@@ -9,9 +9,10 @@ Celerio Installation
 Requirements
 ------------
 
-### JDK 6 or above
+### JDK 1.8 or above
 
-Celerio and the generated code require at least JDK 1.6.0_24 to compile and run.
+Celerio and the generated code require at least JDK 1.8.0_25 to compile and run.
+
 *Download and install the latest JDK from [http://java.oracle.com](http://java.oracle.com)*
 
 Once installed, make sure you can run `javac` from the command line.
@@ -21,28 +22,26 @@ Open a command line and run:
 
 You should get a result similar to this:
 
-    javac 1.6.0_37
+    javac 1.8.0_25
 
-### Maven 2
+### Maven 3
 
-Celerio and the generated code require Maven 2.
+Celerio and the generated code require Maven 3.
 
-*Download and install Maven 2 from [http://maven.apache.org](http://maven.apache.org)*
+*Download and install Maven 3 from [http://maven.apache.org](http://maven.apache.org)*
 
-Once installed, make sure you can run Maven 2 from the command line.
+Once installed, make sure you can run Maven from the command line.
 Open a command line and run:
 
 	mvn –v
 
-You should get a result similar to this:
+You should get a result containing a line similar to this:
 
-    Maven version: 2.0.9
-    Java version: 1.6.0_18
-    OS name: "windows xp" version: "5.1" arch: "x86" Family: "windows"
+    Apache Maven 3.3.3 (7994120775791599e205a5524ec3e0dfe41d4a06; 2015-04-22T13:57:37+02:00)
 
 ### Source control system (optional)
 
-Celerio leverages source control (SVN and CVS) usage to provide features
+Celerio leverages source control (SVN, CVS, GIT) usage to provide features
 allowing the user to take control over certain generated file.
 
 Before generating such file, Celerio always check if a file of the same
@@ -52,74 +51,70 @@ Celerio assumes that files under source control should not be
 overwritten arbitrarily.
 
 To really take advantage of Celerio's collision features, you must use a
-source-control system for the project you intent to generate with
-Celerio.
+source-control system for the project you intent to generate with Celerio.
 
 Celerio
 -------
 
-Celerio is distributed as a Maven plugin. It is available on Jaxio's private Maven repository.
+Celerio is distributed as a Maven plugin. It is available on Jaxio's Maven repository, not on Maven central.
 
-Once you purchase a License, Jaxio provides you with some credential to access Jaxio's private Maven repository.
+For this reason, you must declare this repository in your Maven `~/.m2/settings.xml` file.
 
-### Configure your access to Jaxio's private Maven repository
-
-As explained at [http://maven.apache.org/settings.html#Servers](http://maven.apache.org/settings.html#Servers) the username and password 
-should be set in your settings.xml file. Here is how:
+### Declare Jaxio's Maven repository in settings.xml
 
 {% highlight xml %}
-
-<settings ...>
-... 
-  <servers>
-    <server>
-      <id>springfuse-repository</id>
-      <username>YOUR_USERNAME</username>
-      <password>YOUR_PASSWORD</password>
-    </server>
-  </servers>
-  <profiles>
-    <profile>
-      <id>celerio</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <repositories>
-        <repository>
-          <id>springfuse-repository</id>
-          <url>http://maven2.springfuse.com/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </repository>
-      </repositories>
-      <pluginRepositories>
-        <pluginRepository>
-          <id>springfuse-repository</id>
-          <url>http://maven2.springfuse.com/</url>
-          <releases>
-            <enabled>true</enabled>
-          </releases>
-          <snapshots>
-            <enabled>false</enabled>
-          </snapshots>
-        </pluginRepository>
-       </pluginRepositories>
-     </profile>
-    </profiles>
-...
+<settings xmlns="http://maven.apache.org/POM/4.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <!-- ... -->
+    <profiles>
+        <!-- ... -->
+        <profile>
+            <id>celerio</id>
+            <repositories>
+                <repository>
+                    <id>jaxio-repository</id>
+                    <url>http://maven.jaxio.com/repository</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>jaxio-repository</id>
+                    <url>http://maven.jaxio.com/repository</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+        <!-- ... -->
+    <profiles>
+    <!-- ... -->
 </settings>
-
 {% endhighlight %}
 
 
-### License key installation
+### Bootstrap a project with Celerio
 
-Celerio License Key comes as a jar file named brand-1.0.0.jar.
+Type the following command in a console:
 
-To install it, run this maven command from a folder containing the brand-1.0.0.jar file provided by Jaxio:
+    mvn -Pcelerio com.jaxio.celerio:bootstrap-maven-plugin:4.0.0:bootstrap
 
-	mvn install:install-file -Dfile=brand-1.0.0.jar -DgroupId=com.jaxio.celerio -DartifactId=brand-Dversion=1.0.0 -Dpackaging=jar
+Then follow the instructions...
+
+### Branding file...
+
+The first time Celerio is executed it creates the file `.celerio/branding.properties` in your home directory.
+
+To change the default root package of the generated source code, you can open this file and change property:
+
+    root_package=com.jaxio

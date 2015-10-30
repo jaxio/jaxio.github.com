@@ -3,6 +3,20 @@ layout: english
 title: Celerio Guide - Celerio Change Log
 ---
 
+## Celerio Change Log
+
+### 4.0.0 (2015-11-xx)
+
+We are pleased to announce that Celerio is now freely available and that Celerio Code generation templates are Open Source.
+
+To start using Celerio, please refer to [Celerio's installation instructions](installation.html)
+
+Code generation templates source code (in case you want to help or create your own) are here:
+
+* backend templates: [https://github.com/jaxio/pack-backend-jpa](https://github.com/jaxio/pack-backend-jpa)
+* frontend templates: [https://github.com/jaxio/pack-jsf2-spring-conversation](https://github.com/jaxio/pack-jsf2-spring-conversation)
+
+
 ## Celerio/Springfuse Change Log
 
 ### 3.0.109 (2014-02-05)
@@ -164,7 +178,7 @@ Despite our efforts, there are still few limitations/bugs, but overall we are qu
 
 #### celerio configuration
 
-* when the default value of maven-celerio-plugin.outputDir is overridden and entities are taken-over using Celerio's 'Base' inheritance, the metamodel is now generated properly (was a regression).
+* when the default value of celerio-maven-plugin.outputDir is overridden and entities are taken-over using Celerio's 'Base' inheritance, the metamodel is now generated properly (was a regression).
 
 #### pack backend-jpa
 
@@ -595,7 +609,7 @@ No significant changes
 * cascade type is now configurable globally
 * orphanRemoval is now configurable globally
 
-Here is an example extracted from the default maven-celerio-plugin.xml configuration file:
+Here is an example extracted from the default celerio-maven-plugin.xml configuration file:
 {% highlight xml %}
 <configuration>
 	<!-- ... skip stuff ... -->
@@ -861,7 +875,7 @@ Many thanks to Brice Leporini, Jean-Louis Boudart, Pierre-Henri Dezanneau and Vi
 * order by business key when relevant in XxxLazyDataModel and XxxController
 * upgrade to PrimeFaces 3.4.1
 * automatically create the Xxx_.java file (in regular user folder src/main/java) in case the corresponding entity Xxx.java is taken over.
-* remove a System.out.println in maven-celerio-plugin
+* remove a System.out.println in celerio-maven-plugin
 * rename Entity_.e.vm.java to EntityMeta_.e.vm.java to make sure it is executed after Entity.e.vm.java
  
 ### 3.0.83 (2012-09-20)
@@ -890,7 +904,7 @@ to change it from find to findTerm... easy
 * dynamic layout in selectManyEnum depending on items list size
 
 ##### Celerio
-* collision is now under target/maven-celerio-plugin/collisions, in any circumstance
+* collision is now under target/celerio-maven-plugin/collisions, in any circumstance
 * we now generate bootstrap as all regular file (so pom get into collision)
 
 
