@@ -2,21 +2,30 @@
 layout: english
 title: Celerio Guide - Installation
 ---
-
 Celerio Installation
 ====================
 
+* [Requirements](#requirements)
+    * [JDK 1.8](#requirements-jdk)
+    * [Maven 3](#requirements-maven3)
+    * [Settings.xml](#requirements-settings)
+* [Celerio](#celerio)
+    * [Bootstrap a project with Celerio](#celerio-bootstrap)
+    * [Celerio branding](#celerio-branding)
+
+
+<a name="requirements"></a>
 Requirements
 ------------
 
+<a name="requirements-jdk"></a>
 ### JDK 1.8 or above
 
-Celerio and the generated code require at least JDK 1.8.0_25 to compile and run.
+Celerio requires at least JDK 1.8.0_25 to run.
 
 *Download and install the latest JDK from [http://java.oracle.com](http://java.oracle.com)*
 
-Once installed, make sure you can run `javac` from the command line.
-Open a command line and run:
+Once installed, make sure you can run `javac` from the command line. Open a command line and run:
 
 	javac –version
 
@@ -24,9 +33,10 @@ You should get a result similar to this:
 
     javac 1.8.0_25
 
+<a name="requirements-maven3"></a>
 ### Maven 3
 
-Celerio and the generated code require Maven 3.
+Celerio requires Maven 3.
 
 *Download and install Maven 3 from [http://maven.apache.org](http://maven.apache.org)*
 
@@ -39,28 +49,12 @@ You should get a result containing a line similar to this:
 
     Apache Maven 3.3.3 (7994120775791599e205a5524ec3e0dfe41d4a06; 2015-04-22T13:57:37+02:00)
 
-### Source control system (optional)
 
-Celerio leverages source control (SVN, CVS, GIT) usage to provide features
-allowing the user to take control over certain generated file.
-
-Before generating such file, Celerio always check if a file of the same
-name exists on disk and is present under source control.
-
-Celerio assumes that files under source control should not be
-overwritten arbitrarily.
-
-To really take advantage of Celerio's collision features, you must use a
-source-control system for the project you intent to generate with Celerio.
-
-Celerio
--------
+<a name="requirements-settings"></a>
+#### Declare Jaxio's Maven repository in settings.xml
 
 Celerio is distributed as a Maven plugin. It is available on Jaxio's Maven repository, not on Maven central.
-
 For this reason, you must declare this repository in your Maven `~/.m2/settings.xml` file.
-
-### Declare Jaxio's Maven repository in settings.xml
 
 {% highlight xml %}
 <settings xmlns="http://maven.apache.org/POM/4.0.0"
@@ -103,6 +97,11 @@ For this reason, you must declare this repository in your Maven `~/.m2/settings.
 {% endhighlight %}
 
 
+<a name="celerio"></a>
+Celerio
+-------
+
+<a name="celerio-bootstrap"></a>
 ### Bootstrap a project with Celerio
 
 Type the following command in a console:
@@ -111,10 +110,14 @@ Type the following command in a console:
 
 Then follow the instructions...
 
+<a name="celerio-branding"></a>
 ### Branding file...
 
-The first time Celerio is executed it creates the file `.celerio/branding.properties` in your home directory.
+The first time Celerio is executed it creates the file `.celerio/branding.properties` in your home directory as well as
+`.celerio/logo.png`
 
-To change the default root package of the generated source code, you can open this file and change property:
+To change the default root package of the generated source code, you can open this file and change the property:
 
     root_package=com.jaxio
+
+You may also change the logo.

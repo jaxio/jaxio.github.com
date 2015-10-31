@@ -6,14 +6,18 @@ title: Celerio Guide - Database Schema extraction
 Database Schema extraction
 ==========================
 
+* [Principle](#principle)
+* [Details of dbmetadata-maven-plugin](#details)
+* [Simple Usage](#usage)
+
+<a name="principle"></a>
 Principle
 ---------
 
-The database schema extraction is performed by
-`dbmetadata-maven-plugin`, a Maven plugin provided by Jaxio.
+The database schema extraction is performed by `dbmetadata-maven-plugin`, a Maven plugin provided by Jaxio.
 
-This plugin connects to a relational database using JDBC, retrieves 
-the database schema metadata and write it into an XML file.
+This plugin connects to a relational database using JDBC, retrieves the database schema metadata and write it
+into an XML file named `metadata.xml`.
 
 > **Note**
 >
@@ -21,15 +25,15 @@ the database schema metadata and write it into an XML file.
 > manually. If you need to change some settings, you should either
 > change your database schema or use Celerio's configuration file.
 
-While pretty straightforward the schema extraction may take several minutes on large
-database schemas (e.g. more than 200 tables). *To prevent useless
-extraction* , the simplest approach is to declare a Maven profile
+While pretty straightforward the schema extraction may take several minutes on large database schemas
+(e.g. more than 200 tables). *To prevent useless extraction* , the simplest approach is to declare a Maven profile
 dedicated to database extraction and activate it only when needed (i.e. each time you modify the database schema).
 
 The `metadata.xml` file produced by this plugin is used by Celerio's generate goal.
 
-Plugin details
---------------
+<a name="details"></a>
+Details of dbmetadata-maven-plugin
+-----------------------------------
 
 ### Full name
 
@@ -101,6 +105,7 @@ This is a common pattern in Maven, where you can skip plugins using profiles to 
 * default value: `${basedir}/src/main/config/celerio-maven-plugin/metadata.xml`
 * description: The fully qualified name of the XML file created by this plugin.
 
+<a name="usage"></a>
 Simple Usage
 ------------
 

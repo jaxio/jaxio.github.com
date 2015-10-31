@@ -53,8 +53,8 @@ Whereas when Celerio outputDir is different from Maven baseDir, the Java files a
 * ${celerio-maven-plugin.outputDir}/src/main/java
 * ${celerio-maven-plugin.outputDir}/src/test/java
 
-Plugin details
---------------
+Details of celerio-maven-plugin
+-------------------------------
 
 ### Full name
 
