@@ -6,11 +6,17 @@ title: Celerio Guide - Code Generation
 Code generation
 ===============
 
+* [Principle](#principle)
+* [Details of celerio-maven-plugin](#details)
+* [Simple Usage](#usage)
+* [Advanced: Where to generate](#advanced-where-to-generate)
+
+<a name="principle"></a>
 Principle
 ---------
 
-The code generation step is performed by the `generate` goal of the
-`celerio-maven-plugin` provided by Jaxio.
+The code generation step is performed by the `generate` goal of the `celerio-maven-plugin`, a Maven plugin
+provided by Jaxio.
 
 The code generation step is driven by several factors:
 
@@ -31,28 +37,7 @@ the simplest approach is to declare a Maven profile dedicated to code
 generation. As an example you can use the `pom.xml` that the Celerio
 `bootstrap` goal produces.
 
-Where to generate ?
--------------------
-
-By default, the files that Celerio generate are rooted in the folder where your pom.xml resides (the Maven ${baseDir} folder).
- 
-You can configure it to be a different folder using the `${celerio-maven-plugin.outputDir}` expression.
-
-> **Note**
-> The location of a generated file is defined in the generation template relatively to the Celerio outputDir.
-
-The location of the generated Java file depend on the outputDir.
-
-When Celerio outputDir is the same as Maven baseDir, the Java files are generated under:
-
-* ${celerio-maven-plugin.outputDir}/src/main/generated-java
-* ${celerio-maven-plugin.outputDir}/src/test/generated-java
- 
-Whereas when Celerio outputDir is different from Maven baseDir, the Java files are generate under:
-
-* ${celerio-maven-plugin.outputDir}/src/main/java
-* ${celerio-maven-plugin.outputDir}/src/test/java
-
+<a name="details"></a>
 Details of celerio-maven-plugin
 -------------------------------
 
@@ -98,10 +83,9 @@ important benefit of this feature is to store the file in your source control, t
 * description: set the base folder for generated files. It could be for example set to `target` if you want to clearly separate the generated files 
 from all the manually written files.
 
-
+<a name="usage"></a>
 Simple Usage
 ------------
-
 In your pom.xml create a dedicated profile to execute the plugin, then run:
 
 	mvn -Pgen generate-sources
@@ -154,4 +138,25 @@ Here is the `gen` profile detail:
 	</profile>
 {% endhighlight %}
 
+<a name="advanced-where-to-generate"></a>
+Advanced: Where to generate ?
+-----------------------------
 
+By default, the files that Celerio generate are rooted in the folder where your pom.xml resides (the Maven ${baseDir} folder).
+
+You can configure it to be a different folder using the `${celerio-maven-plugin.outputDir}` expression.
+
+> **Note**
+> The location of a generated file is defined in the generation template relatively to the Celerio outputDir.
+
+The location of the generated Java file depend on the outputDir.
+
+When Celerio outputDir is the same as Maven baseDir, the Java files are generated under:
+
+* ${celerio-maven-plugin.outputDir}/src/main/generated-java
+* ${celerio-maven-plugin.outputDir}/src/test/generated-java
+
+Whereas when Celerio outputDir is different from Maven baseDir, the Java files are generate under:
+
+* ${celerio-maven-plugin.outputDir}/src/main/java
+* ${celerio-maven-plugin.outputDir}/src/test/java

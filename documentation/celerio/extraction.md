@@ -14,7 +14,8 @@ Database Schema extraction
 Principle
 ---------
 
-The database schema extraction is performed by `dbmetadata-maven-plugin`, a Maven plugin provided by Jaxio.
+The database schema extraction is performed by the `extract-metadata` goal of the `dbmetadata-maven-plugin`,
+a Maven plugin provided by Jaxio.
 
 This plugin connects to a relational database using JDBC, retrieves the database schema metadata and write it
 into an XML file named `metadata.xml`.
