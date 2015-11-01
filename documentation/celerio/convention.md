@@ -1,5 +1,5 @@
 ---
-layout: english
+layout: refdoc
 title: Celerio Guide - Conventions 
 ---
 [ << prev ](modification.html) [ index ](index.html) [ next >> ](configuration-file.html)

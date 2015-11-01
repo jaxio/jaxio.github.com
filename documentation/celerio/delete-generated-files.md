@@ -1,5 +1,5 @@
 ---
-layout: english
+layout: refdoc
 title: Celerio Guide - Delete Generated Files
 ---
 [ << prev ](generation.html) [ index ](index.html) [ next >> ](modification.html)

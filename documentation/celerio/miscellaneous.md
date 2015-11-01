@@ -1,5 +1,5 @@
 ---
-layout: english
+layout: refdoc
 title: Celerio Guide - Configuration 
 ---
 [ << prev ](troubleshooting.html) [ index ](index.html) [ next >> ](changelog.html)

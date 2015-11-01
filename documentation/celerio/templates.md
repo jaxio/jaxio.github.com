@@ -1,5 +1,5 @@
 ---
-layout: english
+layout: refdoc
 title: Celerio Guide - Writing templates
 ---
 [ << prev ](configuration.html) [ index ](index.html) [ next >> ](troubleshooting.html)

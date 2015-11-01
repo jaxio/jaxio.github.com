@@ -1,5 +1,5 @@
 ---
-layout: english
+layout: refdoc
 title: Springfuse change log
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: english
+layout: refdoc
 title: Celerio Guide - Code Generation
 ---
 [ << prev ](extraction.html) [ index ](index.html) [ next >> ](delete-generated-files.html)

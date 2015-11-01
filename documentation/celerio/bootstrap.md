@@ -1,5 +1,5 @@
 ---
-layout: english
+layout: refdoc
 title: Celerio Guide - Bootstrapping a project
 ---
 [ << prev ](installation.html) [ index ](index.html) [ next >> ](extraction.html)

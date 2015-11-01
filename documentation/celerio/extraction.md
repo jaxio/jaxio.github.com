@@ -1,5 +1,5 @@
 ---
-layout: english
+layout: refdoc
 title: Celerio Guide - Database Schema extraction
 ---
 [ << prev ](bootstrap.html) [ index ](index.html) [ next >> ](generation.html)

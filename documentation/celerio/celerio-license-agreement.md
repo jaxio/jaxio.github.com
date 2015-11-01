@@ -1,5 +1,5 @@
 ---
-layout: english
+layout: refdoc
 title: License Agreement For Celerio
 ---
 # LICENSE AGREEMENT FOR CELERIO

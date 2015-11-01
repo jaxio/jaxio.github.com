@@ -1,5 +1,5 @@
 ---
-layout: english
+layout: refdoc
 title: Celerio Guide - Troubleshooting
 ---
 [ << prev ](templates.html) [ index ](index.html) [ next >> ](miscellaneous.html)

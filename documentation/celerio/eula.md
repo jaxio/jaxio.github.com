@@ -1,5 +1,5 @@
 ---
-layout: english
+layout: refdoc
 title: Celerio End User License Agreement
 ---
 # Celerio End User License Agreement

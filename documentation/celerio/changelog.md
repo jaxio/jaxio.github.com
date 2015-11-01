@@ -1,5 +1,5 @@
 ---
-layout: english
+layout: refdoc
 title: Celerio Guide - Celerio Change Log
 ---
 [ << prev ](miscellaneous.html) [ index ](index.html) [ next >> ](celerio-license-agreement.html)

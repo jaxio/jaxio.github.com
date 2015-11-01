@@ -1,5 +1,5 @@
 ---
-layout: english
+layout: refdoc
 title: Celerio Guide - Installation
 ---
 [ << prev ](introduction.html) [ index ](index.html) [ next >> ](bootstrap.html)
