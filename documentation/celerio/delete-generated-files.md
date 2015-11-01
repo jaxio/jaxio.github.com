@@ -2,9 +2,9 @@
 layout: english
 title: Celerio Guide - Delete Generated Files
 ---
-
-Delete Generated Files
-======================
+[ << prev ](generation.html) [ index ](index.html) [ next >> ](modification.html)
+6. Delete Generated Files
+=========================
 
 Principle
 ---------
@@ -12,7 +12,10 @@ Principle
 Celerio tracks all the files it generates. For this purpose Celerio creates and maintains the file `.celerio/generated.xml`.
 Do not edit or delete this file!
 
-You can delete the generated files using the cleanGenerated goal of the celerio-maven-plugin.
+You can delete the generated files using the `cleanGenerated goal` of the `celerio-maven-plugin.
+
+By default, all generated files that have not been modified manually are deleted. You may configure this plugin to
+exclude certain files so they do not get deleted.
 
 Plugin details
 --------------
@@ -25,7 +28,27 @@ Plugin details
 
 This goal uses the file `.celerio/generated.xml` which is created by the celerio-maven-plugin:generate goal.
 
-### Attribute
+### Attributes
+
+#### excludedFiles
+* default value: none
+* description: List the generated files' relative path that must not be deleted. You may use the following wildcards:
+    * ? matches one character
+    * \* matches zero or more characters
+    * ** matches zero or more directories in a path
+
+_Use case_:
+Celerio generates a file, you do not modify it manually, you commit it in your SCM. To prevent Celerio
+from deleting it, you add it to the excludedFiles list.
+
+_example_:
+{% highlight xml %}
+<configuration>
+  <excludedFiles>
+    <param>src/main/generated-java/**/domain/**/*.java</param>
+  </excludedFiles>
+</configuration>
+{% endhighlight %}
 
 #### skip
 * expression: celerio-maven-plugin.cleanGenerated.skip
@@ -58,6 +81,14 @@ Here is the cleanGen profile detail:
 					<executions>
 						<execution>
 							<id>Delete previously generated files (use .celerio/ folder)</id>
+                            <!-- If you do not want certain generated files to be deleted, you can exclude them, for example: -->
+                            <!--
+                            <configuration>
+                                <excludedFiles>
+                                    <param>src/main/generated-java/**/domain/**/*.java</param>
+                                </excludedFiles>
+                            </configuration>
+                            -->
 							<goals>
 								<goal>cleanGenerated</goal>
 							</goals>
@@ -80,5 +111,3 @@ Here is the cleanGen profile detail:
 		</pluginRepositories>
 	</profile>
 {% endhighlight %}
-
-

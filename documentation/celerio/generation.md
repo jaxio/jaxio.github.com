@@ -2,9 +2,9 @@
 layout: english
 title: Celerio Guide - Code Generation
 ---
-
-Code generation
-===============
+[ << prev ](extraction.html) [ index ](index.html) [ next >> ](delete-generated-files.html)
+5. Code generation
+==================
 
 * [Principle](#principle)
 * [Details of celerio-maven-plugin](#details)

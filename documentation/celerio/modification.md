@@ -2,9 +2,9 @@
 layout: english
 title: Celerio Guide - Code modification, regeneration and collisions
 ---
-
-Code modification, regeneration and collisions
-==============================================
+[ << prev ](delete-generated-files.html) [ index ](index.html) [ next >> ](convention.html)
+7. Code modification, regeneration and collisions
+=================================================
 
 ## Introduction
 
@@ -37,12 +37,13 @@ Each time Celerio regenerates a file it checks first if the file has been modifi
 `If yes`, Celerio takes no risk, it generates the file in the collision folder (details are provided further).
 `If no`,   Celerio replaces the file with the new generated content.
 
-Note that if the generated file has the same content as the old one, Celerio does not regenerate it in order to preserve the file's timestamp.
+Note that if the generated file has the same content as the old one, Celerio does not regenerate it in order to preserve
+the file's timestamp.
 
 > ** Important **
 > 
-> If you delete the `.celerio/generated.xml file` Celerio has no way to determine if a file has been manually modified or not and you may loose 
-> your modifications unless the file has been committed to your Source Control System.
+> If you delete the `.celerio/generated.xml file` Celerio has no way to determine if a file has been manually modified
+> or not and you may loose your modifications.
 
 <a name="java-files"></a>
 ## Java files
@@ -241,20 +242,15 @@ By configuration, Spring Web Flow will first look up a flow by id in the
 <a name="take-ownership"></a>
 ### Take ownership of a generated file
 
-In order to tell Celerio to do not overwrite a generated file, you must add this file to your source control system.
+The simplest way to tell Celerio to do not overwrite a generated file is to modify that file or to change its
+modification date using the `touch` command present on Unix system.
 
-Next time Celerio runs, it will detect that your file is under source
-control and will not overwrite it.
+Next time Celerio runs, it will detect that your file was modified or touched and will not overwrite it.
 
-In a sense, the code generation is frozen for this file: Celerio does not
-control it anymore, it is under your control.
+Since you may be interested in the file Celerio would have generated if you had not modified or touched this file,
+Celerio generates it under the `target` folder. Please refer to [Collisions and merging](#collisions-merging) section.
 
-Since you may be interested in the file Celerio would have generated if you had not added your file to your Source Control System, Celerio generates it under the `target`
-folder. Please refer to [Collisions and merging](#collisions-merging) section.
-
-If you change your mind and want Celerio to generate the file again,
-simply remove the file from your source control and regenerate your
-code.
+If you change your mind and want Celerio to generate the file again, simply remove the file and regenerate your code.
 
 <a name="gen-rule-same-dir"></a>
 #### Generation rule summary for non-java file (baseDir == outputDir)
@@ -266,7 +262,7 @@ Before generating a non-java file, Celerio applies the following rules:
 	<thead>
 	<tr>
 		<th>File is already present on disk</th>
-		<th>File is under source control</th>
+		<th>File has been manually modified or touched</th>
 		<th>Generated file would be the same </th>
 		<th>Celerio action</th>
 	</tr>
@@ -288,7 +284,7 @@ Before generating a non-java file, Celerio applies the following rules:
 		<td>Yes</td>
 		<td>No</td>
 		<td>No</td>
-		<td>File is overwritten if it was not manually modified. Otherwise, it is generated in the collision folder</td>
+		<td>File is overwritten</td>
 	</tr>
 	<tr>
 		<td>Yes</td>
@@ -362,30 +358,27 @@ Before generating a non-java file, Celerio applies the following rules:
 <a name="collisions-folder"></a>
 ### Collision folder
 
-When Celerio detects that a file which should be generated is already
-present and under source control or manually modified, it does not overwrite your file. 
-Instead, Celerio generates the files in conflict in the *collision folder*: `target/celerio-maven-plugin/collisions`
+When Celerio detects that a file which should be regenerated is manually modified, it does not overwrite your file.
+Instead, Celerio generates the file in the *collision folder*: `target/celerio-maven-plugin/collisions`
 
-All files generated in that folder have the same path as if they had
-been generated normally, except for the `target/celerio-maven-plugin/collisions` path prefix.
+All files generated in that folder have the same path as if they had been generated normally, except for
+the `target/celerio-maven-plugin/collisions` path prefix.
 
-So, whenever appropriate, Celerio generates the original file, under the
-expected path, in the collision folder `target/celerio-maven-plugin/collisions`
+So, whenever appropriate, Celerio generates the original file, under the expected path, in the collision
+folder `target/celerio-maven-plugin/collisions`
 
 <a name="collisions-manual-merge"></a>
 ### Merging manually the files
 
 To merge the files in conflict, you can use a tool such as WinMerge.
 
-Since, the files that led to some conflict are located in the collision
-folder under the same relative path, you can use the recursive directory
-comparison feature.
+Since, the files that led to some conflict are located in the collision folder under the same relative path, you can
+use the recursive directory comparison feature.
 
-To do so, you just have to specify in WinMerge, your project root
-directory and the collision directory
+To do so, you just have to specify in WinMerge, your project root directory and the collision directory
 
-Then, you can keep track of changes you made and eventually merge some
-of the newly generated code into your existing file.
+Then, you can keep track of changes you made and eventually merge some of the newly generated code into your
+existing file.
 
 <a name="collisions-merging-tools"></a>
 #### Merging Tools

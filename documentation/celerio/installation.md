@@ -2,8 +2,9 @@
 layout: english
 title: Celerio Guide - Installation
 ---
-Celerio Installation
-====================
+[ << prev ](introduction.html) [ index ](index.html) [ next >> ](bootstrap.html)
+2. Celerio Installation
+=======================
 
 * [Requirements](#requirements)
     * [JDK 1.8](#requirements-jdk)
@@ -108,7 +109,7 @@ Type the following command in a console:
 
     mvn -Pcelerio com.jaxio.celerio:bootstrap-maven-plugin:4.0.0:bootstrap
 
-Then follow the instructions...
+Then follow the instructions in [Bootstrapping a project with Celerio](bootstrap.html).
 
 <a name="celerio-branding"></a>
 ### Branding file...

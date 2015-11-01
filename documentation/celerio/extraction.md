@@ -2,9 +2,9 @@
 layout: english
 title: Celerio Guide - Database Schema extraction
 ---
-
-Database Schema extraction
-==========================
+[ << prev ](bootstrap.html) [ index ](index.html) [ next >> ](generation.html)
+4. Database Schema extraction
+=============================
 
 * [Principle](#principle)
 * [Details of dbmetadata-maven-plugin](#details)

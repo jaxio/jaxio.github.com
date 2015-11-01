@@ -3,8 +3,9 @@ layout: english
 title: Celerio Guide - Configuration 
 ---
 
-Celerio Configuration
-=====================
+[ << prev ](configuration-file.html) [ index ](index.html) [ next >> ](templates.html)
+10. Celerio Configuration
+=========================
 
 A thorough configuration file example is provided when you create a project out of the sample H2 database that we provide.
 The file is located under `src/main/config/celerio-maven-plugin/celerio-maven-plugin.xml`.

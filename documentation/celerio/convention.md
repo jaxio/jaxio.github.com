@@ -2,9 +2,10 @@
 layout: english
 title: Celerio Guide - Conventions 
 ---
+[ << prev ](modification.html) [ index ](index.html) [ next >> ](configuration-file.html)
 
-Conventions and integration
-===========================
+8. Conventions and integration
+==============================
 
 Celerio has some built-in conventions. When these conventions are
 followed, Celerio generates some specific features.

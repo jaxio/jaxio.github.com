@@ -2,9 +2,10 @@
 layout: english
 title: Celerio Guide - Best practices
 ---
+[ << prev ](templates.html) [ index ](index.html) [ next >> ](troubleshooting.html)
 
-Best practices
-==============
+12. Best practices
+==================
 
 Source control
 --------------

@@ -2,8 +2,8 @@
 layout: english
 title: Celerio Guide - Writing templates
 ---
-
-Writing Celerio Templates
+[ << prev ](configuration.html) [ index ](index.html) [ next >> ](best-practices.html)
+11. Writing Celerio Templates
 =========================
 
 * [Introduction](#intro)
@@ -32,11 +32,10 @@ Celerio can either execute templates packaged in a jar file or templates that ar
 
 Jaxio provides some ready-to-use generation templates. These templates are packaged in template packs.
 
-A template pack is a simple jar. To be executed by Celerio this jar file must be explicitly added
+A `template pack is a simple jar. To be executed by Celerio this jar file must be explicitly added
 as a Celerio's dependency when running Celerio.
 
-Jaxio provides various template packs with Celerio. New template packs can be
-written either by Jaxio's consultants or Celerio's end users.
+New template packs can be written either by Jaxio's consultants or Celerio's end users.
 
 <a name="learn-by-example"></a>
 Learn by example
@@ -52,9 +51,9 @@ Checkout our Open Source template packs:
 <a name="templates-folder"></a>
 Templates folder
 ----------------
-Before writing templates please update your Celerio configuration in order to specify your templates folder location.
+Before starting, update your Celerio configuration in order to specify your templates folder location.
 
-In celerio-templates-packs.xml declare your Celerio template source folder using the template pack element.
+In `celerio-templates-packs.xml` declare your Celerio template source folder using the template pack element.
 For example:
 
 {% highlight xml %}
@@ -97,6 +96,7 @@ Here is a celerio.txt file example:
 	packCommand=mvn -Ph2,db,metadata,gen test
 
 It is important that the packName starts with the prefix `pack-`.
+
 
 <a name="template-name-conventions"></a>
 Template name conventions
@@ -188,7 +188,7 @@ For example:
 
 	$output.java($Root,"MyClass")
 
-Writes the result of the template evaluation to _src/main/java/your-root-package/MyClass.java_
+Writes the result of the template evaluation to _src/main/generated-java/your-root-package/MyClass.java_
 
 > _** Note **: Check the full list of [GeneratedPackage](/documentation/celerio-api/com/jaxio/celerio/convention/GeneratedPackage.html), that you can pass as the first argument of $output.java_
 
@@ -216,8 +216,8 @@ Note that you can use $output.require conditionally, anywhere in your template c
 	$output.require("java.util.List")
 	#end
 
-In case 'something' evals to true, the 2 import statements will be properly inserted in your
-generated java file, not in the middle of a java method of course.
+In case 'something' evals to true, the 2 import statements will be properly inserted in your generated java file,
+not in the middle of a java method of course.
 
 #### `output` provides helper for annotation and Java imports
 

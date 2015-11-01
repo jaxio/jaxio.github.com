@@ -3,8 +3,9 @@ layout: english
 title: Celerio Guide - Configuration File
 ---
 
-Configuration File
-==================
+[ << prev ](convention.html) [ index ](index.html) [ next >> ](configuration.html)
+9. Configuration File
+=====================
 
 Main Configuration File
 -----------------------

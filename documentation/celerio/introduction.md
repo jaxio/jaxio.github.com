@@ -2,8 +2,11 @@
 layout: english
 title: Celerio Guide - Introduction
 ---
-Introduction
-============
+
+[ << prev ](index.html) [ index ](index.html) [ next >> ](installation.html)
+
+1. Introduction
+===============
 
 * [Celerio](#celerio)
     * [Database Schema Extractor tool](#celerio-db-schema-extractor)
@@ -14,7 +17,7 @@ Introduction
     * [Application Rewriting](#application-rewritting)
     * [Rapid prototyping](#rapid-prototyping)
     * [New application](#new-application)
-    * [Training](#training)	
+    * [Training](#training)
 * [What to expect from Celerio?](#what-to-expect-from-celerio)
 
 <a name="celerio"></a>
