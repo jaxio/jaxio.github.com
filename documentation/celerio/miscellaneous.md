@@ -3,7 +3,7 @@ layout: english
 title: Celerio Guide - Configuration 
 ---
 [ << prev ](troubleshooting.html) [ index ](index.html) [ next >> ](changelog.html)
-14. Miscellaneous
+13. Miscellaneous
 =================
 
 * [Install Oracle Jdbc driver](#install-oracle-jdbc-driver-maven-repository)

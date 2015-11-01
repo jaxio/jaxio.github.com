@@ -19,11 +19,10 @@ Celerio is a code generator tool for data-driven application.
 9. [Configuration file](configuration-file.html)
 10. [Configuration](configuration.html)
 11. [Writing templates](templates.html)
-12. [Best practices](best-practices.html)
-13. [Troubleshooting](troubleshooting.html)
-14. [Miscellaneous](miscellaneous.html)
-15. [Change logs](changelog.html)
-16. [License Agreement](celerio-license-agreement.html)
+12. [Troubleshooting](troubleshooting.html)
+13. [Miscellaneous](miscellaneous.html)
+14. [Change logs](changelog.html)
+15. [License Agreement](celerio-license-agreement.html)
 
 
 *All copyright, confidential information, patents, design rights and all other 

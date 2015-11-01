@@ -3,7 +3,7 @@ layout: english
 title: Celerio Guide - Celerio Change Log
 ---
 [ << prev ](miscellaneous.html) [ index ](index.html) [ next >> ](celerio-license-agreement.html)
-15. Celerio Change Log
+14. Celerio Change Log
 ======================
 
 ### 4.0.0 (2015-11-xx)

@@ -2,8 +2,8 @@
 layout: english
 title: Celerio Guide - Troubleshooting
 ---
-[ << prev ](best-practices.html) [ index ](index.html) [ next >> ](miscellaneous.html)
-13. Troubleshooting
+[ << prev ](templates.html) [ index ](index.html) [ next >> ](miscellaneous.html)
+12. Troubleshooting
 ===================
 
 Generated code does not compile

@@ -2,7 +2,7 @@
 layout: english
 title: Celerio Guide - Writing templates
 ---
-[ << prev ](configuration.html) [ index ](index.html) [ next >> ](best-practices.html)
+[ << prev ](configuration.html) [ index ](index.html) [ next >> ](troubleshooting.html)
 11. Writing Celerio Templates
 =========================
 
