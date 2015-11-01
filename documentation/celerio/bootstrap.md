@@ -66,7 +66,7 @@ The `-P` option stands for *profile*. In the above command, we activate:
 
 * `h2` profile to use an H2 database and driver
 * `d` profile to create a new database,
-* `etadata` profile to reverse it
+* `metadata` profile to reverse it
 * `gen` profile to generate the corresponding source code.
 
 All these profiles are declared in the main `pom.xml` file. The `jetty:run` starts an embedded web server.
