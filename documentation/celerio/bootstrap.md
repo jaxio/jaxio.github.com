@@ -65,7 +65,7 @@ To do so, from your project folder execute the Maven command printed on the cons
 The `-P` option stands for *profile*. In the above command, we activate:
 
 * `h2` profile to use an H2 database and driver
-* `d` profile to create a new database,
+* `db` profile to create a new database,
 * `metadata` profile to reverse it
 * `gen` profile to generate the corresponding source code.
 
