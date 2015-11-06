@@ -32,7 +32,7 @@ Celerio can either execute templates packaged in a jar file or templates that ar
 
 Jaxio provides some ready-to-use generation templates. These templates are packaged in template packs.
 
-A `template pack is a simple jar. To be executed by Celerio this jar file must be explicitly added
+A `template pack` is a simple jar. To be executed by Celerio this jar file must be explicitly added
 as a Celerio's dependency when running Celerio.
 
 New template packs can be written either by Jaxio's consultants or Celerio's end users.
@@ -43,7 +43,7 @@ Learn by example
 
 The simplest way to get started with Celerio templates is to modify existing templates.
 
-Checkout our Open Source template packs:
+Jaxio provides the following Open Source template packs:
 
 * backend templates: [https://github.com/jaxio/pack-backend-jpa](https://github.com/jaxio/pack-backend-jpa)
 * frontend templates: [https://github.com/jaxio/pack-jsf2-spring-conversation](https://github.com/jaxio/pack-jsf2-spring-conversation)
@@ -53,8 +53,8 @@ Templates folder
 ----------------
 Before starting, update your Celerio configuration in order to specify your templates folder location.
 
-In `celerio-templates-packs.xml` declare your Celerio template source folder using the template pack element.
-For example:
+In `src/main/config/celerio-maven-plugin/celerio-templates-packs.xml` declare your Celerio template source folder using
+the template pack element. For example:
 
 {% highlight xml %}
 <packs>

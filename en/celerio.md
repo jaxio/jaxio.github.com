@@ -56,7 +56,12 @@ Here is a high level overview of Celerio
 
 ### Code Generation Templates Packs
 
+Jaxio provides these templates packs by default
+
 #### 'Backend' pack
+
+Sources: [https://github.com/jaxio/pack-backend-jpa](https://github.com/jaxio/pack-backend-jpa)
+
 * JPA2 entities (Hibernate)
 	* Supports many-to-one, one-to-many, one-to-one, one-to-one inverse, many-to-many, many-to-many inverse
 	* Inheritance
@@ -77,6 +82,9 @@ Here is a high level overview of Celerio
 * etc.
 
 #### 'JSF 2 & PrimeFaces' Pack
+
+Sources: [https://github.com/jaxio/pack-jsf2-spring-conversation](https://github.com/jaxio/pack-jsf2-spring-conversation)
+
 * Depends on 'Backend' Pack
 * Generate advanced CRUD features for all entities
 * View generation
@@ -87,17 +95,3 @@ Here is a high level overview of Celerio
 * etc.
 
 <p>Read our blog entry "<a href="http://www.springfuse.com/2013/03/05/jsf2-conversation.html">Conversation with JSF2</a>"</p>  
-
-#### 'Spring MVC 3 & JQuery' Pack
-* Depends on 'Backend' Pack
-* Controllers (regular, REST)
-* Generate views
-	* Auto-complete (ajax configuration)
-	* forms
-	* Complete navigation of entities graph
-	* Search criteria (date range, ajax, etc.)
-	* Ajax pagination
-	* Layout with BluePrint Css
-* Spring Security ready
-
-Read our blog entry "<a href="http://www.springfuse.com/2011/05/04/generate-spring-mvc3-jquery-jpa2-crud-applications.html">Generate Spring MVC3, JQuery, JPA2 CRUD Application</a>".

@@ -10,7 +10,7 @@ Jaxio edits Celerio, a pragmatic code generator tool for data oriented applicati
 
 We are based in Paris, France but our tool is used from all over the planet.
 
-<a href="https://twitter.com/springfuse" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @springfuse</a>
+<a href="https://twitter.com/jaxiosoft" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @jaxiosoft</a>
 
 ## Founders
 
