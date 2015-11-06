@@ -3,7 +3,7 @@ layout: refdoc
 title: Celerio Guide - Code modification, regeneration and collisions
 ---
 [ << prev ](delete-generated-files.html) [ index ](index.html) [ next >> ](convention.html)
-7. Code modification, regeneration and collisions
+8. Code modification, regeneration and collisions
 =================================================
 
 ## Introduction

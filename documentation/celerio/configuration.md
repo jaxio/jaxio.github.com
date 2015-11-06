@@ -4,7 +4,7 @@ title: Celerio Guide - Configuration
 ---
 
 [ << prev ](configuration-file.html) [ index ](index.html) [ next >> ](templates.html)
-10. Celerio Configuration
+11. Celerio Configuration
 =========================
 
 A thorough configuration file example is provided when you create a project out of the sample H2 database that we provide.

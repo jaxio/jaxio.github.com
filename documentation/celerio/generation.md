@@ -3,7 +3,7 @@ layout: refdoc
 title: Celerio Guide - Code Generation
 ---
 [ << prev ](extraction.html) [ index ](index.html) [ next >> ](delete-generated-files.html)
-5. Code generation
+6. Code generation
 ==================
 
 * [Principle](#principle)

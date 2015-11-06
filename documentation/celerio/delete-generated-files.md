@@ -3,7 +3,7 @@ layout: refdoc
 title: Celerio Guide - Delete Generated Files
 ---
 [ << prev ](generation.html) [ index ](index.html) [ next >> ](modification.html)
-6. Delete Generated Files
+7. Delete Generated Files
 =========================
 
 Principle

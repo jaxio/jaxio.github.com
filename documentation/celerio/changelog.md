@@ -3,20 +3,19 @@ layout: refdoc
 title: Celerio Guide - Celerio Change Log
 ---
 [ << prev ](miscellaneous.html) [ index ](index.html) [ next >> ](celerio-license-agreement.html)
-14. Celerio Change Log
+15. Celerio Change Log
 ======================
 
 ### 4.0.0 (2015-11-xx)
 
 We are pleased to announce that Celerio is now freely available and that Celerio Code generation templates are Open Source.
 
-To start using Celerio, please refer to [Celerio's installation instructions](installation.html)
+To start using Celerio, please follow [Celerio's documentation](index.html)
 
 Code generation templates source code (in case you want to help or create your own) are here:
 
 * backend templates: [https://github.com/jaxio/pack-backend-jpa](https://github.com/jaxio/pack-backend-jpa)
 * frontend templates: [https://github.com/jaxio/pack-jsf2-spring-conversation](https://github.com/jaxio/pack-jsf2-spring-conversation)
-
 
 ## Celerio/Springfuse Change Log
 

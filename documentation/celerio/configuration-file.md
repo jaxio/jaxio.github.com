@@ -4,7 +4,7 @@ title: Celerio Guide - Configuration File
 ---
 
 [ << prev ](convention.html) [ index ](index.html) [ next >> ](configuration.html)
-9. Configuration File
+10. Configuration File
 =====================
 
 Main Configuration File

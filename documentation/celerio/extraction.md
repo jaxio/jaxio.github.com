@@ -3,7 +3,7 @@ layout: refdoc
 title: Celerio Guide - Database Schema extraction
 ---
 [ << prev ](bootstrap.html) [ index ](index.html) [ next >> ](generation.html)
-4. Database Schema extraction
+5. Database Schema extraction
 =============================
 
 * [Principle](#principle)

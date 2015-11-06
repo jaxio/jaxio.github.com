@@ -3,7 +3,7 @@ layout: refdoc
 title: Celerio Guide - Writing templates
 ---
 [ << prev ](configuration.html) [ index ](index.html) [ next >> ](troubleshooting.html)
-11. Writing Celerio Templates
+12. Writing Celerio Templates
 =========================
 
 * [Introduction](#intro)

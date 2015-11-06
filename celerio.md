@@ -59,7 +59,12 @@ La figure ci-dessus illustre le fonctionnement de Celerio et donne un aperçu de
 
 ### Packs de templates de générations
 
+Jaxio fournit en Open Source, 2 packs de templates de génération.
+
 #### Pack 'Backend'
+
+Code source: [https://github.com/jaxio/pack-backend-jpa](https://github.com/jaxio/pack-backend-jpa)
+
 * Génération des entitées JPA2 (Hibernate)
 	* Associations many-to-one, one-to-many, one-to-one, one-to-one inverse, many-to-many, many-to-many inverse
 	* Héritage
@@ -71,6 +76,7 @@ La figure ci-dessus illustre le fonctionnement de Celerio et donne un aperçu de
 	* Helper pour les formats binaires (Blob)
 * Génération des DAOs et services associés
 	* Recherche avancée par l'exemple (inclus les entitées liées au 1er degré)
+	* recherche avec hibernate search
 	* Pagination
 	* Named-query
 	* Utilisation des "generic" Java
@@ -79,6 +85,9 @@ La figure ci-dessus illustre le fonctionnement de Celerio et donne un aperçu de
 * etc.
 
 #### Pack 'JSF 2 & PrimeFaces'
+
+Code source: [https://github.com/jaxio/pack-jsf2-spring-conversation](https://github.com/jaxio/pack-jsf2-spring-conversation)
+
 * Utilise le résultat du pack 'Backend'
 * Génération des conversations
 	* Ré-utilisation des conversations
@@ -90,18 +99,3 @@ La figure ci-dessus illustre le fonctionnement de Celerio et donne un aperçu de
 * etc.
 
 Voir le billet <a href="http://www.springfuse.com/2013/03/05/jsf2-conversation.html">Conversation with JSF2</a> publié sur le blog de SpringFuse.  
-
-#### Pack 'Spring MVC 3 & JQuery'
-* Utilise le résultat du pack 'Backend'
-* Génération des controlleurs
-* Génération des vues
-	* Auto-complete ajax configuration
-	* formulaire
-	* read-only avec navigation dans le graphe des entitées liées
-	* Critères de recherche (intervalle de date, ajax, etc.)
-	* Résultats de recherche paginés (ajax)
-	* Layout avec BluePrint Css
-* Sécurité avec Spring Security
-
-Voir le billet <a href="http://www.springfuse.com/2011/05/04/generate-spring-mvc3-jquery-jpa2-crud-applications.html">Generate Spring MVC3, JQuery, JPA2 CRUD Application</a> publié sur le blog de SpringFuse.
-
