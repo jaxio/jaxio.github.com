@@ -5,8 +5,10 @@ title: Celerio Guide
 
 Celerio Reference Guide
 =======================
+Current version: 4.0.0
 
 Celerio is a code generator tool for data-driven application.
+
 
 1. [Introduction](introduction.html)
 2. [Installation](installation.html)

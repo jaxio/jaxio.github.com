@@ -6,9 +6,9 @@ title: Celerio Guide - Celerio Change Log
 15. Celerio Change Log
 ======================
 
-### 4.0.0 (2015-11-xx)
+### 4.0.0 (2015-11-09)
 
-We are pleased to announce that Celerio is now freely available and that Celerio Code generation templates are Open Source.
+We are pleased to announce that Celerio is now licensed for free and that Celerio Code generation templates are Open Source.
 
 To start using Celerio, please follow [Celerio's documentation](index.html)
 

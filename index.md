@@ -7,8 +7,6 @@ title: Jaxio
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
   </ol>
   <!-- Carousel items -->
   <div class="carousel-inner">
@@ -23,30 +21,12 @@ title: Jaxio
     </div>
     <div class="item">
 	    <h1>Celerio</h1>
-		<h4>Restez au top des technos</h4>		
+		<h4>Générateur de code Java pour applications orientées données</h4>
 		<div class="carousel-caption">
-			<p>&gt; Le code généré suit les derniers standards</p>
+			<p>&gt; Templates de génération Open Source</p>
 			<p>&gt; 100% du code généré est déjà testé</p>
 			<p>&gt; Les fonctionnalités avancées sont au rendez-vous</p>
 		</div>	
-    </div>
-    <div class="item">
-	    <h1>Celerio</h1>
-		<h4>Restez autonome</h4>
-	     <div class="carousel-caption">
-			<p>&gt; Vous avez la maitrise totale du code généré</p>
-			<p>&gt; La qualité du code simplifie l'auto-apprentissage</p>
-			<p>&gt; Celerio n'intervient pas à l'exécution</p>
-		</div>
-    </div>
-    <div class="item">
-	    <h1>Celerio</h1>
-		<h4>Réduisez vos cycles de développements</h4> 
-		<div class="carousel-caption">
-			<p>&gt; Focus sur la partie métier de l’application sous une semaine</p>
-			<p>&gt; Homogénéité du code généré d’un projet à l’autre</p>    
-			<p>&gt; Droit au changement et à l'erreur</p>    
-		</div>
     </div>
   </div>
   <!-- Carousel nav -->
@@ -64,26 +44,16 @@ $('.carousel').carousel({
 <!-- Example row of columns -->
 <div class="row">
 <div class="span4">
-	<h1>Celerio</h1>
-	<p><a href="/fonctionnalites-application-gestion-javaee-generee.html" class="btn btn-primary">Fonctionnalités d'une application générée</a></p>
-	<p><a href="https://github.com/jaxio/generated-projects" class="btn btn-primary">Exemple de code généré</a></p>
-	<p><a href="/celerio-service.html" class="btn btn-primary">Evaluer Celerio en ligne</a></p>
-	<p><a href="/licence-utilisation-celerio.html" class="btn btn-primary">Acheter Celerio</a></p>
+	<h1>Utiliser Celerio</h1>
+	<p>
+	    Suivez la <a href="/documentation/celerio/">documentation...</a>
+	</p>
 </div>
 <div class="span4">
-	<h1>Success Story</h1>
-	<ul>
-	<li>
-		<a href="/celerio-livre-blanc.html">Une banque centrale utilise Celerio. Présenté lors du MD Day 2010...</a>
-	</li>
-	<li>
-		<a href="reference-steria.html">Steria utilise Celerio pour développer la banque en ligne BforBank...</a>
-	</li>
-	<li>
-		<a href="reference-editeur.html">Celerio est utilisé par Eptica pour le développement d'un nouveau 
-		produit réalisé pour répondre aux besoins d'une grande banque...</a>
-	</li>
-	</ul>
+	<h1>Contribuer</h1>
+	<p>
+	    <a href="/documentation/celerio/templates.html#learn-by-example">Templates de génération</a> open source...
+	</p>
 </div>
 <div class="span4">
 	<h1>Actualités</h1>

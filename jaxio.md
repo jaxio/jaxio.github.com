@@ -17,7 +17,7 @@ le développement des applications orientées-données en Java.
 
 <a href="https://twitter.com/jaxiosoft" class="twitter-follow-button" data-show-count="false" data-lang="en">Suivre Jaxio sur twitter: @jaxiosoft</a>
 
-### Fondateurs
+### Equipe
  
 #### <script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/nromanetti" data-format="hover"></script> Nicolas Romanetti
 
