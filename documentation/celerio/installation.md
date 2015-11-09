@@ -92,7 +92,7 @@ For this reason, you must declare this repository in your Maven `~/.m2/settings.
             </pluginRepositories>
         </profile>
         <!-- ... -->
-    <profiles>
+    </profiles>
     <!-- ... -->
 </settings>
 {% endhighlight %}
