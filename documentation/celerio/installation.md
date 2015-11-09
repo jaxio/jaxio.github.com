@@ -61,9 +61,7 @@ For this reason, you must declare this repository in your Maven `~/.m2/settings.
 <settings xmlns="http://maven.apache.org/POM/4.0.0"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
           xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-    <!-- ... -->
     <profiles>
-        <!-- ... -->
         <profile>
             <id>celerio</id>
             <repositories>
@@ -91,9 +89,7 @@ For this reason, you must declare this repository in your Maven `~/.m2/settings.
                 </pluginRepository>
             </pluginRepositories>
         </profile>
-        <!-- ... -->
     </profiles>
-    <!-- ... -->
 </settings>
 {% endhighlight %}
 
