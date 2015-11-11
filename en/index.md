@@ -46,20 +46,26 @@ $('.carousel').carousel({
 <div class="span4">
 	<h1>Get Started</h1>
 	<p>
-	    To start using Celerio simply follow the <a href="/documentation/celerio/">documentation...</a>
+        Follow our doc to generate in a few minutes your <a href="/documentation/celerio/installation.html">1st projet with Celerio...</a>
 	</p>
 </div>
 <div class="span4">
 	<h1>Contribute</h1>
 	<p>
-	    Open Source <a href="/documentation/celerio/templates.html#learn-by-example">Code generation templates...</a>
-	</p></div>
+	    Code generation templates are Open Source (included by default with Celerio)
+	     <ul>
+	        <li><a href="https://github.com/jaxio/pack-backend-jpa">Pack JPA 2 / Hibernate + Lucene</a></li>
+	        <li><a href="https://github.com/jaxio/pack-jsf2-spring-conversation">Pack JSF 2 + Spring</a></li>
+	     </ul>
+	     You may also <a href="/documentation/celerio/templates.html">write your own templates</a>.
+	</p>
+</div>
 <div class="span4">
 <h1>Use Cases</h1>
 	<p>
 	Celerio targets applications that use a relational database and whose database schema is close to the domain layer.
 	Celerio may be used for <a href="/documentation/celerio/introduction.html#when-to-use-celerio">
-	different use cases</a>
+	different use cases</a>.
 	</p>
 </div>
 </div>

@@ -46,13 +46,18 @@ $('.carousel').carousel({
 <div class="span4">
 	<h1>Utiliser Celerio</h1>
 	<p>
-	    Suivez la <a href="/documentation/celerio/">documentation...</a>
+        Suivez notre guide pour générer en quelques minutes vôtre <a href="/documentation/celerio/installation.html">1er projet avec Celerio...</a>
 	</p>
 </div>
 <div class="span4">
 	<h1>Contribuer</h1>
 	<p>
-	    <a href="/documentation/celerio/templates.html#learn-by-example">Templates de génération</a> open source...
+	    Templates de générations Open Source (incluses par défaut avec Celerio)
+	     <ul>
+	        <li><a href="https://github.com/jaxio/pack-backend-jpa">Pack JPA 2 / Hibernate + Lucene</a></li>
+	        <li><a href="https://github.com/jaxio/pack-jsf2-spring-conversation">Pack JSF 2 + Spring</a></li>
+	     </ul>
+	     Vous pouvez aussi <a href="/documentation/celerio/templates.html">écrire vos propres templates</a>.
 	</p>
 </div>
 <div class="span4">
