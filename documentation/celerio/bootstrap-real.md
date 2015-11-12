@@ -20,7 +20,7 @@ simplest one (named `empty`).
 
 	mvn -Pcelerio com.jaxio.celerio:bootstrap-maven-plugin:4.0.0:bootstrap
 
-To add new entities, simply edit the sample sql file that was generated in the `src/main/sql/h` folder
+To add new entities, simply edit the sample sql file that was generated in the `src/main/sql/h2` folder
 and re-run the command, in general:
 
     mvn -Pdb,metadata,gen generate-sources
