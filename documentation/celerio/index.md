@@ -13,7 +13,7 @@ Celerio is a code generator tool for data-driven application.
 1. [Introduction](introduction.html)
 2. [Installation](installation.html)
 3. [Bootstrap a sample project](bootstrap.html)
-4. [Bootstrap a real project](bootstrap.html)
+4. [Bootstrap a real project](bootstrap-real.html)
 5. [Database Reverse Engineering](extraction.html)
 6. [Code Generation](generation.html)
 7. [Delete Generated Files](delete-generated-files.html)
