@@ -48,24 +48,27 @@ We do not want you to execute that script by mistake since you are going to use 
 
 Open the generated pom.xml file and provide all the information to access your database instead of the
 sample H2 database:
+{% highlight xml %}
 
-        <!-- **** CHANGE THE PROPERTIES BELOW TO USE YOUR OWN DATABASE **** -->
-        <!-- **** DO NOT USE A PRODUCTION DATABASE **** -->
-        <jdbc.type>h2</jdbc.type><!-- see 'db' profile, it is used to find the sql script -->
+<!-- **** CHANGE THE PROPERTIES BELOW TO USE YOUR OWN DATABASE **** -->
+<!-- **** DO NOT USE A PRODUCTION DATABASE **** -->
+<jdbc.type>h2</jdbc.type><!-- see 'db' profile, it is used to find the sql script -->
 
-        <!-- h2 jdbc driver -->
-        <jdbc.groupId>com.h2database</jdbc.groupId>
-        <jdbc.artifactId>h2</jdbc.artifactId>
-        <jdbc.version>1.4.190</jdbc.version>
+<!-- h2 jdbc driver -->
+<jdbc.groupId>com.h2database</jdbc.groupId>
+<jdbc.artifactId>h2</jdbc.artifactId>
+<jdbc.version>1.4.190</jdbc.version>
 
-        <!-- h2 jdbc settings -->
-        <jdbc.driver>org.h2.Driver</jdbc.driver>
-        <jdbc.url>jdbc:h2:~/.h2/${database.name};MVCC=TRUE;FILE_LOCK=NO</jdbc.url>
-        <jdbc.user>${database.user}</jdbc.user>
-        <jdbc.password>${database.password}</jdbc.password>
-        <jdbc.catalog></jdbc.catalog>
-        <hibernate.dialect>org.hibernate.dialect.H2Dialect</hibernate.dialect>
-        <sql-maven-plugin.delimiter>;</sql-maven-plugin.delimiter>
+<!-- h2 jdbc settings -->
+<jdbc.driver>org.h2.Driver</jdbc.driver>
+<jdbc.url>jdbc:h2:~/.h2/${database.name};MVCC=TRUE;FILE_LOCK=NO</jdbc.url>
+<jdbc.user>${database.user}</jdbc.user>
+<jdbc.password>${database.password}</jdbc.password>
+<jdbc.catalog></jdbc.catalog>
+<hibernate.dialect>org.hibernate.dialect.H2Dialect</hibernate.dialect>
+<sql-maven-plugin.delimiter>;</sql-maven-plugin.delimiter>
+
+{% endhighlight %}
 
 **Tips:**
 
