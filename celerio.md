@@ -54,7 +54,7 @@ La figure ci-dessus illustre le fonctionnement de Celerio et donne un aperçu de
 	* Spécialisation des champs: champ de recherche, champ de formulaire, champ présent dans liste de résultats.
 * Templates de génération simples à développer grâce aux contextes Celerio accessibles depuis les templates.	
 * Détection des modifications apportées au code généré lors des regénérations
-* Intégration à Maven 2/3: Celerio est distribué par défaut sous forme de plugin Maven.
+* Intégration à Maven 3: Celerio est distribué par défaut sous forme de plugin Maven.
 
 
 ### Packs de templates de générations

@@ -38,7 +38,7 @@ Details of dbmetadata-maven-plugin
 
 ### Full name
 
-* name: com.jaxio.celerio:dbmetadata-maven-plugin:4.0.0
+* name: com.jaxio.celerio:dbmetadata-maven-plugin:4.0.2
 * goal: extract-metadata
 * maven phase: generate-sources
 

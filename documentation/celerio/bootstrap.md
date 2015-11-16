@@ -10,13 +10,10 @@ title: Celerio Guide - Bootstrap a sample project with Celerio
 Run the bootstrap wizard
 ------------------------
 
-Make sure you have defined the *celerio* profile in your settings.xml file
-[as explained here](installation.html#requirements-settings).
-
 Invoke the `bootstrap` goal of the `bootstrap-maven-plugin`.
 From a command line executes (it may take some time to download all the dependencies the first time you use it):
 
-	mvn -Pcelerio com.jaxio.celerio:bootstrap-maven-plugin:4.0.0:bootstrap
+	mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.2:bootstrap
 
 > **Note**
 >

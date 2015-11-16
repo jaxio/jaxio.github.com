@@ -43,7 +43,7 @@ Details of celerio-maven-plugin
 
 ### Full name
 
-* name: com.jaxio.celerio:celerio-maven-plugin:4.0.0
+* name: com.jaxio.celerio:celerio-maven-plugin:4.0.2
 * goal: generate
 * maven phase: generate-sources
 

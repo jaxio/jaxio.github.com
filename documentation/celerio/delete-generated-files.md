@@ -22,7 +22,7 @@ Plugin details
 
 ### Full name
 
-* name: com.jaxio.celerio:celerio-maven-plugin:4.0.0
+* name: com.jaxio.celerio:celerio-maven-plugin:4.0.2
 * goal: cleanGenerated
 * maven phase: clean
 

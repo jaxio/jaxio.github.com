@@ -52,13 +52,16 @@ $('.carousel').carousel({
 <div class="span4">
 	<h1>Contribute</h1>
 	<p>
-	    Code generation templates are Open Source (included by default with Celerio)
+	    Both Celerio and templates packs are Open Source:
 	     <ul>
+	        <li><a href="https://github.com/jaxio/celerio">Celerio</a></li>	     
 	        <li><a href="https://github.com/jaxio/pack-backend-jpa">Pack JPA 2 / Hibernate + Lucene</a></li>
 	        <li><a href="https://github.com/jaxio/pack-jsf2-spring-conversation">Pack JSF 2 + Spring</a></li>
 	     </ul>
-	     You may also <a href="/documentation/celerio/templates.html">write your own templates</a>.
 	</p>
+	<p>
+	    You may also <a href="/documentation/celerio/templates.html">write your own code generation templates </a>.
+	</p>	
 </div>
 <div class="span4">
 <h1>Use Cases</h1>

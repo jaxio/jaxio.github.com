@@ -2,9 +2,17 @@
 layout: refdoc
 title: Celerio Guide - Celerio Change Log
 ---
-[ << prev ](miscellaneous.html) [ index ](index.html) [ next >> ](celerio-license-agreement.html)
+[ << prev ](miscellaneous.html) [ index ](index.html)
 15. Celerio Change Log
 ======================
+
+### 4.0.2 (2015-11-16)
+
+We are pleased to announce that Celerio itself is now also Open Source.
+
+This release no longer require you to defined a celerio profile since Celerio is now on Maven Central.
+
+* Celerio on GitHub: [https://github.com/jaxio/pack-backend-jpa](https://github.com/jaxio/celerio)
 
 ### 4.0.0 (2015-11-09)
 

@@ -5,9 +5,10 @@ title: Celerio Guide
 
 Celerio Reference Guide
 =======================
-Current version: 4.0.0
+**Current version: 4.0.2**
 
-Celerio is a code generator tool for data-driven application.
+Celerio is a code generator tool for data-driven application.<br/>
+Celerio is licensed under the [Apache License V2.0](www.apache.org/licenses/LICENSE-2.0).
 
 
 1. [Introduction](introduction.html)
@@ -25,8 +26,16 @@ Celerio is a code generator tool for data-driven application.
 13. [Troubleshooting](troubleshooting.html)
 14. [Miscellaneous](miscellaneous.html)
 15. [Change logs](changelog.html)
-16. [License Agreement](celerio-license-agreement.html)
 
+
+Celerio uses the following [third party software](third-party-software-used-by-celerio.html)
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<hr/>
 *All copyright, confidential information, patents, design rights and all other 
 intellectual property rights of whatsoever nature contained herein are and 
 shall remain the sole and exclusive property of Jaxio SARL. The information 
