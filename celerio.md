@@ -29,10 +29,6 @@ d'autres templates de de générations peuvent être développées soit par vous
 
 ![great](/images/green-check.gif) Il est important de noter que `Celerio n’est pas requis à l’exécution`.
 
-<img src="/images/celerio/celerio-overview.png" width="100%"/>
-
-La figure ci-dessus illustre le fonctionnement de Celerio et donne un aperçu des couches générées par les packs de templates 'Backend' et 'JSF2'.
-
 ### Principales fonctionnalités
 
 * Reverse engineering base de données
@@ -60,6 +56,12 @@ La figure ci-dessus illustre le fonctionnement de Celerio et donne un aperçu de
 ### Packs de templates de générations
 
 Jaxio fournit en Open Source, 2 packs de templates de génération.
+
+La figure ci-dessous illustre le fonctionnement de Celerio et donne un aperçu des couches générées par les packs de templates 'Backend' et 'JSF2'.
+
+<img src="/images/celerio/celerio-overview.png" width="100%"/>
+
+
 
 #### Pack 'Backend'
 

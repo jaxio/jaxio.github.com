@@ -7,26 +7,21 @@ title: Celerio , a code generation tool for data-oriented application written in
 
 Celerio is a code generator tool for data-oriented application.
 
-![great](/images/green-check.gif) Celerio uses as input the entity-relationship model used by all relational databases. 
+![great](/images/green-check.gif) Celerio uses as input the entity-relationship model used by all **relational databases**. 
 This model is present in production and most developers understand it.
-To obtain this model, Celerio connects to your database and performs a "reverse engineering" of your 
-database schema. Celerio supports Oracle, My Sql, Postgres, DB2, etc.
+To obtain this model, Celerio connects to your database and performs a **reverse engineering of your 
+database schema**. Celerio supports Oracle, My Sql, Postgres, DB2, etc.
 
-![great](/images/green-check.gif) The model can be augmented using a configuration file. 
-You may for example configure inheritance, rename some variables, declare some bi-directional associations, etc.
+![great](/images/green-check.gif) The model can be augmented using a **configuration file**. 
+You may for example **configure inheritance**, rename some variables, declare some **bi-directional associations**, etc.
 Then Celerio executes code generation templates written in Velocity
 
-![great](/images/green-check.gif) Celerio comes with code generation templates organized 
+![great](/images/green-check.gif) Celerio comes with **ready-to-use code generation templates** organized 
 into templates packs ('Backend' pack', 'JSF 2' pack, etc...). 
 These templates address most use cases of data-oriented applications.
 
-The code that Celerio generates leverages the best and latest Open Source technologies and standards and follows the best practices.
-
-Of course Celerio is not required at Runtime.
-
-Here is a high level overview of Celerio
-
-<img src="/images/celerio/celerio-overview-en.png" width="100%"/>
+![great](/images/green-check.gif) You can of course **write your own generation templates**, 
+using existing one as source of inspiration
 
 ### Celerio Main features
 
@@ -50,13 +45,21 @@ Here is a high level overview of Celerio
 	* Labels for fields
 	* Field visibility in search form, edit form, and search results tables
 	* etc.
-* Write your own generation templates, using existing one as source of inspiration
 * Detect and preserve code modification across regeneration 
 * Integrate with Maven 2/3: Celerio comes as a Maven plugin. No IDE required!
 
 ### Code Generation Templates Packs
 
 Jaxio provides these templates packs by default
+
+The code that gets generated leverages the best and latest Open Source technologies and standards and follows the best practices.
+
+Of course Celerio is not required at Runtime.
+
+Here is a high level overview of Celerio and the generated code
+
+<img src="/images/celerio/celerio-overview-en.png" width="100%"/>
+
 
 #### 'Backend' pack
 

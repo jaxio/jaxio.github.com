@@ -52,11 +52,12 @@ $('.carousel').carousel({
 <div class="span4">
 	<h1>Contribute</h1>
 	<p>
-	    Both Celerio and templates packs are Open Source:
+	    Celerio, templates packs and sample projects are Open Source:
 	     <ul>
-	        <li><a href="https://github.com/jaxio/celerio">Celerio</a></li>	     
+	        <li><a href="https://github.com/jaxio/celerio">Celerio</a> generator</li>	     
 	        <li><a href="https://github.com/jaxio/pack-backend-jpa">Pack JPA 2 / Hibernate + Lucene</a></li>
 	        <li><a href="https://github.com/jaxio/pack-jsf2-spring-conversation">Pack JSF 2 + Spring</a></li>
+	        <li><a href="https://github.com/jaxio/javaee-lab">Advanced Java EE 7 app with Celerio</a></li>
 	     </ul>
 	</p>
 	<p>

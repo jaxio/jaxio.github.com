@@ -19,10 +19,14 @@ Pour en savoir plus, consultez la [documentation](/documentation/celerio).
 
 Le code source de Celerio est sur [GitHub](https://github.com/jaxio/celerio).
 
-Les templates de génération sont également Open Source. 
+Les templates de génération sont également Open Source:
 
 * backend: [https://github.com/jaxio/pack-backend-jpa](https://github.com/jaxio/pack-backend-jpa)
 * frontend: [https://github.com/jaxio/pack-jsf2-spring-conversation](https://github.com/jaxio/pack-jsf2-spring-conversation)
+
+D'autres packs sont en cours de développement:
+
+* App Java EE 7 complète avec Celerio: [https://github.com/jaxio/javaee-lab](https://github.com/jaxio/javaee-lab)
 
 Nous comptons ajouter des packs prochainement (Angularjs 2 etc...)
 
