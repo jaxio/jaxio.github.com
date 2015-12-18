@@ -50,15 +50,27 @@ $('.carousel').carousel({
 	</p>
 </div>
 <div class="span4">
-	<h1>Contribuer</h1>
+	<h1>Open Source</h1>
 	<p>
-	     Celerio et les packs de templates sont Open Source:
+	     Celerio:
 	     <ul>
-	        <li>Générateur <a href="https://github.com/jaxio/celerio">Celerio</a></li>	     
-	        <li><a href="https://github.com/jaxio/pack-backend-jpa">Pack JPA 2 / Hibernate + Lucene</a></li>
+	        <li><a href="https://github.com/jaxio/celerio">Celerio</a></li>	     
+         </ul>
+	     Template Packs:
+	     <ul>
+	        <li><a href="https://github.com/jaxio/celerio">Celerio Core Engine</a></li>	     
+	        <li><a href="https://github.com/jaxio/pack-backend-jpa">Pack JPA 2 / Hibernate + Lucene + Spring</a></li>
 	        <li><a href="https://github.com/jaxio/pack-jsf2-spring-conversation">Pack JSF 2 + Spring</a></li>
-	        <li><a href="https://github.com/jaxio/javaee-lab">Projet Java EE 7 avec Celerio</a></li>
+         </ul>
+         Template Packs à venir:
+         <ul>
+	        <li><a href="https://github.com/jaxio/javaee-lab">Web App Java EE 7</a> (No Spring Inside)</li>
+	        <li><a href="https://github.com/jaxio/angular-lab">Web App Angular JS + Spring Boot</a></li>
 	     </ul>
+	     Projets associés:
+         <ul>
+	        <li><a href="https://github.com/jaxio/jpa-query-by-example">JPA Query By Example (avec Spring)</a></li>
+         </ul>
 	</p>
 	<p>
         Vous pouvez aussi <a href="/documentation/celerio/templates.html">écrire vos templates</a>.

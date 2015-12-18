@@ -50,14 +50,27 @@ $('.carousel').carousel({
 	</p>
 </div>
 <div class="span4">
-	<h1>Contribute</h1>
+	<h1>Open Source</h1>
 	<p>
-	    Celerio, templates packs and sample projects are Open Source:
+	    Celerio:
 	     <ul>
-	        <li><a href="https://github.com/jaxio/celerio">Celerio</a> generator</li>	     
-	        <li><a href="https://github.com/jaxio/pack-backend-jpa">Pack JPA 2 / Hibernate + Lucene</a></li>
+	        <li><a href="https://github.com/jaxio/celerio">Celerio</a></li>	     
+	     </ul>
+	     Template packs (released):
+	     <ul>
+	        <li><a href="https://github.com/jaxio/pack-backend-jpa">Pack JPA 2 / Hibernate + Lucene + Spring</a></li>
 	        <li><a href="https://github.com/jaxio/pack-jsf2-spring-conversation">Pack JSF 2 + Spring</a></li>
-	        <li><a href="https://github.com/jaxio/javaee-lab">Advanced Java EE 7 app with Celerio</a></li>
+	     </ul>
+
+	     Upcoming Template packs (in progress):
+	     <ul>
+	        <li><a href="https://github.com/jaxio/javaee-lab">Java EE 7 Web App (No Spring Inside)</a></li>
+	        <li><a href="https://github.com/jaxio/angular-lab">AngularJS + Spring Boot Web App</a></li>
+	     </ul>
+
+	     Related projects:
+	     <ul>
+	        <li><a href="https://github.com/jaxio/jpa-query-by-example">JPA Query By Example API</a></li>
 	     </ul>
 	</p>
 	<p>
