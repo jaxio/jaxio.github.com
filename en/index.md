@@ -62,9 +62,9 @@ $('.carousel').carousel({
 	        <li><a href="https://github.com/jaxio/pack-jsf2-spring-conversation">Pack JSF 2 + Spring</a></li>
 	     </ul>
 
-	     Upcoming Template packs (in progress):
+	     Upcoming Template packs:
 	     <ul>
-	        <li><a href="https://github.com/jaxio/javaee-lab">Java EE 7 Web App (No Spring Inside)</a></li>
+	        <li><a href="https://github.com/jaxio/javaee-lab">Java EE 7 Web App</a> (No Spring Inside)</li>
 	        <li><a href="https://github.com/jaxio/angular-lab">AngularJS + Spring Boot Web App</a></li>
 	     </ul>
 
