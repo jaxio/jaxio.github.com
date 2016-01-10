@@ -11,11 +11,18 @@ date: 2012-05-29
 
 # Vidéo de l'university Introduction à Cassandra (Devoxx France 2012)
 
-Voici la vidéo tant attendue (approx 3h en tout):
+Voici les vidéos tant attendues (approx 3h en tout):
 
 * <a href="http://www.parleys.com/#st=5&id=3260&sl=0">Introduction à Cassandra part 1/3</a>
 * <a href="http://www.parleys.com/#st=5&id=3247&sl=0">Introduction à Cassandra part 2/3</a>
 * <a href="http://www.parleys.com/#st=5&id=3261&sl=0">Introduction à Cassandra part 3/3</a>
+
+Les vidéos ci-dessus sont maintenant disponibles gratuitement sur YouTube:
+
+* <a href="https://www.youtube.com/watch?v=2zBY4OquaOg">Introduction à Cassandra part 1/3</a>
+* <a href="https://www.youtube.com/watch?v=FlPH78xaFMY">Introduction à Cassandra part 2/3</a>
+* <a href="https://www.youtube.com/watch?v=ZrmzDMXoe2o">Introduction à Cassandra part 3/3</a>
+
 
 Voici les slides qui vont avec:
 
