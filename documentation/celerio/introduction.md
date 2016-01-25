@@ -68,8 +68,9 @@ The generation templates that Celerio executes are grouped into jar files called
 
 Jaxio provides some Open Source template packs, but again, you can write your own:
 
-* backend templates: [https://github.com/jaxio/pack-backend-jpa](https://github.com/jaxio/pack-backend-jpa)
-* frontend templates: [https://github.com/jaxio/pack-jsf2-spring-conversation](https://github.com/jaxio/pack-jsf2-spring-conversation)
+* pure Java EE 7 (backend + frontend, without Spring): [https://github.com/jaxio/javaee-lab](https://github.com/jaxio/javaee-lab)
+* backend templates (with Spring): [https://github.com/jaxio/pack-backend-jpa](https://github.com/jaxio/pack-backend-jpa)
+* frontend templates (with Spring): [https://github.com/jaxio/pack-jsf2-spring-conversation](https://github.com/jaxio/pack-jsf2-spring-conversation)
 
 Celerio loads all the template packs found on the classpath, so make sure you add them as jar dependencies when
 executing Celerio.

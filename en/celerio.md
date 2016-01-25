@@ -60,8 +60,34 @@ Here is a high level overview of Celerio and the generated code
 
 <img src="/images/celerio/celerio-overview-en.png" width="100%"/>
 
+#### 'Java EE 7 webapp' (backend and frontend, without Spring)
 
-#### 'Backend' pack
+Sources: [https://github.com/jaxio/javaee-lab](https://github.com/jaxio/javaee-lab)
+
+* JPA2 entities (Hibernate)
+	* Supports many-to-one, one-to-many, one-to-one, one-to-one inverse, many-to-many, many-to-many inverse
+	* Inheritance
+	* Bean Validation
+	* Optimistic Locking
+	* Date formatting
+	* 2d level cache
+	* Support main java type mapping (BigInteger, BigDecimal, Integer, String, etc...)
+	* Generate helper methods for files (Blob)
+* DAOs and services
+	* Search by example with first level associated entities
+	* Pagination
+	* Named-query
+	* Leverage generics
+	* Transactions (using @javax.transaction.Transactional)
+	* Hibernate Search
+* Generate advanced CRUD features for all entities
+* View generation
+	* Uses facelets
+	* Uses PrimeFaces
+* Shiro ready
+* etc.
+
+#### 'Backend' pack (with Spring)
 
 Sources: [https://github.com/jaxio/pack-backend-jpa](https://github.com/jaxio/pack-backend-jpa)
 
@@ -84,7 +110,7 @@ Sources: [https://github.com/jaxio/pack-backend-jpa](https://github.com/jaxio/pa
 * Generate Unit tests
 * etc.
 
-#### 'JSF 2 & PrimeFaces' Pack
+#### 'JSF 2 & PrimeFaces' Pack (with Spring)
 
 Sources: [https://github.com/jaxio/pack-jsf2-spring-conversation](https://github.com/jaxio/pack-jsf2-spring-conversation)
 

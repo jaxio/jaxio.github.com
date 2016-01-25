@@ -6,6 +6,19 @@ title: Celerio Guide - Celerio Change Log
 15. Celerio Change Log
 ======================
 
+### 4.0.4 (2016-01-25)
+
+Introduce a new pack that allows you to generate a full blown JavaEE 7 web application (without Spring).
+It runs OK on WildFly 10. The source code for the templates is here:
+
+* [https://github.com/jaxio/javaee-lab](https://github.com/jaxio/javaee-labà)
+
+Fix few bugs:
+
+* [Issue with Oracle special table DR$... ](https://github.com/jaxio/celerio/issues/2)
+* [Issue with allocationSize and Sequence config](https://github.com/jaxio/pack-backend-jpa/issues/2)
+
+
 ### 4.0.2 (2015-11-16)
 
 We are pleased to announce that Celerio itself is now also Open Source.

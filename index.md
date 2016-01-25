@@ -58,12 +58,12 @@ $('.carousel').carousel({
          </ul>
 	     Template Packs:
 	     <ul>
+	        <li><a href="https://github.com/jaxio/javaee-lab">Web App Java EE 7</a> (No Spring Inside)</li>
 	        <li><a href="https://github.com/jaxio/pack-backend-jpa">Pack JPA 2 / Hibernate + Lucene + Spring</a></li>
 	        <li><a href="https://github.com/jaxio/pack-jsf2-spring-conversation">Pack JSF 2 + Spring</a></li>
          </ul>
          Template Packs à venir:
          <ul>
-	        <li><a href="https://github.com/jaxio/javaee-lab">Web App Java EE 7</a> (No Spring Inside)</li>
 	        <li><a href="https://github.com/jaxio/angular-lab">Web App Angular JS + Spring Boot</a></li>
 	     </ul>
 	     Projets associés:
