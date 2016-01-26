@@ -11,7 +11,7 @@ title: Celerio Guide - Celerio Change Log
 Introduce a new pack that allows you to generate a full blown JavaEE 7 web application (without Spring).
 It runs OK on WildFly 10. The code generation templates source code are here (part of Celerio distrib):
 
-* [https://github.com/jaxio/javaee-lab](https://github.com/jaxio/javaee-labà)
+* [https://github.com/jaxio/javaee-lab](https://github.com/jaxio/javaee-lab)
 
 Fix few bugs:
 
