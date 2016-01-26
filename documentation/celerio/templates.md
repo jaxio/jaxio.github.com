@@ -83,7 +83,7 @@ The project must have the following structure:
 	   |- main
 	          |- resources
 	                      |- META-INF
-	                      |          |- celerio.txt
+	                      |          |- celerio-pack.xml
 	                      |
 	                      |- celerio
 	                                |- bootstrap
@@ -93,16 +93,22 @@ The project must have the following structure:
 	                                |- pack-the-name-of-the-pack
 	                                                          |- **/yourtemplate.e.vm.java
 
-The celerio.txt file contains some meta information that Celerio engine and the Celerio bootstrap-maven-plugin use.
-Here is a celerio.txt file example:
+The `celerio-pack.xml` file contains some meta information that Celerio engine and the Celerio `bootstrap-maven-plugin` use.
+Here is a `celerio-pack.xml` file example:
 
-	packName=pack-the-name-of-the-pack
-	packDescription=Java EE backend pack: almost pure JPA 2 with Hibernate 4. No Spring at all. CDI.
-	packDescription2=Some more info
-	packCommand=mvn -Ph2,db,metadata,gen test
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<celerioPack xmlns="http://www.jaxio.com/schema/celerio">
+    <packName value="pack-javaee7-backend"/>
+    <packDescription value="Java EE 7 backend relying on CDI, Hibernate, Hibernate Search and Lucene"/>
+    <packDescription2 value="Generates entities, meta model, repositories to access entities etc. Used by front-end packs."/>
+    <packCommand value="mvn -Pdb,metadata,gen test"/>
+    <packCommandHelp value=""/>
+    <projectLink value="https://github.com/jaxio/javaee-lab"/>
+</celerioPack>
+```
 
 It is important that the packName starts with the prefix `pack-`.
-
 
 <a name="template-name-conventions"></a>
 Template name conventions
