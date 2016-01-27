@@ -9,7 +9,7 @@ date: 2015-11-16
 
 Jaxio est heureux d'annoncer que Celerio 4 notre générateur de code est désormais Open Source (Licence Apache v2).
 
-Pour générer un projet d'exemple à partir d'une base de données d'exemple il suffit de lancer la commande:
+Pour générer un projet à partir d'une base de données d'exemple il suffit de lancer la commande:
 
     mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.4:bootstrap
 
