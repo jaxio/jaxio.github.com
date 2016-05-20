@@ -65,6 +65,7 @@ $('.carousel').carousel({
 
 	     Upcoming Template packs:
 	     <ul>
+	        <li><a href="https://github.com/jaxio/celerio-angular-quickstart">Web App Angular 2 + PrimeNG + Spring Boot</a></li>
 	        <li><a href="https://github.com/jaxio/angular-lab">AngularJS + Spring Boot Web App</a></li>
 	     </ul>
 
