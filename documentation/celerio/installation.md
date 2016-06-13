@@ -59,7 +59,7 @@ Celerio
 
 Type the following command in a console:
 
-    mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.4:bootstrap
+    mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.5:bootstrap
 
 Then follow the instructions in [Bootstrapping a project with Celerio](bootstrap.html).
 

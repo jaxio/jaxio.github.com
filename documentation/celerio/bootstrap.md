@@ -13,7 +13,7 @@ Run the bootstrap wizard
 Invoke the `bootstrap` goal of the `bootstrap-maven-plugin`.
 From a command line executes (it may take some time to download all the dependencies the first time you use it):
 
-	mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.4:bootstrap
+	mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.5:bootstrap
 
 > **Note**
 >
@@ -76,7 +76,7 @@ Get familiarized with the various maven profiles
 The `-P` option stands for *profile*. In the above command, we activate:
 
 * `db` profile to create a new database,
-* `metadata` profile to reverse it
+* `metadata` profile to reverse the database schema,
 * `gen` profile to generate the corresponding source code.
 
 All these profiles are declared in the main `pom.xml` file. The `jetty:run` starts an embedded web server.
