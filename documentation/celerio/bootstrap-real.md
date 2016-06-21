@@ -5,11 +5,9 @@ title: Celerio Guide - Bootstrapping a real project with Celerio
 [ << prev ](bootstrap.html) [ index ](index.html) [ next >> ](extraction.html)
 
 
-4. Bootstrap a real project with Celerio
-========================================
+# 4. Bootstrap a real project with Celerio
 
-Create a new project (no existing database case)
-------------------------------------------------
+## Create a new project (no existing database case)
 
 If you want to create a new project using Celerio, and you have no database yet, simply follow the wizard
 as explained in the [previous chapter](bootstrap.html). When you are asked to select a sample database schema, select the
@@ -22,8 +20,7 @@ and re-run the command, in general:
 
     mvn -Pdb,metadata,gen generate-sources
 
-Create a new project (from an existing database case)
------------------------------------------------------
+## Create a new project (from an existing database case)
 
 First of all, **DO NOT USE A PRODUCTION DATABASE** You could loose some data.
 

@@ -4,8 +4,8 @@ title: Celerio Guide - Configuration
 ---
 
 [ << prev ](configuration-file.html) [ index ](index.html) [ next >> ](templates.html)
-11. Celerio Configuration
-=========================
+
+# 11. Celerio Configuration
 
 A thorough configuration file example is provided when you create a project out of the sample H2 database that we provide.
 The file is located under `src/main/config/celerio-maven-plugin/celerio-maven-plugin.xml`.
@@ -15,12 +15,12 @@ For example, you may want to rename some variables, make some associations bidir
 
 Here are the main configuration points:
 
-* [Inline documentation through XSD](#xsd)
-* [Entity ID](#entity_id)
-	* [Use a SEQUENCE per TABLE](#seq_per_table)
-	* [Use a custom Id generator](#cust_id_generator)
-* [Entity and property names](#naming)
-	* [Underscore '_' enables Java camel case syntax](#conventions-camel-case-underscore)
+* [Inline documentation through XSD](#inline-documentation-through-xsd)
+* [Entity ID](#entity-id)
+	* [Use a SEQUENCE per TABLE](#use-a-sequence-per-table)
+	* [Use a custom Id generator](#use-a-custom-id-generator)
+* [Entity and property names](#entity-and-property-names)
+	* [Underscore '_' enables Java camel case syntax](#underscore-_-enables-java-camel-case-syntax)
 	* [Native camel case support](#conventions-camel-case-native)
 	* [Force an entity name](#entity_name)
 	* [Force a property name](#property_name)
@@ -46,7 +46,6 @@ Here are the main configuration points:
 	* [Joined strategy](#inheritance-joined)  
 	* [Table per class strategy](#inheritance-table-per-class)  
 
-<a name="xsd"></a>
 ## Inline documentation through XSD
 Before editing your configuration file, make sure that Eclipse displays
 the documentation present in the `celerio.xsd` file and that it suggests
@@ -56,13 +55,11 @@ the help of the XSD documentation.
 ![Tag completion and documentation under
 Eclipse](images/celerio-eclipse-xsd-completion.png)
 
-<a name="entity_id"></a>
 ## Entity ID
 
 If you rely on conventions, you do not need to configure anything
 regarding Ids. These examples are for advanced usage.
 
-<a name="seq_per_table"></a>
 ### Use a SEQUENCE per TABLE
 
 In case you use a sequence per table to generate your primary key
@@ -97,7 +94,6 @@ You can configure globally the sequence name pattern
 </sequences>
 {% endhighlight %}
 
-<a name="cust_id_generator"></a>
 ### Use a custom Id generator
 
 In certain cases, generally when you work with legacy databases, you may
@@ -136,7 +132,6 @@ public Integer getAddressId() {
 <a name="naming"></a>
 ## Entity and property names
 
-<a name="conventions-camel-case-underscore"></a>
 ### Underscore '_' enables Java camel case syntax
 
 'Camel Case' syntax is standard Java code convention. When Celerio

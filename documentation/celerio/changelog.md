@@ -3,8 +3,8 @@ layout: refdoc
 title: Celerio Guide - Celerio Change Log
 ---
 [ << prev ](miscellaneous.html) [ index ](index.html)
-15. Celerio Change Log
-======================
+
+# 15. Celerio Change Log
 
 ### 4.0.4 (2016-01-25)
 
