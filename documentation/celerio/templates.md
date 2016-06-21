@@ -4,7 +4,7 @@ title: Celerio Guide - Writing templates
 ---
 [ << prev ](configuration.html) [ index ](index.html) [ next >> ](troubleshooting.html)
 12. Writing Celerio Templates
-=========================
+=============================
 
 * [Introduction](#intro)
 * [Learn by example](#learn-by-example)
