@@ -21,7 +21,7 @@ Here are the main configuration points:
 	* [Use a custom Id generator](#use-a-custom-id-generator)
 * [Entity and property names](#entity-and-property-names)
 	* [Underscore '_' enables Java camel case syntax](#underscore--enables-java-camel-case-syntax)
-	* [Native camel case support](#conventions-camel-case-native)
+	* [Native camel case support](#native-camel-case-support)
 	* [Force an entity name](#force-an-entity-name)
 	* [Force a property name](#force-a-property-name)
 	* [Advanced property name calculation](#advanced-property-name-calculation)
@@ -302,7 +302,7 @@ can add the following mapping rule:
 {% endhighlight %}
 
 
-## Enum
+## Enum Mapping
 
 To map a column to an Java Enum using the `@Enumerated` value, see:
 
