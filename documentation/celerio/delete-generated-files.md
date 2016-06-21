@@ -3,11 +3,10 @@ layout: refdoc
 title: Celerio Guide - Delete Generated Files
 ---
 [ << prev ](generation.html) [ index ](index.html) [ next >> ](modification.html)
-7. Delete Generated Files
-=========================
 
-Principle
----------
+# 7. Delete Generated Files
+
+## Principle
 
 Celerio tracks all the files it generates. For this purpose Celerio creates and maintains the file `.celerio/generated.xml`.
 Do not edit or delete this file!
@@ -17,8 +16,7 @@ You can delete the generated files using the `cleanGenerated goal` of the `celer
 By default, all generated files that have not been modified manually are deleted. You may configure this plugin to
 exclude certain files so they do not get deleted.
 
-Plugin details
---------------
+## Plugin details
 
 ### Full name
 
@@ -57,8 +55,7 @@ _example_:
 where you can skip plugins using profiles to fully adapt your build.
 
 
-Simple Usage
-------------
+## Simple Usage
 
 In your pom.xml create a dedicated profile to execute the plugin, then run:
 

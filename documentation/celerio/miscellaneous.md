@@ -3,13 +3,12 @@ layout: refdoc
 title: Celerio Guide - Configuration 
 ---
 [ << prev ](troubleshooting.html) [ index ](index.html) [ next >> ](changelog.html)
-14. Miscellaneous
-=================
 
-* [Install Oracle Jdbc driver](#install-oracle-jdbc-driver-maven-repository)
-* [Install DB2 Jdbc driver](#install-db2-jdbc-driver-maven-repository)
+# 14. Miscellaneous
 
-<a name="install-oracle-jdbc-driver-maven-repository"></a>
+* [Install Oracle Jdbc driver in your Maven local repository](#install-oracle-jdbc-driver-in-your-maven-local-repository)
+* [Generate a project from an IBM DB2 database schema](#generate-a-project-from-an-ibm-db2-database-schema)
+
 ## Install Oracle Jdbc driver in your Maven local repository
 
 If you are using Oracle, you must first install your Oracle JDBC driver in your local Maven repository.
@@ -69,8 +68,6 @@ You can now add the driver dependency in your pom.xml
 {% endhighlight %}
  
 You are now ready to reverse your Oracle database using Celerio and generate a complete Java/JPA/Hibernate/Spring project!
-
-<a name="install-db2-jdbc-driver-maven-repository"></a>
 
 ## Generate a project from an IBM DB2 database schema
 

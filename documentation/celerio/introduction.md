@@ -5,8 +5,7 @@ title: Celerio Guide - Introduction
 
 [ << prev ](index.html) [ index ](index.html) [ next >> ](installation.html)
 
-1. Introduction
-===============
+# 1. Introduction
 
 * [Celerio](#celerio)
     * [Database Schema Extractor tool](#celerio-db-schema-extractor)

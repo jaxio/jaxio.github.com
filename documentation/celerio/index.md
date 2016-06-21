@@ -3,8 +3,8 @@ layout: refdoc
 title: Celerio Guide 
 ---
 
-Celerio Reference Guide
-=======================
+# Celerio Reference Guide
+
 **Current version: 4.0.5**
 
 Celerio is a code generator tool for data-driven application.<br/>

@@ -3,11 +3,10 @@ layout: refdoc
 title: Celerio Guide - Troubleshooting
 ---
 [ << prev ](templates.html) [ index ](index.html) [ next >> ](miscellaneous.html)
-13. Troubleshooting
-===================
 
-Generated code does not compile
--------------------------------
+# 13. Troubleshooting
+
+## Generated code does not compile
 
 You may encounter a situation where the generated Java code does not
 compile. This could be due to a Celerio's bug. To avoid loosing too much
@@ -20,8 +19,7 @@ fixed in a next release of Celerio. As soon as the issue is fixed in
 Celerio, you may give the control back to Celerio by simply removing the
 file so Celerio can generate it as usual.
 
-Tomcat converts request parameters to 0, "" or true
----------------------------------------------------
+## Tomcat converts request parameters to 0, "" or true
 
 By default Tomcat coerces null values of types such as java.lang.String
 or java.lang.Boolean to `""` or `false`.
@@ -35,8 +33,7 @@ Please refer to [Tomcat System
 properties](http://tomcat.apache.org/tomcat-6.0-doc/config/systemprops.html)
 for more information.
 
-PermGen when running Jetty
---------------------------
+## PermGen when running Jetty
 
 Increase the memory:
 

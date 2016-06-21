@@ -3,16 +3,14 @@ layout: refdoc
 title: Celerio Guide - Database Schema extraction
 ---
 [ << prev ](bootstrap.html) [ index ](index.html) [ next >> ](generation.html)
-5. Database Schema extraction
-=============================
+
+# 5. Database Schema extraction
 
 * [Principle](#principle)
-* [Details of dbmetadata-maven-plugin](#details)
-* [Simple Usage](#usage)
+* [Details of dbmetadata-maven-plugin](#details-of-dbmetadata-maven-plugin)
+* [Simple Usage](#simple-usage)
 
-<a name="principle"></a>
-Principle
----------
+## Principle
 
 The database schema extraction is performed by the `extract-metadata` goal of the `dbmetadata-maven-plugin`,
 a Maven plugin provided by Jaxio.
@@ -32,9 +30,7 @@ dedicated to database extraction and activate it only when needed (i.e. each tim
 
 The `metadata.xml` file produced by this plugin is used by Celerio's generate goal.
 
-<a name="details"></a>
-Details of dbmetadata-maven-plugin
------------------------------------
+## Details of dbmetadata-maven-plugin
 
 ### Full name
 
@@ -106,9 +102,7 @@ This is a common pattern in Maven, where you can skip plugins using profiles to 
 * default value: `${basedir}/src/main/config/celerio-maven-plugin/metadata.xml`
 * description: The fully qualified name of the XML file created by this plugin.
 
-<a name="usage"></a>
-Simple Usage
-------------
+## Simple Usage
 
 In your pom.xml, declare as *properties* the necessary *expressions* that the plugin needs to connect to your database and reverse it.
 Then create a dedicated profile to execute the plugin.

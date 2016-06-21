@@ -3,8 +3,8 @@ layout: refdoc
 title: Celerio Guide - Code modification, regeneration and collisions
 ---
 [ << prev ](delete-generated-files.html) [ index ](index.html) [ next >> ](convention.html)
-8. Code modification, regeneration and collisions
-=================================================
+
+# 8. Code modification, regeneration and collisions
 
 ## Introduction
 
@@ -27,7 +27,6 @@ nature of the generated file.
     * [Merging manually the files](#collisions-manual-merge)
         * [Merging Tools](#collisions-merging-tools)
 
-<a name="manual-modification-detection"></a>
 ## Manual Modification Detection
 
 Celerio keeps track of all the file it generates in the file `.celerio/generated.xml`.
@@ -45,7 +44,6 @@ the file's timestamp.
 > If you delete the `.celerio/generated.xml file` Celerio has no way to determine if a file has been manually modified
 > or not and you may loose your modifications.
 
-<a name="java-files"></a>
 ## Java files
 
 By default, Celerio generates the main Java file under the directory

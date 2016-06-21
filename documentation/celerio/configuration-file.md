@@ -4,11 +4,10 @@ title: Celerio Guide - Configuration File
 ---
 
 [ << prev ](convention.html) [ index ](index.html) [ next >> ](configuration.html)
-10. Configuration File
-======================
 
-Main Configuration File
------------------------
+# 10. Configuration File
+
+## Main Configuration File
 
 The main Celerio configuration file is by convention located under
 `${basedir}/src/main/config/celerio-maven-plugin/celerio-maven-plugin.xml`.
@@ -16,8 +15,7 @@ This configuration file must respect the `celerio.xsd` schema present in the sam
 
 > *Note*: The bootstrap goal creates a configuration file that can be used as a starting point.
 
-Splitting the `entityConfigs` tag
----------------------------------
+## Splitting the `entityConfigs` tag
 
 The `entityConfigs` tag can be declared in the main Celerio
 configuration file AND/OR in sub-configuration files that are included
@@ -45,8 +43,7 @@ And here is the included file
 </celerio>
 {% endhighlight %}
 
-Template pack configuration file
---------------------------------
+## Template pack configuration file
 
 The template packs can be declared in the main Celerio configuration
 file OR in the file

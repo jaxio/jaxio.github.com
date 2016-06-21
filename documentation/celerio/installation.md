@@ -3,22 +3,19 @@ layout: refdoc
 title: Celerio Guide - Installation
 ---
 [ << prev ](introduction.html) [ index ](index.html) [ next >> ](bootstrap.html)
-2. Celerio Installation
-=======================
+
+# 2. Celerio Installation
 
 * [Requirements](#requirements)
-    * [JDK 1.8](#requirements-jdk)
-    * [Maven 3](#requirements-maven3)
+    * [JDK 1.8 or above](#jdk-18-or-above)
+    * [Maven 3](#maven-3)
 * [Celerio](#celerio)
-    * [Bootstrap a project with Celerio](#celerio-bootstrap)
+    * [Bootstrap a project with Celerio](#bootstrap-a-project-with-Celerio)
     * [Celerio branding](#celerio-branding)
 
 
-<a name="requirements"></a>
-Requirements
-------------
+## Requirements
 
-<a name="requirements-jdk"></a>
 ### JDK 1.8 or above
 
 Celerio requires at least JDK 1.8.0_25 to run.
@@ -33,7 +30,6 @@ You should get a result similar to this:
 
     javac 1.8.0_25
 
-<a name="requirements-maven3"></a>
 ### Maven 3
 
 Celerio is distributed as a Maven plugin. Celerio requires Maven 3.
@@ -50,11 +46,8 @@ You should get a result containing a line similar to this:
     Apache Maven 3.3.3 (7994120775791599e205a5524ec3e0dfe41d4a06; 2015-04-22T13:57:37+02:00)
 
 
-<a name="celerio"></a>
-Celerio
--------
+## Celerio
 
-<a name="celerio-bootstrap"></a>
 ### Bootstrap a project with Celerio
 
 Type the following command in a console:
@@ -63,8 +56,7 @@ Type the following command in a console:
 
 Then follow the instructions in [Bootstrapping a project with Celerio](bootstrap.html).
 
-<a name="celerio-branding"></a>
-### Branding file...
+### Celerio branding
 
 The first time Celerio is executed it creates the file `.celerio/branding.properties` in your home directory as well as
 `.celerio/logo.png`

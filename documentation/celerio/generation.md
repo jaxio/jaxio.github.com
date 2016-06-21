@@ -3,17 +3,15 @@ layout: refdoc
 title: Celerio Guide - Code Generation
 ---
 [ << prev ](extraction.html) [ index ](index.html) [ next >> ](delete-generated-files.html)
-6. Code generation
-==================
+
+# 6. Code generation
 
 * [Principle](#principle)
-* [Details of celerio-maven-plugin](#details)
-* [Simple Usage](#usage)
+* [Details of celerio-maven-plugin](#details-of-celerio-maven-plugin)
+* [Simple Usage](#simple-usage)
 * [Advanced: Where to generate](#advanced-where-to-generate)
 
-<a name="principle"></a>
-Principle
----------
+## Principle
 
 The code generation step is performed by the `generate` goal of the `celerio-maven-plugin`, a Maven plugin
 provided by Jaxio.
@@ -37,9 +35,7 @@ the simplest approach is to declare a Maven profile dedicated to code
 generation. As an example you can use the `pom.xml` that the Celerio
 `bootstrap` goal produces.
 
-<a name="details"></a>
-Details of celerio-maven-plugin
--------------------------------
+## Details of celerio-maven-plugin
 
 ### Full name
 
@@ -83,9 +79,8 @@ important benefit of this feature is to store the file in your source control, t
 * description: set the base folder for generated files. It could be for example set to `target` if you want to clearly separate the generated files 
 from all the manually written files.
 
-<a name="usage"></a>
-Simple Usage
-------------
+## Simple Usage
+
 In your pom.xml create a dedicated profile to execute the plugin, then run:
 
 	mvn -Pgen generate-sources
@@ -138,9 +133,7 @@ Here is the `gen` profile detail:
 	</profile>
 {% endhighlight %}
 
-<a name="advanced-where-to-generate"></a>
-Advanced: Where to generate ?
------------------------------
+## Advanced: Where to generate ?
 
 By default, the files that Celerio generate are rooted in the folder where your pom.xml resides (the Maven ${baseDir} folder).
 
