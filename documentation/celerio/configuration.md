@@ -20,21 +20,21 @@ Here are the main configuration points:
 	* [Use a SEQUENCE per TABLE](#use-a-sequence-per-table)
 	* [Use a custom Id generator](#use-a-custom-id-generator)
 * [Entity and property names](#entity-and-property-names)
-	* [Underscore '_' enables Java camel case syntax](#underscore-_-enables-java-camel-case-syntax)
+	* [Underscore '_' enables Java camel case syntax](#underscore--enables-java-camel-case-syntax)
 	* [Native camel case support](#conventions-camel-case-native)
-	* [Force an entity name](#entity_name)
-	* [Force a property name](#property_name)
-	* [Advanced property name calculation](#name_rule)
-* [Type Mapping](#type_mapping)
-	* [Force a type mapping locally](#force_mapping)
-	* [Number mapping customization](#rule_number_mapping)
-	* [Date mapping customization](#rule_date_mapping)               
-* [Enum Mapping](#enum)
-	* [Enum persisted as String](#enum-string)
-	* [Enum persisted as Integer](#enum-ordinal)
-	* [Advanced Enum mapping](#enum-custom)
+	* [Force an entity name](#force-an-entity-name)
+	* [Force a property name](#force-a-property-name)
+	* [Advanced property name calculation](#advanced-property-name-calculation)
+* [Type Mapping](#type-mapping)
+	* [Force a type mapping locally](#force-a-type-mapping-locally)
+	* [Number mapping customization](#number-mapping-customization)
+	* [Date mapping customization](#date-mapping-customization)               
+* [Enum Mapping](#enum-mapping)
+	* [Enum persisted as String](#enum-persisted-as-string)
+	* [Enum persisted as Integer](#enum-persisted-as-integer)
+	* [Advanced Enum mapping](#advanced-enum-mapping)
 * [Associations](#associations)  
-	* [@ManyToOne](#m2o)
+	* [@ManyToOne](#@manytoone)
 	* [@OneToMany](#o2m)
 	* [@ManyToOne and @OneToMany with composite foreign key](#cfk)
 	* [@OneToOne](#o2o)
@@ -129,7 +129,6 @@ public Integer getAddressId() {
 }          
 {% endhighlight %}
 
-<a name="naming"></a>
 ## Entity and property names
 
 ### Underscore '_' enables Java camel case syntax
@@ -145,7 +144,6 @@ class will be named `BookComment`; a variable holding `BookComment`
 instance will be named `bookComment` and a setter will be named
 `setBookComment`, etc.
 
-<a name="conventions-camel-case-native"></a>
 ### Native camel case support
 
 If your table's and/or Column use a camel case syntax and if the
@@ -162,7 +160,6 @@ Choosing explicit names for your tables and columns is thus very
 important as it improves your source code readability without the burden
 of relying on configuration.
 
-<a name="entity_name"></a>
 ### Force an entity name
 
 By default, an entity name is deduced from the Table name. To force the
@@ -175,7 +172,6 @@ entity name to a different value, use the `entityName` attribute of the
  </entityConfigs>
 {% endhighlight %}
 
-<a name="property_name"></a>
 ### Force a property name
 
 By default, a property name is deduced from the column name. To force
@@ -198,7 +194,6 @@ leads to:
 Date birthDate;
 {% endhighlight %}
 
-<a name="name_rule"></a>
 ### Advanced property name calculation
 
 By default Celerio calculates Java entity/field name based on the underlying table/column name.
@@ -229,13 +224,11 @@ In that case, assuming we have a table named `tbl_account`, the entity will be n
 
 Column names such as `XYZ_SOMETHING_MEANINGFUL` will give `sometingMeaningful` instead of `xyzSometingMeaningful`.
 
-<a name="type_mapping"></a>
 ## Type Mapping
 
 Celerio has some conventions regarding type mapping. You can change them
 either locally or globally using rules.
 
-<a name="force_mapping"></a>
 ### Force a type mapping locally
 
 You can force the mapped type using the `mappedType` attribute of the
@@ -252,7 +245,6 @@ would do:
  </entityConfigs>
 {% endhighlight %}
 
-<a name="rule_number_mapping"></a>
 ### Number mapping customization
 
 You can configure number mapping rules globally. For example, to map all
@@ -283,7 +275,6 @@ Double or BigDecimal you can do:
 Note that the `columnSizeMin` is inclusive and `columnSizeMax` is
 exclusive.
 
-<a name="rule_date_mapping"></a>               
 ### Date mapping customization
 
 You can configure date mapping rules globally. For example, to map all
@@ -311,7 +302,6 @@ can add the following mapping rule:
 {% endhighlight %}
 
 
-<a name="enum"></a>
 ## Enum
 
 To map a column to an Java Enum using the `@Enumerated` value, see:
@@ -324,7 +314,6 @@ the enum's name() or enum's ordinal() method, see:
 
 * [Advanced Enum mapping](#enum-custom) 
 
-<a name="enum-string"></a>
 ### Enum persisted as String
 In this example, the persisted value is the value returned by the enum's name() method.
 
@@ -388,7 +377,6 @@ public Civility getCivility() {
 }
 {% endhighlight %}
 
-<a name="enum-ordinal"></a>
 ### Enum persisted as Integer
 In this example, the persisted value is the value returned by the enum's ordinal() method.
 
@@ -431,7 +419,6 @@ public Civility getCivility() {
 }
 {% endhighlight %}
 
-<a name="enum-custom"></a>
 ### Advanced Enum mapping
 This mapping allows you to customize the persisted value instead of relying on the name() or ordinal() enum's method.
 
@@ -511,10 +498,8 @@ public Civility getCivility() {
 }
 {% endhighlight %}
 
-<a name="associations"></a>
 ## Associations
 
-<a name="m2o"></a>
 ### @ManyToOne
 
 By default, Celerio generates the code for a `@ManyToOne` association
@@ -576,7 +561,6 @@ was present by setting the `targetTableName` attribute of the
 <columnConfig columnName="address_id" targetTableName="ADDRESS"/>
 {% endhighlight %}
 
-<a name="o2m"></a>
 ### @OneToMany
 
 One to many association is configured on the 'many' side of the
@@ -641,7 +625,6 @@ The `oneToManyConfig` element also allows you to tune the JPA fetch type
 and the JPA cascade types. Please refer to the XSD for more information.
 
 
-<a name="cfk"></a>
 ### @ManyToOne and @OneToMany with composite foreign key
 
 By default, Celerio generates the code for a `@ManyToOne` association
@@ -652,7 +635,6 @@ The `manyToOneConfig` should be a child of the columnConfig corresponding to the
 As for regular @OneToMany, you can use the `oneToManyConfig` element to generate the inverse association. 
 Do not forget to set the `associationDirection` attribute of the `columnConfig` element to `BIDIRECTIONAL`
 
-<a name="o2o"></a>
 ### @OneToOne
 
 By default, Celerio generates the code for a `@OneToOne` association
@@ -682,7 +664,6 @@ will lead to
 Address myAddress;
 {% endhighlight %}
 
-<a name="io2o"></a>
 ### Inverse @OneToOne
 
 Inverse one to one association is for one to one association what one to
@@ -727,7 +708,6 @@ Address myAddress;
 Account owner;
 {% endhighlight %}
 
-<a name="m2m"></a>
 ### @ManyToMany
 
 Many to many association necessarily involves a join table. When Celerio
@@ -768,7 +748,6 @@ Which side of the @ManyToMany relation is marked as `inverse="true"` ?
 By convention, the side whose corresponding column's order is the highest on the 'middle table'.
 You can override this convention using the parent's columnConfig's 'inverse' attribute. 
 
-<a name="m2o-intermediate"></a>
 ### @ManyToOne and @OneToMany with an intermediate table
 
 *Since Celerio 3.0.101*
@@ -793,14 +772,12 @@ the `OneToManyConfig` element for the inverse association. For example:
 </entityConfig>
 {% endhighlight %}
 
-<a name="inheritance"></a>
 ## Inheritance
 
 By default Celerio does not try to guess any inheritance strategy.
 
 However, you can configure Celerio to take your inheritance strategy into account.
 
-<a name="inheritance-single-table"></a>
 ### Single table strategy inheritance
 
 The `SINGLE_TABLE` strategy maps all entities in the hierarchy to the same table.
@@ -841,7 +818,6 @@ Here is the corresponding `SINGLE_TABLE` inheritance configuration:
 </entityConfigs>
 {% endhighlight %}
 
-<a name="inheritance-joined"></a>
 ### Joined strategy inheritance 
 
 The `JOINED` strategy uses a different table for each entity in the hierarchy.
@@ -916,7 +892,6 @@ Here is the corresponding `JOINED` inheritance configuration:
 </entityConfigs>
 {% endhighlight %}
 
-<a name="inheritance-table-per-class"></a>
 ### Table per class strategy inheritance
 
 *This feature is not implemented* 
