@@ -42,9 +42,9 @@ Here are the main configuration points:
 	* [@ManyToMany](#manytomany)
 	* [@ManyToOne and @OneToMany with an intermediate table](#manytoone-and-onetomany-with-an-intermediate-table)
 * [Inheritance](#inheritance)  
-	* [Single table strategy](#single-table-strategy)  
-	* [Joined strategy](#joined-strategy)  
-	* [Table per class strategy](#table-per-class-strategy)  
+	* [Single table strategy inheritance](#single-table-strategy-inheritance)  
+	* [Joined strategy inheritance](#joined-strategy-inheritance)  
+	* [Table per class strategy inheritance](#table-per-class-strategy-inheritance)  
 
 ## Inline documentation through XSD
 Before editing your configuration file, make sure that Eclipse displays
