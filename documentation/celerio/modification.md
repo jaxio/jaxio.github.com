@@ -15,16 +15,16 @@ nature of the generated file.
 
 * [Manual Modification Detection](#manual-modification-detection)
 * [Java Files](#java-files)
-    * [Moving the file to ${baseDir}/src/main/java](#moving-to-java)
+    * [Moving the file to ${baseDir}/src/main/java](#moving-the-file-to-basedirsrcmainjava)
     * [Code modifications through Base inheritance](#code-modifications-through-base-inheritance)
-* [Other files (non-Java) when baseDir equals Celerio's outputDir](#non-java-files-same-dir)
+* [Other files (non-Java) when baseDir equals Celerio's outputDir](#other-files-non-java-when-basedir-equals-celerios-outputdir)
     * [Take ownership of a generated file](#take-ownership-of-a-generated-file)
-        * [Generation rule summary for non-java file (baseDir == outputDir)](#gen-rule-same-dir)
-    * [Other files (non-Java) when baseDir is different from Celerio's outputDir](#non-java-diff-dir)
-        * [Generation rule summary for non-java file (baseDir =/= outputDir)](#gen-rule-diff-dir)
+        * [Generation rule summary for non-java file (baseDir == outputDir)](#generation-rule-summary-for-non-java-file-basedir--outputdir)
+    * [Other files (non-Java) when baseDir is different from Celerio's outputDir](#other-files-non-java-when-basedir-is-different-from-celerios-outputdir)
+        * [Generation rule summary for non-java file (baseDir =/= outputDir)](#generation-rule-summary-for-non-java-file-basedir--outputdir-1)
 * [Collisions and Merging](#collisions-and-merging)
     * [Collision folder](#collision-folder)
-    * [Merging manually the files](#Merging-manually-the-files)
+    * [Merging manually the files](#merging-manually-the-files)
         * [Merging Tools](#merging-tools)
 
 ## Manual Modification Detection
@@ -39,7 +39,7 @@ Each time Celerio regenerates a file it checks first if the file has been modifi
 Note that if the generated file has the same content as the old one, Celerio does not regenerate it in order to preserve
 the file's timestamp.
 
-> ** Important **
+> **Important**
 > 
 > If you delete the `.celerio/generated.xml file` Celerio has no way to determine if a file has been manually modified
 > or not and you may loose your modifications.
