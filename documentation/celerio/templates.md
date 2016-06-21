@@ -106,7 +106,7 @@ It is important that the packName starts with the prefix `pack-`.
 
 There are several kinds of template:
 
-### Bootstrap templates
+### Bootstrap template
 
 A _bootstrap template_ is interpreted only when Celerio is run in _bootstrap mode_. The _bootstrap mode_ is active when
 you use the Celerio's `bootstrap-maven-plugin`.
@@ -129,7 +129,7 @@ Its name must have this form: `TemplateName.e.vm.ext` where:
 
 Example: `Controller.e.vm.java`
 
-### Per projet template
+### Per project template
 
 A **per project template** is interpreted one time per projet.
 Its name must have this form: `TemplateName.p.vm.ext` where:
