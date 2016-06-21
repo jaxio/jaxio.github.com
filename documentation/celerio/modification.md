@@ -16,16 +16,16 @@ nature of the generated file.
 * [Manual Modification Detection](#manual-modification-detection)
 * [Java Files](#java-files)
     * [Moving the file to ${baseDir}/src/main/java](#moving-to-java)
-    * [Code modifications through 'Base' inheritance](#inheritance)
+    * [Code modifications through Base inheritance](#code-modifications-through-base-inheritance)
 * [Other files (non-Java) when baseDir equals Celerio's outputDir](#non-java-files-same-dir)
-    * [Take ownership of a generated file](#take-ownership)
+    * [Take ownership of a generated file](#take-ownership-of-a-generated-file)
         * [Generation rule summary for non-java file (baseDir == outputDir)](#gen-rule-same-dir)
     * [Other files (non-Java) when baseDir is different from Celerio's outputDir](#non-java-diff-dir)
         * [Generation rule summary for non-java file (baseDir =/= outputDir)](#gen-rule-diff-dir)
-* [Collisions and Merging](#collisions-merging)
-    * [Collision folder](#collisions-folder)
-    * [Merging manually the files](#collisions-manual-merge)
-        * [Merging Tools](#collisions-merging-tools)
+* [Collisions and Merging](#collisions-and-merging)
+    * [Collision folder](#collision-folder)
+    * [Merging manually the files](#Merging-manually-the-files)
+        * [Merging Tools](#merging-tools)
 
 ## Manual Modification Detection
 
@@ -61,7 +61,6 @@ The second approach involves inheritance of a base class. Both approaches have p
 > In any case, you should avoid to modify directly the generated Java file
 > as you may loose your changes as soon as you regenerate the code.
 
-<a name="moving-to-java"></a>
 ### Moving the file to ${baseDir}/src/main/java
 
 Before modifying the generated Java file, move it to the `${baseDir}/src/main/java`
@@ -95,8 +94,7 @@ file. Hopefully, to help you in this task, Celerio generates the file in
 a dedicated collision folder under the `target` folder. Please refer to
 [Collisions and merging](#collisions-merging) section.
 
-<a name="inheritance"></a>
-### Code modifications through 'Base' inheritance
+### Code modifications through Base inheritance
 
 Celerio enables you to extend a generated Java class without modifying
 the generated Java code.
@@ -218,8 +216,6 @@ file, it deletes it to prevent class duplication.
 
 You can proceed by analogy to override other Java classes.
 
-
-<a name="non-java-files-same-dir"></a>
 ## Other files (non-Java) when baseDir equals Celerio's outputDir
 
 Ideally all generated files should be under a `generated` folder. In
@@ -237,7 +233,6 @@ Do not modify the generated flows, instead simply copy the files you need under
 By configuration, Spring Web Flow will first look up a flow by id in the
 `src/main/webapp/WEB-INF/flows` user's reserved folder.
 
-<a name="take-ownership"></a>
 ### Take ownership of a generated file
 
 The simplest way to tell Celerio to do not overwrite a generated file is to modify that file or to change its
@@ -250,7 +245,6 @@ Celerio generates it under the `target` folder. Please refer to [Collisions and 
 
 If you change your mind and want Celerio to generate the file again, simply remove the file and regenerate your code.
 
-<a name="gen-rule-same-dir"></a>
 #### Generation rule summary for non-java file (baseDir == outputDir)
 
 Before generating a non-java file, Celerio applies the following rules:
@@ -299,7 +293,6 @@ Before generating a non-java file, Celerio applies the following rules:
 	</tbody>
 </table>
 
-<a name="non-java-diff-dir"></a>
 ### Other files (non-Java) when baseDir is different from Celerio's outputDir
 
 In the case when baseDir is different from Celerio's outputDir, all is much simpler as
@@ -316,7 +309,6 @@ For example move:
 Once you re-run Celerio, it will detect the file under `${baseDir}` and therefore will no longer generate it in the `${celerio-maven-plugin.outputDir}`.
 Instead, it will generate it in the collision folder.  Please refer to [Collisions and merging](#collisions-merging) section.
 
-<a name="gen-rule-diff-dir"></a>
 #### Generation rule summary for non-java file (baseDir =/= outputDir)
 
 Before generating a non-java file, Celerio applies the following rules:
@@ -350,10 +342,8 @@ Before generating a non-java file, Celerio applies the following rules:
 </table>
 
 
-<a name="collisions-merging"></a>
 ## Collisions and Merging
 
-<a name="collisions-folder"></a>
 ### Collision folder
 
 When Celerio detects that a file which should be regenerated is manually modified, it does not overwrite your file.
@@ -365,7 +355,6 @@ the `target/celerio-maven-plugin/collisions` path prefix.
 So, whenever appropriate, Celerio generates the original file, under the expected path, in the collision
 folder `target/celerio-maven-plugin/collisions`
 
-<a name="collisions-manual-merge"></a>
 ### Merging manually the files
 
 To merge the files in conflict, you can use a tool such as WinMerge.
@@ -378,7 +367,6 @@ To do so, you just have to specify in WinMerge, your project root directory and 
 Then, you can keep track of changes you made and eventually merge some of the newly generated code into your
 existing file.
 
-<a name="collisions-merging-tools"></a>
 #### Merging Tools
 
 * [WinMerge](http://winmerge.org/)
