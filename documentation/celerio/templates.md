@@ -4,28 +4,25 @@ title: Celerio Guide - Writing templates
 ---
 [ << prev ](configuration.html) [ index ](index.html) [ next >> ](troubleshooting.html)
 
-12. Writing Celerio Templates
-=============================
+# 12. Writing Celerio Templates
 
-* [Introduction](#intro)
+* [Introduction](#introduction)
 * [Learn by example](#learn-by-example)
 * [Templates folder](#templates-folder)
-* [Create a templates pack](#create-templates-pack)
+* [Create a templates pack](#create-a-templates-pack)
 * [Template name conventions](#template-name-conventions)
 	* [Bootstrap template](#bootstrap-template)
-	* [Per entity template](#entity-template)
-	* [Per project template](#project-template)
-	* [Per enum template](#enum-template)
-	* [Per composite primary key template](#cpk-template)
+	* [Per entity template](#per-entity-template)
+	* [Per project template](#per-project-template)
+	* [Per enum template](#per-enum-template)
+	* [Per composite primary key template](#per-composite-primary-key-template)
 	* [Static files](#static-files)
 * [Template context](#template-context)
 * [Entity namers](#entity-namers)
-* [Create an entity namer](#create-entity-namer)
-* [Celerio SPI](#celerio-spi)
+* [Create an entity namer](#create-an-entity-namer)
+* [Celerio Service Provider Interface](#celerio-service-provider-interface)
 
-<a name="intro"></a>
-Introduction
-------------
+## Introduction
 
 Celerio code generation templates are written in [Velocity](http://velocity.apache.org/engine/releases/velocity-1.7/user-guide.html).
 
@@ -38,9 +35,7 @@ as a Celerio's dependency when running Celerio.
 
 New template packs can be written either by Jaxio's consultants or Celerio's end users.
 
-<a name="learn-by-example"></a>
-Learn by example
-----------------
+## Learn by example
 
 The simplest way to get started with Celerio templates is to modify existing templates.
 
@@ -54,10 +49,8 @@ We also have some template packs that are currently in development:
 
 * pure Spring + Angular: [https://github.com/jaxio/angular-lab](https://github.com/jaxio/angular-lab)
 
+## Templates folder
 
-<a name="templates-folder"></a>
-Templates folder
-----------------
 Before starting, update your Celerio configuration in order to specify your templates folder location.
 
 In `src/main/config/celerio-maven-plugin/celerio-templates-packs.xml` declare your Celerio template source folder using
@@ -72,9 +65,7 @@ the template pack element. For example:
 
 In the above example, Celerio considers any file present under 'src/main/celerio' and its subfolder as a Celerio template.
 
-<a name="create-templates-pack"></a>
-Create a templates pack
------------------------
+## Create a templates pack
 
 A template pack is simply a set of Celerio templates packaged in a jar file.
 The project must have the following structure:
@@ -111,13 +102,10 @@ Here is a `celerio-pack.xml` file example:
 
 It is important that the packName starts with the prefix `pack-`.
 
-<a name="template-name-conventions"></a>
-Template name conventions
--------------------------
+## Template name conventions
 
 There are several kinds of template:
 
-<a name="bootstrap-template"></a>
 ### Bootstrap templates
 
 A _bootstrap template_ is interpreted only when Celerio is run in _bootstrap mode_. The _bootstrap mode_ is active when
@@ -132,7 +120,6 @@ Its name must have this form: `TemplateName.boot.vm.ext` where:
 
 Example: `pom.boot.vm.xml`
 
-<a name="entity-template"></a>
 ### Per entity template
 
 A **per entity template** is interpreted for each entity.
@@ -142,7 +129,6 @@ Its name must have this form: `TemplateName.e.vm.ext` where:
 
 Example: `Controller.e.vm.java`
 
-<a name="project-template"></a>
 ### Per projet template
 
 A **per project template** is interpreted one time per projet.
@@ -152,7 +138,6 @@ Its name must have this form: `TemplateName.p.vm.ext` where:
 
 Example: `web.p.vm.xml`
 
-<a name="enum-template"></a>
 ### Per enum template
 
 A **per enum template** is interpreted for each enum.
@@ -162,7 +147,6 @@ Its name must have this form: `TemplateName.enum.vm.ext`
 
 Example: `EnumController.enum.vm.java`
 
-<a name="cpk-template"></a>
 ### Per composite primary key template
 
 A **per composite primary key template** is interpreted for each composite primary key.
@@ -172,22 +156,18 @@ Its name must have this form: `TemplateName.cpk.vm.ext` where:
 
 Example: `CompositePkBridge.cpk.vm.java`
 
-<a name="static-files"></a>
 ### Static files
 
 Static files are not interpreted, they are just copied as is by Celerio.
 
 Exemple: `afolder/img.gif` would be copied to `yourProjectRootFolder/afolder/img.gif`
 
-<a name="template-context"></a>
-Template context
-----------------
+## Template context
 
 The template context is the velocity execution context. It exposes your project metamodel and various facilities.
 
 Here is the list of object variables present in the template context:
 
-<a name="api-output"></a>
 ### output
 
 Full javadoc: [output - TemplateExcecution](/documentation/celerio-api/com/jaxio/celerio/template/TemplateExecution.html)
@@ -282,8 +262,7 @@ Full javadoc: [enum - EnumType](/documentation/celerio-api/com/jaxio/celerio/mod
 
 	public class $output.currentClass extends GenericEnumController<${enum.model.type}> { ...
 
-<a name="entity-namers"></a>
-### Entity's Namers
+### Entity Namers
 
 Full javadoc: [Namer](/documentation/celerio-api/com/jaxio/celerio/support/Namer.html)
 
@@ -328,7 +307,6 @@ By default Celerio has some built-in namers. Theses can be used from your entity
 * controller
 * etc..
 
-<a name="create-entity-namer"></a>
 ### Create an entity namer
 
 **Let's assume that:**
@@ -366,8 +344,7 @@ To do so, open the celerio-template-packs.xml file and add the following `celeri
 </packs>
 {% endhighlight %}
 
-<a name="celerio-spi"></a>
-### Celerio Service Provider Interface (SPI)
+### Celerio Service Provider Interface
 
 Celerio exposes the following SPIs:
 
