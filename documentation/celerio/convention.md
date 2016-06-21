@@ -14,28 +14,25 @@ convention, you can rely on Celerio to generate all the infrastructure
 code and configuration that will allow you to handle file upload and
 download in your web application, in an optimal way.
 
-* [Primary key conventions](#conventions-pk)
-	* [Numeric](#conventions-pk-numeric)
-	* [32 chars](#conventions-pk-32chars)
-	* [36 chars](#conventions-pk-36chars)
-	* [Other](#conventions-pk-other)
-* [Spring Security Integration](#conventions-spring-security-integration)
-	* [Account entity](#conventions-account-entity)
-	* [Role entity](#conventions-role-entity)
-* [ACCOUNT_ID column & Hibernate Filter](#conventions-hibernate-filter)
-* [Version column and optimistic locking](#conventions-version-optimistic-locking)
-* [Many to many and inverse attribute](#conventions-many-to-many-inverse-attribute)
-* [File Upload and Download](#conventions-file-download)
-* [Audit in entity](#conventions-audit-entity)
-* [Audit log table](#conventions-audit-table)
-* [Saved search](#conventions-saved-search)
+* [Primary key conventions](#primary-key-conventions)
+	* [Numerical Primary Keys](#numerical-primary-keys)
+	* [Primary Keys with 32 characters](#primary-keys-with-32-characters)
+	* [Primary Keys with 36 characters](#primary-Keys-with-36-characters)
+	* [Other Primary Keys](#other-primary-keys)
+* [Spring Security Integration](#spring-security-integration)
+	* [Account Entity](#account-entity)
+	* [Role entity](#role-entity)
+* [ACCOUNT_ID column & Hibernate Filter](#accountid-column--hibernate-filter)
+* [Version column and optimistic locking](#Version-column-and-optimistic-locking)
+* [Many to many and inverse attribute](#many-to-many-and-inverse-attribute)
+* [File Upload and Download](#file-upload-and-download)
+* [Audit in entity](#audit-in-entity)
+* [Audit log table](#audit-log-table)
+* [Saved search table](#saved-search-table)
 
 
-<a name="conventions-pk"></a>
-Primary key conventions
------------------------
+## Primary key conventions
 
-<a name="conventions-pk-numeric"></a>
 ### Numerical Primary Keys
 
 Each numerical primary key column is mapped with `@GeneratedValue` and
@@ -47,7 +44,6 @@ Each numerical primary key column is mapped with `@GeneratedValue` and
 > the sequence `hibernate_sequence`. Please refer to Hibernate
 > reference documentation for more advanced alternatives.
 
-<a name="conventions-pk-32chars"></a>
 ### Primary Keys with 32 characters
 
 By convention, for all primary keys that are `char(32)`, Celerio maps the
@@ -63,7 +59,6 @@ column with the following annotations
 
 As it uses Hibernate's `UUIDHexGenerator`, no sequence is needed for these primary keys.
 
-<a name="conventions-pk-36chars"></a>
 ### Primary Keys with 36 characters
 
 By convention, for all primary keys that are `char(36)`, Celerio maps the
@@ -79,7 +74,6 @@ column with the following annotations
 
 As it uses Hibernate's `UUIDGenerator`, no sequence is needed for these primary keys.
 
-<a name="conventions-pk-other"></a>
 ### Other Primary Keys
 
 For primary key that are `char(x)` where x is different from 32 or 36, Celerio
@@ -87,9 +81,7 @@ map the column with an `assigned` generator, which means you must
 provide manually the primary key value.
 
 
-<a name="conventions-spring-security-integration"></a>
-Spring Security Integration
----------------------------
+## Spring Security Integration
 
 The generated `UserDetailsServiceImpl` service is the link between the SpringSecurity's world
 and your user's credential information. As you expect, this class must know how to
@@ -109,8 +101,7 @@ of a `Role` entity (e.g. it has an 'authority' property), then it uses it.
 >
 > The 'Account' and the 'Role' entities do not need to be named Account and Role.
 
-<a name="conventions-account-entity"></a>
-### The Account entity
+### Account entity
 
 By convention, Celerio considers that an entity is the `Account` entity if it has the following properties:
 
@@ -168,9 +159,7 @@ user_login and user_password to one of the expected properties, for example:
 > If no `Account` entity is found, the `UserDetailsServiceImpl` simply returns hard coded users and roles.
 
 
-<a name="conventions-role-entity"></a>
-The 'Role' entity
-----------------
+### Role entity
 
 By convention, Celerio considers that an entity is the `Role` entity if it has the following property:
 
@@ -237,7 +226,6 @@ CREATE TABLE ACCOUNT_ROLE (
 
 {% endhighlight %}
 
-<a name="conventions-hibernate-filter"></a>
 ## ACCOUNT_ID column & Hibernate Filter
 
 When a table contains a foreign key pointing to the `Account` table,
@@ -259,7 +247,6 @@ of disabling it:
 
 3.  Disable globally this convention in Celerio's configuration file.
 
-<a name="conventions-version-optimistic-locking"></a>
 ## Version column and Optimistic Locking
 
 If your table has a column named `VERSION` whose type is compatible with the JPA `@Version` annotation, 
@@ -269,7 +256,6 @@ As a result, the corresponding property is annotated with `@Version`.
 
 You can disable this convention in the configuration using columnConfig's version attribute.
 
-<a name="conventions-many-to-many-inverse-attribute"></a>
 ## Many to many and inverse attribute
 
 Which side of the @ManyToMany relation is marked as `inverse="true"` ? 
@@ -277,7 +263,6 @@ Which side of the @ManyToMany relation is marked as `inverse="true"` ?
 By convention, the side whose corresponding column's order is the highest on the 'middle table'.
 You can override this convention using the parent's columnConfig's 'inverse' attribute. 
 
-<a name="conventions-file-download"></a>
 ## File Upload and Download
 
 When the following properties are present simultaneously in an entity, 
@@ -333,7 +318,6 @@ the properties required to activate the file upload/download feature.
 This convention allows you to upload a file transparently, 
 save it to the corresponding table, then download it using a simple URL.
 
-<a name="conventions-audit-entity"></a>
 ## Audit in entity
 
 For a given entity, it is often desirable to know:
@@ -419,7 +403,6 @@ Here is how looks the Java code in the corresponding entity:
 {% endhighlight %}
 
 
-<a name="conventions-audit-table"></a>
 ## Audit log table
 
 The simple auditing feature allows you to track for each entity creation/modifications/deletion events and store them in a
@@ -512,8 +495,6 @@ column's columnConfig, and the feature will be activated. For example:
 <columnConfig columnName="event_type" fieldName="event"/>
 {% endhighlight %}
 
-
-<a name="conventions-saved-search"></a>
 ## Saved search table
 
 When the following columns are present simultaneously in a
