@@ -13,7 +13,7 @@ title: Celerio Guide - Introduction
     * [Template packs](#template-packs)
 * [When to use Celerio?](#when-to-use-celerio)
     * [Spread your best practice and architecture](#spread-your-best-practice-and-architecture)
-    * [Application Rewriting](#application-rewritting)
+    * [Application Rewriting](#application-rewriting)
     * [Rapid prototyping](#rapid-prototyping)
     * [New application](#new-application)
     * [Training](#training)
