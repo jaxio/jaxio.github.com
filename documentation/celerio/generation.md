@@ -9,7 +9,7 @@ title: Celerio Guide - Code Generation
 * [Principle](#principle)
 * [Details of celerio-maven-plugin](#details-of-celerio-maven-plugin)
 * [Simple Usage](#simple-usage)
-* [Advanced: Where to generate](#advanced-where-to-generate)
+* [Advanced: Where to generate?](#advanced-where-to-generate-)
 
 ## Principle
 

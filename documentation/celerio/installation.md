@@ -10,7 +10,7 @@ title: Celerio Guide - Installation
     * [JDK 1.8 or above](#jdk-18-or-above)
     * [Maven 3](#maven-3)
 * [Celerio](#celerio)
-    * [Bootstrap a project with Celerio](#bootstrap-a-project-with-Celerio)
+    * [Bootstrap a project with Celerio](#bootstrap-a-project-with-celerio)
     * [Celerio branding](#celerio-branding)
 
 
