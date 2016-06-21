@@ -13,7 +13,6 @@ title: Celerio Guide - Installation
     * [Bootstrap a project with Celerio](#bootstrap-a-project-with-celerio)
     * [Celerio branding](#celerio-branding)
 
-
 ## Requirements
 
 ### JDK 1.8 or above

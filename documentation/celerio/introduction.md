@@ -11,13 +11,13 @@ title: Celerio Guide - Introduction
     * [Database Schema Extractor tool](#database-schema-extractor-tool)
     * [Celerio Engine](#celerio-engine)
     * [Template packs](#template-packs)
-* [When to use Celerio?](#when-to-use-celerio-)
+* [When to use Celerio?](#when-to-use-celerio)
     * [Spread your best practice and architecture](#spread-your-best-practice-and-architecture)
     * [Application Rewriting](#application-rewritting)
     * [Rapid prototyping](#rapid-prototyping)
     * [New application](#new-application)
     * [Training](#training)
-* [What to expect from Celerio?](#what-to-expect-from-celerio-)
+* [What to expect from Celerio?](#what-to-expect-from-celerio)
 
 ## Celerio
 
