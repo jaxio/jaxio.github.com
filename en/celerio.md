@@ -60,6 +60,13 @@ Here is a high level overview of Celerio and the generated code
 
 <img src="/images/celerio/celerio-overview-en.png" width="100%"/>
 
+
+#### Pack Angular 2 + Spring Boot + Prime NG etc.
+
+Pack development is in progress. 
+
+Code source: [https://github.com/jaxio/celerio-angular-quickstart](https://github.com/jaxio/celerio-angular-quickstart)
+
 #### 'Java EE 7 webapp' (backend and frontend, without Spring)
 
 Sources: [https://github.com/jaxio/javaee-lab](https://github.com/jaxio/javaee-lab)

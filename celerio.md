@@ -55,13 +55,17 @@ d'autres templates de de générations peuvent être développées soit par vous
 
 ### Packs de templates de générations
 
-Jaxio fournit en Open Source, 2 packs de templates de génération.
+Jaxio fournit en Open Source, plusieurs packs de templates de génération.
 
 La figure ci-dessous illustre le fonctionnement de Celerio et donne un aperçu des couches générées par les packs de templates 'Backend' et 'JSF2'.
 
 <img src="/images/celerio/celerio-overview.png" width="100%"/>
 
+#### Pack Angular 2 + Spring Boot + Prime NG etc.
 
+Ce pack est en cours de développement.
+
+Code source: [https://github.com/jaxio/celerio-angular-quickstart](https://github.com/jaxio/celerio-angular-quickstart)
 
 #### Pack 'Java EE 7 webapp' (backend et frontend, sans Spring)
 
