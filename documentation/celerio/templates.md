@@ -47,11 +47,12 @@ Jaxio provides the following Open Source template packs:
 
 We also have some template packs that are currently in development:
 
-* pure Spring + Angular: [https://github.com/jaxio/angular-lab](https://github.com/jaxio/angular-lab)
+* Angular 2 + Spring backend: [https://github.com/jaxio/celerio-angular-quickstart](https://github.com/jaxio/celerio-angular-quickstart)
+* AngularJS 1 + Spring backend: [https://github.com/jaxio/angular-lab](https://github.com/jaxio/angular-lab)
 
 ## Templates folder
 
-Before starting, update your Celerio configuration in order to specify your templates folder location.
+Before starting, update your Celerio configuration in order to specify a template folder location.
 
 In `src/main/config/celerio-maven-plugin/celerio-templates-packs.xml` declare your Celerio template source folder using
 the template pack element. For example:
@@ -59,13 +60,21 @@ the template pack element. For example:
 {% highlight xml %}
 <packs>
 	<!-- ... other packs skipped... -->
-	<pack name="pack-custom" path="src/main/celerio" enable="true" />
+	<pack name="pack-custom" path="src/main/my-pack" enable="true" />
 </packs>
 {% endhighlight %}
 
-In the above example, Celerio considers any file present under 'src/main/celerio' and its subfolder as a Celerio template.
+Celerio expects to find in the declared 'src/main/my-pack' folder 2 subfolders:
 
-## Create a templates pack
+	src
+	   |- main
+	          |- my-pack
+	                  |- META-INF
+	                  |- celerio	                                
+
+Content of META-INF and celerio sub-folders is described below. 
+
+## Create a templates pack or template folder
 
 A template pack is simply a set of Celerio templates packaged in a jar file.
 The project must have the following structure:
@@ -91,70 +100,70 @@ Here is a `celerio-pack.xml` file example:
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <celerioPack xmlns="http://www.jaxio.com/schema/celerio">
-    <packName value="pack-javaee7-backend"/>
-    <packDescription value="Java EE 7 backend relying on CDI, Hibernate, Hibernate Search and Lucene"/>
+    <packName value="pack-the-name-of-the-pack"/>
+    <packDescription value="My sample pack"/>
     <packDescription2 value="Generates entities, meta model, repositories to access entities etc. Used by front-end packs."/>
     <packCommand value="mvn -Pdb,metadata,gen test"/>
     <packCommandHelp value=""/>
-    <projectLink value="https://github.com/jaxio/javaee-lab"/>
+    <projectLink value="https://github.com/jaxio/my-pack"/>
 </celerioPack>
 ```
 
-It is important that the packName starts with the prefix `pack-`.
+It is important that the `packName` starts with the prefix `pack-`.
 
 ## Template name conventions
 
-There are several kinds of template:
+There are several kinds of templates.
 
 ### Bootstrap template
 
 A _bootstrap template_ is interpreted only when Celerio is run in _bootstrap mode_. The _bootstrap mode_ is active when
 you use the Celerio's `bootstrap-maven-plugin`.
 
-Its name must have this form: `TemplateName.boot.vm.ext` where:
+Its name must have this form: `TemplateName.boot.vm.ext` `TemplateName.ext.boot.vm` or where:
 
 * `TemplateName` is a logical name for your template. It is not used by Celerio.
 * `boot` stands for bootstrap
 * `vm` means the templates is written in Velocity.
 * `ext` should be the same as the extension of the generated file. It is used by Celerio.
 
-Example: `pom.boot.vm.xml`
+Example: `pom.boot.vm.xml` or `pom.xml.boot.vm`.
 
 ### Per entity template
 
 A **per entity template** is interpreted for each entity.
-Its name must have this form: `TemplateName.e.vm.ext` where:
+Its name must have this form: `TemplateName.e.vm.ext` or `TemplateName.ext.e.vm` where:
 
 * `e` stands for entity.
 
-Example: `Controller.e.vm.java`
+Example: `Controller.e.vm.java` or `Controller.java.e.vm`
 
 ### Per project template
 
 A **per project template** is interpreted one time per projet.
-Its name must have this form: `TemplateName.p.vm.ext` where:
+Its name must have this form: `TemplateName.p.vm.ext` or `TemplateName.ext.p.vm` where:
 
 * `p` stands for project.
 
-Example: `web.p.vm.xml`
+Example: `web.p.vm.xml` or `web.xml.p.vm`
 
 ### Per enum template
 
 A **per enum template** is interpreted for each enum.
-Its name must have this form: `TemplateName.enum.vm.ext`
+Its name must have this form: `TemplateName.enum.vm.ext` or `TemplateName.ext.enum.vm`
 
 * `enum` stands for enum.
 
-Example: `EnumController.enum.vm.java`
+Example: `EnumController.enum.vm.java` or `EnumController.java.enum.vm` 
 
 ### Per composite primary key template
 
 A **per composite primary key template** is interpreted for each composite primary key.
-Its name must have this form: `TemplateName.cpk.vm.ext` where:
+Its name must have this form: `TemplateName.cpk.vm.ext` or `TemplateName.ext.cpk.vm` where:
 
 * `cpk` stands for composite primary key
 
-Example: `CompositePkBridge.cpk.vm.java`
+Example: `CompositePkBridge.cpk.vm.java` or `CompositePkBridge.java.cpk.vm`
 
 ### Static files
 
@@ -210,7 +219,7 @@ Note that you can use $output.require conditionally, anywhere in your template c
 	#end
 
 In case 'something' evals to true, the 2 import statements will be properly inserted in your generated java file,
-not in the middle of a java method of course.
+not in the middle of a Java method of course.
 
 #### `output` provides helper for annotation and Java imports
 

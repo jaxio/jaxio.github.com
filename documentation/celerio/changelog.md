@@ -6,6 +6,20 @@ title: Celerio Guide - Celerio Change Log
 
 # 15. Celerio Change Log
 
+### 4.0.6 (in progress)
+
+* shortcut for dollar and pound... in templates use `${d}` and `${p}`. `${dollar}` and `${pound}` are still supported. 
+* provide configurable property support for template pack. This way template pack author can use for example: 
+  #if($pack.hasProperty('pagination')) ...
+
+### 4.0.5 (2016-05-06)
+
+* Code formatter now supports Java 1.8 code
+* Introduce 'skip' option for entity in order to skip generation of entity (ex: skip special jhipster entity) without preventing such entity from being referenced by other entity (ex: many-to-one).
+* Support mapping to ZonedDateTime in configuration
+* Fix entity.relatedEntities
+* load namers from pack file and bind them to entities.
+
 ### 4.0.4 (2016-01-25)
 
 Introduce a new pack that allows you to generate a full blown JavaEE 7 web application (without Spring).
