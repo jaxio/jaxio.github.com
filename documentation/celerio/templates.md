@@ -74,7 +74,7 @@ Celerio expects to find in the declared 'src/main/my-pack' folder 2 subfolders:
 
 Content of META-INF and celerio sub-folders is described below. 
 
-## Create a templates pack or template folder
+## Create a templates pack
 
 A template pack is simply a set of Celerio templates packaged in a jar file.
 The project must have the following structure:
