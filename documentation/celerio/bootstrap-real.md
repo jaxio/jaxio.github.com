@@ -13,7 +13,7 @@ If you want to create a new project using Celerio, and you have no database yet,
 as explained in the [previous chapter](bootstrap.html). When you are asked to select a sample database schema, select the
 simplest one (named `empty`).
 
-	mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.5:bootstrap
+	mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.6:bootstrap
 
 To add new entities, simply edit the sample sql file that was generated in the `src/main/sql/h2` folder
 and re-run the command, in general:
@@ -29,7 +29,7 @@ First of all, **DO NOT USE A PRODUCTION DATABASE** You could loose some data.
 Follow the wizard as explained in the [previous chapter](bootstrap.html). When you are asked to select a sample
 database schema, select the simplest one (named `empty`).
 
-	mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.5:bootstrap
+	mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.6:bootstrap
 
 Once it completes, **do not run any command** beside `cd <your_app>`
 

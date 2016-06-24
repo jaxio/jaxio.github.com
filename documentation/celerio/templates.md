@@ -64,7 +64,7 @@ the template pack element. For example:
 </packs>
 {% endhighlight %}
 
-Celerio expects to find in the declared 'src/main/my-pack' folder 2 subfolders:
+Celerio expects to find in the declared `src/main/my-pack` folder 2 subfolders:
 
 	src
 	   |- main
@@ -72,12 +72,12 @@ Celerio expects to find in the declared 'src/main/my-pack' folder 2 subfolders:
 	                  |- META-INF
 	                  |- celerio	                                
 
-Content of META-INF and celerio sub-folders is described below. 
+Content of `META-INF` and `celerio` sub-folders is described below. 
 
 ## Create a templates pack
 
 A template pack is simply a set of Celerio templates packaged in a jar file.
-The project must have the following structure:
+The project (assuming you are using Maven) must have the following structure:
 
 	pom.xml
 	src
@@ -93,6 +93,7 @@ The project must have the following structure:
 	                                |
 	                                |- pack-the-name-of-the-pack
 	                                                          |- **/yourtemplate.e.vm.java
+
 
 The `celerio-pack.xml` file contains some meta information that Celerio engine and the Celerio `bootstrap-maven-plugin` use.
 Here is a `celerio-pack.xml` file example:
@@ -120,10 +121,10 @@ There are several kinds of templates.
 A _bootstrap template_ is interpreted only when Celerio is run in _bootstrap mode_. The _bootstrap mode_ is active when
 you use the Celerio's `bootstrap-maven-plugin`.
 
-Its name must have this form: `TemplateName.boot.vm.ext` `TemplateName.ext.boot.vm` or where:
+Its name must have this form: `TemplateName.boot.vm.ext` or `TemplateName.ext.boot.vm` where:
 
-* `TemplateName` is a logical name for your template. It is not used by Celerio.
-* `boot` stands for bootstrap
+* `TemplateName` is your template file name. It is `not used` by Celerio.
+* `boot` stands for bootstrap.
 * `vm` means the templates is written in Velocity.
 * `ext` should be the same as the extension of the generated file. It is used by Celerio.
 
@@ -173,7 +174,7 @@ Exemple: `afolder/img.gif` would be copied to `yourProjectRootFolder/afolder/img
 
 ## Template context
 
-The template context is the velocity execution context. It exposes your project metamodel and various facilities.
+The template context is the Velocity execution context. It exposes your project metamodel and various facilities.
 
 Here is the list of object variables present in the template context:
 
@@ -202,7 +203,7 @@ Writes the result of the template evaluation to _src/main/java/your-root-package
 
 #### `output` manages Java imports
 
-One of the challenge of writing a java template is to manage the Java imports.
+One of the challenge of writing a Java template is to manage the Java imports.
 You have to make sure that you do not import twice the same class or that you do not import useless classes.
 
 `$output.require` or `$output.requireStatic` methods help you in this task.

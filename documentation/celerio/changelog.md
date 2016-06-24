@@ -6,11 +6,12 @@ title: Celerio Guide - Celerio Change Log
 
 # 15. Celerio Change Log
 
-### 4.0.6 (in progress)
+### 4.0.6 (2016-06-24)
 
-* shortcut for dollar and pound... in templates use `${d}` and `${p}`. `${dollar}` and `${pound}` are still supported. 
+* shortcut for dollar and pound: in templates you may use `${d}` and `${p}` instead of `${dollar}` and `${pound}` which are still supported. 
 * provide configurable property support for template pack. This way template pack author can use for example: 
   #if($pack.hasProperty('pagination')) ...
+* introduce max attribute in ColumnConfig.  
 
 ### 4.0.5 (2016-05-06)
 
