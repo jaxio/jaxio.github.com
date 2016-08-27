@@ -115,63 +115,51 @@ Then create a dedicated profile to execute the plugin.
 {% highlight xml %}
 
 <properties>
-	<jdbc.groupId>com.h2database</jdbc.groupId>
-	<jdbc.artifactId>h2</jdbc.artifactId>
-	<jdbc.version>1.3.167</jdbc.version>
-	<jdbc.driver>org.h2.Driver</jdbc.driver>
-	<jdbc.url>jdbc:h2:~/.h2/mydbname;MVCC=TRUE</jdbc.url>
-	<jdbc.user>admin</jdbc.user>
-	<jdbc.password></jdbc.password>
+  <jdbc.groupId>com.h2database</jdbc.groupId>
+  <jdbc.artifactId>h2</jdbc.artifactId>
+  <jdbc.version>1.3.167</jdbc.version>
+  <jdbc.driver>org.h2.Driver</jdbc.driver>
+  <jdbc.url>jdbc:h2:~/.h2/mydbname;MVCC=TRUE</jdbc.url>
+  <jdbc.user>admin</jdbc.user>
+  <jdbc.password></jdbc.password>
 </properties>
 
 <!-- skip -->
 	
 <profile>
-	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-	<!-- Extract the database metadata -->
-	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-	<id>metadata</id>
-	<build>
-		<defaultGoal>generate-sources</defaultGoal>
-		<plugins>
-			<plugin>
-				<groupId>com.jaxio.celerio</groupId>
-				<artifactId>dbmetadata-maven-plugin</artifactId>
-				<version>${celerio-maven-plugin.version}</version>
-				<executions>
-					<execution>
-						<id>Extract the database schema.</id>
-						<goals>
-							<goal>extract-metadata</goal>
-						</goals>
-                        <configuration>
-                            <jdbcTableNamePatterns><!-- pre-filtering, configurable since 4.0.7, optional, will be % by default -->
-                                <param>%</param> <!-- "%" means match any substring of 0 or more characters, and "_" means match any one character -->
-                            </jdbcTableNamePatterns>
-                        </configuration>						
-				</executions>
-				<dependencies>
-					<dependency>
-						<groupId>${jdbc.groupId}</groupId>
-						<artifactId>${jdbc.artifactId}</artifactId>
-						<version>${jdbc.version}</version>
-					</dependency>
-				</dependencies>
-			</plugin>
-		</plugins>
-	</build>
-	<repositories>
-		<repository>
-				<id>jaxio-repository</id>
-				<url>http://maven.jaxio.com/repository</url>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-				<id>jaxio-repository</id>
-				<url>http://maven.jaxio.com/repository</url>
-		</pluginRepository>
-	</pluginRepositories>
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <!-- Extract the database metadata -->
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <id>metadata</id>
+  <build>
+    <defaultGoal>generate-sources</defaultGoal>
+    <plugins>
+      <plugin>
+        <groupId>com.jaxio.celerio</groupId>
+        <artifactId>dbmetadata-maven-plugin</artifactId>
+        <version>${celerio-maven-plugin.version}</version>
+        <executions>
+          <execution>
+            <id>Extract the database schema.</id>
+            <goals>
+              <goal>extract-metadata</goal>
+          	</goals>
+            <configuration>
+              <jdbcTableNamePatterns><!-- pre-filtering, configurable since 4.0.7, optional, will be % by default -->
+                <param>%</param> <!-- "%" means match any substring of 0 or more characters, and "_" means match any one character -->
+              </jdbcTableNamePatterns>
+            </configuration>						
+          </executions>
+          <dependencies>
+            <dependency>
+              <groupId>${jdbc.groupId}</groupId>
+              <artifactId>${jdbc.artifactId}</artifactId>
+              <version>${jdbc.version}</version>
+            </dependency>
+        </dependencies>
+      </plugin>
+    </plugins>
+  </build>
 </profile>
 {% endhighlight %}
 		

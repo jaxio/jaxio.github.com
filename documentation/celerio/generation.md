@@ -118,18 +118,6 @@ Here is the `gen` profile detail:
 				</plugin>
 			</plugins>
 		</build>
-		<repositories>
-			<repository>
-				<id>jaxio-repository</id>
-				<url>http://maven.jaxio.com/repository</url>
-			</repository>
-		</repositories>
-		<pluginRepositories>
-			<pluginRepository>
-				<id>jaxio-repository</id>
-				<url>http://maven.jaxio.com/repository</url>
-			</pluginRepository>
-		</pluginRepositories>
 	</profile>
 {% endhighlight %}
 
