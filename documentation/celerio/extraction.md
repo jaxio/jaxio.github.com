@@ -34,7 +34,7 @@ The `metadata.xml` file produced by this plugin is used by Celerio's generate go
 
 ### Full name
 
-* name: com.jaxio.celerio:dbmetadata-maven-plugin:4.0.6
+* name: com.jaxio.celerio:dbmetadata-maven-plugin:4.0.7
 * goal: extract-metadata
 * maven phase: generate-sources
 
@@ -102,6 +102,11 @@ This is a common pattern in Maven, where you can skip plugins using profiles to 
 * default value: `${basedir}/src/main/config/celerio-maven-plugin/metadata.xml`
 * description: The fully qualified name of the XML file created by this plugin.
 
+#### jdbcTableNamePatterns
+* type: List
+* default value: `%`
+* description: In case DB reverse is too slow you may use this configuration to filter out tables during DB reverse phase. By default Celerio reverses all the tables and you can filter them out afterward, during code generation phase. 
+
 ## Simple Usage
 
 In your pom.xml, declare as *properties* the necessary *expressions* that the plugin needs to connect to your database and reverse it.
@@ -139,7 +144,11 @@ Then create a dedicated profile to execute the plugin.
 						<goals>
 							<goal>extract-metadata</goal>
 						</goals>
-					</execution>
+                        <configuration>
+                            <jdbcTableNamePatterns><!-- pre-filtering, configurable since 4.0.7, optional, will be % by default -->
+                                <param>%</param> <!-- "%" means match any substring of 0 or more characters, and "_" means match any one character -->
+                            </jdbcTableNamePatterns>
+                        </configuration>						
 				</executions>
 				<dependencies>
 					<dependency>

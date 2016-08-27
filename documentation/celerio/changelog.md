@@ -6,6 +6,13 @@ title: Celerio Guide - Celerio Change Log
 
 # 15. Celerio Change Log
 
+
+### 4.0.7 (2016-08-26)
+
+* Fix secondaryTables code generation support helper when there are multiple secondary tables (a comma was missing). Thanks to Stéphane Pommier for reporting it.
+* Fix annotations not commented out as they should in case of take over when using $output.dynamicAnnotationTakeOver support. Thanks to Vivien Mast for reporting it.
+* Add "tableNamePatterns" list to DbMetadataMojo configuration in order to pre-filter out tables (they won't appear in metadata.xml). It helps speed up DB reverse for huge schema.
+
 ### 4.0.6 (2016-06-24)
 
 * shortcut for dollar and pound: in templates you may use `${d}` and `${p}` instead of `${dollar}` and `${pound}` which are still supported. 

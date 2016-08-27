@@ -39,7 +39,7 @@ generation. As an example you can use the `pom.xml` that the Celerio
 
 ### Full name
 
-* name: com.jaxio.celerio:celerio-maven-plugin:4.0.6
+* name: com.jaxio.celerio:celerio-maven-plugin:4.0.7
 * goal: generate
 * maven phase: generate-sources
 
