@@ -6,6 +6,13 @@ title: Celerio Guide - Celerio Change Log
 
 # 15. Celerio Change Log
 
+### 4.0.9 (2016-09-13)
+
+* Support JPA @Convert
+
+### 4.0.8 (2016-09-06)
+
+* Add meta attributes to other config point (convenient for SPIs dev)
 
 ### 4.0.7 (2016-08-26)
 

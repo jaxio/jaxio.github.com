@@ -51,7 +51,7 @@ You should get a result containing a line similar to this:
 
 Type the following command in a console:
 
-    mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.7:bootstrap
+    mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.9:bootstrap
 
 Then follow the instructions in [Bootstrapping a project with Celerio](bootstrap.html).
 

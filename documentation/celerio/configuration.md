@@ -486,16 +486,38 @@ public enum Civility implements LabelizedEnum {
     }
 }
 
+// A Converter is generated (since Celerio 4.0.9, pack-backend-jpa 1.0.4)
+
+import javax.persistence.AttributeConverter;
+import javax.persistence.Converter;
+
+@Converter
+public class CivilityConverter implements AttributeConverter<Civility, String> {
+
+    public String convertToDatabaseColumn(Civility javaEnum) {
+        if (javaEnum == null) {
+            return null;
+        }
+
+        return javaEnum.getValue(); // dbValue...
+    }
+
+    public Civility convertToEntityAttribute(String dbValue) {
+        if (dbValue == null || dbValue.isEmpty()) {
+            return null;
+        }
+
+        return Civility.fromValue(dbValue);
+    }
+}
+
 // In Account.java
-@Column(name = "CIVILITY")
-@Type(type = "org.jadira.usertype.corejava.PersistentEnum", parameters = { //
-@Parameter(name = "enumClass", value = "com.mycompany.myproject.domain.Civility"), //
-            @Parameter(name = "valueOfMethod", value = "fromValue"), //
-            @Parameter(name = "identifierMethod", value = "getValue") //
-})
+@Column(name = "CIVILITY", length = 2)
+@Convert(converter = CivilityConverter.class)
 public Civility getCivility() {
     return civility;
 }
+
 {% endhighlight %}
 
 ## Associations
