@@ -11,7 +11,7 @@ title: Celerio Guide - Bootstrap a sample project with Celerio
 Invoke the `bootstrap` goal of the `bootstrap-maven-plugin`.
 From a command line executes (it may take some time to download all the dependencies the first time you use it):
 
-	mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.9:bootstrap
+	mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.10:bootstrap
 
 > **Note**
 >

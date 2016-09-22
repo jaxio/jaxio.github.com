@@ -34,7 +34,7 @@ The `metadata.xml` file produced by this plugin is used by Celerio's generate go
 
 ### Full name
 
-* name: com.jaxio.celerio:dbmetadata-maven-plugin:4.0.9
+* name: com.jaxio.celerio:dbmetadata-maven-plugin:4.0.10
 * goal: extract-metadata
 * maven phase: generate-sources
 

@@ -6,6 +6,10 @@ title: Celerio Guide - Celerio Change Log
 
 # 15. Celerio Change Log
 
+### 4.0.10 (2016-09-20)
+
+* Fix non desired file deletion!
+
 ### 4.0.9 (2016-09-13)
 
 * Support JPA @Convert
