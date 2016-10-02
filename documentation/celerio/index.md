@@ -5,7 +5,7 @@ title: Celerio Guide
 
 # Celerio Reference Guide
 
-**Current version: 4.0.9**
+**Current version: 4.0.11**
 
 Celerio is a code generator tool for data-driven application.<br/>
 Celerio is licensed under the [Apache License V2.0](www.apache.org/licenses/LICENSE-2.0).

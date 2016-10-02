@@ -11,7 +11,7 @@ Jaxio est heureux d'annoncer que Celerio 4 notre générateur de code est désor
 
 Pour générer un projet à partir d'une base de données d'exemple il suffit de lancer la commande:
 
-    mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.10:bootstrap
+    mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.11:bootstrap
 
 Note: Maven 3.1.1 (au moins) + Java 8 sont requis.
 

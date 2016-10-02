@@ -6,6 +6,14 @@ title: Celerio Guide - Celerio Change Log
 
 # 15. Celerio Change Log
 
+
+### 4.0.11 (2016-10-03)
+
+* Add 3 config param (searchFieldOrder, searchResultOrder, formFieldOrder) in columnConfig to control the order 
+  in which searchField, searchResult and formField are displayed.
+* Add displayOrder param to oneToManyConfig and manyToManyConfig to control the order xToMany relations when displayed in tabs. 
+* fix: $entity.isView() now returns true when it corresponds to an sql view, and false when it corresponds to a TABLE. 
+
 ### 4.0.10 (2016-09-20)
 
 * Fix non desired file deletion!
