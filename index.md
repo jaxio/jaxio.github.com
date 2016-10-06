@@ -82,6 +82,5 @@ $('.carousel').carousel({
 	{% endfor %}
 		<li><a href="actualites.html"> [ ... ] </a></li>
 	</ul>
-	<p>
 </div>
 </div>
