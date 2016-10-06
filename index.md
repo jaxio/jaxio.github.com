@@ -52,10 +52,7 @@ $('.carousel').carousel({
 	</p>
 	<h1>Open Source</h1>
 	<p>
-        Celerio:
-	     <ul>
-	        <li><a href="https://github.com/jaxio/celerio">Celerio</a></li>	     
-         </ul>
+        <a href="https://github.com/jaxio/celerio">Celerio est sur GitHub</a>	     
     </p>
 </div>
 <div class="span4">
