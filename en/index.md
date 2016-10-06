@@ -23,6 +23,7 @@ title: Jaxio
     <div class="item">
 	    <h1>Celerio</h1>
 		<h4>Code generator tool for Java data-oriented applications</h4>
+		<h4>New: code generation for Angular 2.0</h4>		
 		<div class="carousel-caption">
 			<p>&gt; Open Source code generation templates</p>
 			<p>&gt; 100% of generated code is already tested</p>
@@ -49,14 +50,17 @@ $('.carousel').carousel({
 	<p>
         Follow our doc to generate in a few minutes your <a href="/documentation/celerio/installation.html">1st projet with Celerio...</a>
 	</p>
-</div>
-<div class="span4">
 	<h1>Open Source</h1>
 	<p>
 	    Celerio:
 	     <ul>
 	        <li><a href="https://github.com/jaxio/celerio">Celerio</a></li>	     
 	     </ul>
+    </p>
+</div>
+<div class="span4">
+	<h1>Open Source</h1>
+	<p>
 	     Template packs:
 	     <ul>
 	        <li><a href="https://github.com/jaxio/celerio-angular-quickstart">Web App Angular 2 + PrimeNG + Spring Boot</a></li>
@@ -65,7 +69,7 @@ $('.carousel').carousel({
 	        <li><a href="https://github.com/jaxio/pack-jsf2-spring-conversation">Pack JSF 2 + Spring</a></li>
 	     </ul>
 
-	     Related projects:
+	     Related project:
 	     <ul>
 	        <li><a href="https://github.com/jaxio/jpa-query-by-example">JPA Query By Example API</a></li>
 	     </ul>

@@ -23,6 +23,7 @@ title: Jaxio
     <div class="item">
 	    <h1>Celerio</h1>
 		<h4>Générateur de code Java pour applications orientées données</h4>
+		<h4>Nouveau: templates de génération pour Angular 2.0</h4>
 		<div class="carousel-caption">
 			<p>&gt; Templates de génération Open Source</p>
 			<p>&gt; 100% du code généré est déjà testé</p>
@@ -47,16 +48,19 @@ $('.carousel').carousel({
 <div class="span4">
 	<h1>Utiliser Celerio</h1>
 	<p>
-        Suivez notre guide pour générer en quelques minutes vôtre <a href="/documentation/celerio/installation.html">1er projet avec Celerio...</a>
+        Suivez notre guide pour générer en quelques minutes un <a href="/documentation/celerio/installation.html">projet avec Celerio...</a>
 	</p>
+	<h1>Open Source</h1>
+	<p>
+        Celerio:
+	     <ul>
+	        <li><a href="https://github.com/jaxio/celerio">Celerio</a></li>	     
+         </ul>
+    </p>
 </div>
 <div class="span4">
 	<h1>Open Source</h1>
 	<p>
-	     Celerio:
-	     <ul>
-	        <li><a href="https://github.com/jaxio/celerio">Celerio</a></li>	     
-         </ul>
 	     Template Packs:
 	     <ul>
 	        <li><a href="https://github.com/jaxio/celerio-angular-quickstart">Web App Angular 2.0 + PrimeNG + Spring Boot</a></li>
@@ -64,7 +68,7 @@ $('.carousel').carousel({
 	        <li><a href="https://github.com/jaxio/pack-backend-jpa">Backend JPA 2 / Hibernate + Lucene + Spring</a></li>
 	        <li><a href="https://github.com/jaxio/pack-jsf2-spring-conversation">Pack JSF 2 + Spring</a></li>
          </ul>
-	     Projets associés:
+	     Projet associé
          <ul>
 	        <li><a href="https://github.com/jaxio/jpa-query-by-example">JPA Query By Example (avec Spring)</a></li>
          </ul>
