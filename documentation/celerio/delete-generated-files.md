@@ -20,7 +20,7 @@ exclude certain files so they do not get deleted.
 
 ### Full name
 
-* name: com.jaxio.celerio:celerio-maven-plugin:4.0.11
+* name: com.jaxio.celerio:celerio-maven-plugin:4.0.12
 * goal: cleanGenerated
 * maven phase: clean
 

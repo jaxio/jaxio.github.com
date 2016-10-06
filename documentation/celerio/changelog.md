@@ -6,6 +6,10 @@ title: Celerio Guide - Celerio Change Log
 
 # 15. Celerio Change Log
 
+### 4.0.12 (2016-10-06)
+
+* Celerio can now determine if a file is under SVN or GIT. As a result Celerio can make sure it never deletes or overwrite such files.
+* Fix NullPointerException introduced in 4.0.11. Occurs in some case when many to many is present.
 
 ### 4.0.11 (2016-10-03)
 
