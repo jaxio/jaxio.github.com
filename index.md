@@ -13,7 +13,7 @@ title: Jaxio
     <div class="active item">
 	    <h1>Celerio</h1>
 		<h4>Générateur de code pour applications orientées données</h4>
-		<h4>Nouveau: templates de génération pour Angular 2.0</h4>
+		<a href="https://github.com/jaxio/celerio-angular-quickstart">Nouveau: templates de génération pour Angular 2.0</a>
 		<div class="carousel-caption">
 			<p>&gt; Reverse de votre base de données</p>
 			<p>&gt; Génération de code configurable</p>
@@ -23,7 +23,7 @@ title: Jaxio
     <div class="item">
 	    <h1>Celerio</h1>
 		<h4>Générateur de code Java pour applications orientées données</h4>
-		<h4>Nouveau: templates de génération pour Angular 2.0</h4>
+		<a href="https://github.com/jaxio/celerio-angular-quickstart">Nouveau: templates de génération pour Angular 2.0</a>
 		<div class="carousel-caption">
 			<p>&gt; Templates de génération Open Source</p>
 			<p>&gt; 100% du code généré est déjà testé</p>
