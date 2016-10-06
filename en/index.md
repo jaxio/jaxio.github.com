@@ -12,7 +12,8 @@ title: Jaxio
   <div class="carousel-inner">
     <div class="active item">
 	    <h1>Celerio</h1>
-		<h4>Code generator tool for Java data-oriented applications</h4>
+		<h4>Code generator tool for data-oriented applications</h4>
+		<h4>New: code generation for Angular 2.0</h4>
 		<div class="carousel-caption">
 			<p>&gt; Reverse your database schema</p>
 			<p>&gt; Configure Celerio and generate your project foundation</p>
@@ -56,17 +57,12 @@ $('.carousel').carousel({
 	     <ul>
 	        <li><a href="https://github.com/jaxio/celerio">Celerio</a></li>	     
 	     </ul>
-	     Template packs (released):
+	     Template packs:
 	     <ul>
+	        <li><a href="https://github.com/jaxio/celerio-angular-quickstart">Web App Angular 2 + PrimeNG + Spring Boot</a></li>
 	        <li><a href="https://github.com/jaxio/javaee-lab">Java EE 7 Web App</a> (No Spring Inside)</li>
 	        <li><a href="https://github.com/jaxio/pack-backend-jpa">Pack JPA 2 / Hibernate + Lucene + Spring</a></li>
 	        <li><a href="https://github.com/jaxio/pack-jsf2-spring-conversation">Pack JSF 2 + Spring</a></li>
-	     </ul>
-
-	     Upcoming Template packs:
-	     <ul>
-	        <li><a href="https://github.com/jaxio/celerio-angular-quickstart">Web App Angular 2 + PrimeNG + Spring Boot</a></li>
-	        <li><a href="https://github.com/jaxio/angular-lab">AngularJS + Spring Boot Web App</a></li>
 	     </ul>
 
 	     Related projects:
