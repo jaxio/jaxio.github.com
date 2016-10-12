@@ -8,10 +8,16 @@ title: Celerio Guide - Bootstrap a sample project with Celerio
 
 ## Run the bootstrap wizard
 
+*Prerequisites:*
+
+* [Java Development Kit 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [Maven 3.3.3](https://maven.apache.org/download.cgi)
+
+
 Invoke the `bootstrap` goal of the `bootstrap-maven-plugin`.
 From a command line executes (it may take some time to download all the dependencies the first time you use it):
 
-	mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.12:bootstrap
+	mvn com.jaxio.celerio:bootstrap-maven-plugin:bootstrap
 
 > **Note**
 >

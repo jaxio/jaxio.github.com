@@ -9,11 +9,16 @@ title: Celerio Guide - Bootstrapping a real project with Celerio
 
 ## Create a new project (no existing database case)
 
+*Prerequisites:*
+
+* [Java Development Kit 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [Maven 3.3.3](https://maven.apache.org/download.cgi)
+
 If you want to create a new project using Celerio, and you have no database yet, simply follow the wizard
 as explained in the [previous chapter](bootstrap.html). When you are asked to select a sample database schema, select the
 simplest one (named `empty`).
 
-	mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.12:bootstrap
+	mvn com.jaxio.celerio:bootstrap-maven-plugin:bootstrap
 
 To add new entities, simply edit the sample sql file that was generated in the `src/main/sql/h2` folder
 and re-run the command, in general:
@@ -29,7 +34,7 @@ First of all, **DO NOT USE A PRODUCTION DATABASE** You could loose some data.
 Follow the wizard as explained in the [previous chapter](bootstrap.html). When you are asked to select a sample
 database schema, select the simplest one (named `empty`).
 
-	mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.12:bootstrap
+	mvn com.jaxio.celerio:bootstrap-maven-plugin:bootstrap
 
 Once it completes, **do not run any command** beside `cd <your_app>`
 

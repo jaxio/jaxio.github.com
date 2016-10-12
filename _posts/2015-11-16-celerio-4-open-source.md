@@ -9,11 +9,14 @@ date: 2015-11-16
 
 Jaxio est heureux d'annoncer que Celerio 4 notre générateur de code est désormais Open Source (Licence Apache v2).
 
+Prérequis:
+
+* [Java Development Kit 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+* [Maven 3.3.3](https://maven.apache.org/download.cgi)
+
 Pour générer un projet à partir d'une base de données d'exemple il suffit de lancer la commande:
 
-    mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.12:bootstrap
-
-Note: Maven 3.1.1 (au moins) + Java 8 sont requis.
+    mvn com.jaxio.celerio:bootstrap-maven-plugin:bootstrap
 
 Pour en savoir plus, consultez la [documentation](/documentation/celerio).
 

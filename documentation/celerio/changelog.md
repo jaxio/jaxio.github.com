@@ -6,6 +6,10 @@ title: Celerio Guide - Celerio Change Log
 
 # 15. Celerio Change Log
 
+### 4.0.13 (2016-10-12)
+
+* Support Cascade type "DETACH" (since JPA 2.0) in celerio-maven-plugin.xml configuration file.
+
 ### 4.0.12 (2016-10-06)
 
 * Celerio can now determine if a file is under SVN or GIT. As a result Celerio can make sure it never deletes or overwrite such files.
@@ -65,7 +69,7 @@ Fix few bugs:
 
 To try it, type the following Maven command in a console:
 
-    mvn com.jaxio.celerio:bootstrap-maven-plugin:4.0.4:bootstrap
+    mvn com.jaxio.celerio:bootstrap-maven-plugin:bootstrap
 
 
 ### 4.0.2 (2015-11-16)
