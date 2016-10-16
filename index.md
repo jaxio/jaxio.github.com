@@ -1,5 +1,5 @@
 ---
-layout: french
+layout: english
 title: Jaxio
 ---
 
@@ -12,29 +12,28 @@ title: Jaxio
   <div class="carousel-inner">
     <div class="active item">
 	    <h1>Celerio</h1>
-		<h4>Générateur de code pour applications orientées données</h4>
-		<a href="https://github.com/jaxio/celerio-angular-quickstart">Nouveau: templates de génération pour Angular 2.0</a>
+		<h4>Code generator tool for data-oriented applications</h4>
+		<a href="https://github.com/jaxio/celerio-angular-quickstart">New: code generation for Angular 2.0</a>
 		<div class="carousel-caption">
-			<p>&gt; Reverse de votre base de données</p>
-			<p>&gt; Génération de code configurable</p>
-			<p>&gt; Des semaines de R&amp;D gagnées en quelques secondes</p>
+			<p>&gt; Reverse your database schema</p>
+			<p>&gt; Configure Celerio and generate your project foundation</p>
+			<p>&gt; Save weeks of R&amp;D in few seconds</p>
 		</div>
     </div>
     <div class="item">
 	    <h1>Celerio</h1>
-		<h4>Générateur de code Java pour applications orientées données</h4>
-		<a href="https://github.com/jaxio/celerio-angular-quickstart">Nouveau: templates de génération pour Angular 2.0</a>
+		<h4>Code generator tool for Java data-oriented applications</h4>
+		<a href="https://github.com/jaxio/celerio-angular-quickstart">New: code generation for Angular 2.0</a>
 		<div class="carousel-caption">
-			<p>&gt; Templates de génération Open Source</p>
-			<p>&gt; 100% du code généré est déjà testé</p>
-			<p>&gt; Les fonctionnalités avancées sont au rendez-vous</p>
+			<p>&gt; Open Source code generation templates</p>
+			<p>&gt; 100% of generated code is already tested</p>
+			<p>&gt; Generated code implements advanced features</p>
 		</div>	
     </div>
   </div>
   <!-- Carousel nav -->
   <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
   <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-  
 </div>
 
 <script type="text/javascript">
@@ -45,42 +44,43 @@ $('.carousel').carousel({
 
 <!-- Example row of columns -->
 <div class="row">
+
 <div class="span4">
-	<h1>Utiliser Celerio</h1>
+	<h1>Get Started</h1>
 	<p>
-        Suivez notre guide pour générer en quelques minutes un <a href="/documentation/celerio/installation.html">projet avec Celerio...</a>
+        Follow our doc to generate in a few minutes your <a href="/documentation/celerio/installation.html">1st projet with Celerio...</a>
 	</p>
 	<h1>Open Source</h1>
 	<p>
-        <a href="https://github.com/jaxio/celerio">Celerio est sur GitHub</a>	     
+	    <a href="https://github.com/jaxio/celerio">Celerio is on GitHub</a>
     </p>
 </div>
 <div class="span4">
 	<h1>Open Source</h1>
 	<p>
-	     Template Packs:
+	     Template packs:
 	     <ul>
-	        <li><a href="https://github.com/jaxio/celerio-angular-quickstart">Web App Angular 2.0 + PrimeNG + Spring Boot</a></li>
-	        <li><a href="https://github.com/jaxio/javaee-lab">Web App Java EE 7</a> (No Spring Inside)</li>
-	        <li><a href="https://github.com/jaxio/pack-backend-jpa">Backend JPA 2 / Hibernate + Lucene + Spring</a></li>
+	        <li><a href="https://github.com/jaxio/celerio-angular-quickstart">Web App Angular 2 + PrimeNG + Spring Boot</a></li>
+	        <li><a href="https://github.com/jaxio/javaee-lab">Java EE 7 Web App</a> (No Spring Inside)</li>
+	        <li><a href="https://github.com/jaxio/pack-backend-jpa">Pack JPA 2 / Hibernate + Lucene + Spring</a></li>
 	        <li><a href="https://github.com/jaxio/pack-jsf2-spring-conversation">Pack JSF 2 + Spring</a></li>
-         </ul>
-	     Projet associé
-         <ul>
-	        <li><a href="https://github.com/jaxio/jpa-query-by-example">JPA Query By Example (avec Spring)</a></li>
-         </ul>
+	     </ul>
+
+	     Related project:
+	     <ul>
+	        <li><a href="https://github.com/jaxio/jpa-query-by-example">JPA Query By Example API</a></li>
+	     </ul>
 	</p>
 	<p>
-        Vous pouvez aussi <a href="/documentation/celerio/templates.html">écrire vos templates</a>.
-	</p>
+	    You may also <a href="/documentation/celerio/templates.html">write your own code generation templates </a>.
+	</p>	
 </div>
 <div class="span4">
-	<h1>Actualités</h1>
-	<ul>
-    {% for post in site.posts limit:3 %}
-    	<li><a href="{{ post.url }}">{{ post.date | date_to_string }} - {{ post.title }}</a></li>
-	{% endfor %}
-		<li><a href="actualites.html"> [ ... ] </a></li>
-	</ul>
+<h1>Use Cases</h1>
+	<p>
+	Celerio targets applications that use a relational database and whose database schema is close to the domain layer.
+	Celerio may be used for <a href="/documentation/celerio/introduction.html#when-to-use-celerio">
+	different use cases</a>.
+	</p>
 </div>
 </div>
