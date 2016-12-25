@@ -6,6 +6,10 @@ title: Celerio Guide - Celerio Change Log
 
 # 15. Celerio Change Log
 
+### 4.0.14 (2016-12-25)
+
+* Add helper method for LocalDateTime. Related to issue [https://github.com/jaxio/celerio-angular-quickstart/issues/15](https://github.com/jaxio/celerio-angular-quickstart/issues/15)
+
 ### 4.0.13 (2016-10-12)
 
 * Support Cascade type "DETACH" (since JPA 2.0) in celerio-maven-plugin.xml configuration file.
