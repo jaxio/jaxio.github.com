@@ -41,14 +41,11 @@ The simplest way to get started with Celerio templates is to modify existing tem
 
 Jaxio provides the following Open Source template packs:
 
+* Angular 2 + Spring backend: [https://github.com/jaxio/celerio-angular-quickstart](https://github.com/jaxio/celerio-angular-quickstart)
 * pure Java EE 7 (backend + frontend, without Spring): [https://github.com/jaxio/javaee-lab](https://github.com/jaxio/javaee-lab)
 * backend templates (with Spring): [https://github.com/jaxio/pack-backend-jpa](https://github.com/jaxio/pack-backend-jpa)
 * frontend templates (with Spring): [https://github.com/jaxio/pack-jsf2-spring-conversation](https://github.com/jaxio/pack-jsf2-spring-conversation)
 
-We also have some template packs that are currently in development:
-
-* Angular 2 + Spring backend: [https://github.com/jaxio/celerio-angular-quickstart](https://github.com/jaxio/celerio-angular-quickstart)
-* AngularJS 1 + Spring backend: [https://github.com/jaxio/angular-lab](https://github.com/jaxio/angular-lab)
 
 ## Templates folder
 

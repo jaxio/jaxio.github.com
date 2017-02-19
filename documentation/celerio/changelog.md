@@ -6,6 +6,10 @@ title: Celerio Guide - Celerio Change Log
 
 # 15. Celerio Change Log
 
+### 4.0.15 (2017-02-19)
+
+* When generating the @GeneratedValue annotation, use IDENTITY strategy instead of AUTO when auto increment is true.
+
 ### 4.0.14 (2016-12-25)
 
 * Add helper method for LocalDateTime. Related to issue [https://github.com/jaxio/celerio-angular-quickstart/issues/15](https://github.com/jaxio/celerio-angular-quickstart/issues/15)
