@@ -6,6 +6,10 @@ title: Celerio Guide - Celerio Change Log
 
 # 15. Celerio Change Log
 
+### 4.0.16 (2017-03-05)
+
+* Add forwardXToOne to Entity (used in templates)
+
 ### 4.0.15 (2017-02-19)
 
 * When generating the @GeneratedValue annotation, use IDENTITY strategy instead of AUTO when auto increment is true.
