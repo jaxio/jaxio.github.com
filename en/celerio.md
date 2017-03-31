@@ -61,7 +61,7 @@ Here is a high level overview of Celerio and the generated code
 <img src="/images/celerio/celerio-overview-en.png" width="100%"/>
 
 
-#### Pack Angular 2 + Spring Boot + Prime NG etc.
+#### Pack Angular 4 + Spring Boot + Prime NG etc.
 
 Pack development is in progress. 
 

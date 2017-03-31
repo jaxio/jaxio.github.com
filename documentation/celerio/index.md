@@ -5,12 +5,12 @@ title: Celerio Guide
 
 # Celerio Reference Guide
 
-**Current version: 4.0.16**
+**Current version: 4.0.17**
 
 Celerio is a code generator tool for data-driven application.<br/>
 Celerio is licensed under the [Apache License V2.0](www.apache.org/licenses/LICENSE-2.0).
 
-**NEWS**: 2016-06-13: We are working on **Angular 2** code generation templates, not yet part of the release. Please visit [https://github.com/jaxio/celerio-angular-quickstart](https://github.com/jaxio/celerio-angular-quickstart) to use them.
+**NEWS**: 2017-03-31: For our **Angular 4** code generation templates. Please visit [https://github.com/jaxio/celerio-angular-quickstart](https://github.com/jaxio/celerio-angular-quickstart) to use them.
    
 1. [Introduction](introduction.html)
 2. [Installation](installation.html)

@@ -61,7 +61,7 @@ La figure ci-dessous illustre le fonctionnement de Celerio et donne un aperçu d
 
 <img src="/images/celerio/celerio-overview.png" width="100%"/>
 
-#### Pack Angular 2 + Spring Boot + Prime NG etc.
+#### Pack Angular 4 + Spring Boot + Prime NG etc.
 
 Ce pack est en cours de développement.
 

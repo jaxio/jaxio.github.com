@@ -63,7 +63,7 @@ The generation templates that Celerio executes are grouped into jar files called
 
 Jaxio provides some Open Source template packs, but again, you can write your own:
 
-* Angular 2 with PrimeNG + SpringBoot: [https://github.com/jaxio/celerio-angular-quickstart](https://github.com/jaxio/celerio-angular-quickstart)
+* Angular 4 with PrimeNG + SpringBoot: [https://github.com/jaxio/celerio-angular-quickstart](https://github.com/jaxio/celerio-angular-quickstart)
 * pure Java EE 7 (backend + frontend, without Spring): [https://github.com/jaxio/javaee-lab](https://github.com/jaxio/javaee-lab)
 * backend templates (with Spring): [https://github.com/jaxio/pack-backend-jpa](https://github.com/jaxio/pack-backend-jpa)
 * frontend templates (with Spring): [https://github.com/jaxio/pack-jsf2-spring-conversation](https://github.com/jaxio/pack-jsf2-spring-conversation)

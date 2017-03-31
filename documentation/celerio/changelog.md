@@ -6,6 +6,11 @@ title: Celerio Guide - Celerio Change Log
 
 # 15. Celerio Change Log
 
+### 4.0.17 (2017-03-31)
+
+* Special table name escaping now follows JPA 2.0 spec. See (hibernate doc)[http://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#mapping-quoted-identifiers]
+  Thanks to [AVE-cesar](https://github.com/AVE-cesar) for his [pull request](https://github.com/jaxio/celerio/pull/3).
+
 ### 4.0.16 (2017-03-05)
 
 * Add forwardXToOne to Entity (used in templates)
