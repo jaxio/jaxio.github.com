@@ -6,6 +6,11 @@ title: Celerio Guide - Celerio Change Log
 
 # 15. Celerio Change Log
 
+### 4.0.18 (2017-05-11)
+
+* Support java.time.Instant mapping in configuration
+* PK renaming to identifiable property is now configurable (true by default though)
+
 ### 4.0.17 (2017-03-31)
 
 * Special table name escaping now follows JPA 2.0 spec. See (hibernate doc)[http://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html#mapping-quoted-identifiers]
