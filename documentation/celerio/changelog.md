@@ -6,6 +6,13 @@ title: Celerio Guide - Celerio Change Log
 
 # 15. Celerio Change Log
 
+
+### 4.0.20 (2017-07-11)
+
+* Implement (issue 4)[https://github.com/jaxio/celerio/issues/4] - add schema and catalog attributes to `@Table` annotation when not empty. 
+
+### 4.0.19 (not released)
+
 ### 4.0.18 (2017-05-11)
 
 * Support java.time.Instant mapping in configuration
