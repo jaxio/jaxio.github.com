@@ -7,6 +7,27 @@ title: Celerio Guide - Celerio Change Log
 # 15. Celerio Change Log
 
 
+### 4.0.21 (2017-07-13)
+
+* Rework on [issue 4](https://github.com/jaxio/celerio/issues/4):
+
+Catalog/Schema info is now retrieved from jdbc table metadata instead of pom.xml (which may contain wildcards).
+
+Catalog/Schema usage in `@Table` annotation is disable by default, to enable it, please edit your `celerio-maven-plugin.xml`
+configuration file and set the `jpaUseCatalog` and/or `jpaUseSchema` attribute of the `configuration` element to `TRUE`.
+
+Here is an example:
+  
+{% highlight xml %}
+<celerio xmlns="http://www.jaxio.com/schema/celerio" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.jaxio.com/schema/celerio ./celerio.xsd">
+    <configuration rootPackage="com.yourpackage" applicationName="yourappname" jpaUseCatalog="FALSE" jpaUseSchema="TRUE">
+        <!-- ... skip everything for clarity ...-->
+    </configuration>
+</celerio>    
+{% endhighlight %}
+
+
 ### 4.0.20 (2017-07-11)
 
 * Implement [issue 4](https://github.com/jaxio/celerio/issues/4) - add schema and catalog attributes to `@Table` annotation when not empty. 
@@ -1130,7 +1151,7 @@ So currently other options (spring data, spring mvc/jquery) are no longer availa
 * fix fileUpload and Ajax (see https://jira.springsource.org/browse/SWF-1526 )
 * remove spel from converters
 * add caching in ResourcesUtil
-* rename ```GenericConverter``` to ```GenericJsfConverter```
+* rename `GenericConverter` to `GenericJsfConverter`
 * use prod config mode instead of slowly dev mode
 * disable webflow snapshoting by default
 * fix typo in {TotalPages} in paginator template
