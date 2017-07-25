@@ -7,6 +7,14 @@ title: Celerio Guide - Celerio Change Log
 # 15. Celerio Change Log
 
 
+### 4.0.22 (2017-07-25)
+
+More work done to support multiple schemas. Fix these issues:
+
+ - [issue 5](https://github.com/jaxio/celerio/issues/5) - Problems with relationships between tables from diferent schemas
+ - [issue 6](https://github.com/jaxio/celerio/issues/6) - Same table name in different schemas
+
+
 ### 4.0.21 (2017-07-13)
 
 * Rework on [issue 4](https://github.com/jaxio/celerio/issues/4):
