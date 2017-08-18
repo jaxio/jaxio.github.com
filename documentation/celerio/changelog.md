@@ -7,6 +7,11 @@ title: Celerio Guide - Celerio Change Log
 # 15. Celerio Change Log
 
 
+### 4.0.23 (2017-08-17)
+
+Some code modif to fail fast in case configuration file is not found.
+It is related to this [celerio-angular-quickstart issue 49](https://github.com/jaxio/celerio-angular-quickstart/issues/49).
+
 ### 4.0.22 (2017-07-25)
 
 More work done to support multiple schemas. Fix these issues:
